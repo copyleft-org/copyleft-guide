@@ -614,13 +614,15 @@ to fair and unregulated uses.
 Fair use of copyrighted material is an established legal doctrine that
 permits certain activities.  Discussion of the various types of fair use
 activity are beyond the scope of this tutorial.  However, one important
-example of fair use is the right to reverse engineering software.
+example of fair use is the right to quote a very few lines (less than
+seven or so), and reuse them as you with without licensing restrictions.
 
 Fair use is a doctrine established by the courts or by statute.  By
 contrast, unregulated uses are those that are not covered by the statue
 nor determined by a court to be covered, but are common and enjoyed by
-many users.  An example of unregulated use is reading a program like a
-novel for the purpose of learning how to be a better programmer.
+many users.  An example of unregulated use is reading a printout of the
+programs source code like an instruction book for the purpose of learning
+how to be a better programmer.
 
 \medskip
 
@@ -862,10 +864,11 @@ truly GPL'ed.
 
 Software is a strange beast when compared to other copyrightable works.
 It is currently impossible to make a film or a book that can be truly
-obscured.  Ultimately, the full text of a novel must presented to the
-reader as words in some human-readable language so that they can enjoy the
-work.  A film, even one directed by David Lynch, must be perceptible by
-human eyes and ears to have any value.
+obscured.  Ultimately, the full text of a novel, even one written by
+Donald Barthelme, must presented to the reader as words in some
+human-readable language so that they can enjoy the work.  A film, even one
+directed by David Lynch, must be perceptible by human eyes and ears to
+have any value.
 
 Software is not so.  While the source code, the human-readable
 representation of software is of keen interest to programmers, users and
@@ -884,11 +887,11 @@ electronic file storage.
 Therefore, for GPL'ed software to be useful, the GPL, since it governs the
 rules for creation of derivative works, must grant permission for the
 generation of binaries.  Furthermore, notwithstanding the relative
-popularity of source-based GNU/Linux distributions like ``Gentoo'', users
-find it extremely convenient to receive distribution of binary software.
-Such distribution is the redistribution of derivative works of the
-software's source code.  \S 3 addresses the matter of creation and
-distribution of binary versions.
+popularity of source-based GNU/Linux distributions like Gentoo, users find
+it extremely convenient to receive distribution of binary software.  Such
+distribution is the redistribution of derivative works of the software's
+source code.  \S 3 addresses the matter of creation and distribution of
+binary versions.
 
 Under \S 3, binary versions may be created and distributed under the terms
 of \S\S 1--2, so all the material previously discussed applies here.
@@ -910,32 +913,32 @@ option for most distributors, because it means that the source-code
 provision obligations are fully completed at the time of binary
 distribution (more on that later).
 
-Under \S 3(a), the source code code provided must be the ``corresponding
-source code''.  Here ``corresponding'' primarily means that the source
-code provided must be that code used to produce the binaries being
-distributed.  That source code must also be ``complete''.  A later
-paragraph of \S 3 explains in detail what is meant by ``complete''.  In
-essence, it is all the material that a programmer of average skill would
-need to actually use the source code to produce the binaries she has
-received.  Complete source is required so that, if the licensee choses,
-she should be able to exercise her freedoms to modify and redistribute
-changes.  Without the complete source, it would not be possible to make
-changes that were actually directly derived from the version received.
+Under \S 3(a), the source code provided must be the ``corresponding source
+code''.  Here ``corresponding'' primarily means that the source code
+provided must be that code used to produce the binaries being distributed.
+That source code must also be ``complete''.  A later paragraph of \S 3
+explains in detail what is meant by ``complete''.  In essence, it is all
+the material that a programmer of average skill would need to actually use
+the source code to produce the binaries she has received.  Complete source
+is required so that, if the licensee chooses, she should be able to
+exercise her freedoms to modify and redistribute changes.  Without the
+complete source, it would not be possible to make changes that were
+actually directly derived from the version received.
 
 Furthermore, \S 3 is defending against a tactic that has in fact been seen
 in FSF's GPL enforcement.  Under GPL, if you pay a high price for a copy
 of GPL'ed binaries (which comes with corresponding source, of course), you
 have the freedom to redistribute that work at any fee you choose, or not
-at all.  Sometimes, companies attempt to build a racket by producing very
-specialized binaries (perhaps for an obscure architecture), and then
-giving source code that does correspond, but not giving the
-``incantations'' and build plans they used to make that source compile
-into the specialized binaries.  Therefore, \S 3 that the source code
-include ``meta-material'' like scripts, interface definitions, and other
-material that is used to ``control compilation and installation'' of the
-binaries.  In this manner, those further down the distribution chain are
-assured that they have the unabated freedom to build their own derivative
-works from the sources provided.
+at all.  Sometimes, companies attempt a GPL-violating cozenage whereby
+they produce very specialized binaries (perhaps for an obscure
+architecture), and then giving source code that does correspond, but not
+giving the ``incantations'' and build plans they used to make that source
+compile into the specialized binaries.  Therefore, \S 3 that the source
+code include ``meta-material'' like scripts, interface definitions, and
+other material that is used to ``control compilation and installation'' of
+the binaries.  In this manner, those further down the distribution chain
+are assured that they have the unabated freedom to build their own
+derivative works from the sources provided.
 
 FSF (as authors of GPL) realizes that software distribution comes in many
 forms.  Embedded manufacturers, for example, have the freedom to put
@@ -951,8 +954,8 @@ phrase covers a broad spectrum.  At best, FSF can viably release a new GPL
 every ten years or so.  Thus, phrases like this must be adaptive to
 changes in the technology.  When GPL version 2 was first published in June
 1991, distribution on magnetic tape was still common, and CD was
-relatively new.  Today, CD is the default, and for larger systems DVD-ROM
-is gaining adoption.  This language must adapt with changing technology.
+relatively new.  Today, CD is the default, and for larger systems DVD-R is
+gaining adoption.  This language must adapt with changing technology.
 
 Meanwhile, the binding created by the word ``customarily'' is key.  Many
 incorrectly believe that distributing binary on CD and source on the
@@ -1017,13 +1020,14 @@ those who receive the software from her can exercise their freedoms under
 GPL --- including the freedom to modify, rebuild, and redistribute the
 source code.
 
-This is where \S 3(c) comes into play.  Ultimately, \S 3(b) is a big
-compromise.  It separates the binary software from the key tool that
-people can use to exercise their freedom.  The GPL permits this separation
-because it is good for redistributors, and those users who turn out not to
-need the source.  However, to ensure equal rights for all software users,
-anyone along the distribution chain must have the right to get the source
-and exercise those freedoms that require it.
+\S 3(c) is created to save her some trouble, because by itself \S 3(b)
+would unfairly favor large companies.  compromise.  \S 3(b) allows the
+separation of the binary software from the key tool that people can use
+to exercise their freedom.  The GPL permits this separation because it is
+good for redistributors, and those users who turn out not to need the
+source.  However, to ensure equal rights for all software users, anyone
+along the distribution chain must have the right to get the source and
+exercise those freedoms that require it.
 
 Meanwhile, \S 3(b)'s compromise primarily benefits companies who
 distribute binary software commercially.  Without \S 3(c), that benefit
@@ -1066,11 +1070,6 @@ field clear so that \S\S 0--3 can do their jobs.
 \section{GPL \S 4: Termination on Violation}
 \label{GPLs4}
 
-\S 4--5 are, in my opinion, the heart of the GPL\@. \S\S 0--3 are
-important in their efforts to set forth in clear legal language the
-doctrine of copyleft.  However, \S 4--5 are the glue that holds \S\S 0--3
-together.
-
 \S 4 is GPL's termination clause.  Upon first examination, it seems
 strange for a license that has the goal of defending users and programmers
 freedoms for perpetuity in an irrevocable way would have such a clause.
@@ -1082,12 +1081,13 @@ rights for someone to copy, modify and redistribute the software under
 terms of the GPL, they cannot later revoke that grant.  Since the GPL has
 no provision allowing the copyright holder to take such a prerogative, the
 license is granted as long as the copyright remains in effect\footnote{In
-  the USA< due to unfortunate legislation, this is nearly perpetual, even
-  though the Constitution forbids it.}.  The copyright holder has the
-right to relicense the same work under different licenses (see
-Section~\ref{Proprietary Relicensing} of this tutorial), or to stop
-distributing the GPL'ed version (assuming \S 3(b) was never used), but the
-she may not revoke the rights under GPL already granted.
+  the USA, due to unfortunate legislation, the length of copyright is
+  nearly perpetual, even though the Constitution forbids perpetual
+  copyright.}.  The copyright holder has the right to relicense the same
+work under different licenses (see Section~\ref{Proprietary Relicensing}
+of this tutorial), or to stop distributing the GPL'ed version (assuming \S
+3(b) was never used), but the she may not revoke the rights under GPL
+already granted.
 
 In fact, when an entity looses their right to copy, modify and distribute
 GPL'ed software, it is because of their \emph{own actions}, not that of
@@ -1264,11 +1264,6 @@ copyright licenses.
 \section{GPL \S 11: No Warranty}
 \label{GPLs11}
 
-With \S 11, the boilerplate language of all copyright licenses begins.
-Sometimes, companies are concerned that there is no default warranty on
-GPL'ed software.  However, nearly all proprietary software licensing
-agreements disclaim warranty as well.
-
 All warranty disclaimer language tends to be shouted in all capital
 letters.  Apparently, there was once a case where the disclaimer language
 of an agreement was negated because it was not ``conspicuous'' to one of
@@ -1277,7 +1272,7 @@ started placing it in bold or capitalizing the entire text.  It now seems
 to be voodoo tradition of warranty disclaimer writing.
 
 Finally, one important point to remember when reading \S 11 is that \S 1
-permits the sale of warranty as an additional service, which  \S 11
+permits the sale of warranty as an additional service, which \S 11
 affirms.
 
 \section{GPL, \S 12: Limitation of Liability}
@@ -1401,7 +1396,7 @@ For those who go into the business of distributing or distributing
 modified versions of GPL'ed software, the burden is a bit higher, but not
 by much.  The glib answer that is that it is always easy to comply with
 the GPL by releasing the whole product as Free Software.  However,
-admittedly to the chagrin of FSF, many modern and complex software systems
+admittedly to the dismay of FSF, many modern and complex software systems
 are built using both proprietary and GPL'ed components that are not
 legally derivative works of each other.  Usually, in product development
 with Free Software tools, sometimes it is easier simply to improve
@@ -1412,7 +1407,7 @@ is a way to help build a better world while also making a profit.
 
 Note that FSF does provide services to assist companies who need
 assistance in complying with the GPL.  You can contact FSF's GPL
-Compliance Labs at <compliance@fsf.org>.
+Compliance Labs at $<$compliance@fsf.org$>$.
 
 \appendix
 
