@@ -16,7 +16,7 @@
 %\setlength\parindent{0pt}
 
 
-\pagestyle{empty}
+%\pagestyle{empty}
 
 \begin{document}
 
@@ -107,26 +107,26 @@ learned the following:
 
 \chapter{What Is Free Software?}
 
-We begin our consideration of the GNU General Public License (herein,
-abbreviated as ``GNU GPL'' or just ``GPL'') by first considering the
-broader world of ``Free Software''.  The GPL was not created from a void,
-rather, it was created to embody and defend a set of principles that were
-set forth at the founding of the GNU project and the Free Software
-Foundation (FSF), the organization that upholds, defends and promotes the
-philosophy of software freedom.  To understand the point of the GPL and
-its terms and conditions, we must first have a basic understanding of the
-principles behind it.  The GPL is unlike most software licenses in that it
-is designed to defend and uphold these principles.
+Consideration of the GNU General Public License (herein, abbreviated as
+``GNU GPL'' or just ``GPL'') must begin by first considering the broader
+world of ``Free Software''.  The GPL was not created from a void, rather,
+it was created to embody and defend a set of principles that were set
+forth at the founding of the GNU project and the Free Software Foundation
+(FSF)---the organization that upholds, defends and promotes the philosophy
+of software freedom.  A prerequisite for understanding the GPL and its
+terms and conditions is a basic understanding of the principles behind it.
+The GPL is unlike almost all other software licenses in that it is
+designed to defend and uphold these principles.
 
 \section{The Free Software Definition}
 
-\href{http://www.fsf.org/philosophy/free-sw.html}{The Free Software
-  Definition} is defined in full on the Free Software Foundation website
-at \verb0http://www.fsf.org/philosophy/free-sw.html0.  Here, we give an
-abbreviated version that will help us consider the terms of the GPL.
+The Free Software Definition is set forth in full on FSF's website at
+\href{http://www.fsf.org/philosophy/free-sw.html}{http://www.fsf.org/philosophy/free-sw.html}.
+This section presents an abbreviated version that will focus on the parts
+that are most pertinent to the terms of the GPL\@.
 
-A particular program is Free Software if it grants you, a particular user
-of that program, the following freedoms:
+A particular program is Free Software if it grants a particular user of
+that program, the following freedoms:
 
 \begin{itemize}
 
@@ -140,6 +140,45 @@ of that program, the following freedoms:
 
 \end{itemize}
 
+The focus on ``a particular user'' is very pertinent here.  It is not
+uncommon for the same version of a specific program to grant these
+freedoms to some subset of its user base, while others have none or only
+some of these freedoms.  Section~\ref{relicensing} talks in detail about
+how this can happen even if a program is released under the GPL\@.
+
+Some people refer to software that gives these freedoms as ``Open
+Source''.  Besides having a different political focus than those who call
+it Free Software\footnote{The political differences between the Free
+Software Movement and the Open Source Movement are documented on FSF's
+website at
+\href{http://www.fsf.org/philosophy/free-software-for-freedom.html}
+{http://www.gnu.org/philosophy/free-software-for-freedom.html}.},
+those who call the software ``Open Source'' are focused on a side issue.
+User access to the source code of a program is a prerequisite to make use
+of the freedom to modify.  However, the important issue is what freedoms
+are granted in the license of that source code.  Microsoft's ``Shared
+Source'' program, for example, gives various types of access to source
+code, but almost none of the freedoms described in this section.
+
+One key issue that is central to these freedoms is that there are no
+restrictions on how these freedoms can be excercised.  Specifically, users
+and programmers can exercise these freedoms non-commercially or
+commercially.  Licenses that grant these freedoms for non-commercial
+activies but prohibit them for commercial activites are considered
+non-Free.
+
+In general, software for which most or all of these freedoms are
+restricted in any way is called ``non-Free Software''.  Typically, the
+term ``proprietary software'' is used more or less interchangably with
+``non-Free Software''.  Personally, I tend to use the term ``non-Free
+Software'' to refer to non-commercial software that restricts freedom
+(such as ``shareware'') and ``propreitary software'' to refer to
+commercial software that restricts freedom (such as nearly all of
+Microsoft's and Oracle's offerings).
+
+The remainder of this section considers each of the four freedoms in
+detail.
+
 \subsection{The Freedom to Run}
 
 For a program to be Free Software, the freedom to run the program must be
@@ -148,6 +187,105 @@ the user can come up with must be permitted.  Perhaps, for example, the
 user has discovered an innovative new use for a particular program, one
 that the programmer never could have predicted.  Such a use much not be
 restricted.
+
+It was once rare that this freedom was restricted by even proprietary
+software; today it is not so rare.  Most End User Licensing Agreements
+(EULAs) that cover most proprietary software restrict some types of use.
+For example, some versions of Microsoft's Frontpage software prohbit use
+of the software to create websites that generate negative publicity for
+Microsoft.  Free Software has no such restrictions; everyone is free to
+use Free Software for any purpose whatsoever.
+
+\subsection{The Freedom to Change and Modify}
+
+Free Software programs allow users to change, modify and adapt the
+software to suit their needs.  Access to the source code and related build
+scripts are an essential part of this freedom.  Without the source code
+and the ability to build the binary applications from that source, the
+freedom cannot be properly exercised.
+
+Programmers can take direct benefit from this freedom, and often do.
+However, this freedom is essential to users who are not programmers.
+Users must have the right to engage in a non-commercial enviornment of
+finding help with the software (as often happens on email lists and in
+users groups).  This means they must have the freedom to recruit
+programmers who might altrusitcally assist them to modify their software.
+
+The commercial exercise of this freedom is also essential.  Each user, or
+group of users, must have the right to hire anyone they wish on a
+competitive free market to modify and change the software.  This means
+that companies have a right to hire anyone they wish to modify their Free
+Software.  Additionally, such companies may contract with other companies
+to commission software modification.
+
+\subsection{The Freedom to Copy and Share}
+
+Users may share Free Software in a variety of ways.  Free Software
+advocates work to eliminate fundamental ethical delimema of the software
+age: choosing between obeying a software license, and friendship (by
+giving away a copy of a program your friend who likes the software you are
+using).  Free Software licenses, therefore, must permit this sort of
+altruistic sharing of software amoung friends.
+
+The commercial enviornment must also have the benefits of this freedom.
+Commercial sharing typically takes the form of selling copies of Free
+Software.  Free Software can be sold at any price to anyone.  Those who
+redistribute Free Software commercially have the freedom to selectively
+distribute (you can pick your customers) and to set prices at any level
+the redistributor sees fit.
+
+It is true that many people get copies of Free Software very cheaply (and
+sometimes without charge). The competitive free market of Free Software
+tends to keep prices low and reasonable.  However, if someone is willing
+to pay a billion dollars for one copy of the GNU Compiler Collection, such
+a sale is completely permited.
+
+Another common instance of commercial sharing is service-oriented
+distribution.  For example, a distribution vendor may provide immediate
+security and upgrade distribution via a special network service.  Such
+distribution is completely permitted for Free Software.
+
+\subsection{The Freedom to Share Improvements}
+
+The freedom to modify and improve is somewhat empty without the freedom to
+share those improvements.  The Free Software community is built on the
+pillar of altruistic sharing of improved Free Software.  Inevitably, a
+Free Software project sprouts a mailing list where improvements are shared
+freely among members of the development community.  Such non-commercial
+sharing must be permitted for Free Software to thrive.
+
+Commercial sharing of modified Free Software is equally important.  For a
+competitive free market for support to exist, all developers --- from
+single-person contractors to large software companies --- must have the
+freedom to market their services as improvers of Free Software.  All forms
+of such service marketing must be equally available to all.
+
+For example, selling support services for Free Software is fully
+permitted.  Companies and individuals can offer thesmelves as ``the place
+to call'' when software fails or does not function properly.  For such a
+service to be meaningful, the entity offering that service must have the
+right to modify and improve the software for the customer to correct any
+problems that are beyond mere user error.
+
+Entities must also be permitted to make available modified versions of
+Free Software.  Most Free Software programs have a so-called ``canonoical
+version'' that is made available from the primary developers of the
+software.  Hoewver, all who have the software have the ``freedom to fork''
+--- that is, make available non-trivial modified versions of the software
+on a permenant or semi-permenant basis.  Such freedom is central to
+vibrant developer and user interaction.
+
+Companies and individuals have the right to make true value-added versions
+of Free Software.  They may use freedom to share improvements to
+distribute distinct versions of Free Software with different functionality
+and features.  Furthermore, this freedom can be exercised to serve a
+disenfranchised subset of the user community.  If the developers of the
+canonical version refuse to serve the needs of some of the software's
+users, other entities have the right to create long- or short-lived fork
+that serves that sub-community.
+
+\section{How Does Software Become Free?}
+
 
 \appendix
 
@@ -223,7 +361,7 @@ The precise terms and conditions for copying, distribution and
 modification follow.
 
 \begin{center}
-{\large \sc Terms and Conditions For Copying, Distribution and
+{\Large \sc Terms and Conditions For Copying, Distribution and
   Modification}
 \end{center}
 
@@ -468,33 +606,36 @@ No Warranty
 \end{center}
 
 \item
-BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
-FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN
-OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
-PROVIDE THE PROGRAM ``AS IS'' WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
-OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS
-TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE
-PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,
-REPAIR OR CORRECTION.
+{\sc Because the program is licensed free of charge, there is no warranty
+for the program, to the extent permitted by applicable law.  Except when
+otherwise stated in writing the copyright holders and/or other parties
+provide the program ``as is'' without warranty of any kind, either expressed
+or implied, including, but not limited to, the implied warranties of
+merchantability and fitness for a particular purpose.  The entire risk as
+to the quality and performance of the program is with you.  Should the
+program prove defective, you assume the cost of all necessary servicing,
+repair or correction.}
 
 \item
-IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
-WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
-REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES,
-INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING
-OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED
-TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY
-YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER
-PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGES.
+{\sc In no event unless required by applicable law or agreed to in writing
+will any copyright holder, or any other party who may modify and/or
+redistribute the program as permitted above, be liable to you for damages,
+including any general, special, incidental or consequential damages arising
+out of the use or inability to use the program (including but not limited
+to loss of data or data being rendered inaccurate or losses sustained by
+you or third parties or a failure of the program to operate with any other
+programs), even if such holder or other party has been advised of the
+possibility of such damages.}
+
 \end{enumerate}
 
 
 \begin{center}
-{\large\sc End of Terms and Conditions}
+{\Large\sc End of Terms and Conditions}
 \end{center}
 
+
+\pagebreak[2]
 
 \section*{Appendix: How to Apply These Terms to Your New Programs}
 
