@@ -1,8 +1,23 @@
+2003-05-28  Bradley M. Kuhn  <bkuhn@fsf.org>
+
+	* gpl-business.tex (section{An Ecosystem of Equality}): Started
+	section.
+	(subsection{The Non-Commercial Ecosystem}): Wrote subsection.
+	(subsection{The Commercial Ecosystem}): Wrote subsection.
+	(subsection{Law Analogy}): Wrote subsection.
+
+2003-05-27  Bradley M. Kuhn  <bkuhn@fsf.org>
+
+	* gpl-business.tex (section{How Does Software Become Free?}):
+	Finished section.
+	(subsection{Public Domain Software}): Wrote section.
+
 2003-05-26  Bradley M. Kuhn  <bkuhn@fsf.org>
 
 	* gpl-business.tex (subsection{The Freedom to Copy and Share}):
 	Wrote subsection.
 	(subsection{The Freedom to Share Improvements}): Wrote subsection.
+	(section{How Does Software Become Free?}): Started section.
 
 2003-05-25  Bradley M. Kuhn  <bkuhn@fsf.org>
 
