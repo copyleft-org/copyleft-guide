@@ -1311,13 +1311,13 @@ So ends the terms and conditions of the GNU General Public License.
 \chapter{The Lesser GPL}
 
 As we have seen in our consideration of the GPL, its text is specifically
-designed to cover all possible deriviative works under copyright law.  Our
-goal in desiging GPL was to make sure that any derivative work of GPL'd
+designed to cover all possible derivative works under copyright law.  Our
+goal in designing GPL was to make sure that any derivative work of GPL'd
 software was itself released under GPL when distributed.  Reaching as far
 as copyright law will allow is the most direct way to reach that goal.
 
 However, while the strategic goal is to bring as much Free Software into
-the world as possible, particular tatical situations of software freedom
+the world as possible, particular tactical situations of software freedom
 dictate different means.  Extending the copyleft effect as far as
 copyright law allows is not always the most prudent course to the goal.
 In particular situations, even those of us with the goal of building a
@@ -1330,16 +1330,16 @@ License (``GNU LGPL'') was designed as a solution for such situations.
 The first example that FSF encountered where such altered tactics were
 needed was when work began on the GNU C Library.  The GNU C Library would
 be (and today, now is) a drop-in replacement for existing C Libraries.  On
-a Unix-like operating system, C is the linga franca and the C library is
+a Unix-like operating system, C is the lingua franca and the C library is
 an essential component for all programs.  It is extremely difficult to
 construct a program that will run with ease on a Unix-like operating
 system without making use of services provided by the GNU C Library --
-even if the program is written in a langauge other than C\@.  Effectively,
+even if the program is written in a language other than C\@.  Effectively,
 all user application programs that run on any modern Unix-like system must
 make use of the C Library.
 
 By the time work began on the GNU implementation of the C Library, there
-were already many C libraries in existance from a variety of vendors.
+were already many C libraries in existence from a variety of vendors.
 Every proprietary Unix vendor had one, and many third parties produced
 smaller versions for special purpose use.  However, our goal was to create
 a C library that would provide equivalent functionality to these other C
@@ -1368,7 +1368,7 @@ advocates, since it stops all proprietary software development on
 GNU/Linux systems.  However, the outcome is a bit more subtle.  In a world
 where many C Libraries already exist, many of which could easily be ported
 to GNU/Linux, a GPL'd glibc would be unlikely to succeed.  Proprietary
-vendors would see the exellent opportunity to license their C libraries to
+vendors would see the excellent opportunity to license their C libraries to
 anyone who wished to write proprietary software for GNU/Linux systems.
 The de-facto standard for C libraries on GNU/Linux would likely become not
 glibc, but the most popular proprietary one.
@@ -1380,7 +1380,7 @@ be users of a proprietary C library, not glibc.
 
 The Lesser GPL was first conceived to handle this scenario.  It was clear
 that the existence of proprietary applications for GNU/Linux was
-inevitable.  Since there were so many C libraries already in existance, a
+inevitable.  Since there were so many C libraries already in existence, a
 new one under GPL would not stop that tide.  However, if the new C library
 were released under a license that (a) permitted proprietary applications
 to link with it, but (b) made sure that the library itself remained Free,
@@ -1390,7 +1390,7 @@ the application itself, would have the freedom to do so with respect to
 the C library.
 
 There was no way the license of glibc could stop or even slow the creation
-of propreitary applications on GNU/Linux.  However, loosening the
+of proprietary applications on GNU/Linux.  However, loosening the
 restrictions on the licensing of glibc was able to ensure that nearly all
 proprietary applications at least used a Free C library rather than a
 proprietary one.  This trade-off is central to the reasoning behind the
@@ -1406,7 +1406,7 @@ the LGPL is helpful when studying the license.
 
 \section{What's the Same?}
 
-Much of the text of the LGPL is identitcal to the GPL\@.  As we begin our
+Much of the text of the LGPL is identical to the GPL\@.  As we begin our
 discussion of the LGPL, we will first eliminate the sections that are
 identical, or that have the minor change of changing the word ``Program''
 to ``Library''.
@@ -1429,13 +1429,13 @@ restrictions are imposed.
 
 LGPL's \S 11 is GPL's \S 7.  As discussed, it is used to ensure that
 other claims and legal realities, such as patent licenses and court
-judgements, do not trump the rights and permissions granted by these
+judgments, do not trump the rights and permissions granted by these
 licenses, and requires that distribution be halted if such a trump is
 known to exist.
 
 LGPL's \S 12 adds the same features as GPL's \S 8.  These sections are
 used to allow original copyright holders to forbid distribution in
-countries with draconian laws that would otherwise contridict these
+countries with draconian laws that would otherwise contradict these
 licenses.
 
 LGPL's \S 13 sets up FSF as the steward of the LGPL, just as GPL's \S 9
@@ -1448,16 +1448,16 @@ identical; thus LGPL's \S 15 and \S 16 are the same as GPL's \S 11 and \S
 12.
 
 Thus, as we see, the entire latter half of the license is identical.
-The parts which set up the legal boundries and meta-rules for the license
+The parts which set up the legal boundaries and meta-rules for the license
 are the same.  It is our intent that the two licenses operate under the
-same legal meachanisms and are enforced precisely the same way.
+same legal mechanisms and are enforced precisely the same way.
 
 We strike a difference only in the early portions of the license.
 Namely, we go into deeper detail of granting various permissions to
 create derivative works, so the redistributors can make some proprietary
 derivatives.  Since we simply do not allow the license to stretch as far
 as copyright law does regarding what derivative works must be relicensed
-under the same terms, we must go further to explain which dervative works
+under the same terms, we must go further to explain which derivative works
 we will allow to be proprietary.  Thus, we'll see that the front matter
 of the LGPL is a bit more wordy and detailed with regards to the
 permissions granted to those who modify or redistribute the software.
@@ -1466,7 +1466,7 @@ permissions granted to those who modify or redistribute the software.
 
 Most of LGPL's Preamble is identical, but the last seven paragraphs
 introduce the concepts and reasoning behind creation of the license,
-persenting a more generalized and briefer version of the story with which
+presenting a more generalized and briefer version of the story with which
 we began our consideration of LGPL\@.
 
 In short, FSF designed LGPL for those edge cases where the freedom of the
@@ -1522,24 +1522,24 @@ compiled and linked with GPL'd software are derivative works of that GPL'd
 software.  This includes both linking that happens at compile-time (when
 the binary is created) or at runtime (when the binary -- including library
 and main program both -- is loaded into memory by the user).  In GPL,
-binary derivative works are controled by the terms of the license (in GPL
+binary derivative works are controlled by the terms of the license (in GPL
 \S 3), and distributors of such binary derivatives must release full
-correesponding source under terms of GPL\@.
+corresponding source under terms of GPL\@.
 
-In the case of LGPL, these are preceisely the types of derivative works
+In the case of LGPL, these are precisely the types of derivative works
 we wish to permit.  This scenario, defined in LGPL as ``a work that uses
 the library'', works as follows:
-
-\begin{itemize}
 
 \newcommand{\workl}{$\mathcal{L}$}
 \newcommand{\lplusi}{$\mathcal{L\!\!+\!\!I}$}
 
-\item A new copyright holder creates a separate and independant work,
+\begin{itemize}
+
+\item A new copyright holder creates a separate and independent work,
   \worki{}, that makes interface calls (e.g., function calls) to the
   LGPL'd work, called \workl{}, whose copyright is held by some other
   party.  Note that since \worki{} and \workl{} are separate and
-  indepedant works, there is no copyright obligation on this new copyright
+  independent works, there is no copyright obligation on this new copyright
   holder with regard to the licensing of \worki{}, at least with regard to
   the source code.
 
@@ -1558,16 +1558,16 @@ the library'', works as follows:
 We will talk about the specific restrictions LGPL places on ``works that
 use the library'' in detail in Section~\ref{FIXME}.  For now, focus on the
 logic related to how the LGPL places requirements on the license of
-\lplusi{}.  Note, first of all, the similarity between this explination
+\lplusi{}.  Note, first of all, the similarity between this explanation
 and that in Section~\ref{separate-and-independent}, which discussed the
-combining otherwise separate and independant works with GPL'd code.
+combining otherwise separate and independent works with GPL'd code.
 Effectively, what LGPL is doing is saying that when a new work is
-otherwise separate and independant, but has interface calls out to an
-LGPL'ed library, then it is considered a ``work that uses the library''.
+otherwise separate and independent, but has interface calls out to an
+LGPL'd library, then it is considered a ``work that uses the library''.
 
 In addition, the only reason that LGPL has any control over the licensing
 of a ``work that uses the library'' is for the same reason that GPL has
-some say over separate and independant works.  Namely, such controls exist
+some say over separate and independent works.  Namely, such controls exist
 because the {\em binary combination\/} (\lplusi{}) that must be created to
 make the separate work (\worki{}) at all useful is a derivative work of
 the LGPL'd software (\workl{}).
@@ -1575,16 +1575,16 @@ the LGPL'd software (\workl{}).
 Thus, a two-question test that will help indicate if a particular work is
 a ``work that uses the library'' under LGPL is as follows:
 
-\begin{emumerate}
+\begin{enumerate}
 
 \item Is the source code of the new copyrighted work, \worki{}, a
-  completely independant work that stands by itself, and includes no
+  completely independent work that stands by itself, and includes no
   source code from \workl{}?
 
 \item When the source code is compiled, does it create a derivative work
   by combining with \workl{}, either by static (compile-time) or dynamic
   (runtime) linking, to create a new binary work, \lplusi{}?
-\end{emumerate}
+\end{enumerate}
 
 If the answers to both questions are ``yes'', then \worki{} is most likely
 a ``work that uses the library''.  If the answer to the first question
@@ -1604,7 +1604,7 @@ library'' extends the full width and depth of copyright derivative works,
 in the same sense that GPL does.
 
 Most typically, one creates a ``work based on the library'' by directly
-modifing the source of the library.  Such a work could also be created by
+modifying the source of the library.  Such a work could also be created by
 tightly integrating new software with the library.  The lines are no doubt
 fuzzy, just as they are with GPL'd works, since copyright law gives us no
 litmus test for derivative works of a software program.
@@ -1637,7 +1637,7 @@ discovered that what we actually had were three distinct components -- the
 original LGPL'd work, a specific set of works that used that library, and
 a specific set of works that were based on the library.  Once such
 distinctions are established, the licensing for each component can be
-considered independantly and the LGPL applied to each work as prescribed.
+considered independently and the LGPL applied to each work as prescribed.
 
 
 \section{Subtleties in Works that Use the Library}
@@ -1666,16 +1666,16 @@ mixing them with another.  However, under LGPL, there is a case in the
 compilation process where the legal implications are different.
 Specifically, while we know that a ``work that uses the library'' is one
 whose final binary is a derivative work, but whose source is not, there
-are cases where the object code --- that intermmediate step between source
+are cases where the object code --- that intermediate step between source
 and final binary --- is a derivative work created by copying verbatim code
 from the LGPL'd software.
 
-For effeciency, when a compiler turns source code into object code, it
+For efficiency, when a compiler turns source code into object code, it
 sometimes places literal portions of the copyrighted library code into the
-object code for an otherwise separate independant work.  In the normal
+object code for an otherwise separate independent work.  In the normal
 scenario, the derivative would not be created until final assembly and
-linking of the executible occured.  However, when the compiler does this
-effeciency optimization, at the intermediate object code step, a
+linking of the executable occurred.  However, when the compiler does this
+efficiency optimization, at the intermediate object code step, a
 derivative work is created.
 
 LGPL's \S 5, \P 4 is designed to handle this specific case.  The intent of
@@ -1683,7 +1683,7 @@ the license is clearly that simply compiling software to ``make use'' of
 the library does not in itself cause the compiled work to be a ``work
 based on the library''.  However, since the compiler copies verbatim,
 copyrighted portions of the library into the object code for the otherwise
-separate and independant work, it would actually cause that object file a
+separate and independent work, it would actually cause that object file a
 ``work based on the library''.  It is not FSF's intent that a mere
 compilation idiosyncrasy changes the requirements on the users of the
 LGPL'd software.  This paragraph removes that restriction, allowing the
@@ -1694,7 +1694,7 @@ library''.
 As it turns out, we have only once had anyone worry about this specific
 idiosyncrasy, because that particular vendor wanted to ship object code
 (rather than final binaries) to their customers and were worried about
-this edge condition.  The intent of clarifing this edge condition is
+this edge condition.  The intent of clarifying this edge condition is
 primarily to quell the worries of software engineers who understand the
 level of verbatim code copying that a compiler often does, and to help
 them understand that the full implications of LGPL are the same regardless
@@ -1712,11 +1712,74 @@ of source when a binary version of the LGPL'd software is released.  Of
 course, it only requires that source code for the library itself be made
 available.  The work that ``uses'' the library need not be provided in
 source form.  However, there are also conditions in LGPL \S 6 to make sure
-that a user who wishes to modify or udpate the library can do so.
+that a user who wishes to modify or update the library can do so.
 
-LGPL \S 6 lists five choices 
+LGPL \S 6 lists five choices with regard to supplying library source and
+the freedom to modify that library source the users.  We will first
+consider the option given by \S 6(b), which describes the most common way
+that is currently used for LGPL compliance on a ``work that uses the
+library''.
+
+\S 6(b) allows the distributor of a ``work that uses the library'' to
+simply use a dynamically linked, shared library mechanism to link with the
+library.  This is by far the easiest and most straightforward option for
+distribution.  In this case, the executable of the work that uses the
+library will contain only the ``stub code'' that is put in place by the
+shared library mechanism, and at runtime the executable will combine with
+the shared version of the library already resident on the user's computer.
+If such a mechanism is used, it must allow the user to upgrade and
+replace the library with interface-compatible versions and still be able
+to use the ``work that use the library''.  However, all modern shared
+library mechanisms function as such, and thus \S 6(b) is the simplest
+option, since it does not even require that the distributor of the ``work
+based on the library'' ship copies of the library itself.
+
+\S 6(a) is the option to use when, for some reason, a shared library
+mechanism cannot be used.  It requires that the source for the library be
+included, in the typical GPL fashion, but it also has a requirement beyond
+that.  The user must be able to exercise her freedom to modify the library
+to its fullest extent, and that means recombining it with the ``work based
+on the library''.  If the full binary is linked without a shared library
+mechanism, the user must have available the object code for the ``worked
+based on the library'', so that the user can relink the application and
+build a new binary.
+
+The remaining options in \S 6 are very similar to the other choices
+provided by GPL \S 3.  There are some additions, and time does not permit
+us in this course to go into those additional options.  In almost all
+cases of distribution under LGPL, either \S 6(a) or \S 6(b) are exercised.
+
+\section{Distribution of Works Based on the Library}
+
+Essential, ``works based on the library'' must be distributed under the
+same conditions as works under full GPL\@.  In fact, we note that LGPL's \S
+2 is nearly identical in its terms and requirements to GPL's \S 2.  There
+are again subtle differences and additions, which time does not permit us
+to cover in this course.
+
+\section{And the Rest}
+
+The remaining variations between LGPL and GPL cover the following
+conditions:
+
+\begin{itemize}
+
+\item allowing a licensing ``upgrade'' from LGPL to GPL\@ (in LGPL \S 3),
+
+\item binary distribution of the library only, covered in LGPL \S 4,
+  which is effectively equivalent to LGPL \S 3, and
+
+\item creating aggregates of libraries that are not derivative works of
+  each other, and distributing them as a unit (in LGPL \S 7).
+\end{itemize}
 
 
+Due to time constraints, we cannot cover these additional terms in detail,
+but they are mostly straightforward.  The key to understanding LGPL is
+understanding the difference between a ``work based on the library'' and a
+``work that uses the library''.  Once that distinction is clear, the
+remainder of LGPL is close enough to GPL that the concepts discussed in
+our more extensive GPL unit can be directly applied.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Integrating the GPL into Business Practices}
@@ -2869,5 +2932,5 @@ That's all there is to it!
 
 % LocalWords:  proprietarize redistributors sublicense yyyy Gnomovision EULAs
 % LocalWords:  Yoyodyne FrontPage improvers Berne copyrightable Stallman's GPLs
-% LocalWords:  Lessig Lessig's UCITA pre PDAs CDs reshifts GPL's Gentoo
-% LocalWords:  TrollTech
+% LocalWords:  Lessig Lessig's UCITA pre PDAs CDs reshifts GPL's Gentoo glibc
+% LocalWords:  TrollTech administrivia LGPL's MontaVista OpenTV
