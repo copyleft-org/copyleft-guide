@@ -30,8 +30,7 @@
 
 \vspace{.5in}
 
-{\Large {\sc GPL Compliance Case Studies and Legal Ethics in Free Software
-    Licensing } \\
+{\Large {\sc GPL Compliance Case Studies} \\
 
 \vspace{.7in}
 
@@ -93,10 +92,6 @@ insights into problems that can arise when the terms of GPL are not
 properly followed, and how diplomatic negotiation between the violator and
 the copyright holder can yield positive results for both parties.
 
-This course also includes a unit on the ethical considerations for
-attorneys who want to represent clients that make use of or sell Free
-Software products.
-
 Attendees should have successfully completely the course, a ``Detailed
 Study and Analysis of GPL and LGPL'', as the material from that course
 forms the building blocks for this material.
@@ -118,11 +113,11 @@ will also find the course very helpful.
 \chapter{Overview of FSF's GPL Compliance Lab}
 
 The GPL is a Free Software license with legal teeth.  Unlike licenses like
-the X11-style or various BSD licenses, GPL (and by extention, the LGPL) is
+the X11-style or various BSD licenses, GPL (and by extension, the LGPL) is
 designed to defend as well as grant freedom.  We saw in the last course
 that GPL uses copyright law as a mechanism to grant all the key freedoms
 essential in Free Software, but also to ensure that those freedoms
-propogate throughout the distribution chain of the software.
+propagate throughout the distribution chain of the software.
 
 \section{Termination Begins Enforcement}
 
@@ -155,7 +150,7 @@ and distributing.
 
 \section{Ongoing Violations}
 
-In conjuction with \S 4's termination of violators' rights, there is one
+In conjunction with \S 4's termination of violators' rights, there is one
 final industry fact is added to the mix: rarely, does on engage in a
 single, solitary act of copying, distributing or modifying software.
 Almost always, a violator will have legitimately acquired a copy a GPL'd
@@ -166,10 +161,10 @@ software was put up for download on the Internet.  Regardless of the
 delivery mechanism, violators almost always are engaged in {\em ongoing\/}
 violation of GPL\@.
 
-In fact, when we discover a GPL violation that occured only once --- for
+In fact, when we discover a GPL violation that occurred only once --- for
 example, a user group who distributed copies of a GNU/Linux system without
 source at a meeting once --- we rarely pursue it with a high degree of
-dilligence.  In our minds, that is an educational problem, and unless the
+diligence.  In our minds, that is an educational problem, and unless the
 user group becomes a repeat offender (as it turns out, the never do) we
 simply send an FAQ entry that best explains how user groups can most
 easily comply with GPL, and send them on there merry way.
@@ -184,7 +179,7 @@ educate industries who are making a mistake on a large scale.
 
 In addition, such ongoing violation shows that a particular company is
 committed to a GPL'd product line.  We are thrilled to learn that someone
-is benefitting from Free Software, and we understand that sometimes they
+is benefiting from Free Software, and we understand that sometimes they
 have become confused about the rules of the road.  Rather than merely
 giving us a post mortem to perform on a past mistake, an ongoing violation
 gives us an active opportunity to educate a new contributor the GPL'd
@@ -200,52 +195,662 @@ contrast, we revel in the successes of educating an ongoing violator about
 GPL so that GPL compliance becomes a second-nature matter, and they join
 the GPL ecosystem as contributors.
 
+\section{How are Violations Discovered?}
+
+Our enforcement of GPL is not a fund-raising effort; in fact, FSF's GPL
+compliance lab runs at a loss (in other words, it is subsided by our
+donors).  Our violation reports come from volunteers, who have encountered
+in their business or personal life, a device or software product that
+appears to contain GPL'd software; these reports are usually sent via
+email to $<$license-violation@fsf.org$>$.
+
+Our first order of business, upon receiving such a report, is to seek
+independent confirmation.  When possible, we get a copy of the software
+product.  For example, if it is an offering that is downloadable from a
+website, we download it and investigate ourselves.  When it is not
+possible for us to actually get a copy of the software, we ask the
+reporter to go through the same process we use in examining the software.
+
+By rough estimation, about 95\% of violations at this stage can be
+confirmed by simple commands.  Since almost all violators have merely made
+an error, and have no nefarious intentions, they have made no attempt to
+remove our copyright notices from the software.  Given the third-party
+binary, {\tt tpb}, usually, a simple command (on a GNU/Linux system) such
+as the following will find an Free Software copyright notice and GPL
+reference:
+\begin{quotation}
+{\tt string tpb | grep Copyright}
+\end{quotation}
+In other words, it is usually more than trivial to confirm that GPL'd
+software is included.
+
+Once we have confirmed that a violation has indeed occurred, we must then
+determine whose copyright has been violated.  Contrary to popular belief,
+FSF does not have the power to enforce GPL in all cases.  Since GPL
+operates under copyright law, the powers of enforcement --- to seek
+redress once \S 4 has been invoked --- lies with the copyright holder of
+the software.  FSF is one of the largest copyright holders in the world
+of GPL'd software, but we are by no means the only one.  Thus, we
+sometimes discover that while GPL'd code is present in the software,
+there is no software copyrighted by FSF.
+
+In cases where FSF does not hold copyright interest in the software, but
+we have confirmed a violation, we contact the copyright holders of the
+software, and encourage them to enforce GPL\@.  We offer our good offices
+to help negotiate compliance on their behalf, and many times we help as a
+third party to settle such GPL violations.  However, what we will
+describe in this course is FSF's first-hand experience enforcing its own
+copyrights and GPL\@.
+
 \section{First Contact}
 
 The Free Software community is built on a structure of voluntary
-cooperation and mutual help.
+cooperation and mutual help.  Our community has learned that cooperation
+works best when you assume the best of others, and only change policy,
+procedures and attitudes when some specific event or occurrence indicates
+that a change is necessary.  We treat the process of GPL enforcement in
+the same way; our goal is to encourage violators to join the cooperative
+community of software sharing, so we want to open our hand in friendship
+to them.
 
+Therefore, once we have confirmed a violation, our first assumption is
+that the violation is an oversight or otherwise a mistake due to confusion
+about the terms of the license.  We reach out to the violator and ask them
+to work with us in a collaborative way to bring the product into
+compliance.  We have received the gamut of possible reactions to such
+requests, and in this course, we examine four specific examples of such
+compliance work.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Case Study A}
+\chapter{Case Study: Davrik's Modified GCC}
+
+In our first case study, we will consider Davrik, a company that produces
+software and hardware toolkits to assist OEM vendors who products consumer
+electronic devices.
+
+\section{Facts}
+
+One of Davrik's key products is a Software Development Kit (``SDK'')
+designed to assist developers building software for a specific class of
+consumer electronics devices.
+
+FSF received a report that the SDK may be based on the GNU Compiler
+Collection (which is an FSF-copyrighted collection of tools for software
+development in C, C++ and other popular languages).  FSF investigated the
+claim, but was unable to confirm the violation.  The violation reporter
+was unresponsive to follow-up requests for more information.
+
+Since FSF was unable to confirm the violation, we did not pursue it any
+further.  Bogus reports do happen, and we do not want to burden companies
+with specious GPL violation complaints.  FSF shelved the matter until
+more evidence was discovered.
+
+FSF was later able to confirm the violation when two additional reports
+surfaced from other violation reports, both of whom had used the product
+professional and noticed clear similarities to FSF's GNU GCC\@.  FSF's
+Compliance Engineer asked the reporters to run standard tests to confirm
+the violation, and it was confirmed that the product was indeed a
+derivative work of GCC, ported to Windows and with a number of features
+added, including support for a specific consumer device chipset and
+additional features to aid in the linking process (``LP'') for the
+specific devices.  FSF explained the rights that the GPL afforded these
+customers and pointed out, for example, that Davrik only needed to provide
+source to those in possession of the binaries, and that the users may need
+to request that source (if \S 3(b) was exercised).  The violators
+confirmed that such requests were not answered.
+
+FSF brought the matter to the attention of Davrik, who immediately
+escalated the matter to their attorneys.  After a long negotiation, Davrik
+acknowledged that their SDK was indeed a derivative work of GCC\@.  Davrik
+released most of the source, but some disagreement occurred over whether LP
+was a derivate work of GCC\@.  After repeated FSF inquiries, Davrik
+reaudited the source and discovered that FSF's analysis was correct and
+determined that LP include a number of source files copied from the GCC
+code-base.
+
+\label{davrik-build-problems}
+Once the full software release was made available, FSF asked the
+violation reporters if it addressed the problem.  Reports came back that
+in fact the source did not properly build.  FSF asked Davrik to provide
+better build instructions with the software, and such build instructions
+were incorporated into the next software release.
+
+At FSF's request as well, Davrik informed customers who had previously
+purchased the product that the source was now available, by announcing
+the available on its website and via a customer newsletter.
+
+Davrik did have some concerns regarding patents.  They wished to include a
+statement with the software release that made sure they were not granting
+any patent permission other than what was absolutely required by GPL\@.
+They understood that their patent assertions could not trump any rights
+granted by GPL\@.  The following language was negotiated to be included
+with the release:
+
+\begin{quotation}
+Subject to the qualifications stated below, Davrik, on behalf of itself
+and its Subsidiaries, agrees not to assert the Claims against you for your
+making, use, offer for sale, sale, or importation of the Davrik's GNU
+Utilities or derivative works of the Davrik's GNU Utilities
+("Derivatives"), but only to the extent that any such Derivatives are
+licensed by you under the terms of the GNU General Public License.  The
+Claims are the claims of patents that Davrik or its Subsidiaries have
+standing to enforce that are directly infringed by the making, use, or
+sale of an Davrik Distributed GNU Utilities in the form it was distributed
+by Davrik and that do not include any limitation that reads on hardware;
+the Claims do not include any additional patent claims held by Davrik that
+cover any modifications of, derivative works based on or combinations with
+the Davrik's GNU Utilities, even if such a claim is disclosed in the same
+patent as a Claim.  Subsidiaries are entities that are wholly owned by
+Davrik.
+
+This statement does not negate, limit or restrict any rights you already
+have under the GNU General Public License, Version 2.
+\end{quotation}
+
+This quelled Davrik's concerns about other patent licensing they sought to
+do outside of the GPL'd software, and satisfied FSF's concerns that they
+give no permissions to exercise teachings of patents that were not already
+exercised in their GPL'd software release.
+
+Finally, a GPL Compliance Officer inside Davrik was appointed who is
+responsible for all matters of GPL Compliance inside the company.  Darvik
+is responsible for informing FSF if the position is given to someone else
+inside the company, and making sure that FSF has direct contact
+information with Darvik's Compliance Officer.
+
+\section{Lessons}
+
+This case introduces a number of concepts regarding GPL enforcement.
+
+\begin{enumerate}
+
+\item {\bf Enforcement should not begin until the evidence is confirmed.}
+  Most companies who distribute GPL'd software do so in compliance, and at
+  times, violation reports are mistaken.  Even with extensive efforts in
+  GPL education, many users do not fully understand their rights and the
+  obligations that companies have.  By working through the investigation
+  with reporters, the violation can be properly confirmed, and {\bf the
+    user of the software can be educated about what to expect as a user}.
+  When users and customers of GPL'd products know their rights, what to
+  expect, and how to properly exercise their rights (particularly under \S
+  3(b)), it reduces the chances for user frustration and inappropriate
+  community outcry about an alleged GPL violation.
+
+\item {\bf GPL compliance requires friendly negotiation and
+  cooperation.}  Often, attorneys and managers are legitimately surprised
+  to find out GPL'd software is included in their company's products.
+  Engineers sometimes include GPL'd software without understanding the
+  requirements.  This does not excuse companies from their obligations
+  under the license, but it does mean that care and patience are
+  essential for reaching GPL compliance.  We want companies to understand
+  that participating and benefiting from a collaborative Free Software
+  community is not a burden, so we strive to make the process of coming
+  into compliance when a problem occurs as smooth as possible.
+
+\item {\bf Confirming compliance is a community effort.}  The whole point
+  of making sure that software distributors respect the terms of GPL is to
+  allow a thriving software sharing community to benefit and improve the
+  work.  FSF are not the experts on how a compiler for consumer electronic
+  devices should work.  We therefore inform the community who originally
+  brought the violation to our attention and ask them to assist in
+  evaluation and confirmation of the product's compliance.  Of course, FSF
+  coordinates and oversees the process, but we do not want compliance for
+  compliance's sake; rather, we wish to foster a cooperating community of
+  development around the Free Software in question, and encourage the
+  once-violator to begin participating in that community.
+
+\item {\bf Informing the harmed community is part of compliance.} FSF asks
+  violators to make some attempt --- such as via newsletters and the
+  company's website --- to inform those who already have the products as
+  to their rights under GPL\@.  One of the key thrusts of GPL's \S 1 and
+  \S 3 is to {\em make sure the user knows he has these rights\/}.  If a
+  product was received out of compliance by a customer, they may never
+  actually discover that they had such rights.  Informing them, in a way
+  that is not burdensome but has a high probability of successfully
+  reaching those who would seek to exercise their freedoms, is essential
+  to properly remedy the mistake.
+
+\item {\bf Lines between various copyright, patent, and other legal
+  mechanisms must be precisely defined and considered.}  The most
+  difficult negotiation point of this compliance case was drafting
+  language that simultaneously protected the Davrik's patent rights
+  outside of the GPL'd source, but was consistent with the implicit patent
+  grant in GPL\@.  As we discussed in the first course in this series,
+  there is indeed an implicit patent grant with GPL, thanks to \S 6 and \S
+  7.  However, many companies become nervous and wish to make the grant
+  explicit to assure themselves that the grant is sufficiently narrow for
+  their needs.  We understand that there is no reasonable way to determine
+  what patent claims read on a company's GPL holdings and which do not, so
+  we do not object to general language that explicitly narrows the patent
+  grant to only those patents that were, in fact, exercised by the GPL'd
+  software as released by the company.
+
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Case Study B}
+\chapter{Bracken: a Minor Violation in a GNU/Linux Distribution}
+
+Bracken produces a GNU/Linux operating system product that is sold
+primarily to OEM vendors to be placed in appliance devices that are used
+for a single purpose, such as an Internet-browsing-only device.  The
+product is almost 100\% Free Software, mostly licensed under GPL and
+related Free Software licenses.
+
+FSF found out about this violation through a report first posted in a
+comment on a Slashdot\footnote{Slashdot is a popular news and discussion
+  site for technical readers.} comment, and then later brought to our
+attention by another Free Software copyright holder who had discovered the
+same violation.
+
+Bracken's GNU/Linux product is delivered directly from their website.
+This allowed FSF engineers to directly download and confirm the violation
+quickly.  It was discovered that there were two primary problems with the
+online distribution:
+
+\begin{itemize}
+
+\item No source code nor offer for source code was provided for a number
+  of components for the distributed GNU/Linux system; only binaries were
+  available.
+
+\item An End User License Agreement (``EULA'') was included that
+  contradicted the permissions granted by GPL\@.
+\end{itemize}
+
+FSF contacted Bracken and gave them the details of the violation. Bracken
+immediately ceased distribution of the product temporarily, and set forth
+a plan to bring themselves back into compliance.  This plan included the
+following steps:
+
+\begin{itemize}
+
+\item Bracken attorneys would rewrite the EULA to comply with GPL, and
+  would vet the new EULA through FSF before use.
+
+\item Bracken engineers would provide source side-by-side with the
+  binaries for the GNU/Linux distribution on the site (and on CD's, if
+  ever they distributed that way).
+
+\item Bracken attorneys would run an internal seminar for its engineers
+  regarding GPL proper compliance, to help ensure that such oversights
+  regarding source releases would not occur in the future.
+
+\item Bracken would resume distribution of the product only after FSF
+  formally restored Bracken's distribution rights.
+\end{itemize}
+
+This work was completed in the matter of about a month.  FSF approved the
+new EULA text.  They key portion in the EULA relating to GPL read as
+follows:
+
+\begin{quotation}
+Many of the Software Programs included in Bracken Software are distributed
+under the terms of agreements with Third Parties (``Third Party
+Agreements'') which may expand or limit the Licensee's rights to use
+certain Software Programs as set forth in [this EULA].  Certain Software
+Programs may be licensed (or sublicensed) to Licensee under the GNU
+General Public License and other similar license agreements listed in part
+in this section which, among other rights, permit the Licensee to copy,
+modify and redistribute certain Software Programs, or portions thereof,
+and have access to the source code of certain Software Programs, or
+portions thereof.  In addition, certain Software Programs, or portions
+thereof, may be licensed (or sublicensed) to Licensee under terms stricter
+than those set forth in [this EULA].  The Licensee must review the
+electronic documentation that accompanies certain Software Programs, or
+portions thereof, for the applicable Third Party Agreements.  To the
+extent any Third Party Agreements require that Bracken provide rights to
+use, copy or modify a Software Program that are broader than the rights
+granted to the Licensee in [this EULA], then such rights shall take
+precedence over the rights and restrictions granted in this Agreement
+solely for such Software Programs.
+\end{quotation}
+
+FSF restored Bracken's distribution rights shortly after the work was
+completed as described.
+
+\section{Lessons Learned}
+
+This case was probably them most quickly and easily resolved of all GPL
+violations in the history of FSF's Compliance Lab.  The ease with which
+the problem was resolved shows a number of cultural factors that play a
+role in GPL compliance.
+
+\begin{enumerate}
+
+\item {\bf Companies that understand Free Software culture better have an
+  easier time with compliance.}  Bracken's products were designed and
+  build around the GNU/Linux system and Free Software components.  Their
+  engineers were deeply familiar with the Free Software ecosystem, and
+  their lawyers had seen and reviewed GPL before.  The violation was
+  completely an honest mistake, and since the culture inside the company
+  had already adapted to the cooperative style of resolution to problems
+  in the Free Software world, there was very little work for either
+  party to bring the product into compliance.
+
+\item {\bf When people in key positions understand the Free Software
+  nature of their software products, compliance concerns are as mundane as
+  minor software bugs.}  Even the most functional system or structure has
+  its problems, and successful business often depends on agile response to
+  the problems that do come up; avoiding problems altogether is a pipe
+  dream.  Minor GPL violations can and do happen even with well-informed
+  redistributors, but when the company --- and in particular, the lawyers,
+  managers, and engineers working on the Free Software product lines --
+  have adapted to the cooperate Free Software culture, resolving such
+  problems are merely a mundane details of typical operation and resolved
+  just as easily.
+
+\item {\bf Legally, distribution must stop when a violation is
+  identified.}  In our opinion, Bracken went above and beyond the call by
+  ceasing distribution while the violation was being resolved.  Under GPL
+  \S 4, the redistributor loses the right to distribute the software, and
+  thus they are in ongoing violation of copyright law as they distribute.
+  It is FSF's policy to temporarily allow distribution while compliance
+  negotiations are ongoing and only in the most extreme cases where the
+  other party appears to be negotiating in bad faith does FSF even
+  threaten an injunction on copyright grounds.  However, Bracken --- as a
+  good Free Software citizen --- chose to be on the safe side and do the
+  legally correct thing while the violation case was pending.  Since from
+  start to finish it took less than am month to resolve, this lapse in
+  distribute did not, to FSF's knowledge, impact their business in any
+  way.
+
+\item {\bf EULAs are a common area for GPL problems.}  Often, EULAs are
+  drafted from boilerplate text that a company uses for all its products.
+  Even the most diligent attorneys forget or simply do not know that a
+  product contains software licensed under GPL and other Free Software
+  licenses.  Drafting a EULA that accounts for such licenses is
+  straightforward; the text quoted above works just fine.  The EULA must
+  be designed so that it does not trump and rights and permissions already
+  granted by GPL\@, and it must be certain that if there is a conflict
+  between EULA and GPL, with regard to GPL'd code, that the GPL is the
+  overriding license.
+
+\item {\bf Compliance Officers are rarely necessary when companies are
+  educated about GPL compliance.}  As we saw in the Davrik case, FSF asks
+  that a formal ``GPL Compliance Officer'' be appointed inside a
+  previously violating organization to shepherd the organization to a
+  cooperative approach with regard to GPL compliance.  However, when FSF
+  sees that an organization already has such an approach, there is no
+  need to request that such an officer be appointed.
+
+\end{enumerate}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Case Study C}
+\chapter{Vigorien: Security, Export Controls, and GPL Compliance}
+
+This case study introduces how concerns of ``security through obscurity''
+and regulatory problems can impact GPL compliance matters.
+
+\section{The Facts}
+
+Vigorien distributes a backup solution product that allows system
+administrators to create encrypted backups of file-systems on Unix-like
+computers.  The product is based on GNU tar, a backup utility that
+replaces the standard Unix utility, ``tar'', but has additional features.
+
+Vigorien's backup solution added cryptographic features to GNU tar, and
+included a suite of utilities and graphical user interfaces surrounding
+GNU tar to make backups convenient.
+
+FSF discovered the violation from a user report, and determined that the
+cryptographic features were the only part of the product that constituted
+a derivative work of GNU tar; the extraneous utilities merely made
+``shell'' calls out to GNU tar.  FSF requested that Vigorien come into
+compliance with GPL by releasing the source of GNU tar, with the
+cryptographic modifications, to its customers.
+
+Vigorien released the GNU tar sources, but kept the cryptographic library
+proprietary.  They argued that the security of their system depending on
+keeping the software proprietary and that regardless, USA export
+restrictions on cryptographic software prohibited such a release.  FSF
+disputed the claim on the first count, pointing out that Vigorien's had
+only one option if they did not want to release the source: they would
+have to remove GNU tar from the software and not distribute it further.
+Vigorien rejected this suggestion, since GNU tar was an integral part of
+the product and the security changes were useless without GNU tar.
+
+Regarding the export control claims, FSF proposed a number of options,
+including release of the source from one of Vigorien's divisions overseas
+where no such restrictions occurred, but Vigorien argued that the problem
+was insoluble because they operated primarily in the USA\@.
+
+The deadlock on the second issue was resolved when those cryptographic
+export restrictions were lifted shortly thereafter, and FSF again raised
+the matter with Vigorien.  At that point, they dropped the first claim and
+agreed to release the remaining source module to their customers.  They
+did so, and the violation was resolved.
+
+
+\section{Lessons Learned}
+
+\begin{enumerate}
+
+\item {\bf Removing the GPL'd portion of the product is always an option.}
+  Many violators' first response is to simply refuse to release the source
+  code as GPL required.  FSF offers the option to simply remove the GPL'd
+  portions from the product and continue along without them indefinitely.
+  Every case where this has been suggested has led to the same conclusion.
+  Like Vigorien, the violator argues that the product cannot function
+  without the GPL'd components and they cannot effectively replace them.
+
+  Such an outcome of course is further evidence that the combined work in
+  question is indeed a derivative work of the original GPL'd component.
+  If the other components cannot stand on their own and be useful without
+  the GPL'd portions, then one cannot effectively argue that the work as a
+  whole is not a derivative of the GPL'd portions.
+
+
+\item {\bf ``Security'' concerns do not exonerate a distributor from GPL
+  obligations, and ``security through obscurity'' does not work anyway.}
+  The argument that ``this is security software, so it cannot be released
+  in source form'' is not a valid defense for explaining why the terms of
+  the GPL are ignored.  If companies do not want to release source code
+  for some reason, then they should not base the work on GPL'd software.
+  No external argument for non-compliance can hold weight if the work as
+  whole is indeed a derivative work of a GPL'd program.
+
+  The ``security concerns'' argument is often floated as a reason to keep
+  software proprietary, but the computer security community has on
+  numerous occasions confirmed that such arguments are entirely specious.
+  Security experts have found --- since the beginnings of the field of
+  cryptography in the ancient word --- that sharing results about systems
+  and having such systems withstand peer review and scrutiny builds the
+  most secure systems.  While full disclosure may help some who wish to
+  compromise security, it helps those who want to fix problems even more
+  by identifying them early.
+
+\item {\bf External regulatory problems can be difficult to resolve.}
+  GPL, though copyright law, does not have the power to trump regulations
+  like export controls.  While Vigorien's ``security concerns'' were
+  specious, their export control concerns were not.  It is indeed a
+  difficult problem that FSF acknowledges.  We want compliance with GPL
+  and respect for users' freedoms, but we certainly do not expect
+  companies to commit criminal offenses for the sake of compliance.  We
+  will see more about this issue in our next case study.
+\end{enumerate}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Case Study D}
+\chapter{Haxil, Polgara, and Thesulac: Mergers, Upstream Providers and Radio Devices}
 
-Reminder about how organizations themselves work.  We don't have to
-educate the organization, just call their attention to something.
+This case study considers an ongoing (at the time of writing) violation
+that occurred.  By the end of the investigation period, three companies
+were involved and many complex issues arose.
 
-Working on DVD cases -- interested in the question on how one plays DVD
-on one ligitimate owns, if one uses GNU/Linux give the licensing
-structure of DVD content scrambling system.
+\section{The Facts}
 
-An article from the IBM guy who had arranged to have DVD player
-application by a vendor for includsion with IBM distributed based T20s.
+Haxil produced a consumer electronics device which included a mini
+GNU/Linux distribution to control the device.  The device was of interest
+to many technically minded consumers, who purchased the device and very
+quickly discovered that Free Software was included without source.
+Mailing lists throughout the Free Software community erupted with
+complaints about the problem, and FSF quickly investigated.
 
-They shimed the kernel, it was a GPL problem.
+FSF confirmed that FSF-copyrighted GPL'd software was included.  In
+addition, the whole distribution included GPL'd works from hundreds of
+individual copyright holders, many of whom were, at this point, up in
+arms about the violation.
 
-Couple of weeks, we've looked into it, and we're going back to the
-contractor and having them redo the thing to comply with GPL.
+Meanwhile, Haxil was in the midst of being acquired by Polgara.  Polgara
+was as surprised as everyone else to discover the product was based on
+GPL'd software; it had not been part of the disclosures made during
+acquisition.  FSF contacted both Haxil and Polgara, and product managers
+who had transitioned into the ``Haxil division'' of newly merged Polgara
+company worked and Polgara's General Counsel's office worked with FSF on
+the matter.
 
-contaminate a video output port with MacroVision.
+FSF meanwhile formed a coalition with the other primary copyright holders
+to pursue the enforcement effort on their behalf.  FSF communicated
+directly with Polgara's representatives to begin working through the
+issues on behalf of FSF itself and the Free Software community at large.
 
-kernel mods 
+Polgara pointed out that the software distribution they used was mostly
+contributed by an upstream provider, Thesulac, and Haxil's changes to that
+code base were minimal.  Polgara negotiated with Thesulac to obtain the
+source, although the issue was moving very slowly in the channels between
+Polgara and Thesulac.
+
+FSF encouraged a round-table meeting so that high bandwidth communication
+could occur between FSF, Polgara and Thesulac.  Polgara and Thesulac
+agreed, and that discussion began.  Thesulac provided nearly complete
+sources to Polgara, and Polgara made a full software release on their
+website.  At the time of writing, that software still has some build
+problems (similar those that occurred with Davrik, as described in
+Section~\ref{davrik-build-problems}).  FSF continues to negotiate with
+Polgara and Thesulac to resolve these problems, which have a clear path to
+solution and are expected to resolve.
+
+Similar to the Vigorien case, Thesulac has regulatory concerns.  In this
+case, it is not export controls --- an issue that has since been resolved
+--- but radio spectrum regulation.  Since this consumer electronic device
+contains a software-programmable radio transmitter, regulations in (at
+least) the USA and Japan prohibit release of those portions of the code
+that operate the device.  Since this is a low-level programming issue, the
+changes to operate the device are a derivative work of the kernel named
+Linux.  This situation remains unresolved at the time of writing, although
+FSF continues to negotiation with Thesulac and the Linux community
+regarding the problem.
+
+\section{Lessons Learned}
+
+\begin{enumerate}
+
+\item {\bf Community outrage, while justified, can often make negotiation
+  more difficult.}  FSF has a strong policy to not publicized names of GPL
+  violators if they are negotiating in a friendly way and operating in
+  good faith toward compliance.  Most violations are honest mistakes, and
+  FSF sees no reason to publicly admonish violators who genuinely see to
+  come into compliance with GPL and to work hard staying in compliance.
+
+  This case was so public in the Free Software community that both Haxil's
+  and Polgara's representatives were nearly shell-shocked by the time FSF
+  began negotiations.  There was much work required to diffuse the
+  situation.  We empathize with our community and their outrage about GPL
+  violations, but we also want to follow a path that leads expediently
+  to compliance.  In our experience, public outcry works best as a last
+  resort, not the first.
+
+\item {\bf For software companies, GPL compliance belongs on a corporate
+  acquisition checklist. }  Polgara was truly amazed that Haxil had used
+  GPL'd software in a major new product line but never informed Polgara
+  during the acquisition process.  While GPL compliance is not a
+  particularly difficult matter, it is an additional obligation that comes
+  along with the product line.  When planning mergers and joint ventures,
+  include lists of GPL'd components contained in the products discussed.
+
+\item {\bf Compliance problems of upstream providers do not excuse a
+  violation for the downstream distributor.}  To paraphrase \S 6, upstream
+  providers are not responsible for enforcing compliance of their
+  downstream, nor are downstream distributors responsible for compliance
+  problems of upstream providers.  However, engaging in distribution of
+  GPL'd works out of compliance is still just that --- a compliance
+  problem.  When FSF carries out enforcement, we are patient and
+  sympathetic when the problem appears to be upstream.  In fact, we urge
+  the violator to point us to the upstream provider to talk to them, and
+  in this case we were happy to begin negotiations with Thesulac.  However,
+  Polgara still has an obligation to bring their product into compliance.
+
+\item {\bf It behooves upstream providers to advise downstream
+  distributors about compliance matters.}  FSF has encouraged Thesulac to
+  distribute a ``good practices for GPL compliance'' document with their
+  product.  Polgara added various software components to Thesulac's
+  product, and it is conceivable that such additions can introduce
+  compliance.  In FSF's opinion, Thesulac is no way legally responsible
+  for such a violation introduced by their customer, but it behooves them
+  from a business standpoint to educate their customers about using the
+  product.  We can argue whether or not it is your coffee vendor's fault
+  if you burn yourself with their product, but (likely) no one on either
+  side would dispute the prudence of placing a ``caution: hot'' label on
+  the cup.
+
+\item {\bf FSF enforcement often avoids redundant enforcement cases from
+  many parties.}  Most Free Software systems have hundreds of copyright
+  holders.  Some have thousands.  FSF is in a unique position as one of
+  the largest single copyright holders on GPL'd software and as a
+  respected umpire in the community neutrally enforcing the rules of the
+  GPL road.  FSF works hard in the community to convince copyright
+  holders that consolidating GPL claims through FSF is better for them,
+  and more likely to yield positive compliance results.
+
+  A few copyright holders engage in the ``proprietary relicensing''
+  business, so they use GPL enforcement as a sales channel for that
+  business.  FSF, as a community-oriented not-for-profit organization,
+  seeks only to preserve the freedom of Free Software in its enforcement
+  efforts.  As it turns out, most of the community of copyright holders
+  of Free Software want the same thing.  Share and share alike is a
+  simple rule to follow, and following that rule to FSF's satisfaction
+  usually means you are following it to the satisfaction of the entire
+  Free Software community.
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Good Practices for Compliance}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Ethical Considerations for the Attorney Practicing Free Software}
 
+Generally, from the experience of GPL enforcement, we glean the following
+general practices that can help in GPL compliance for organizations that
+distribute products based on GPL'd software:
+
+\begin{enumerate}
+
+\item Talk to your software engineers and ask them where they got the
+  components they use in the products they build.  Find out if GPL'd
+  components are present.
+
+\item Teach your engineering staff to pay attention to license documents.
+  Give them easy-to-follow policies to get approval for using a Free
+  Software component.
+
+\item Build a ``Free Software Licensing'' committee that handles requests
+  and questions about GPL and other Free Software licenses.
+
+\item Add ``What parts of your products are under GPL or other Free
+  Software licenses?'' to your checklist of questions to ask when you
+  consider mergers, acquisitions, or joint ventures.
+
+\item Encourage your engineers to participate collaboratively with GPL'd
+  software development.  The more knowledge about the Free Software world
+  your organization has, the better equipped it is to deal with this
+  rapidly changing field.
+
+\item When someone points out a potential GPL violation in one of your
+  products, do not assume the product line is doomed.  GPL is not a virus;
+  merely having GPL'd code in one part of a product does not necessarily
+  mean that every related product must also be GPL'd.  And, even if some
+  software needs to be released that was not before, the product will
+  surely still survive.  In FSF's enforcement efforts, we have not yet
+  seen a product line die because source was released to customers in
+  compliance with GPL.
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
 
 % LocalWords:  proprietarize redistributors sublicense yyyy Gnomovision EULAs
 % LocalWords:  Yoyodyne FrontPage improvers Berne copyrightable Stallman's GPLs
 % LocalWords:  Lessig Lessig's UCITA pre PDAs CDs reshifts GPL's Gentoo glibc
-% LocalWords:  TrollTech administrivia LGPL's MontaVista OpenTV
+% LocalWords:  TrollTech administrivia LGPL's MontaVista Davrik Davrik's Darvik
+% LocalWords:  Darvik's Slashdot sublicensed Vigorien Vigorien's Haxil Polgara
+% LocalWords:  Thesulac Polgara's Haxil's Thesulac's
