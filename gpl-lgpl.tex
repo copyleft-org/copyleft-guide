@@ -832,7 +832,7 @@ receive this no-charge license.  Namely, they receive it ``under the terms
 of this License'', the GPL.  When an entity \emph{chooses} to redistribute
 a derivative work of GPL'ed software, the license of that whole derivative
 work must be GPL and only GPL\@.  In this manner, \S 2(b) dovetails nicely
-with \S 6 (as discussed in Section\~ref{GPLs6} of this tutorial).
+with \S 6 (as discussed in Section~\ref{GPLs6} of this tutorial).
 
 \medskip
 
@@ -852,7 +852,200 @@ software alongside proprietary software or other unrelated Free Software,
 as long as the terms of GPL are adhered to for those packages that are
 truly GPL'ed.
 
-\section{GPL, \S 3}
+\section{GPL \S 3: Producing Binaries}
+
+% FIXME: need name of a novelist who writes very obscurely and obliquely.
+
+Software is a strange beast when compared to other copyrightable works.
+It is currently impossible to make a film or a book that can be truly
+obscured.  Ultimately, the full text of a novel must presented to the
+reader as words in some human-readable language so that they can enjoy the
+work.  A film, even one directed by David Lynch, must be perceptible by
+human eyes and ears to have any value.
+
+Software is not so.  While the source code, the human-readable
+representation of software is of keen interest to programmers, users and
+programmers alike cannot make the proper use of software in that
+human-readable form.  Binary code --- the ones and zeros that the computer
+can understand --- must be producible and attainable for the software to
+be fully useful.  Without the binaries, be they in object or executable
+form, the software serves only the didactic purposes of computer science.
+
+Under copyright law, binary representations of the software are simply
+derivative works of the source code.  Applying a systematic process (i.e.,
+``compilation'') to a work of source code yields binary code.  The binary
+code is now a new work of expression fixed in the tangible medium of
+electronic file storage.
+
+Therefore, for GPL'ed software to be useful, the GPL, since it governs the
+rules for creation of derivative works, must grant permission for the
+generation of binaries.  Furthermore, notwithstanding the relative
+popularity of source-based GNU/Linux distributions like ``Gentoo'', users
+find it extremely convenient to receive distribution of binary software.
+Such distribution is the redistribution of derivative works of the
+software's source code.  \S 3 addresses the matter of creation and
+distribution of binary versions.
+
+Under \S 3, binary versions may be created and distributed under the terms
+of \S\S 1--2, so all the material previously discussed applies here.
+However, \S 3 must go a bit further.  Access to the software's source code
+is an incontestable prerequisite for the exercise of the fundamental
+freedoms to modify and improve the software.  Making even the most trivial
+changes to a software program at the binary level is effectively
+impossible.  \S 3 must ensure that the binaries are never distributed
+without the source code, so that these freedoms are ensured to be passed
+along the distribution chain.
+
+\S 3 permits distribution of binaries, and then offers three options for
+distribution of source code along with binaries.  The most common and the
+least complicated is the option given under \S 3(a).
+
+\S 3(a) offers the option to directly accompany the source code alongside
+the distribution of the binaries.  This is by far the most convenient
+option for most distributors, because it means that the source-code
+provision obligations are fully completed at the time of binary
+distribution (more on that later).
+
+Under \S 3(a), the source code code provided must be the ``corresponding
+source code''.  Here ``corresponding'' primarily means that the source
+code provided must be that code used to produce the binaries being
+distributed.  That source code must also be ``complete''.  A later
+paragraph of \S 3 explains in detail what is meant by ``complete''.  In
+essence, it is all the material that a programmer of average skill would
+need to actually use the source code to produce the binaries she has
+received.  Complete source is required so that, if the licensee choses,
+she should be able to exercise her freedoms to modify and redistribute
+changes.  Without the complete source, it would not be possible to make
+changes that were actually directly derived from the version received.
+
+Furthermore, \S 3 is defending against a tactic that has in fact been seen
+in FSF's GPL enforcement.  Under GPL, if you pay a high price for a copy
+of GPL'ed binaries (which comes with corresponding source, of course), you
+have the freedom to redistribute that work at any fee you choose, or not
+at all.  Sometimes, companies attempt to build a racket by producing very
+specialized binaries (perhaps for an obscure architecture), and then
+giving source code that does corresponding, but not giving the
+``incantations'' and build plans they used to make that source compile
+into the specialized binaries.  Therefore, \S 3 that the source code
+include ``meta-material'' like scripts, interface definitions, and other material
+that is used to ``control compilation and installation'' of the binaries.
+In this manner, those further down the distribution chain are assured that
+they have the unabated freedom to build their own derivative works from
+the sources provided.
+
+FSF (as authors of GPL) realizes that software distribution comes in many
+forms.  Embedded manufacturers, for example, have the freedom to put
+GPL'ed software into their PDAs with very tight memory and space
+constraints.  In such cases, putting the source right alongside the
+binaries on the machine itself might not be an option.  While it is
+recommended that this be the default way that people comply with GPL, the
+GPL does provide options when such distribution is infeasible.
+
+\S 3, therefore, allows source code to be provided on any physical
+``medium customarily used for software interchange''.  By design, this
+phrase covers a broad spectrum.  At best, FSF can viably release a new GPL
+every ten years or so.  Thus, phrases like this must be adaptive to
+changes in the technology.  When GPL version 2 was first published in June
+1991, distribution on magnetic tape was still common, and CD was
+relatively new.  Today, CD is the default, and for larger systems DVD-ROM
+is gaining adoption.  This language must adapt with changing technology.
+
+Meanwhile, the binding created by the word ``customarily'' is key.  Many
+incorrectly believe that distributing binary on CD and source on the
+Internet is acceptable.  In the corporate world, it is indeed customary to
+simply download CDs worth of data over a T1 or email large file
+attachments.  However, even today in the USA, many computer users with
+CD-ROM drives are not connected to the Internet, and most people connected
+to the Internet are connected via a 56K dial-up connection.  Downloading
+CDs full of data is not customary for them in the least.  In some cities
+in Africa, computers are becoming more common, but Internet connectivity
+is still available only at a few centralized locations.  Thus, the
+``customs'' here have must have a worldwide scope in context, and simply
+providing source on the Internet --- while it is a kind, friendly and
+useful thing to do --- is not usually sufficient.
+
+Note, however, a major exception to this rule, given by the last paragraph
+of \S 3.  \emph{If} distribution of the binary files is made only on the
+Internet (i.e., ``from a designated place''), \emph{then} simply providing
+the source code right alongside the binaries in the same place is
+sufficient to comply with \S 3.
+
+\midskip
+
+As is shown above, Under \S 3(a), embedded manufacturers can put the
+binaries on the device and ship the source code along on a CD\@.  However,
+sometimes this turns out to be too costly.  Including a CD with every
+device could prove too costly, and may practically (although not legally)
+prohibit using GPL'ed software.  For this situation and others like it, \S
+3(b) is available.
+
+\S 3(b) allows a distributor of binaries to instead provide a written
+offer for source code alongside those binaries.  This is useful in two
+specific ways.  First, it may turn out that most users do not request the
+source, and thus the cost of producing the CDs is saved --- a financial
+and environmental windfall.  In addition, along with a \S 3(b) compliant
+offer for source, a binary distributor might choose to \emph{also} give a
+URL for source code.  Many who would otherwise need a CD with source might
+turn out to have those coveted high bandwidth connections, and are able to
+download the source instead --- again yielding environmental and financial
+windfalls.
+
+However, note that regardless of how many users prefer to get the source
+online, that \S 3(b) does place lasting long-term obligations on the
+binary distributor.  The binary distributor must be prepared for three
+years to honor that offer for source, and ship it out (just as they would
+have had to do under \S 3(a)) at a moment's notice when they receive such
+a request.  There is real organizational cost here: support engineers for
+three years must be trained how to route source requests, and source CD
+images for every release version for the last three years must be kept on
+hand to burn such CDs quickly.  The requests might not even come from
+actual customers; the offer for source must be valid for ``any third
+party''.
+
+That phrase is another place where some get confused --- thinking again
+that full public distribution of source is required.  The offer for source
+must be valid for ``any third party'' because of the freedoms of
+redistribution granted by \S\S 1--2.  A company may ship a binary image
+and an offer for source to only one customer.  However, under GPL, that
+customer has the right to redistribute that software to the world if she
+likes.  When she does, that customer has an obligation to make sure that
+those who receive the software from her can exercise their freedoms under
+GPL --- including the freedom to modify, rebuild, and redistribute the
+source code.
+
+This is where \S 3(c) comes into play.  Ultimately, \S 3(b) is a big
+compromise.  It separates the binary software from the key tool that
+people can use to exercise their freedom.  The GPL permits this separation
+because it is good for redistributors, and those users who turn out not to
+need the source.  However, to ensure equal rights for all software users,
+anyone along the distribution chain must have the right to get the source
+and exercise those freedoms that require it.
+
+Meanwhile, \S 3(b)'s compromise primarily benefits companies who
+distribute binary software commercially.  Without \S 3(c), that benefit
+would be at the detriment of the companies' customers; the burden of
+source code provision would be unfairly shifted to the companies'
+customers.  A customer, who had received binaries with a \S 3(b)-compliant
+offer, would be required under GPL (sans \S 3(c)) to acquire the source,
+merely to give a copy of the software to a friend who needed it.  \S 3(c)
+reshifts this burden to entity who benefits from \S 3(b).
+
+\S 3(c) allows those who undertake \emph{non-commercial} distribution to
+simply pass along a \S 3(b)-compliant source code offer.  The customer who
+wished to give a copy to her friend can now do so without provisioning the
+source, as long as she gives that offer to her friend.  By contrast, if
+she wanted to go into business for herself selling CDs of that software,
+she would have to acquire the source and either comply via \S 3(a), or
+write her own \S 3(b)-compliant source offer.
+
+This process is precisely the reason why a \S 3(b) source offer must be
+valid for all third parties.  At the time the offer is made, there is no
+way of knowing who might end up non-commercially receiving a copy of the
+software.  Companies who choose to comply via \S 3(b) must thus be
+prepared to honor all incoming source code requests.  For this and the
+many other additional necessary complications under \S\S 3(b--c), it is
+only rarely a better option than complying via \S 3(a).
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Defending Freedom On Many Fronts}
@@ -872,16 +1065,16 @@ truly GPL'ed.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Odds, Ends, and Absolutely No Warranty}
 
-\section{GPL, \S 8}
+\section{GPL \S 8}
 \label{GPLs8}
 
-\section{GPL, \S 9}
+\section{GPL \S 9}
 \label{GPLs9}
 
-\section{GPL, \S 10}
+\section{GPL \S 10}
 \label{GPLs10}
 
-\section{GPL, \S 11}
+\section{GPL \S 11}
 \label{GPLs11}
 
 There was a case where the disclaimer of a contract was negated because it
@@ -1333,4 +1526,4 @@ General Public License instead of this License.
 
 % LocalWords:  proprietarize redistributors sublicense yyyy Gnomovision EULAs
 % LocalWords:  Yoyodyne FrontPage improvers Berne copyrightable Stallman's GPLs
-% LocalWords:  Lessig Lessig's UCITA pre
+% LocalWords:  Lessig Lessig's UCITA pre PDAs CDs reshifts
