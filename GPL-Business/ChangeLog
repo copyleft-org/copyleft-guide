@@ -1,0 +1,23 @@
+2003-05-26  Bradley M. Kuhn  <bkuhn@fsf.org>
+
+	* gpl-business.tex (subsection{The Freedom to Copy and Share}):
+	Wrote subsection.
+	(subsection{The Freedom to Share Improvements}): Wrote subsection.
+
+2003-05-25  Bradley M. Kuhn  <bkuhn@fsf.org>
+
+	* gpl-business.tex (subsection{The Freedom to Change and Modify}):
+	Wrote subsection.
+
+2003-05-24  Bradley M. Kuhn  <bkuhn@fsf.org>
+
+	* gpl-business.tex (section{The Free Software Definition}):
+	Started section.
+	(subsection{The Freedom to Run}): Wrote subsection.
+
+2003-05-23  Bradley M. Kuhn  <bkuhn@fsf.org>
+
+	* gpl-business.tex (chapter{The GNU General Public License}):
+	Formatted GPL for LaTeX.
+	Added abstract from website into document.
+	(chapter{What Is Free Software?}): Began chapter.
