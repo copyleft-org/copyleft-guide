@@ -203,7 +203,7 @@ restricted.
 It was once rare that this freedom was restricted by even proprietary
 software; today it is not so rare.  Most End User Licensing Agreements
 (EULAs) that cover most proprietary software restrict some types of use.
-For example, some versions of Microsoft's Frontpage software prohibit use
+For example, some versions of Microsoft's FrontPage software prohibit use
 of the software to create websites that generate negative publicity for
 Microsoft.  Free Software has no such restrictions; everyone is free to
 use Free Software for any purpose whatsoever.
@@ -581,7 +581,7 @@ GPL\@.  In this chapter, we consider the core terms: GPL \S\S 0--3.  These
 are the sections of the GPL that fundamentally define the legal details of
 how software freedom is respected.
 
-\section{GPL, \S 0: Freedom to Run}
+\section{GPL \S 0: Freedom to Run}
 
 \S 0, the opening section of GPL, sets forth that the work is governed by
 copyright law.  It specifically points out that it is the ``copyright
@@ -594,7 +594,7 @@ system under which it is governed.  Specifically, it states:
 Activities other than copying, distribution and modification are not
 covered by this License; they are outside its scope.
 \end{quote}
-In essence, the license governs \emph{only} those activites and all other
+In essence, the license governs \emph{only} those activities and all other
 activities are unrestricted, provided that no other agreements trump GPL
 (which they cannot; see Sections~\ref{GPLs6} and~\ref{GPLs7}).  This is
 very important, because the Free Software community heavily supports
@@ -615,7 +615,7 @@ novel for the purpose of learning how to be a better programmer.
 
 \medskip
 
-Thus, the GPL protects users fair and uregulated use rights precisely by
+Thus, the GPL protects users fair and unregulated use rights precisely by
 not attempting to cover them.  Furthermore, the GPL ensures the freedom
 to run specifically by stating the following:
 \begin{quote}
@@ -625,15 +625,232 @@ Thus, users are explicitly given the freedom to run by \S 0.
 
 \medskip
 
-The bulk of \S 0 not mentioned here gives definitions for other terms used
+The bulk of \S 0 not yet discussed gives definitions for other terms used
 throughout.  The only one worth discussing in detail is ``work based on
 the Program''.  The reason this definition is particular interesting is
-that 
+not for the definition itself, which is rather straightforward, but the
+because it clears up a common misconception about the GPL\@.
 
+The GPL is often mistakenly criticized because it fails to give a
+definition of ``derivative work''.  In fact, it would be incorrect and
+problematic if the GPL attempt to define this.  A copyright license, in
+fact, has no control over what may or may not be a derivative work.  This
+matter is left up to copyright law, not the licenses that utilize it.
 
-\section{GPL, \S 1}
+It is certainly true that copyright law as a whole does not propose clear
+and straightforward guidelines for what is and is not a derivative
+software work under copyright law.  However, no copyright license --- not
+even the GNU GPL -- can be blamed for this.  Legislators and court
+opinions must give us guidance to decide the border cases.
 
-\section{GPL, \S 2}
+\section{GPL \S 1: Verbatim Copying}
+
+GPL \S 1 covers the matter of redistributing the source code of a program
+exactly as it was received.  This section is quite straightforward.
+However, there are a few details worth noting here.
+
+The phrase ``in any medium'' is important.  This, for example, gives the
+freedom to publish a book that is the printed copy of the program's source
+code.  It also allows for changes in the medium of distribution.  Some
+vendors may ship Free Software on a CD, but others may place it right on
+the hard drive of a pre-installed computer.  Any such redistribution media
+is allowed.
+
+Preservation of copyright notice and license notifications are mentioned
+specifically in \S 1.  These are in some ways the most important part of
+the redistribution, which is why they are mentioned by name.  The GPL
+always strives to make it abundantly clear to anyone who receives the
+software what its license is.  The goal is to leave no reason that someone
+would be surprised that the software she got was licensed under GPL\@.
+Thus throughout the GPL, there are specific reference to the importance of
+notifying others down the distribution chain that they have rights under
+GPL.
+
+Also mentioned by name is the warranty disclaimer.  Most people today do
+not believe that software comes with any warranty.  Notwithstanding the
+proposed state-level UCITA bills (which have never obtained widespread
+adoption), there are little or no implied warranties with software.
+However, just to be on the safe side, GPL clearly disclaims them, and the
+GPL requires redistributors to keep the disclaimer very visible.  (See
+Sections~\ref{GPLs11} and~\ref{GPLs12} of this tutorial for more on GPL's
+warranty disclaimers.)
+
+Note finally that \S 1 begins to set forth the important defense of
+commercial freedom.  \S 1 clearly states that in the case of verbatim
+copies, one may make money.  Redistributors are fully permitted to charge
+for the redistribution of copies of Free Software.  In addition, they may
+provide the warranty protection that the GPL disclaims as an additional
+service for a fee.  (See Section~\ref{Business Models} for more discussion
+on making profit from Free Software redistribution.)
+
+\section{GPL \S 2: Share and Share Alike}
+
+Many consider \S 2 the heart and soul of the GPL\@.  For many, this is
+where the ``magic'' happens that defends software freedom along the
+distribution chain.  I certainly agree that if GPL has a soul, this is
+where it is.  However, I argue that the heart is in fact contained in \SS
+4--5 (see Section~\ref{GPLs4} and~\ref{GPLs5} of this tutorial).  But, for
+the moment, let us consider the soul.
+
+\S 2 gives the only permission in the GPL that governs the modification
+controls of copyright law.  If someone modifies a GPL'ed program, she is
+bound in the making those changes by \S 2.  The goal here is to ensure
+that the body of GPL'ed software, as it continues and develops, remains
+Free as in freedom.
+
+To achieve that goal, \S 2 first sets forth that the rights of
+redistribution modified versions are the same as those for verbatim
+copying, as presented in \S 1.  Therefore, the details of charging,
+keeping copyright notices in tact, and other \S 1 provisions are in tact
+here as well.  However, there are three additional requirements.
+
+The first (\S 2(a)) requires that modified files carry ``prominent
+notices'' explaining what changes were made and the date of such changes.
+The goal here is not to put forward some specific way of marking changes,
+or controlling the process of how changes get made.  Primarily, \S 2(a)
+seeks to ensure that those receiving modified versions what path it took
+to them.  For some users, it is important to know that they are using the
+canonical version of program, because while there are many advantages to
+using a fork, there are a few disadvantages.  Users should be informed the
+historical context of the software version they use, so that they can make
+proper support choices.  Finally, \S 2(a) serves an academic purpose ---
+ensuring that future developers can use a diachronic approach to
+understand the software.
+
+\medskip
+
+The second requirement (\S 2(b)) contains the four short lines that embody
+the legal details of ``share and share alike''.  These 46 words are
+considered by some to be the most worthy of careful scrutiny.  It is worth
+the effort to carefully understand what each clause is saying, because \S
+2(b) can be a source of great confusion when not properly understood.
+
+In considering \S 2(b), first note the qualifier: it only applies to
+derivative works that ``you distribute or publish''.  Despite years of
+education efforts by FSF on this matter, many still believe that modifiers
+of GPL'ed software are required by the license to publish or otherwise
+share their changes.  On the contrary, \S 2(b) {\bf does not apply if} the
+changes are never distributed.  Indeed, the freedom to make private,
+personal changes to software that are not shared should be protected and
+defended\footnote{FSF does maintain that there is an {\bf ethical}
+  obligation to redistributor changes that are generally useful, and often
+  encourages companies and individuals to do so.  However, there is a
+  clear distinction between what one {\bf ought} to do and what one {\bf
+    must} do.}.
+
+Next, we again encounter the same matter that appears in \S 0, in the
+following text:
+\begin{quote}
+... that in whole or part contains or is derived from the Program or any
+  part thereof,
+\end{quote}
+Again, the GPL relies here on what the copyright law says is a derivative
+work.  If, under copyright law, the modified version ``contains or is
+derived from'' the GPL'ed software, then the requirements of \S 2(b)
+apply.  The GPL invokes its control as a copyright license over the
+modification of the work in combination with its control over distribution
+of the work.
+
+The final clause of \S 2(b) describes what the licensee must do if she is
+distributing or publishing a work that is deemed a derivative work under
+copyright law --- namely, the following:
+\begin{quote}
+[The work must] be licensed as a whole at no charge to all third parties
+under the terms of this License.
+\end{quote}
+That is probably the most tightly-packed phrase in all of the GPL\@.
+Consider each subpart carefully.
+
+The work ``as a whole'' is what is to be licensed.  This is an important
+point that \S 2 spends an entire paragraph explaining; thus this phrase is
+worthy of a lengthy discussion here.  As a programmer modifies a software
+program, she generates new copyrighted material --- fixing ideas in the
+tangible medium of electronic file storage.  That programmer is indeed the
+copyright holder of those new changes.  However, those changes are part
+and parcel to the original worked distributed to the programmer under
+GPL\@.  Thus, the license of the original work affects the license of the
+new whole derivative work.
+
+% {\cal I}
+\newcommand{\gplusi}{$\mathcal{G\!\!+\!\!I}$}
+\newcommand{\worki}{$\mathcal{I}$}
+\newcommand{\workg}{$\mathcal{G}$}
+
+It is certainly possible to take an existing independent work (called
+\worki{}) and combine it with a GPL'ed program (called \workg{}).  The
+license of \worki{}, when it is distributed as a separate and independent
+work, remains the prerogative of the copyright holder of .  However, when
+\worki{} is combined with \workg{}, it produces a new work that is the
+combination of the two (called \gplusi{}).  The copyright of this
+derivative work, \gplusi{}, is jointly held by the original copyright
+holder of each of the two works.
+
+In this case, \S 2 lays out the terms by which \gplusi{} may be
+distributed and copied.  By default, under copyright law, the copyright
+holder of \worki{} would not have been permitted to distribute \gplusi{};
+copyright law forbids it without the expressed permission of the copyright
+holder of \workg{}.  (Imagine, for a moment, if \workg{} were a Microsoft
+product --- would they give you permission to create and distribute
+\gplusi{} without paying them a hefty sum?)  The license of \workg{}, the
+GPL, sets forth ahead of time options for the copyright holder of \worki{}
+who may want to create and distribute \gplusi{}.  This pre-granted
+permission to create and distribute derivative works, provided the terms
+of GPL are uphold, goes far above and beyond the permissions that one
+would get with a typical work not covered by a copyleft license.  Thus, to
+say that this restriction is any way unreasonable is simply ludicrous.
+
+\medskip
+
+The next phrase of note in \S 2(b) is ``licensed ... at no charge''.  This
+is a source of great confusion to many.  Not a month goes by that FSF does
+not receive an email that claims to point out ``a contradiction in GPL''
+because \S 2 says that redistributors cannot charge for modified versions
+of GPL'ed software, but \S 1 says that they can.  The ``at no charge''
+means not that redistributors cannot charge for performing the acts
+governed by copyright law\footnote{Recall that you could by default charge
+  for any acts not governed by copyright law, because the license controls
+  are confined by copyright.}, but rather that they cannot charge a fee
+for the \emph{license itself}.  In other words, redistributors of
+(modified and unmodified) GPL'ed works may charge any amount they choose
+for performing the modifications on contract or the act of transferring
+the copy to the customer, but they may not charge a separate licensing fee
+for the software.
+
+\S 2(b) further states that the software must ``be licensed ... to all
+third parties''.  This too has led to some confusions, and feeds the
+misconception mentioned earlier --- that all modified versions must made
+available to the public at large.  However, the text here does not say
+that.  Instead, it says that the licensing under terms of the GPL must
+extend to anyone who might, through the typical distribution chain,
+receive a copy of the software.  Distribution to all third parties is not
+mandated here, but \S 2(b) does require redistributors to license the
+derivative works in a way that is extends FIXME to all third parties who may
+ultimately receive a copy of the software.
+
+In summary, \S 2(b) says what terms under which the third parties must
+receive this no-charge license.  Namely, they receive it ``under the terms
+of this License'', the GPL.  When an entity \emph{chooses} to redistribute
+a derivative work of GPL'ed software, the license of that whole derivative
+work must be GPL and only GPL\@.  In this manner, \S 2(b) dovetails nicely
+with \S 6 (as discussed in Section\~ref{GPLs6} of this tutorial).
+
+\medskip
+
+The final paragraph of \S 2 is worth special mention.  It is possible and
+quite common to aggregate various software programs together on one
+distribution medium.  Computer manufacturers do this when they ship a
+pre-installed hard drive, and GNU/Linux distribution vendors do this to
+give a one-stop CD or URL for a complete operating system with necessary
+applications.  The GPL very clearly permits such ``mere aggregation'' with
+programs under any license.  Despite what you hear from its critics, the
+GPL is nothing like a virus, not only because the GPL is good for you and
+a virus is bad for you, but also because simple contact with a GPL'ed
+code-base does not impact the license of other programs.  Actual effort
+must be expended by a programmer to cause a work to fall under the terms
+of the GPL.  Redistributors are always welcome to simply ship GPL'ed
+software alongside proprietary software or other unrelated Free Software,
+as long as the terms of GPL are adhered to for those packages that are
+truly GPL'ed.
 
 \section{GPL, \S 3}
 
@@ -641,6 +858,7 @@ that
 \chapter{Defending Freedom On Many Fronts}
 
 \section{GPL, Section 4}
+\label{GPLs4}
 
 \section{GPL, Section 5}
 \label{GPLs5}
@@ -654,9 +872,21 @@ that
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Odds, Ends, and Absolutely No Warranty}
 
+\section{GPL, \S 8}
+\label{GPLs8}
+
+\section{GPL, \S 9}
+\label{GPLs9}
+
+\section{GPL, \S 10}
+\label{GPLs10}
+
+\section{GPL, \S 11}
+\label{GPLs11}
+
 There was a case where the disclaimer of a contract was negated because it
 was not "conspicuous" to the person entering into the contract.  Therefore,
-to make such language "conspicuous" people started bolding it.  My question
+to make such language "conspicuous" people started placing it in bold or caps it.  My question
 has always been, does that mean all the other parts of the document aren't
 important such that they too need to be "conspicuous."
 
@@ -667,8 +897,18 @@ limitation of liability.  The former gets rid of everything that can be
 gotten rid of, while the latter limits the liability of the actor for any
 warranties that cannot be disclaimed (such as personal injury, etc.).
 
+\section{GPL, \S 12}
+\label{GPLs12}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Business Models, Internal Use, and Compliance}
+\chapter{Integrating the GPL into Business Practices}
+
+\section{Using Free Software In-House}
+
+\section{Business Models}
+\label{Business Models}
+
+\section{Ongoing Compliance}
 
 \appendix
 
@@ -1091,5 +1331,6 @@ General Public License instead of this License.
 
 \end{document}
 
-% LocalWords:  proprietarize redistributors sublicense yyyy Gnomovision
-% LocalWords:  Yoyodyne
+% LocalWords:  proprietarize redistributors sublicense yyyy Gnomovision EULAs
+% LocalWords:  Yoyodyne FrontPage improvers Berne copyrightable Stallman's GPLs
+% LocalWords:  Lessig Lessig's UCITA pre

@@ -1,3 +1,9 @@
+2003-05-29  Bradley M. Kuhn  <bkuhn@fsf.org>
+
+	* gpl-business.tex (section{GPL, \S 1: Verbatim Copying}): Wrote
+	section.
+	(section{GPL \S 2: Share and Share Alike}): Wrote section.
+
 2003-05-28  Bradley M. Kuhn  <bkuhn@fsf.org>
 
 	* gpl-business.tex (section{An Ecosystem of Equality}): Started
