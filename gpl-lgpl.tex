@@ -11,6 +11,7 @@
 % FILTER_PDF: \input{generate-pdf-file}
 % FILTER_HTML: \input{generate-html-file}
 \input{one-inch-margins}
+\usepackage{enumerate}
 
 %\setlength\parskip{0.7em}
 %\setlength\parindent{0pt}
@@ -598,12 +599,12 @@ creation of this vibrant commercial and non-commercial Free Software
 economy.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Copying, Modifying and Redistributing}
+\chapter{Running Software And Verbatim Copying}
 
 This chapter begins the deep discussion of the details of the terms of
-GPL\@.  In this chapter, we consider the core terms: GPL \S\S 0--3.  These
-are the sections of the GPL that fundamentally define the legal details of
-how software freedom is respected.
+GPL\@.  In this chapter, we consider the first two sections: GPL \S\S
+0--2.  These are the straightforward sections of the GPL that define the
+simplest rights that the user receives.
 
 \section{GPL \S 0: Freedom to Run}
 \label{GPLs0}
@@ -711,6 +712,340 @@ for the redistribution of copies of Free Software.  In addition, they may
 provide the warranty protection that the GPL disclaims as an additional
 service for a fee.  (See Section~\ref{Business Models} for more discussion
 on making a profit from Free Software redistribution.)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Derivative Works: Statute and Case Law}
+
+We digress for this chapter from our discussion of GPL's exact text to
+consider the matter of derivative works --- a concept that we must
+understand fully before considering \SS 2--3 of GPL\@.  GPL, and Free
+Software licensing in general, relies critically on the concept of
+``derivative work'' since software that is ``independent,'' (i.e., not
+``derivative'') of free software need not abide by the terms of the
+applicable Free Software license.  As much is required by \S 106 of the
+Copyright Act, 17 U.S.C. \S 106 (2002), and admitted by Free Software
+licenses, such as the GPL, which (as we have seen) states in \S 0 that ``a
+'work based on the Program' means either the Program or any derivative
+work under copyright law.'' It is being a derivative work of Free Software
+that triggers the necessity to comply with the terms of the Free Software
+license under which the original work is distributed. Therefore, one is
+left to ask, just what is a ``derivative work?'' The answer to that
+question differs depending on which court is being asked.
+
+The analysis in this chapter sets forth the differing definitions of
+derivative work by Circuit. The broadest and most established definition
+of derivative work for software is the abstraction, filtration, and
+comparison test (``the AFC test'') as created and developed by the Second
+Circuit. Some Circuits, including the Ninth Circuit and the First Circuit,
+have either adopted narrower versions of the AFC test or have expressly
+rejected the AFC test in favor of a narrower standard. Further, several
+other Circuits have yet to adopt any definition of derivative work for
+software.
+
+As an introductory matter, it is important to note that literal copying of
+a significant portion of source code is not always sufficient to establish
+that a second work is a derivative work of an original
+program. Conversely, a second work can be a derivative work of an original
+program even though absolutely no copying of the literal source code of
+the original program has been made. This is the case because copyright
+protection does not always extend to all portions of a program’s code,
+while, at the same time, it can extend beyond the literal code of a
+program to its non-literal aspects, such as its architecture, structure,
+sequence, organization, operational modules, and computer-user interface.
+
+\section{The Copyright Act}
+
+The copyright act is of little, if any, help in determining the definition
+of a derivative work of software. However, the applicable provisions do
+provide some, albeit quite cursory, guidance. Section 101 of the Copyright
+Act sets forth the following definitions:
+
+A ``computer program'' is a set of statements or instructions to be used
+directly or indirectly in a computer in order to bring about a certain
+result.
+
+A ``derivative work'' is a work based upon one or more preexisting works,
+such as a translation, musical arrangement, dramatization,
+fictionalization, motion picture version, sound recording, art
+reproduction, abridgment, condensation, or any other form in which a work
+may be recast, transformed, or adapted. A work consisting of editorial
+revisions, annotations, elaborations, or other modifications which, as a
+whole, represent an original work of authorship, is a ``derivative work''.
+
+These are the only provisions in the Copyright Act relevant to the
+determination of what constitutes a derivative work of a computer
+program. Another provision of the Copyright Act that is also relevant to
+the definition of derivative work is \S 102(b), which reads as follows:
+
+\begin{quotation}
+In no case does copyright protection for an original work of authorship
+extend to any idea, procedure, process, system, method of operation,
+concept, principle, or discovery, regardless of the form in which it is
+described, explained, illustrated, or embodied in such work.
+\end{quotation}
+
+Therefore, before a court can ask whether one program is a derivative work
+of another program, it must be careful not to extend copyright protection
+to any ideas, procedures, processes, systems, methods of operation,
+concepts, principles, or discoveries contained in the original program. It
+is the implementation of this requirement to ``strip out'' unprotectable
+elements that serves as the most frequent issue over which courts
+disagree.
+
+\section{Abstraction, Filtration, Comparison Test}
+
+As mentioned above, the AFC test for determining whether a computer
+program is a derivative work of an earlier program was created by the
+Second Circuit and has since been adopted in the Fifth, Tenth, and
+Eleventh Circuits. Computer Associates Intl., Inc. v. Altai, Inc., 982
+F.2d 693 (2nd Cir. 1992); Engineering Dynamics, Inc. v. Structural
+Software, Inc., 26 F.3d 1335 (5th Cir. 1994); Kepner-Tregoe,
+Inc. v. Leadership Software, Inc., 12 F.3d 527 (5th Cir. 1994); Gates
+Rubber Co. v. Bando Chem. Indust., Ltd., 9 F.3d 823 (10th Cir. 1993);
+Mitel, Inc. v. Iqtel, Inc., 124 F.3d 1366 (10th Cir. 1997); 5 Bateman
+v. Mnemonics,Inc., 79 F.3d 1532 (11th Cir. 1996); and, Mitek Holdings,
+Inc. v. Arce Engineering Co., Inc., 89 F.3d 1548 (11th Cir. 1996).
+
+Under the AFC test, a court first abstracts from the original program its
+constituent structural parts. Then, the court filters from those
+structural parts all unprotectable portions, including incorporated ideas,
+expression that is necessarily incidental to those ideas, and elements
+that are taken from the public domain. Finally, the court compares any and
+all remaining kernels of creative expression to the structure of the
+second program to determine whether the software programs at issue are
+substantially similar so as to warrant a finding that one is the
+derivative work of the other.
+
+Often, the courts that apply the AFC test will perform a quick initial
+comparison between the entirety of the two programs at issue in order to
+help determine whether one is a derivative work of the other. Such an
+holistic comparison, although not a substitute for the full application of
+the AFC test, sometimes reveals a pattern of copying that is not otherwise
+obvious from the application of the AFC test when, as discussed below,
+only certain components of the original program are compared to the second
+program. If such a pattern is revealed by the quick initial comparison,
+the court is more likely to conclude that the second work is indeed a
+derivative of the original.
+
+\subsection{Abstraction}
+
+The first step courts perform under the AFC test is separation of the
+work’s ideas from its expression. In a process akin to reverse
+engineering, the courts dissect the original program to isolate each level
+of abstraction contained within it. Courts have stated that the
+abstractions step is particularly well suited for computer programs
+because it breaks down software in a way that mirrors the way it is
+typically created. However, the Courts have also indicated that this step
+of the AFC test requires substantial guidance from experts, because it is
+extremely fact and situation specific.
+
+By way of example, one set of abstraction levels is, in descending order
+of generality, as follows: the main purpose, system architecture, abstract
+data types, algorithms and data structures, source code, and object
+code. As this set of abstraction levels shows, during the abstraction step
+of the AFC test, the literal elements of the computer program, namely the
+source and object code, are defined as particular levels of
+abstraction. Further, the source and object code elements of a program are
+not the only elements capable of forming the basis for a finding that a
+second work is a derivative of the program. In some cases, in order to
+avoid a length factual inquiry by the court, the owner of the copyright in
+the original work will submit its own list of what it believes to be the
+protected elements of the original program. In those situations, the court
+will forgo performing its own abstraction, and proceed to second step of
+the AFC test.
+
+\subsection{Filtration}
+
+The most difficult and controversial part of the AFC test is the second
+step, which entails the filtration of protectable expression contained in
+the original program from any unprotectable elements nestled therein. In
+determining which elements of a program are unprotectable, courts employ a
+myriad of rules and procedures to sift from a program all the portions
+that are not eligible for copyright protection.
+
+First, as set forth in \S 102(b) of the Copyright Act, any and all ideas
+embodied in program are to be denied copyright protection. However,
+implementing this rule is not as easy as it first appears. The courts
+readily recognize the intrinsic difficulty in distinguishing between ideas
+and expression and that, given the varying nature of computer programs,
+doing so will be done on an ad hoc basis. The first step of the AFC test,
+the abstraction, exists precisely to assist in this endeavor by helping
+the court separate out all the individual elements of the program so that
+they can be independently analyzed for their expressive nature.
+
+A second rule applied by the courts in performing the filtration step of
+the AFC test is the doctrine of merger, which denies copyright protection
+to expression necessarily incidental to the idea being expressed. The
+reasoning behind this doctrine is that when there is only one way to
+express an idea, the idea and the expression merge, meaning that the
+expression cannot receive copyright protection due to the bar on copyright
+protection extending to ideas. In applying this doctrine, a court will ask
+whether the program's use of particular code or structure is necessary for
+the efficient implementation of a certain function or process. If so, then
+that particular code or structure is not protected by copyright and, as a
+result, it is filtered away from the remaining protectable expression.
+
+A third rule applied by the courts in performing the filtration step of
+the AFC test is the doctrine of scenes a faire, which denies copyright
+protection to elements of a computer program that are dictated by external
+factors. Such external factors can include:
+
+\begin{enumerate}
+ \renewcommand{\theenumi}{\alph{enumi}}
+ \renewcommand{\labelenumi}{\textup{(\theenumi)}}
+
+\item the mechanical
+specifications of the computer on which a particular program is intended
+to operate;
+
+\item compatibility requirements of other programs with which a
+program is designed to operate in conjunction;
+
+\item computer manufacturers'
+design standards;
+
+\item demands of the industry being serviced; and
+
+widely accepted programming practices within the computer industry.
+
+\end{enumerate}
+
+Any code or structure of a program that was shaped predominantly in
+response to these factors is filtered out and not protected by
+copyright. Lastly, elements of a computer program are also to be filtered
+out if they were taken from the public domain or fail to have sufficient
+originality to merit copyright protection.
+
+Portions of the source or object code of a computer program are rarely
+filtered out as unprotectable elements. However, some distinct parts of
+source and object code have been found unprotectable. For example,
+constant s, the invariable integers comprising part of formulas used to
+perform calculations in a program, are unprotectable. Further, although
+common errors found in two programs can provide strong evidence of
+copying, they are not afforded any copyright protection over and above the
+protection given to the expression containing them.
+
+\subsection{Comparison}
+
+The third and final step of the AFC test entails a comparison of the
+original program's remaining protectable expression to a second
+program. The issue will be whether any of the protected expression is
+copied in the second program and, if so, what relative importance the
+copied portion has with respect to the original program overall. The
+ultimate inquiry is whether there is ``substantial'' similarity between
+the protected elements of the original program and the potentially
+derivative work. The courts admit that this process is primarily
+qualitative rather than quantitative and is performed on a case-by-case
+basis. In essence, the comparison is an ad hoc determination of whether
+the protectable elements of the original program that are contained in the
+second work are significant or important parts of the original program. If
+so, then the second work is a derivative work of the first. If, however,
+the amount of protectable elements copied in the second work are so small
+as to be de minimis, then the second work is not a derivative work of the
+original.
+
+\section{Analytic Dissection Test}
+
+The Ninth Circuit has adopted the analytic dissection test to determine
+whether one program is a derivative work of another. Apple Computer,
+Inc. v. Microsoft Corp., 35 F.3d 1435 (9th Cir. 1994). The analytic
+dissection test first considers whether there are substantial similarities
+in both the ideas and expressions of the two works at issue. Once the
+similar features are identified, analytic dissection is used to determine
+whether any of those similar features are protected by copyright. This
+step is the same as the filtration step in the AFC test. After identifying
+the copyrightable similar features of the works, the court then decides
+whether those features are entitled to ``broad'' or ``thin''
+protection. ``Thin'' protection is given to non-copyrightable facts or
+ideas that are combined in a way that affords copyright protection only
+from their alignment and presentation, while ``broad'' protection is given
+to copyrightable expression itself. Depending on the degree of protection
+afforded, the court then sets the appropriate standard for a subjective
+comparison of the works to determine whether, as a whole, they are
+sufficiently similar to support a finding that one is a derivative work of
+the other. ``Thin'' protection requires the second work be virtually
+identical in order to be held a derivative work of an original, while
+``broad'' protection requires only a ``substantial similarity.''
+
+\section{No Protection for ``Methods of Operation''}
+
+The First Circuit expressly rejected the AFC test and, instead, takes a
+much narrower view of the meaning of derivative work for software. The
+First Circuit holds that ``method of operation,'' as used in \S 102(b) of
+the Copyright Act, refers to the means by which users operate
+computers. Lotus Development Corp. v. Borland Int’l., Inc., 49 F.3d 807
+(1st Cir. 1995). More specifically, the court held that a menu command
+hierarchy for a computer program was uncopyrightable because it did not
+merely explain and present the program’s functional capabilities to the
+user, but also served as a method by which the program was operated and
+controlled. As a result, under the First Circuit’s test, literal copying
+of a menu command hierarchy, or any other ``method of operation,'' can not
+form the basis for a determination that one work is a derivative of
+another. It is also reasonable to expect that the First Circuit will read
+the unprotectable elements set forth in \S 102(b) broadly, and, as such,
+promulgate a definition of derivative work that is much narrower than that
+which exists under the AFC test.
+
+\section{No Test Yet Adopted}
+
+Several circuits, including most notably the Fourth and Seventh, have yet
+to declare their definition of derivative work and whether or not the AFC,
+Analytic Dissection, or some other test best fits their interpretation of
+copyright law. Therefore, uncertainty exists with respect to determining
+the extent to which a software program is a derivative work of another in
+those circuits. However, one may presume that they would give deference to
+the AFC test since it is by far the majority rule amongst those circuits
+that have a standard for defining a software derivative work.
+
+\section{Cases Applying Software Derivative Work Analysis}
+
+In the preeminent case regarding the definition of a derivative work for
+software, Computer Associates v. Altai, the plaintiff alleged that the its
+program, Adapter, which was used to handle the differences in operating
+system calls and services, was infringed by the defendant's competitive
+program, Oscar.  About 30 percent of Oscar was literally the same code as
+that in Adapter.  After the suit began, the defendant rewrote those
+portions of Oscar that contained Adapter code in order to produce a new
+version of Oscar that was functionally competitive with Adapter, without
+have any literal copies of its code.  Feeling slighted still, the
+plaintiff alleged that even the second version of Oscar, despite having no
+literally copied code, also infringed its copyrights.  In addressing that
+question, the Second Circuit promulgated the AFC test.
+
+In abstracting the various levels of the program, the court noted a
+similarity between the two programs' parameter lists and macros.  However,
+following the filtration step of the AFC test, only a handful of the lists
+and macros were protectable under copyright law because they were either
+in the public domain or required by functional demands on the
+program. With respect to the handful of parameter lists and macros that
+did qualify for copyright protection, after performing the comparison step
+of the AFC test, it was reasonable for the district court to conclude that
+they did not warrant a finding of infringement given their relative minor
+contribution to the program as a whole.  Likewise, the similarity between
+the organizational charts of the two programs was not substantial enough
+to support a finding of infringement because they were too simple and
+obvious to contain any original expression.
+
+Perhaps not surprisingly, there have been few cases involving a highly
+detailed software derivative work analysis.  Most often, cases involve
+clearer basis for decision, including frequent bad faith on the part of
+the defendant or over aggressiveness on the part of the plaintiff.
+However, no cases involving free software licensing have ever gone to
+court.  As free software becomes an ever increasingly important part of
+the economy, it remains to be seen whether or not battle lines will be
+drawn over whether particular programs infringe the rights of free
+software developers or whether the entire community, including industry,
+adopts norms avoiding such risk.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Modified Source and Binary Distribution}
+
+In this chapter, we discuss the two core sections that define the rights
+and obligations for those who modify, improve, and/or redistribute GPL'd
+software.  These sections, \SS 2--3, define the central core rights and
+requirements of GPL\@.
 
 \section{GPL \S 2: Share and Share Alike}
 
@@ -1073,6 +1408,125 @@ prepared to honor all incoming source code requests.  For this and the
 many other additional necessary complications under \S\S 3(b--c), it is
 only rarely a better option than complying via \S 3(a).
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{The Implied Patent Grant in GPL}
+
+We digress again briefly from our section-by-section consideration of GPL
+to consider the interaction between the terms of GPL and patent law.  The
+GPL, despite being silent with respect to patents, actually confers on its
+licensees more rights to a licensor's patents than those licenses that
+purport to address the issue.  This is the case because patent law, under
+the doctrine of implied license, gives to each distribute of a patented
+article a license from the distributor to practice any patent claims owned
+or held by the distributor that cover the distributed article.  The
+implied license also extends to any patent claims owned or held by the
+distributor that cover ``reasonably contemplated uses'' of the patented
+article.  To quote the Federal Circuit Court of Appeals, the highest court
+for patent cases other than the Supreme Court:
+
+\begin{quotation}
+Generally, when a seller sells a product without restriction, it in
+effect promises the purchaser that in exchange for the price paid, it will
+not interfere with the purchaser's full enjoyment of the product
+purchased. The buyer has an implied license under any patents of the
+seller that dominate the product or any uses of the product to which the
+parties might reasonably contemplate the product will be put.
+\end{quotation}
+Hewlett-Packard Co. v. Repeat-O-Type Stencil Mfg. Corp., Inc., 123 F.3d
+1445 (Fed. Cir. 1997).
+
+Of course, free software is licensed, not sold, and there are indeed
+restrictions placed on the licensee, but those differences are not likely
+to prevent the application of the implied license doctrine to free
+software, because software licensed under the GPL grants the licensee the
+right to make, use, and sell the software, each of which are exclusive
+rights of a patent holder.  Therefore, although the GPL does not expressly
+grant the licensee the right to do those things under any patents the
+licensor may have that cover the software or its reasonably contemplated
+uses, by licensing the software under the GPL, the distributor impliedly
+licenses those patents to the GPL licensee with respect to the GPL
+licensed software.
+
+An interesting issue regarding this implied patent license of GPL'd
+software is what would be considered ``uses of the [software] to which the
+parties might reasonably contemplate the product will be put.''  A clever
+advocate may argue that the implied license granted by GPL is larger in
+scope than the express license in other free software licenses with
+express patent grants, in that, the patent license clause of many of those
+licenses are specifically limited to the patent claims covered by the code
+as licensed by the patentee.
+
+To the contrary, GPL's implied patent license grants the GPL licensee a
+patent license to do much more than just that because the GPL licensee,
+under the doctrine of implied patent license, is free to practice any
+patent claims held by the licensor that cover ``reasonably contemplated
+uses'' of the GPL'd code, which may very well include creation and
+distribution of derivative works since the GPL's terms, under which the
+patented code is distributed, expressly permits such activity.
+
+Further supporting this result is the Federal Circuit's pronouncement that
+the recipient of a patented article has, not only an implied license to
+make, use, and sell the article, but also an implied patent license to
+repair the article to enable it to function properly.  Bottom Line Mgmt.,
+Inc. v. Pan Man, Inc., 228 F.3d 1352 (Fed. Cir. 2000).  Additionally, the
+Federal Circuit extended that rule to include any future recipients of the
+patented article, not just the direct recipient from the distributor.
+This theory comports well with the idea of free software, whereby software
+is distributed amongst many entities within the community for the purpose
+of constant evolution and improvement.  In this way, the law of implied
+patent license used by the GPL ensures that the community mutually
+benefits from the licensing of patents to any single community member.
+
+Note that simply because GPL'd software has an implied patent license does
+not mean that any patents held by a distributor of GPL'd code become
+worthless.  To the contrary, the patents are still valid and enforceable
+against either:
+
+\begin{enumerate}
+ \renewcommand{\theenumi}{\alph{enumi}}
+ \renewcommand{\labelenumi}{\textup{(\theenumi)}}
+
+\item any software other than that licensed under the GPL by the patent
+  holder, and
+
+\item any party that does not comply with the GPL
+with respect to the licensed software.
+\end{enumerate}
+
+\newcommand{\compB}{$\mathcal{B}$}
+\newcommand{\compA}{$\mathcal{A}$}
+
+For example, if Company \compA has a patent on advanced web browsing, but
+also licenses a web browsing software program under the GPL, then it
+cannot assert the patent against any party that takes a license to its
+program under the GPL.  However, if a party uses that program without
+complying with the GPL, then Company \compA can assert, not just copyright
+infringement claims against the non-GPL-compliant party, but also
+infringement of the patent, because the implied patent license only
+extends to use of the software in accordance with the GPL.  Further, if
+Company \compB distributes a competitive advanced web browsing program,
+Company \compA is free to assert its patent against any user or
+distributor of that product.  It is irrelevant whether Company \compB's
+program is distributed under the GPL, as Company \compB can not grant
+implied licenses to Company \compA's patent.
+
+This result also reassures companies that they need not fear loosing their
+proprietary value in patents to competitors through the GPL implied patent
+license, as only those competitors who adopt and comply with the GPL's
+terms can benefit from the implied patent license.  To continue the
+example above, Company \compB does not receive a free ride on Company
+\compA's patent, as Company \compB has not licensed-in and then
+redistributed Company A's advanced web browser under the GPL.  If Company
+\compB does do that, however, Company \compA still has not lost
+competitive advantage against Company \compB, as Company \compB must then,
+when it re-distributes Company \compA's program, grant an implied license
+to any of its patents that cover the program.  Further, if Company \compB
+relicenses an improved version of Company A's program, it must do so under
+the GPL, meaning that any patents it holds that cover the improved version
+are impliedly licensed to any licensee.  As such, the only way Company
+\compB can benefit from Company \compA's implied patent license, is if it,
+itself, distributes Company \compA's software program and grants an
+implied patent license to any of its patents that cover that program.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Defending Freedom On Many Fronts}
@@ -1284,28 +1738,43 @@ copyright licenses.
 \label{GPLs11}
 
 All warranty disclaimer language tends to be shouted in all capital
-letters.  Apparently, there was once a case where the disclaimer language
+letters. Apparently, there was once a case where the disclaimer language
 of an agreement was negated because it was not ``conspicuous'' to one of
-the parties.  Therefore, to make such language ``conspicuous'', people
-started placing it in bold or capitalizing the entire text.  It now seems
+the parties. Therefore, to make such language ``conspicuous'', people
+started placing it in bold or capitalizing the entire text. It now seems
 to be voodoo tradition of warranty disclaimer writing.
 
+Some have argued the GPL is unenforceable in some jurisdictions because
+its disclaimer of warranties is impermissibly broad.  However, \S 11
+contains a jurisdictional savings provision, which states that it is to be
+interpreted only as broadly as allowed by applicable law.  Such a
+provision ensures that both it, and the entire GPL, is enforceable in any
+jurisdiction, regardless of any particular law regarding the
+permissibility of certain warranty disclaimers.
+
 Finally, one important point to remember when reading \S 11 is that \S 1
-permits the sale of warranty as an additional service, which \S 11
-affirms.
+permits the sale of warranty as an additional service, which \S 11 affirms.
 
 \section{GPL, \S 12: Limitation of Liability}
 \label{GPLs12}
 
 There are many types of warranties, and in some jurisdictions some of them
-cannot be disclaimed.  Therefore, usually agreements will have both a
-warranty disclaimer and a limitation of liability, as we have in \S 12.
-\S 11 thus gets rid of all implied warranties that can legally be
-disavowed.  \S 12, in turn, limits the liability of the actor for any
+cannot be disclaimed. Therefore, usually agreements will have both a
+warranty disclaimer and a limitation of liability, as we have in \S 12. \S
+11 thus gets rid of all implied warranties that can legally be
+disavowed. \S 12, in turn, limits the liability of the actor for any
 warranties that cannot legally be disclaimed in a particular jurisdiction.
 
-So ends the terms and conditions of the GNU General Public License.
+Again, some have argued the GPL is unenforceable in some jurisdictions
+because its limitation of liability is impermissibly broad.  However, \S
+12, just like its sister, \S 11, contains a jurisdictional savings
+provision, which states that it is to be interpreted only as broadly as
+allowed by applicable law.  As stated above, such a provision ensures that
+both \S 12, and the entire GPL, is enforceable in any jurisdiction,
+regardless of any particular law regarding the permissibility of limiting
+liability.
 
+So ends the terms and conditions of the GNU General Public License.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{The Lesser GPL}
@@ -1988,11 +2457,9 @@ modification follow.
 \end{center}
 
 
-%\renewcommand{\theenumi}{\alpha{enumi}}
 \begin{enumerate}
 
 \addtocounter{enumi}{-1}
-
 \item
 
 This License applies to any program or other work which contains a notice
@@ -2933,4 +3400,6 @@ That's all there is to it!
 % LocalWords:  proprietarize redistributors sublicense yyyy Gnomovision EULAs
 % LocalWords:  Yoyodyne FrontPage improvers Berne copyrightable Stallman's GPLs
 % LocalWords:  Lessig Lessig's UCITA pre PDAs CDs reshifts GPL's Gentoo glibc
-% LocalWords:  TrollTech administrivia LGPL's MontaVista OpenTV
+% LocalWords:  TrollTech administrivia LGPL's MontaVista OpenTV Mitek Arce
+% LocalWords:  unprotectable protectable Unfreedonia chipset CodeSourcery
+% LocalWords:  impermissibly
