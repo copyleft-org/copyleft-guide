@@ -15,6 +15,7 @@
 %\setlength\parskip{0.7em}
 %\setlength\parindent{0pt}
 
+\newcommand{\defn}[1]{\emph{#1}}
 
 %\pagestyle{empty}
 
@@ -58,6 +59,9 @@ any medium, provided this notice is preserved.
 
 \end{titlepage}
 
+\pagestyle{plain}
+\pagenumbering{roman}
+
 \begin{abstract}
 
 This tutorial gives a section-by-section explanation of the most popular
@@ -79,7 +83,7 @@ are not well versed in the details of copyright law.  Presented by a
 software developer and manager, this tutorial informs those who wish to
 have a deeper understanding of how the GNU GPL uses copyright law to
 protect software freedom and to assist in the formation of Free Software
-businesses, and of the organizatinoal motivations behind the GNU GPL.
+businesses, and of the organizational motivations behind the GNU GPL.
 
 Upon completion of the tutorial, successful attendees can expect to have
 learned the following:
@@ -105,11 +109,18 @@ learned the following:
 
 \end{abstract}
 
+\tableofcontents
+
+\pagebreak
+
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{What Is Free Software?}
 
 Consideration of the GNU General Public License (herein, abbreviated as
-``GNU GPL'' or just ``GPL'') must begin by first considering the broader
-world of ``Free Software''.  The GPL was not created from a void, rather,
+\defn{GNU GPL} or just \defn{GPL}) must begin by first considering the broader
+world of Free Software.  The GPL was not created from a void, rather,
 it was created to embody and defend a set of principles that were set
 forth at the founding of the GNU project and the Free Software Foundation
 (FSF)---the organization that upholds, defends and promotes the philosophy
@@ -119,6 +130,7 @@ The GPL is unlike almost all other software licenses in that it is
 designed to defend and uphold these principles.
 
 \section{The Free Software Definition}
+\label{Free Software Definition}
 
 The Free Software Definition is set forth in full on FSF's website at
 \href{http://www.fsf.org/philosophy/free-sw.html}{http://www.fsf.org/philosophy/free-sw.html}.
@@ -161,18 +173,18 @@ Source'' program, for example, gives various types of access to source
 code, but almost none of the freedoms described in this section.
 
 One key issue that is central to these freedoms is that there are no
-restrictions on how these freedoms can be excercised.  Specifically, users
+restrictions on how these freedoms can be exercised.  Specifically, users
 and programmers can exercise these freedoms non-commercially or
 commercially.  Licenses that grant these freedoms for non-commercial
-activies but prohibit them for commercial activites are considered
+activities but prohibit them for commercial activities are considered
 non-Free.
 
 In general, software for which most or all of these freedoms are
 restricted in any way is called ``non-Free Software''.  Typically, the
-term ``proprietary software'' is used more or less interchangably with
+term ``proprietary software'' is used more or less interchangeably with
 ``non-Free Software''.  Personally, I tend to use the term ``non-Free
 Software'' to refer to non-commercial software that restricts freedom
-(such as ``shareware'') and ``propreitary software'' to refer to
+(such as ``shareware'') and ``proprietary software'' to refer to
 commercial software that restricts freedom (such as nearly all of
 Microsoft's and Oracle's offerings).
 
@@ -191,7 +203,7 @@ restricted.
 It was once rare that this freedom was restricted by even proprietary
 software; today it is not so rare.  Most End User Licensing Agreements
 (EULAs) that cover most proprietary software restrict some types of use.
-For example, some versions of Microsoft's Frontpage software prohbit use
+For example, some versions of Microsoft's Frontpage software prohibit use
 of the software to create websites that generate negative publicity for
 Microsoft.  Free Software has no such restrictions; everyone is free to
 use Free Software for any purpose whatsoever.
@@ -206,10 +218,10 @@ freedom cannot be properly exercised.
 
 Programmers can take direct benefit from this freedom, and often do.
 However, this freedom is essential to users who are not programmers.
-Users must have the right to engage in a non-commercial enviornment of
+Users must have the right to engage in a non-commercial environment of
 finding help with the software (as often happens on email lists and in
 users groups).  This means they must have the freedom to recruit
-programmers who might altrusitcally assist them to modify their software.
+programmers who might altruistically assist them to modify their software.
 
 The commercial exercise of this freedom is also essential.  Each user, or
 group of users, must have the right to hire anyone they wish on a
@@ -221,13 +233,13 @@ to commission software modification.
 \subsection{The Freedom to Copy and Share}
 
 Users may share Free Software in a variety of ways.  Free Software
-advocates work to eliminate fundamental ethical delimema of the software
+advocates work to eliminate fundamental ethical dilemma of the software
 age: choosing between obeying a software license, and friendship (by
 giving away a copy of a program your friend who likes the software you are
 using).  Free Software licenses, therefore, must permit this sort of
-altruistic sharing of software amoung friends.
+altruistic sharing of software among friends.
 
-The commercial enviornment must also have the benefits of this freedom.
+The commercial environment must also have the benefits of this freedom.
 Commercial sharing typically takes the form of selling copies of Free
 Software.  Free Software can be sold at any price to anyone.  Those who
 redistribute Free Software commercially have the freedom to selectively
@@ -238,7 +250,7 @@ It is true that many people get copies of Free Software very cheaply (and
 sometimes without charge). The competitive free market of Free Software
 tends to keep prices low and reasonable.  However, if someone is willing
 to pay a billion dollars for one copy of the GNU Compiler Collection, such
-a sale is completely permited.
+a sale is completely permitted.
 
 Another common instance of commercial sharing is service-oriented
 distribution.  For example, a distribution vendor may provide immediate
@@ -261,18 +273,18 @@ freedom to market their services as improvers of Free Software.  All forms
 of such service marketing must be equally available to all.
 
 For example, selling support services for Free Software is fully
-permitted.  Companies and individuals can offer thesmelves as ``the place
+permitted.  Companies and individuals can offer themselves as ``the place
 to call'' when software fails or does not function properly.  For such a
 service to be meaningful, the entity offering that service must have the
 right to modify and improve the software for the customer to correct any
 problems that are beyond mere user error.
 
 Entities must also be permitted to make available modified versions of
-Free Software.  Most Free Software programs have a so-called ``canonoical
+Free Software.  Most Free Software programs have a so-called ``canonical
 version'' that is made available from the primary developers of the
-software.  Hoewver, all who have the software have the ``freedom to fork''
+software.  However, all who have the software have the ``freedom to fork''
 --- that is, make available non-trivial modified versions of the software
-on a permenant or semi-permenant basis.  Such freedom is central to
+on a permanent or semi-permanent basis.  Such freedom is central to
 vibrant developer and user interaction.
 
 Companies and individuals have the right to make true value-added versions
@@ -286,6 +298,290 @@ that serves that sub-community.
 
 \section{How Does Software Become Free?}
 
+The last section set forth the freedoms and rights are respected by Free
+Software.  It presupposed, however, that such software exists.  This
+section discusses how Free Software comes into existence.  But first, it
+addresses how software can be non-free in the first place.
+
+Software can be made proprietary only because it is governed by copyright
+law\footnote{This statement is a bit of an oversimplification.  Patents
+  and trade secrets can cover software and make it effectively non-free,
+  and one can contract away their rights and freedoms regarding software.
+  However, the primary control mechanism for software is copyright.}.
+Copyright law, with respect to software governs copying, modifying, and
+redistributing that software\footnote{Copyright law in general also
+  governs ``public performance'' of copyrighted works.  There is no
+  generally agreed definition for public performance of software and
+  version 2 of the GPL does not govern public performance.}.  By law, the
+copyright holder (aka the author) of the work controls how others my copy,
+modify and/or distribute the work.  For proprietary software, these
+controls are used to prohibit these activities.  In addition, proprietary
+software distributors further impede modification in a practical sense by
+distributing only binary code and keeping the source code of the software
+secret.
+
+Copyright law is a construction.  In the USA, the Constitution permits,
+but does not require, the creation of copyright law as federal
+legislation.  Software, since it is tangible expression of an idea, is
+thus covered by the statues, and is copyrighted by default.
+
+However, software, in its natural state without copyright, is Free
+Software.  In an imaginary world, which has no copyright, the rules would
+be different.  In this world, when you received a copy of a program's
+source code, there would be no default legal system to restrict you from
+sharing it with others, making modifications, or redistributing those
+modified versions\footnote{There could still exist legal systems, like our
+  modern patent system, which could restrict the software in other ways.}.
+
+Software in the real world is copyrighted by default, and that default
+legal system does exist.  However, it is possible to move software out of
+the domain of the copyright system.  A copyright holder is always
+permitted to \defn{disclaim} their copyright.  If copyright is disclaimed,
+the software is not governed by copyright law.  Software not governed by
+copyright is in the ``public domain''.
+
+\subsection{Public Domain Software}
+
+An author can create public domain software by disclaiming all copyright
+interest on the work.  In the USA and other countries that have signed the
+Berne convention on copyright, software is copyrighted automatically by
+the author when (s)he ``fixes the software into a tangible medium''.  In
+the software world, this usually means typing the source code of the
+software into a file.
+
+However, an author can disclaim that default control given to her by the
+copyright laws.  Once this is done, the software is in the public domain
+--- it is no longer covered by copyright.  Since it is copyright law that
+allows for various controls on software (i.e., prohibition of copying,
+modification, and redistribution), removing the software from the
+copyright system and placing it into the public domain does yield Free
+Software.
+
+Carefully note that software in the public domain is \emph{not} licensed
+in any way.  It is nonsensical to say software is ``licensed for the
+public domain'', or any phrase that implies the copyright holder gave an
+expressed permission to take actions governed by copyright law.
+
+By contrast, what the copyright holder has done is renounce her copyright
+controls on the work.  The law gave her controls over the work, and she
+has chosen to waive those controls.  Software in the public domain is
+absent copyright and absent a license.  The software freedoms discussed in
+Section~\ref{Free Software Definition} are all granted because there is no
+legal system in play to take them away.
+
+\subsection{Why Copyright Free Software?}
+
+If simply disclaiming copyright on software yields Free Software, then it
+stands to reason that putting software into the public domain is the
+easiest and most straightforward way to produce Free Software.  Indeed,
+some major Free Software projects have chosen this method for making their
+software Free.  However, most of the Free Software in existence \emph{is}
+copyrighted.  In most cases (particularly in that of FSF and the GNU
+Project), this was done due to very careful planning.
+
+Software released into the public domain does grant freedom to those users
+who receive the canonical versions on which the original author disclaimed
+copyright.  However, since the work is not copyrighted, any non-trivial
+modification made to the work is fully copyrightable.
+
+Free Software released into the public domain initially is Free, and
+perhaps some who modify the software choose to place their work into the
+public domain as well.  However, over time, some entities will choose to
+proprietarize their modified versions.  The public domain body of software
+feeds the proprietary software.  The public commons disappears, because
+fewer and fewer entities have an incentive to contribute back to the
+commons, since they know that any of their competitors can proprietarize
+their enhancements.  Over time, almost no interesting work is left in the
+public domain, because nearly all new work is done by proprietarization.
+
+A legal mechanism is needed to redress this problem.  FSF was in fact
+originally created primarily as a legal entity to defend software freedom,
+and that work of of defending software freedom is a substantial part of
+its work today.  Specifically because of this ``embrace, proprietarize and
+extend'' cycle, FSF made a conscious choice to copyright its Free Software,
+and then license it under ``copyleft'' terms, and many, including the
+developers of the kernel named Linux has chosen to follow this paradigm.
+
+Copyleft is a legal strategy to defend, uphold and propagate software
+freedom.  The basic technique of copyleft is as follows: copyright the
+software, license it under terms that give all the software freedoms, but
+use the copyright law controls to ensure that all who receive a copy of
+the software have equal rights and freedom.  In essence, copyleft grants
+freedom, but forbids others to forbid that freedom from anyone else along
+the distribution and modification chains.
+
+Copyleft is a general concept.  Much like ideas for what a computer might
+do must be \emph{implemented} by a program that actually does the job, so
+too must copyleft be implemented in some concrete legal structure.
+``Share and share alike'' is a phrase that is often enough to explain the
+concept behind copyleft, but to actually make it work in the real world, a
+true implementation in legal text must exist.  The GPL is the primary
+implementation of copyleft in copyright licensing language.
+
+\section{An Ecosystem of Equality}
+
+The GPL uses copyright law to defend freedom and equally ensure users'
+rights.  This ultimately creates an ecosystem of equality for both
+business and non-commercial users.
+
+\subsection{The Non-Commercial Ecosystem}
+
+A GPL'ed code base becomes a center of a vibrant development and user
+community.  Traditionally, volunteers, operating non-commercially out of
+keen interest or ``scratch an itch'' motivations, produce initial versions
+of a GPL'ed system.  Because of the efficient distribution channels of the
+Internet, any useful GPL'ed system is adopted quickly by non-commercial
+users.
+
+Fundamentally, the early release and quick distribution of the software
+gives birth to a thriving non-commercial community.  Users and developers
+begin sharing bug reports and bug fixes across a shared intellectual
+commons.  Users can trust the developers, because they know that if the
+developers fail to address their needs or abandon the project, the GPL
+ensures that someone else has the right to pick up development.
+Developers know that the users cannot redistribute their software without
+passing along the rights granted by GPL, so they are assured that every
+one of their users is treated equally.
+
+Because of the symmetry and fairness inherent in GPL'ed distribution,
+nearly every GPL'ed package in existence has a vibrant non-commercial user
+and developer base.
+
+\subsection{The Commercial Ecosystem}
+
+By the same token, nearly all established GPL'ed software systems have a
+vibrant commercial community.  Nearly every GPL'ed system that has gained
+wide adoption from non-commercial users and developers eventually begins
+to fuel a commercial system around that software.
+
+For example, consider the Samba file server system that allows Unix-like
+systems (including GNU/Linux) to serve files to Microsoft Windows systems.
+Two graduate students originally developed Samba in their spare time and
+it was deployed non-commercially in academic environments.  However, very
+soon for-profit companies discovered that the software could work for them
+as well, and their system administrators began to use it in place of
+Microsoft Windows NT file-servers.  This served to lower the cost of
+ownership by orders of magnitude.  There was suddenly room in Windows
+file-server budgets to hire contractors to improve Samba.  Some of the first
+people hired to do such work were those same two graduate students who
+originally developed the software.
+
+The non-commercial users, however, were not concerned when these two
+fellows began collecting paychecks off of their GPL'ed work.  They knew
+that because of the nature of the GPL that improvements that were
+distributed in the commercial environment could easily be folded back into
+the canonical version.  Companies are not permitted to proprietarize
+Samba, so the non-commercial users, and even other commercial users are
+safe in the knowledge that the software freedom ensured by GPL will remain
+protected.
+
+Commercial developers also work in concert with non-commercial developers.
+Those two now-long-since graduated students continue to contribute to
+Samba altruistically, but also get work doing it.  Priorities change when a
+client is in the mix, but all the code is contributed back to the
+canonical version.  Meanwhile, many other individuals have gotten involved
+non-commercially as developers, because they want to ``cut their teeth on
+Free Software'' or because the problem interest them.  When they get good
+at it, perhaps they will move on to another project or perhaps they will
+become commercial developers of the software themselves.
+
+No party is a threat to another in the GPL software scenario because
+everyone is on equal ground.  The GPL protects rights of the commercial
+and non-commercial contributors and users equally.  The GPL creates trust,
+because it is a level playing field for all.
+
+\subsection{Law Analogy}
+
+In his introduction to Stallman's \emph{Free Software, Free Society},
+Lawrence Lessig draws an interesting analogy between the law and Free
+Software.  He argues that the laws of a Free society must be protected
+much like the GPL protects software.  So that I might do true justice to
+Lessig's argument, I quote it verbatim:
+
+\begin{quotation}
+
+A ``free society'' is regulated by law. But there are limits that any free
+society places on this regulation through law: No society that kept its
+laws secret could ever be called free. No government that hid its
+regulations from the regulated could ever stand in our tradition. Law
+controls.  But it does so justly only when visibly. And law is visible
+only when its terms are knowable and controllable by those it regulates,
+or by the agents of those it regulates (lawyers, legislatures).
+
+This condition on law extends beyond the work of a legislature.  Think
+about the practice of law in American courts.  Lawyers are hired by their
+clients to advance their clients' interests. Sometimes that interest is
+advanced through litigation. In the course of this litigation, lawyers
+write briefs.  These briefs in turn affect opinions written by judges.
+These opinions decide who wins a particular case, or whether a certain law
+can stand consistently with a constitution.
+
+All the material in this process is free in the sense that Stallman means.
+Legal briefs are open and free for others to use.  The arguments are
+transparent (which is different from saying they are good) and the
+reasoning can be taken without the permission of the original lawyers.
+The opinions they produce can be quoted in later briefs.  They can be
+copied and integrated into another brief or opinion.  The ``source code''
+for American law is by design, and by principle, open and free for anyone
+to take. And take lawyers do---for it is a measure of a great brief that
+it achieves its creativity through the reuse of what happened before.  The
+source is free; creativity and an economy is built upon it.
+
+This economy of free code (and here I mean free legal code) doesn't starve
+lawyers.  Law firms have enough incentive to produce great briefs even
+though the stuff they build can be taken and copied by anyone else.  The
+lawyer is a craftsman; his or her product is public.  Yet the crafting is
+not charity.  Lawyers get paid; the public doesn't demand such work
+without price.  Instead this economy flourishes, with later work added to
+the earlier.
+
+We could imagine a legal practice that was different---briefs and
+arguments that were kept secret; rulings that announced a result but not
+the reasoning.  Laws that were kept by the police but published to no one
+else.  Regulation that operated without explaining its rule.
+
+We could imagine this society, but we could not imagine calling it
+``free.''  Whether or not the incentives in such a society would be better
+or more efficiently allocated, such a society could not be known as free.
+The ideals of freedom, of life within a free society, demand more than
+efficient application.  Instead, openness and transparency are the
+constraints within which a legal system gets built, not options to be
+added if convenient to the leaders.  Life governed by software code should
+be no less.
+
+Code writing is not litigation.  It is better, richer, more
+productive. But the law is an obvious instance of how creativity and
+incentives do not depend upon perfect control over the products created.
+Like jazz, or novels, or architecture, the law gets built upon the work
+that went before. This adding and changing is what creativity always is.
+And a free society is one that assures that its most important resources
+remain free in just this sense.\footnote{This quotation is Copyright
+  \copyright{} 2002, Lawrence Lessig.  Verbatim copying of this quotation
+  in its entirety is permitted provided this notice is preserved.}
+\end{quotation}
+
+In essence, lawyers are paid to service the shared commons of legal
+infrastructure.  Few defend themselves in court or write their own briefs
+(even though they legally permitted to do so) because everyone would
+prefer to have an expert do that job.
+
+The Free Software economy is a market that is ripe for experts.  It
+functions similarly to other well established professional fields like the
+law.  The GPL, in turn, serves as the legal scaffolding that permits the
+creation of this vibrant commercial and non-commercial Free Software
+economy.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Copying, Modifying and Redistributing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Defending Freedom On Many Fronts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Odds, Ends, and Absolutely No Warranty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Business Models, Internal Use, and Compliance}
 
 \appendix
 
@@ -707,3 +1003,6 @@ with the library.  If this is what you want to do, use the GNU Library
 General Public License instead of this License.
 
 \end{document}
+
+% LocalWords:  proprietarize redistributors sublicense yyyy Gnomovision
+% LocalWords:  Yoyodyne
