@@ -1,0 +1,180 @@
+               Detailed Study and Analysis of GPL and LGPL
+
+This one-day course gives a section-by-section explanation of the most
+popular Free Software copyright license, the GNU General Public License
+(GNU GPL), and teaches lawyers, software developers, managers and business
+people how to use the GPL (and GPL'ed software) successfully in a new Free
+Software business and in existing, successful enterprises.
+
+Prerequisites:
+
+     Attendees should have a general familiarity with software development
+     processes.  A basic understanding of how copyright law typically
+     applies to software is also helpful.
+
+Audience:
+
+     The course is of most interest to lawyers, software developers and
+     managers who run (or have clients who run) software businesses that
+     modify and/or redistribute software under terms of the GNU GPL or
+     LGPL, or who wish to make use of existing GPL'd and LGPL'd software
+     in their enterprise.
+
+The course will include the topics listed below, along with ample time for
+questions and discussions.  Lunch is included, with a lunch speaker to be
+announced.
+
+  * Free Software Principles and the Free Software Definition
+
+    The ethical principles that motivated the creation of these licenses
+    are presented.  Unlike licenses that seek to lock up software in a
+    proprietary fashion, the GPL and LGPL are designed to grant freedom to
+    innovate, learn and improve.  Those principles influence licensing
+    policy decisions.  We present the specific definition of the concept
+    of "Free Software" (software whose license grants freedoms to copy,
+    share, modify and redistribute the software either gratis or for a
+    fee) for-profit companies.
+
+  * Preamble of the GNU General Public License (GPL)
+
+    The preamble presents the intent of the license.  The preamble puts
+    forth the motivations for the detailed terms and conditions that
+    follow in the license.  We discuss the language of the preamble in
+    detail to show how it frames the legal details that follow.
+
+  * GPL, Section 0: Definitions, etc.
+
+    GPL's section 0 defines and presents the terms that make the basis of
+    this copyright license.  We discuss those definitions and the
+    copyright scope of the license.
+
+  * GPL, Section 1: Grant for Verbatim Source Copying
+
+    Section 1 defines the terms for making source-only copies of software
+    programs.  We discuss how those rules work and the requirements and
+    obligations for distributors of GPL'd source, whether they choose to
+    distribute at no charge or for fees.
+
+  * Derivative Works: Statute and Case Law
+
+    Free Software licensing in general, and the GPL and LGPL in
+    particular, relies critically on the concept of derivative work since
+    software that is independent (i.e., not derivative) of Free Software
+    need not abide by any of the terms of the applicable Free Software
+    license. If a work is a derivative work of Free Software, then the
+    terms of the license are triggered, and one has obligations to comply
+    with the terms of the Free Software license under which the original
+    work is distributed.  Therefore, one is left to ask, just what is a
+    "derivative work?"  We will show how the answer to that question
+    depends on which court is being asked.  We also present the best
+    background information available to build a working understanding of
+    what is generally considered a derivate work in the rapidly changing
+    field of software copyright law.
+
+  * GPL, Section 2: Grants for Source Derivative Works
+
+    Section 2 sets forth the rules for creation of derivative works of
+    GPL'd software.  We discuss the intent of this section of GPL and how
+    it relates to the copyright situation discussed in our discussion of
+    derivative works.  We also explain the details of preparing derivative
+    source in a GPL-compliant way.
+
+  * GPL, Section 3: Grants for Creating Binary Derivative Works
+
+    Source-only distribution works well for technically savvy clients and
+    users, but most want runnable binary programs as well.  Section 3
+    gives permission for the creation and distribution of such binary
+    works.  We explain how GPL's requirement for corresponding source code
+    operate, and detail what distribution options are available to
+    distributors of binary GPL'd software.  We explore the benefits and
+    downsides of each of those options.
+
+  * The Implied Patent Grant in GPL
+
+    Patent rights are most often granted expressly, through detailed
+    language in a license.  However, express patent grants are not the
+    exclusive way rights in patents are granted by patentees.  Even
+    without express language, patent rights can be granted by a patentee's
+    actions or behavior.  The GPL contains no express patent grant.  Does
+    that mean it grants less rights in the licensor's patents than other
+    licenses which do?  Or, does the GPL, in its silence, actually result
+    in a grant of patent rights to the licensee greater than occurs
+    through many other Free Software and "Open Source" licenses?
+
+    We will consider these questions and provide detailed answers to them.
+
+  * GPL, Section 4: Termination of License
+
+    Section 4 terminates rights under GPL for those who violate it.  We
+    discuss how such termination works, what it means for violators, what
+    risks one takes in violating, and how rights are typically restored.
+    We briefly mention how Section 4 is used as the central tool in GPL
+    enforcement.
+
+  * GPL, Section 5: Acceptance of License
+
+    GPL is not a contract, so acceptance of the license works differently
+    than it does for contracts.  We discuss how this acceptance works
+    under the copyright rules that govern GPL.
+
+  * GPL, Section 6: Prohibition on Further Restrictions
+
+    Other licensing terms cannot be placed on GPL'd software that would
+    trump the rights granted under GPL.  We discuss how Section 6 is used
+    to ensure that no such additional restrictions occur.  We briefly
+    discuss how this leads to the concept of GPL-incompatible Free
+    Software licenses.
+
+  * GPL, Section 7: Conflicts with other Agreements or Orders
+
+    Just as additional licensing restrictions cannot trump GPL, outside
+    agreements, patent licenses or court orders cannot do so either.  We
+    discuss how Section 7 ensures that other rules outside of the direct
+    software license cannot take rights away from users, distributors, and
+    modifiers of GPL'd software.
+
+  * GPL, Section 8: International Licensing Issues
+
+    Section 8 is rarely used part of the GPL that helps copyright holders
+    when certain technologies are prohibited from full international
+    distribution due to draconian rules elsewhere in the world.  We
+    explain how Section 8 helps such copyright holders.
+
+  * GPL, Section 9: FSF as GPL's Stewards
+
+    We discuss how the update process and release of new GPL versions
+    happens.
+
+  * GPL, Section 10: Copyright Holder's Exceptions to GPL
+
+    Section 10 reminds licensees that under copyright law, other
+    relicensing arrangements can be made.  We discuss how this can often
+    be used as a business model and we explicate that model's benefits and
+    downsides.
+
+  * GPL, Section 11: Disclaimer of Warranties
+    GPL, Section 12: Limitation of Liability
+
+    Almost all software licenses, including Free Software licenses such as
+    the GPL, contain sections, typically in all caps, regarding warranties
+    and liability.  The purposes of these sections are lost on most
+    non-lawyers, but attorneys understand the importance their language
+    provides to both the licensor and the licensee.  Some have argued that
+    the GPL's Sections 11 and 12 render it entirely unenforceable.  We
+    consider whether that is true, and present the likely interpretation
+    and implementation of the GPL's Warranty Disclaimer and Liability
+    Limitation provisions.
+
+  * Lesser General Public License (LGPL)
+
+    The LGPL is a "scaled back" version of GPL, designed specifically to
+    allow creation of a very well-defined class of proprietary derivative
+    works.  However, it does prohibit turning the LGPL'd software itself
+    directly into proprietary software.
+
+    We discuss the basic design of LGPL and how it compares and contrasts
+    with GPL.  We introduce the two classes of derivative works covered
+    by LGPL -- "works that use the library" and "works based on the
+    library" -- and give some concrete examples of what proprietary
+    derivative works are prohibited and permitted when basing the
+    software on an LGPL'd work.
