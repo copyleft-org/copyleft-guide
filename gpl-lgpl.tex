@@ -41,7 +41,7 @@ Sponsored by the Free Software Foundation \\
 
 Columbia Law School, New York, NY, USA \\
 \vspace{.1in}
-Tuesday 20 January 2003 
+Tuesday 20 January 2004
 }
 
 \vspace{.7in}
@@ -124,6 +124,15 @@ learned the following:
   \item how best to understand the complexities regarding derivative
         works of software.
 \end{itemize}
+
+\bigskip
+
+These course materials are merely a summary of the highlights of the
+course presented.  Readers of this material should assume that they have
+missed the bulk of the material, as the detailed discussion of about these
+issues is the true education about GPL and LPGL\@.  Merely reading this
+material is akin to matriculating into a college course and read only the
+textbook instead of going to class.
 
 \end{abstract}
 
@@ -600,6 +609,8 @@ economy.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Running Software And Verbatim Copying}
+\label{run-and-verbatim}
+
 
 This chapter begins the deep discussion of the details of the terms of
 GPL\@.  In this chapter, we consider the first two sections: GPL \S\S
@@ -668,7 +679,7 @@ matter is left up to copyright law, not the licenses that utilize it.
 It is certainly true that copyright law as a whole does not propose clear
 and straightforward guidelines for what is and is not a derivative
 software work under copyright law.  However, no copyright license --- not
-even the GNU GPL -- can be blamed for this.  Legislators and court
+even the GNU GPL --- can be blamed for this.  Legislators and court
 opinions must give us guidance to decide the border cases.
 
 \section{GPL \S 1: Verbatim Copying}
@@ -761,6 +772,7 @@ of a derivative work of software. However, the applicable provisions do
 provide some, albeit quite cursory, guidance. Section 101 of the Copyright
 Act sets forth the following definitions:
 
+\begin{quotation}
 A ``computer program'' is a set of statements or instructions to be used
 directly or indirectly in a computer in order to bring about a certain
 result.
@@ -772,6 +784,7 @@ reproduction, abridgment, condensation, or any other form in which a work
 may be recast, transformed, or adapted. A work consisting of editorial
 revisions, annotations, elaborations, or other modifications which, as a
 whole, represent an original work of authorship, is a ``derivative work''.
+\end{quotation}
 
 These are the only provisions in the Copyright Act relevant to the
 determination of what constitutes a derivative work of a computer
@@ -1041,6 +1054,7 @@ adopts norms avoiding such risk.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Modified Source and Binary Distribution}
+\label{source-and-binary}
 
 In this chapter, we discuss the two core sections that define the rights
 and obligations for those who modify, improve, and/or redistribute GPL'd
@@ -1496,49 +1510,50 @@ with respect to the licensed software.
 \newcommand{\compB}{$\mathcal{B}$}
 \newcommand{\compA}{$\mathcal{A}$}
 
-For example, if Company \compA has a patent on advanced web browsing, but
+For example, if Company \compA{} has a patent on advanced web browsing, but
 also licenses a web browsing software program under the GPL, then it
 cannot assert the patent against any party that takes a license to its
 program under the GPL.  However, if a party uses that program without
-complying with the GPL, then Company \compA can assert, not just copyright
+complying with the GPL, then Company \compA{} can assert, not just copyright
 infringement claims against the non-GPL-compliant party, but also
 infringement of the patent, because the implied patent license only
 extends to use of the software in accordance with the GPL.  Further, if
-Company \compB distributes a competitive advanced web browsing program,
-Company \compA is free to assert its patent against any user or
+Company \compB{} distributes a competitive advanced web browsing program,
+Company \compA{} is free to assert its patent against any user or
 distributor of that product.  It is irrelevant whether Company \compB's
-program is distributed under the GPL, as Company \compB can not grant
+program is distributed under the GPL, as Company \compB{} can not grant
 implied licenses to Company \compA's patent.
 
 This result also reassures companies that they need not fear loosing their
 proprietary value in patents to competitors through the GPL implied patent
 license, as only those competitors who adopt and comply with the GPL's
 terms can benefit from the implied patent license.  To continue the
-example above, Company \compB does not receive a free ride on Company
-\compA's patent, as Company \compB has not licensed-in and then
+example above, Company \compB{} does not receive a free ride on Company
+\compA's patent, as Company \compB{} has not licensed-in and then
 redistributed Company A's advanced web browser under the GPL.  If Company
-\compB does do that, however, Company \compA still has not lost
-competitive advantage against Company \compB, as Company \compB must then,
+\compB{} does do that, however, Company \compA{} still has not lost
+competitive advantage against Company \compB{}, as Company \compB{} must then,
 when it re-distributes Company \compA's program, grant an implied license
-to any of its patents that cover the program.  Further, if Company \compB
+to any of its patents that cover the program.  Further, if Company \compB{}
 relicenses an improved version of Company A's program, it must do so under
 the GPL, meaning that any patents it holds that cover the improved version
 are impliedly licensed to any licensee.  As such, the only way Company
-\compB can benefit from Company \compA's implied patent license, is if it,
+\compB{} can benefit from Company \compA's implied patent license, is if it,
 itself, distributes Company \compA's software program and grants an
 implied patent license to any of its patents that cover that program.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Defending Freedom On Many Fronts}
 
-The last chapter presented the core freedom-defending provisions of GPL\@,
-which are in \S\S 0--3.  \S\S 4--7 of the GPL are designed to ensure that
-\S\S 0--3 are not infringed, are enforceable, are kept to the confines of
-copyright law and are not trumped by other copyright agreements or
-components of other entirely separate legal systems.  In short, while \S\S
-0--3 are the parts of the license that defend the freedoms of users and
-programmers, \S\S 4--7 are the parts of the license that keep the playing
-field clear so that \S\S 0--3 can do their jobs.
+Chapters~\ref{run-and-verbatim} and ~\ref{source-and-binary} presented the
+core freedom-defending provisions of GPL\@, which are in \S\S 0--3.  \S\S
+4--7 of the GPL are designed to ensure that \S\S 0--3 are not infringed,
+are enforceable, are kept to the confines of copyright law and are not
+trumped by other copyright agreements or components of other entirely
+separate legal systems.  In short, while \S\S 0--3 are the parts of the
+license that defend the freedoms of users and programmers, \S\S 4--7 are
+the parts of the license that keep the playing field clear so that \S\S
+0--3 can do their jobs.
 
 \section{GPL \S 4: Termination on Violation}
 \label{GPLs4}
@@ -1591,12 +1606,12 @@ That is FSF's steadfast position in a violation negotiation --- comply
 with the license and respect freedom.
 
 However, other entities who do not share the full ethos of software
-freedom as institutionalized by FSF pursue GPL violations differently.  MySQL
-AB, a company that produces the GPL'd MySQL database, upon discovering
-GPL violations typically negotiates a proprietary software license
-separately for a fee.  While this practice is not one that FSF would ever
-consider undertaking or even endorsing, it is a legal way for copyright
-holders to proceed.
+freedom as institutionalized by FSF pursue GPL violations differently.
+MySQL AB, a company that produces the GPL'd MySQL database, upon
+discovering GPL violations typically negotiates a proprietary software
+license separately for a fee.  While this practice is not one that FSF
+would ever consider undertaking or even endorsing, it is a legal way for
+copyright holders to proceed.
 
 \section{GPL \S 5: Acceptance, Copyright Style}
 \label{GPLs5}
@@ -1788,23 +1803,23 @@ as copyright law will allow is the most direct way to reach that goal.
 However, while the strategic goal is to bring as much Free Software into
 the world as possible, particular tactical situations of software freedom
 dictate different means.  Extending the copyleft effect as far as
-copyright law allows is not always the most prudent course to the goal.
-In particular situations, even those of us with the goal of building a
-world where all published software is Free Software realize that full
-copyleft does not best serve that goal.  The GNU Lesser General Public
+copyright law allows is not always the most prudent course in reaching the
+goal.  In particular situations, even those of us with the goal of
+building a world where all published software is Free Software realize
+that full copyleft does not best serve us.  The GNU Lesser General Public
 License (``GNU LGPL'') was designed as a solution for such situations.
 
 \section{The First LGPL'd Program}
 
 The first example that FSF encountered where such altered tactics were
 needed was when work began on the GNU C Library.  The GNU C Library would
-be (and today, now is) a drop-in replacement for existing C Libraries.  On
-a Unix-like operating system, C is the lingua franca and the C library is
-an essential component for all programs.  It is extremely difficult to
+become (and today, now is) a drop-in replacement for existing C Libraries.
+On a Unix-like operating system, C is the lingua franca and the C library
+is an essential component for all programs.  It is extremely difficult to
 construct a program that will run with ease on a Unix-like operating
-system without making use of services provided by the GNU C Library --
-even if the program is written in a language other than C\@.  Effectively,
-all user application programs that run on any modern Unix-like system must
+system without making use of services provided by the C Library --- even
+if the program is written in a language other than C\@.  Effectively, all
+user application programs that run on any modern Unix-like system must
 make use of the C Library.
 
 By the time work began on the GNU implementation of the C Library, there
@@ -1812,15 +1827,15 @@ were already many C libraries in existence from a variety of vendors.
 Every proprietary Unix vendor had one, and many third parties produced
 smaller versions for special purpose use.  However, our goal was to create
 a C library that would provide equivalent functionality to these other C
-Libraries on a Free Software operating system (which in fact happens today
-in modern GNU/Linux systems, which all use the GNU C Library).
+libraries on a Free Software operating system (which in fact happens today
+on modern GNU/Linux systems, which all use the GNU C Library).
 
 Unlike existing GNU application software, however, the licensing
 implications of releasing the GNU C Library (``glibc'') under GPL were
 somewhat different.  Applications released under GPL would never
 themselves become part of proprietary software.  However, if glibc were
 released under GPL, it would require that any application distributed for
-the GNU/Linux platform be released under GPL.
+the GNU/Linux platform be released under GPL\@.
 
 Since all applications on a Unix-like system depend on the C library, it
 means that they must link with that library to function on the system.  In
@@ -1837,18 +1852,18 @@ advocates, since it stops all proprietary software development on
 GNU/Linux systems.  However, the outcome is a bit more subtle.  In a world
 where many C Libraries already exist, many of which could easily be ported
 to GNU/Linux, a GPL'd glibc would be unlikely to succeed.  Proprietary
-vendors would see the excellent opportunity to license their C libraries to
-anyone who wished to write proprietary software for GNU/Linux systems.
-The de-facto standard for C libraries on GNU/Linux would likely become not
+vendors would see the excellent opportunity to license their C libraries
+to anyone who wished to write proprietary software for GNU/Linux systems.
+The de-facto standard for C libraries on GNU/Linux would likely be not
 glibc, but the most popular proprietary one.
 
 Meanwhile, the actual goal of releasing glibc under GPL --- to ensure no
 proprietary applications on GNU/Linux --- would be unattainable in this
 scenario.  Furthermore, users of those proprietary applications would also
-be users of a proprietary C library, not glibc.
+be users of a proprietary C library, not the Free glibc.
 
-The Lesser GPL was first conceived to handle this scenario.  It was clear
-that the existence of proprietary applications for GNU/Linux was
+The Lesser GPL was initially conceived to handle this scenario.  It was
+clear that the existence of proprietary applications for GNU/Linux was
 inevitable.  Since there were so many C libraries already in existence, a
 new one under GPL would not stop that tide.  However, if the new C library
 were released under a license that (a) permitted proprietary applications
@@ -1860,25 +1875,23 @@ the C library.
 
 There was no way the license of glibc could stop or even slow the creation
 of proprietary applications on GNU/Linux.  However, loosening the
-restrictions on the licensing of glibc was able to ensure that nearly all
-proprietary applications at least used a Free C library rather than a
-proprietary one.  This trade-off is central to the reasoning behind the
-LGPL\@.
+restrictions on the licensing of glibc ensured that nearly all proprietary
+applications at least used a Free C library rather than a proprietary one.
+This trade-off is central to the reasoning behind the LGPL\@.
 
 Of course, many people who use the LGPL today are not thinking in these
-terms.  In fact, they are often choosing the GPL because they are looking
-for a ``compromise'' between the GPL and the X11-style liberal licensing
-that does not reserve any rights to ensure the future freedom of the
-software.  However, understanding FSF's reasoning behind the creation of
-the LGPL is helpful when studying the license.
+terms.  In fact, they are often choosing the LGPL because they are looking
+for a ``compromise'' between the GPL and the X11-style liberal licensing.
+However, understanding FSF's reasoning behind the creation of the LGPL is
+helpful when studying the license.
 
 
 \section{What's the Same?}
 
 Much of the text of the LGPL is identical to the GPL\@.  As we begin our
 discussion of the LGPL, we will first eliminate the sections that are
-identical, or that have the minor change of changing the word ``Program''
-to ``Library''.
+identical, or that have the minor modifications of changing the word
+``Program'' to ``Library''.
 
 First, \S 1 of LGPL, the rules for verbatim copying of source, are
 equivalent to those in GPL's \S 1.
@@ -2025,14 +2038,14 @@ the library'', works as follows:
 \end{itemize}
 
 We will talk about the specific restrictions LGPL places on ``works that
-use the library'' in detail in Section~\ref{FIXME}.  For now, focus on the
-logic related to how the LGPL places requirements on the license of
-\lplusi{}.  Note, first of all, the similarity between this explanation
-and that in Section~\ref{separate-and-independent}, which discussed the
-combining otherwise separate and independent works with GPL'd code.
-Effectively, what LGPL is doing is saying that when a new work is
-otherwise separate and independent, but has interface calls out to an
-LGPL'd library, then it is considered a ``work that uses the library''.
+use the library'' in detail in Section~\ref{lgpl-section-6}.  For now,
+focus on the logic related to how the LGPL places requirements on the
+license of \lplusi{}.  Note, first of all, the similarity between this
+explanation and that in Section~\ref{separate-and-independent}, which
+discussed the combination of otherwise separate and independent works with
+GPL'd code.  Effectively, what LGPL is doing is saying that when a new
+work is otherwise separate and independent, but has interface calls out to
+an LGPL'd library, then it is considered a ``work that uses the library''.
 
 In addition, the only reason that LGPL has any control over the licensing
 of a ``work that uses the library'' is for the same reason that GPL has
@@ -2122,11 +2135,10 @@ the license only so that when such a border case is hit, the implications
 of using LGPL continue in the expected way.
 
 To understand this subtle point, we must recall the way that a compiler
-operates, which we discussed in Section~\ref{FIXME}.  The compiler first
-generates object code, which are the binary representations of various
-programming modules.  Each of those modules is usually not useful by
-itself; it becomes useful to a user a a full program when those modules
-are {\em assembled\/} into a full binary executable.
+operates.  The compiler first generates object code, which are the binary
+representations of various programming modules.  Each of those modules is
+usually not useful by itself; it becomes useful to a user a full program
+when those modules are {\em assembled\/} into a full binary executable.
 
 As we have discussed, the assembly of modules can happen at compile-time
 or at runtime.  Legally, there is no distinction between the two --- both
@@ -2154,7 +2166,7 @@ based on the library''.  However, since the compiler copies verbatim,
 copyrighted portions of the library into the object code for the otherwise
 separate and independent work, it would actually cause that object file a
 ``work based on the library''.  It is not FSF's intent that a mere
-compilation idiosyncrasy changes the requirements on the users of the
+compilation idiosyncrasy would change the requirements on the users of the
 LGPL'd software.  This paragraph removes that restriction, allowing the
 implications of the license to be the same regardless of the specific
 mechanisms the compiler uses underneath to create the ``work that uses the
@@ -2170,7 +2182,7 @@ them understand that the full implications of LGPL are the same regardless
 of the details of the compilation progress.
 
 \section{LGPL \S 6: Distributing Works that Use the Library}
-
+\label{lgpl-section-6}
 Now that we have a established a good working definition of works that
 ``use'' and works that ``are based on'' the library, we will consider the
 rules for distributing these two different works.
@@ -2184,10 +2196,10 @@ source form.  However, there are also conditions in LGPL \S 6 to make sure
 that a user who wishes to modify or update the library can do so.
 
 LGPL \S 6 lists five choices with regard to supplying library source and
-the freedom to modify that library source the users.  We will first
-consider the option given by \S 6(b), which describes the most common way
-that is currently used for LGPL compliance on a ``work that uses the
-library''.
+granting the freedom to modify that library source to users.  We will
+first consider the option given by \S 6(b), which describes the most
+common way that is currently used for LGPL compliance on a ``work that
+uses the library''.
 
 \S 6(b) allows the distributor of a ``work that uses the library'' to
 simply use a dynamically linked, shared library mechanism to link with the
@@ -2214,17 +2226,18 @@ based on the library'', so that the user can relink the application and
 build a new binary.
 
 The remaining options in \S 6 are very similar to the other choices
-provided by GPL \S 3.  There are some additions, and time does not permit
-us in this course to go into those additional options.  In almost all
-cases of distribution under LGPL, either \S 6(a) or \S 6(b) are exercised.
+provided by GPL \S 3.  There are some additional options, and time does
+not permit us in this course to go into those additional options.  In
+almost all cases of distribution under LGPL, either \S 6(a) or \S 6(b) are
+exercised.
 
 \section{Distribution of Works Based on the Library}
 
-Essential, ``works based on the library'' must be distributed under the
-same conditions as works under full GPL\@.  In fact, we note that LGPL's \S
-2 is nearly identical in its terms and requirements to GPL's \S 2.  There
-are again subtle differences and additions, which time does not permit us
-to cover in this course.
+Essentially, ``works based on the library'' must be distributed under the
+same conditions as works under full GPL\@.  In fact, we note that LGPL's
+\S 2 is nearly identical in its terms and requirements to GPL's \S 2.
+There are again subtle differences and additions, which time does not
+permit us to cover in this course.
 
 \section{And the Rest}
 
@@ -3400,6 +3413,7 @@ That's all there is to it!
 % LocalWords:  proprietarize redistributors sublicense yyyy Gnomovision EULAs
 % LocalWords:  Yoyodyne FrontPage improvers Berne copyrightable Stallman's GPLs
 % LocalWords:  Lessig Lessig's UCITA pre PDAs CDs reshifts GPL's Gentoo glibc
-% LocalWords:  TrollTech administrivia LGPL's MontaVista OpenTV Mitek Arce
-% LocalWords:  unprotectable protectable Unfreedonia chipset CodeSourcery
-% LocalWords:  impermissibly
+% LocalWords:  TrollTech administrivia LGPL's MontaVista OpenTV Mitek Arce DVD
+% LocalWords:  unprotectable protectable Unfreedonia chipset CodeSourcery Iqtel
+% LocalWords:  impermissibly Bateman faire minimis Borland uncopyrightable Mgmt
+% LocalWords:  franca downloadable
