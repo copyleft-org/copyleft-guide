@@ -928,14 +928,14 @@ of GPL'ed binaries (which comes with corresponding source, of course), you
 have the freedom to redistribute that work at any fee you choose, or not
 at all.  Sometimes, companies attempt to build a racket by producing very
 specialized binaries (perhaps for an obscure architecture), and then
-giving source code that does corresponding, but not giving the
+giving source code that does correspond, but not giving the
 ``incantations'' and build plans they used to make that source compile
 into the specialized binaries.  Therefore, \S 3 that the source code
-include ``meta-material'' like scripts, interface definitions, and other material
-that is used to ``control compilation and installation'' of the binaries.
-In this manner, those further down the distribution chain are assured that
-they have the unabated freedom to build their own derivative works from
-the sources provided.
+include ``meta-material'' like scripts, interface definitions, and other
+material that is used to ``control compilation and installation'' of the
+binaries.  In this manner, those further down the distribution chain are
+assured that they have the unabated freedom to build their own derivative
+works from the sources provided.
 
 FSF (as authors of GPL) realizes that software distribution comes in many
 forms.  Embedded manufacturers, for example, have the freedom to put
@@ -1280,7 +1280,7 @@ Finally, one important point to remember when reading \S 11 is that \S 1
 permits the sale of warranty as an additional service, which  \S 11
 affirms.
 
-\section{GPL, \S 12}
+\section{GPL, \S 12: Limitation of Liability}
 \label{GPLs12}
 
 There are many types of warranties, and in some jurisdictions some of them
@@ -1296,21 +1296,123 @@ So ends the terms and conditions of the GNU General Public License.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Integrating the GPL into Business Practices}
 
-\section{Using Free Software In-House}
+Since GPL'ed software is now extremely prevalent through the industry, it
+is useful to has some basic knowledge about using GPL'ed software in
+business and how to build business models around GPL'ed software.
+
+\section{Using GPL'ed Software In-House}
+
+A discussed in Sections~\ref{GPLs0} and~\ref{GPLs5} of this tutorial, the
+GPL only governs the activities of copying, modifying and distributing the
+software are not governed by the license.  Thus, in FSF's view, simply
+installing the software on a machine and using it is not controlled or
+limited in any way by GPL\@.  Using Free Software in general requires
+substantially fewer agreements and less license compliance activity than
+any known proprietary software.
+
+Even if a company engages heavily in copying the software throughout the
+enterprise, such copying is not only permitted by \S\S 1 and 3, but it is
+encouraged!  If the company simply deploy unmodified (or even modified)
+Free Software throughout the organization for its employees to use, the
+obligations under the license are very minimal.  Using Free Software has a
+substantially lower cost of ownership --- both in licensing fees and in
+licensing checking and handling -- than the proprietary software
+equivalents.
 
 \section{Business Models}
 \label{Business Models}
 
-\subsection{Redistribution Sales}
+Using Free Software in house is certainly helpful, but there is also a
+thriving market for Free Software-oriented business models.  There is the
+traditional model of selling copies of Free Software distributions.  Many
+companies, including IBM and Red Hat, make substantial revenue from this
+model.  IBM primarily chooses this model because they have found that for
+higher-end hardware, the cost of the profit made from proprietary software
+licensing fees is negligible.  The real profit is in the hardware, but it is
+essential that software be stable, reliable and dependable, and the users
+be allowed to have unfettered access to it.  Free Software, and GPL'ed
+software in particular (because IBM can be assured that proprietary
+versions of the same software will not exists to compete on their
+hardware) is the right choice.
 
-\subsection{Custom Modification on Contract}
- 
+Red Hat has actually found that a ``convenience fee'' for Free Software,
+when set at a reasonable price (around \$60 or so), can produce some
+profit.  Even though Red Hat's system is fully downloadable on their
+website, people still go to local computer stores and buy copies of their
+box set, which is simply a printed version of the manual (available under
+a free license as well) and the Free Software system it documents.
 
-\subsection{Proprietary Relicensing}
+\medskip
+
+However, custom support, service, and software improvement contracts are
+the most widely used models for GPL'ed software.  The GPL is central to
+their success, because it ensure that the code base remains common, and
+that large and small companies are on equal footing for access to the
+technology.  Consider, for example, the GNU Compiler Collection (GCC).
+Cygnus Solutions, a company started in the early 1990s, was able to grow
+steadily simply by providing services for GCC --- mostly consisting of
+porting GCC to new embedded chipset target platforms.  Eventually, Cygnus
+was so successful that it was purchased by Red Hat where it remains a
+profitable division.
+
+However, there are very small companies like CodeSourcery, as well as
+other medium sized companies like MontaVista and OpenTV that compete in
+this space.  Because the code-base is protect by GPL, it creates and
+demands industry trust.  Companies can cooperate on the software and
+improve it for everyone.  Meanwhile, companies who rely on GCC for their
+work are happy to pay for improvements, and for ports to new target
+platforms, and nearly all the changes fold back into the standard
+versions, and those forks that exist remain freely available.
+
+\medskip
+
 \label{Proprietary Relicensing}
 
+A final common business model that is perhaps the most controversial is
+proprietary relicensing of a GPL'ed code base.  This is only an option for
+software in which a particular entity is the sole copyright holder.  As
+discussed earlier in this tutorial, a copyright holder is permitted under
+copyright law to license a software system under her copyright as many
+different ways as she likes to as many different parties as she wishes.
+
+Some companies, such as MySQL AB and TrollTech, use this to their
+financial advantage with regard to a GPL'ed code base.  The standard
+version is available from the company under the terms of the GPL\@.
+However, parties can purchase separate proprietary software licensing for
+a fee.
+
+This business model is problematic because it means that the GPL'ed code
+base must be developed in a somewhat monolithic way, because volunteer
+Free Software developers may be reluctant to assign their copyrights to
+the company because it will not promise to always and forever license the
+software as Free Software.  Indeed, the company will surely use such code
+contributions in proprietary versions licensed for fees.
 
 \section{Ongoing Compliance}
+
+GPL compliance is in fact a very simple matter -- much simpler than
+typical proprietary software agreements and EULAs.  Usually, the most
+difficult hurdle is changing from a proprietary software mindset to one
+that seeks to foster a community of sharing and mutual support.  Certainly
+complying with the GPL from a users' perspective gives substantially fewer
+headaches than proprietary license compliance.
+
+For those who go into the business of distributing or distributing
+modified versions of GPL'ed software, the burden is a bit higher, but not
+by much.  The glib answer that is that it is always easy to comply with
+the GPL by releasing the whole product as Free Software.  However,
+admittedly to the chagrin of FSF, many modern and complex software systems
+are built using both proprietary and GPL'ed components that are not
+legally derivative works of each other.  Usually, in product development
+with Free Software tools, sometimes it is easier simply to improve
+existing GPL'ed application than to start from scratch.  In exchange for
+that benefit, the license requires that the modifier give back to the
+commons that made the work easier.  It is a reasonable trade-off, and it
+is a way to help build a better world while also making a profit.
+
+Note that FSF does provide services to assist companies who need
+assistance in complying with the GPL.  You can contact FSF's GPL
+Compliance Labs at <compliance@fsf.org>.
 
 \appendix
 
@@ -1736,3 +1838,4 @@ General Public License instead of this License.
 % LocalWords:  proprietarize redistributors sublicense yyyy Gnomovision EULAs
 % LocalWords:  Yoyodyne FrontPage improvers Berne copyrightable Stallman's GPLs
 % LocalWords:  Lessig Lessig's UCITA pre PDAs CDs reshifts GPL's Gentoo
+% LocalWords:  TrollTech
