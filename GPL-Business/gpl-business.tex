@@ -155,8 +155,9 @@ that program, the following freedoms:
 The focus on ``a particular user'' is very pertinent here.  It is not
 uncommon for the same version of a specific program to grant these
 freedoms to some subset of its user base, while others have none or only
-some of these freedoms.  Section~\ref{relicensing} talks in detail about
-how this can happen even if a program is released under the GPL\@.
+some of these freedoms.  Section~\ref{Proprietary Relicensing} talks in
+detail about how this can happen even if a program is released under the
+GPL\@.
 
 Some people refer to software that gives these freedoms as ``Open
 Source''.  Besides having a different political focus than those who call
@@ -970,7 +971,7 @@ Internet (i.e., ``from a designated place''), \emph{then} simply providing
 the source code right alongside the binaries in the same place is
 sufficient to comply with \S 3.
 
-\midskip
+\medskip
 
 As is shown above, Under \S 3(a), embedded manufacturers can put the
 binaries on the device and ship the source code along on a CD\@.  However,
@@ -1050,16 +1051,90 @@ only rarely a better option than complying via \S 3(a).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Defending Freedom On Many Fronts}
 
-\section{GPL, Section 4}
+The last chapter presented the core freedom-defending provisions of GPL\@,
+which are in \S\S 0--3.  \S\S 4--7 of the GPL are designed to ensure that
+\S\S 0--3 are not infringed, are enforcable, are kept to the confines of
+copyright law and are not trumped by other copyright agreements or
+components of other entirely seperate legal systems.  In short, while \S\S
+0--3 are the parts of the license that defend the freedoms of users and
+programmers, \S\S 4--7 are the parts of the license that keep the playing
+field clear so that \S\S 0--3 can do their jobs.
+
+\section{GPL \S 4: Termination on Violation}
 \label{GPLs4}
 
-\section{GPL, Section 5}
+\S 4--5 are, in my opinion, the heart of the GPL\@. \S\S 0--3 are
+important in their efforts to set forth in clear legal langauge the
+doctrine of copyleft.  However, \S 4--5 are the glue that holds \S\S 0--3
+together.
+
+\S 4 is GPL's termination clause.  Upon first examination, it seems
+strange for a license that has the goal of defending users and programmers
+freedoms for perpetuity in an irrevocable way would have such a clause.
+However, upon further examination, the difference between irrevocability
+and this termination clause becomes clear.
+
+The GPL is irrevocable in the sense that once a copyright holder grants
+rights for someone to copy, modify and redistribute the software under
+terms of the GPL, they cannot later revoke that grant.  Since the GPL has
+no provision allowing the copyright holder to take such a pregoative, the
+license is granted as long as the copyright remains in effect\footnote{In
+  the USA< due to unfortunate legislation, this is nearly perpetual, even
+  though the Constitution forbids it.}.  The copyright holder has the
+right to relicense the same work under different licenses (see
+Section~\ref{Proprietary Relicensing} of this tutorial), or to stop
+distributing the GPL'ed version (assuming \S 3(b) was never used), but the
+she may not revoke the rights under GPL already granted.
+
+In fact, when an entity looses their right to copy, modify and distribute
+GPL'ed software, it is because of their \emph{own actions}, not that of
+the copyright holder.  The copyright holder does not decided when \S 4
+termination occurs (if ever), the actions of the licensee does.
+
+Under copyright law, the GPL has granted various rights and freedoms to
+the licensee to perform specific types of copying, modification, and
+redistribution.  By default, all other types of copying, modification, and
+redistribution are prohibited.  \S 4 says that if you undertake any of
+those other types (e.g., redistributing binary-only in violation of \S 3),
+then all rights under the license --- even those otherwise permitted for
+those who have not violated --- terminate automatically.
+
+\S 4 gives GPL teeth.  If licensees fail to adhere to the license, then
+they are stuck.  They must to completely cease and desist from all
+copying, modification and distribution of that GPL'ed software.
+
+At that point, violating licensees must gain the forgiveness of the
+copyright holder to have their rights restored.  Alternatively, they could
+negotiate another agreement, seperate from GPL, with the copyright
+holder.  Both are common practice.
+
+At FSF, it is part of the mission to spread software freedom.  When FSF
+enforces GPL, the goal is to bring the violator back into compliance as
+quickly as possible, and redress the damage caused by the violation.
+That is FSF's steadfast position in a violation negotation --- comply
+with the license and respect freedom.
+
+However, other entities who do not share the full ethos of software
+freedom as institiualized by FSF persue GPL violations differently.  MySQL
+AB, a company that produces the GPL'ed MySQL database, upon discovering
+GPL violations typically negotiates a proprietary software license
+sepearately for a fee.  While this practice is not one that FSF would ever
+consider undertaking or even endorsing, it is a legal way for copyright
+holders to proceed.
+
+\section{GPL \S 5: Acceptance, Copyright Style}
 \label{GPLs5}
 
-\section{GPL, Section 6}
+Under copyright law, the GPL has granted various rights and freedoms to
+the licensee to perform acts of copying, modification, and redistribution
+that would otherwise have been prohibited by default.  Since, barring
+special permission from the copyright holder, the GPL is a licensee's one
+and only license to the software (thanks to \S 6),
+
+\section{GPL \S 6: GPL, My One and Only}
 \label{GPLs6}
 
-\section{GPL, Section 7}
+\section{GPL \S 7: ``Give My Software Liberty of Give It Death!''}
 \label{GPLs7}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1100,6 +1175,15 @@ warranties that cannot be disclaimed (such as personal injury, etc.).
 
 \section{Business Models}
 \label{Business Models}
+
+\subsection{Redistribution Sales}
+
+\subsection{Custom Modification on Contract}
+ 
+
+\subsection{Proprietary Relicensing}
+\label{Proprietary Relicensing}
+
 
 \section{Ongoing Compliance}
 
