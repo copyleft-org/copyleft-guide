@@ -1,0 +1,126 @@
+  GPL Compliance Case Studies and Legal Ethics in Free Software Licensing
+
+This one-day course presents the details of five different GPL compliance
+cases handled by FSF's GPL Compliance Laboratory.  Each case offers unique
+insights into problems that can arise when the terms of GPL are not
+properly followed, and how diplomatic negotiation between the violator and
+the copyright holder can yield positive results for both parties.
+
+This course also includes a unit on the ethical considerations for
+attorneys who want to represent clients that make use of or sell Free
+Software products.
+
+Prerequisites:
+
+     Attendees should have successfully completely the course, a "Detailed
+     Study and Analysis of GPL and LGPL", as the material from that course
+     forms the building blocks for this material.
+
+Audience:
+
+     The course is of most interest to lawyers who have clients or
+     employers that deal with Free Software on a regular basis.  However,
+     technical managers and executives whose businesses use or distribute
+     Free Software will also find the course very helpful.
+
+
+The course will include the topics listed below, along with ample time for
+questions and discussions.  Lunch is included, with a lunch speaker to be
+announced.
+
+
+ GPL Compliance Case Studies:
+
+    * Overview of FSF's GPL Compliance Lab (:20)
+
+      We present a brief introduction to the work that FSF does to enforce
+      the GPL and defend the freedoms granted by Free Software.
+
+    * GPL Violation Case Study A (1:00)
+
+      In this case study, we consider one of the most complex and
+      longest-running violations that FSF has handled.  Company A
+      distributed a derivative work of the GNU Complier Collection (GCC)
+      without complete corresponding source, and refused to distribute any
+      source at all to anyone who was not their direct customer.  We
+      follow the slow movement toward compliance and explain how FSF deals
+      with sometimes belligerent violators.
+
+    * GPL Violation Case Study B (:20)
+
+      In this case study, we consider a contrasting violation to Case A.
+      Company B, who sold a complete GNU/Linux distribution, had worked
+      hard to be in compliance, but we had nevertheless found an
+      infraction in their compliance efforts.  We explain how smoothly
+      violations of this type can be resolved and the process that an
+      otherwise friendly violator can expect.
+
+    * GPL Violation Case Study C (:35)
+
+      In this case study, we present a violation where an entire embedded
+      GNU/Linux distribution was included in a consumer electronic device.
+      We consider the problems faced regarding kernel modules for device
+      drivers for government-regulated hardware, and cases where both an
+      upstream provider and a downstream distributor are in violation on
+      separate matters.
+      
+    * GPL Violation Case Study D (:25)
+
+      In this case study, we consider how to handle the inevitable
+      violations that can occur from a company that is generally committed
+      to doing Free Software as a regular part of its business, but -- due
+      to experimentation with new cutting edge business models, or because
+      of mere oversights -- has occasional GPL violations or
+      near-violations.
+
+    * Good Practices for GPL Compliance (:10)
+
+      After discussing the details of the various archetypes of GPL
+      compliance efforts undertaken by FSF, we generalize what we have
+      learned to advise on good practices to build a product from start to
+      finish in compliance with GPL, and how to build internal policies to
+      assure that your client or company is never faced with a violation
+      report.
+
+  Ethical Considerations for the Attorney Practicing Free Software
+
+  This portion of the course will focus on ethical issues that may arise
+  for attorneys counseling clients with respect to free software issues.
+  Many of these topics have more general application, but specific
+  discussion of the ways in which these issues may arise for free software
+  clients will be presented.
+
+     * Part I: Representing Free Software Clients (1:00)
+
+       An attorney's ethical duties run to not just their clients, but to
+       potential clients and the general public as well.  Pro bono
+       representation of free software clients not only conforms with the
+       principles set forth by most Bar Associations, but also provides
+       many other benefits to an attorney.  Once a client is retained, the
+       duty of loyalty attaches and conflicts, be they direct, indirect,
+       or political, should be identified and handled.
+
+     * Part II: Practicing Free Software (1:00)
+
+       Differing ethical issues arise in the context of counseling a
+       client who is a free software licensor as opposed to one who is a
+       free software licensee.  Further still, representing a client who
+       is both licensor and licensee presents a combination of all of
+       these issues. Compliance investigation and enforcement strategies
+       must be implemented in accordance with both the duty of loyalty and
+       the duty of honesty.  Likewise, performing exposure abatement while
+       also defending against charges of infringement may pose problems
+       within the attorney-client relationship. The ethical considerations
+       relevant to each of these situations will be presented and
+       discussed.
+
+     * Part III: More General Ethical Considerations Relevant to Free
+                 Software (1:00)
+
+       Free software counseling is but one specialty within the realm of
+       intellectual property counseling in general.  A review of various
+       topics of more general application, but with special relevance to
+       free software counseling, will be given along with a discussion of
+       the reasons why and ways in which such issues arise when
+       representing free software clients.  Patent prosecution and
+       governing rules considerations are two such topics.
