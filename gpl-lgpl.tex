@@ -2349,6 +2349,14 @@ copies within an organization.  In many countries the term ``making available
 to the public'' or ``communicating to the public'' is the closest counterpart
 to the generalized notion of distribution that exists under USA law.
 
+% FIXME: Connect up with: Indeed or something like that.
+
+The
+copyright laws of many countries other than the United States, as well
+as certain international copyright treaties, recognize ``making
+available to the public'' or ``communication to the public'' as one of
+the exclusive rights of copyright holders.
+
 Therefore, the GPL defines the term ``propagate'' by reference to activities
 that require permission under ``applicable copyright law'', but excludes
 execution and private modification from the definition.  GPLv3's definition
@@ -2432,6 +2440,13 @@ make completely clear that a licensee cannot avoid complying with the
 requirements of the GPL by dynamically linking an add-on component to the
 original version of a program.
 
+%FIXME: Merge this in with previous paragarph
+
+The definition of Corresponding Source (``Complete Corresponding Source
+Code'' in Draft1) is the most complex definition in the license.
+
+% FIXME: This needs work
+
 Though the definition of Complete Corresponding Source Code in the
 second paragraph of section 1 is expansive, it is not sufficient to
 protect users' freedoms in many circumstances.  For example, a GPL'd
@@ -2440,6 +2455,20 @@ signed with a key or authorized with a code in order for it to run on
 a particular machine and function properly. Similarly, a program that
 produces digitally-restricted files might require a decryption code in
 order to read the output.  
+
+% FIXME: FSF third person, and verify it still matches GPLv3 text.
+
+We clarify that the shared libraries and dynamically linked subprograms that
+are included in Corresponding Source are those that the work is
+``specifically'' designed to require, making it clearer that they do not
+include libraries invoked by the work that can be readily substituted by
+other existing implementations.
+
+
+%  FIXME: merge in with a forward-reference to Installation Information.
+
+s long as users are truly in a position to install and run
+their modified versions of the program
 
 % FIXME: Standard Interface
 
@@ -2491,6 +2520,14 @@ modifying and running the program. However, the right to privately modify and
 run the program is terminated if the licensee brings a patent infringement
 lawsuit against anyone for activities relating to a work based on the
 program.
+
+% FIXME:  transition, and some word smith
+The explicit prohibition of sublicensing ensures that enforcement of the GPL
+is always by the copyright holder.  Usually, sublicensing is regarded as a
+practical convenience or necessity for the licensee, to avoid having to
+negotiate a license with each licensor in a chain of distribution.  The GPL
+solves this problem in another way, through its automatic licensing
+provision.
 
 % FIXME: new section here, just to talk DRM before the other section.
 
@@ -2596,6 +2633,29 @@ copies of the program's source code must obey any existing additional terms
 that apply to parts of the program. In addition, the distributor is required
 to keep intact all license notices, including notices of such additional
 terms.
+
+% FIXME: needs context, needs match up to current text, and removal of stuff
+%        that's no longer there
+
+The original wording of this clause was meant to
+make clear that the GPL permits one to charge for the distribution of
+software.  Despite our efforts to explain this in the license and in
+other documents, there are evidently some who believe that the GPL
+allows charging for services but not for selling software, or that the
+GPL requires downloads to be gratis.  We referred to charging a ``fee'';
+the term ``fee'' is generally used in connection with services.  Our
+original wording also referred to ``the physical act of transferring.''
+The intention was to distinguish charging for transfers from attempts to
+impose licensing fees on all third parties.  ``Physical'' might be read,
+however, as suggesting ``distribution in a physical medium only.''  In
+our revised wording we use ``price'' in place of ``fee,'' and we remove
+the term ``physical.''
+
+% FIXME: say more and tie it to the text
+
+There is no harm in explicitly pointing out what ought to be obvious: that
+those who convey GPL-covered software may offer commercial services for the
+support of that software.
 
 \section{GPLv3~\S5: Modified Source}
 
@@ -2743,6 +2803,18 @@ program might not have the keys.
 
 % FIXME: installation information
 
+% FIXME: This needs merged in somewhere in here
+
+The mere fact that use of the work implies that the user \textit{has} the key
+may not be enough to ensure the user's freedom in using it.  The user must
+also be able to read and copy the key; thus, its presence in a special
+register inside the computer does not satisfy the requirement. In an
+application in which the user's personal key is used to protect privacy or
+limit distribution of personal data, the user clearly has the ability to read
+and copy the key, which therefore is not included in the Corresponding
+Source. On the other hand, if a key is generated based on the object code, or
+is present in hardware, but the user cannot manipulate that key, then the key
+must be provided as part of the Corresponding Source.
 
 % FIXME: this came from Section 1 but is now mostly in Section 6
 
@@ -2766,7 +2838,11 @@ put.\footnote{There is a clear distinction between this situation and the
   authentication key would also not qualify as part of the Corresponding
   Source under the language we have adopted for Draft 2.}
 
-%FIXME: publicly documented format
+%FIXME: publicly documented format.  This might work as a start on that:
+
+Our primary objective here was to ensure that the
+distributor use a generally-recognized mechanism for packaging source
+code.
 
 \section{Understanding License Compatibility}
 \label{license-compatibility}
@@ -3054,14 +3130,43 @@ of rights under the license.
 
 \section{GPLv3~\S9: Acceptance}
 
-% FIXME
+% FIXME: needs some work here
+
+Section 9 means what it says: mere receipt or execution of code neither
+requires nor signifies contractual acceptance under the GPL.  Speaking more
+broadly, we have intentionally structured our license as a unilateral grant
+of copyright permissions, the basic operation of which exists outside of any
+law of contract.  Whether and when a contractual relationship is formed
+between licensor and licensee under local law do not necessarily matter to
+the working of the license.
 
 \section{GPLv3~\S10: Explicit Downstream License}
 
-% FIXME
+% FIXME: needs filled out and more here.
+
+Draft1 removed the words ``at no charge'' from what is now subsection 5b, the
+core copyleft provision, for reasons related to our current changes to the
+second paragraph of section 4: it had contributed to a misconception that the
+GPL did not permit charging for distribution of copies.  The purpose of the
+``at no charge'' wording was to prevent attempts to collect royalties from
+third parties.  The removal of these words created the danger that the
+imposition of licensing fees would no longer be seen as a license
+violation.
+
+We therefore have added a new explicit prohibition on imposition of licensing
+fees or royalties in section 10.  This section is an appropriate place for
+such a clause, since it is a specific consequence of the general requirement
+that no further restrictions be imposed on downstream recipients of
+GPL-covered code.
 
 \section{GPLv3~\S11: Explicit Patent Licensing}
 \label{GPLv3s11}
+
+The patent licensing practices that section 7 of GPLv2 (corresponding to
+section 12 of GPLv3) was designed to prevent are one of several ways in which
+software patents threaten to make free programs non-free and to prevent users
+from exercising their rights under the GPL. GPLv3 takes a more comprehensive
+approach to combatting the danger of patents.
 
 % FIXME: just brought in words here, needs rewriting.
 
@@ -3211,6 +3316,14 @@ an additional requirement in violation of the GPL.  Moreover, if a
 program author or copyright holder purports to supplement the GPL with
 a choice of law clause, section 7 now permits any licensee to remove
 that clause.
+
+
+% FIXME: does this need to be a section, describing how it was out then in
+% then out then in? :)
+
+We have removed from this draft the appended section on ``How to Apply These
+Terms to Your New Programs.'' For brevity, the license document can instead
+refer to a web page containing these instructions as a separate document.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{The Lesser GPL}
