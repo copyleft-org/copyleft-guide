@@ -2548,7 +2548,109 @@ contains provisions that are designed to reduce license incompatibility by
 making it easier for developers to combine code carrying non-GPL terms with
 GPL'd code.
 
+% FIXME: connecting text
+
+\subsection{Additional Permissions}
+
+The GPL is a statement of permissions, some of which have conditions.
+Additional terms, terms that supplement those of the GPL, may come to be
+placed on, or removed from, GPL-covered code in certain common ways.  We
+consider those added terms ``additional permissions'' if they grant
+exceptions from the conditions of the GPL, and ``additional requirements'' if
+they add conditions to the basic permissions of the GPL. The treatment of
+additional permissions and additional requirements under GPLv3 is necessarily
+asymmetrical, because they do not raise the same ethical and interpretive
+issues; in particular, additional requirements, if allowed without careful
+limitation, could transform a GPL'd program into a non-free one.  With these
+principles in the background, section 7 answers the following questions: (1)
+How do the presence of additional terms on all or part of a GPL'd program
+affect users' rights? (2) When and how may a licensee add terms to code being
+distributed under the GPL? (3) When may a licensee remove additional terms?
+
+% FIXME: FSF third person, etc.
+
+Additional permissions present the easier case.  We have licensed some of our
+own software under GPLv2 with permissive exceptions that allow combination
+with non-free code, and that allow removal of those permissions by downstream
+recipients; similarly, LGPLv2.1 is in essence a permissive variant of GPLv2,
+and it permits relicensing under the GPL.  We have generalized these
+practices in section 7.  A licensee may remove any additional permission from
+a covered work, whether it was placed by the original author or by an
+upstream distributor.  A licensee may also add any kind of additional
+permission to any part of a work for which the licensee has, or can give,
+appropriate copyright permission. For example, if the licensee has written
+that part, the licensee is the copyright holder for that part and can
+therefore give additional permissions that are applicable to it.
+Alternatively, the part may have been written by someone else and licensed,
+with the additional permissions, to that licensee.  Any additional
+permissions on that part are, in turn, removable by downstream recipients.
+As subsection 7a explains, the effect of an additional permission depends on
+whether the permission applies to the whole work or a part.
+
+% FIXME: rework this a bit
+
+We have drafted version 3 of the GNU LGPL, which we have released with Draft
+2 of GPLv3, as a simple list of additional permissions supplementing the
+terms of GPLv3.  Section 7 has thus provided the basis for recasting a
+formally complex license as an elegant set of added terms, without changing
+any of the fundamental features of the existing LGPL.  We offer this draft of
+LGPLv3 as as a model for developers wishing to license their works under the
+GPL with permissive exceptions.  The removability of additional permissions
+under section 7 does not alter any existing behavior of the LGPL; the LGPL
+has always allowed relicensing under the ordinary GPL.
+
+\subsection{Additional Requirements and License Compatibility}
+
+% FIXME: minor rewrites needed
+
+We broadened the title of section 7 because license compatibility, as it is
+conventionally understood, is only one of several facets of the placement of
+additional terms on GPL'd code.  The license compatibility issue arises for
+three reasons.  First, the GPL is a strong copyleft license, requiring
+modified versions to be distributed under the GPL.  Second, the GPL states
+that no further restrictions may be placed on the rights of recipients.
+Third, all other free software licenses in common use contain certain
+requirements, many of which are not conditions made by the GPL.  Thus, when
+GPL'd code is modified by combination with code covered by another formal
+license that specifies other requirements, and that modified code is then
+distributed to others, the freedom of recipients may be burdened by
+additional requirements in violation of the GPL.  It can be seen that
+additional permissions in other licenses do not raise any problems of license
+compatibility.
+
+% FIXME: minor rewrites needed
+
+Section 7 relaxes the prohibition on further restrictions slightly by
+enumerating, in subsection 7b, a limited list of categories of additional
+requirements that may be placed on code without violating GPLv3.  The list
+includes the items that were listed in Draft 1, though rewritten for clarity.
+It also includes a new catchall category for terms that might not obviously
+fall within one of the other categories but which are precisely equivalent to
+GPLv3 conditions, or which deny permission for activities clearly not
+permitted by GPLv3.  We have carefully considered but rejected proposals to
+expand this list further.  We have also rejected suggestions, made by some
+discussion committee members, that the Affero clause requirement (7d in Draft
+1 and 7b4 in Draft 2) be removed, though we have revised it in response to
+certain comments.  We are unwavering in our view that the Affero requirement
+is a legitimate one, and we are committed to achieving compatibility of the
+Affero GPL with GPLv3.
+
+% FIXME: minor rewrites needed
+
+A GPL licensee may place an additional requirement on code for which the
+licensee has or can give appropriate copyright permission, but only if that
+requirement falls within the list given in subsection 7b.  Placement of any
+other kind of additional requirement continues to be a violation of the
+license.  Additional requirements that are in the 7b list may not be removed,
+but if a user receives GPL'd code that purports to include an additional
+requirement not in the 7b list, the user may remove that requirement.  Here
+we were particularly concerned to address the problem of program authors who
+purport to license their works in a misleading and possibly
+self-contradictory fashion, using the GPL together with unacceptable added
+restrictions that would make those works non-free software.
+
 \section{GPLv3~\S7: Explicit Compatibility}
+
 
 % FIXME:  probably mostly still right, needs some updates, though.
 
@@ -2616,6 +2718,25 @@ non-GPL terms covering the added parts just as they must preserve the GPL, as
 long as any substantial portion of those parts is present in the user's
 version.
 
+% FIXME: minor rewrites needed
+
+Section 7 points out that GPLv3 itself makes no assertion that an additional
+requirement is enforceable by the copyright holder.  However, section 7 makes
+clear that enforcement of such requirements is expected to be by the
+termination procedure given in section 8 of GPLv3.
+
+% FIXME: better context, etc.
+
+Some have questioned whether section 7 is needed, and some have suggested
+that it creates complexity that did not previously exist.  We point out to
+those readers that there is already GPLv2-licensed code that carries
+additional terms.  One of the objectives of section 7 is to rationalize
+existing practices of program authors and modifiers by setting clear
+guidelines regarding the removal and addition of such terms.  With its
+carefully limited list of allowed additional requirements, section 7
+accomplishes additional objectives, permitting the expansion of the base of
+code available for GPL developers, while also encouraging useful
+experimentation with requirements we do not include in the GPL itself.
 
 \section{GPLv3~\S8: A Lighter Termination}
 
