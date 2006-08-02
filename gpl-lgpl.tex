@@ -2213,9 +2213,71 @@ adds one.  Most of these defined terms are somewhat straightforward and bring
 forward better worded definitions from GPLv2.  Herein, this tutorial
 discusses a few of the new ones.
 
+% FIXME: it's now five, ``Modify''
+
 GPLv3~\S0 includes definitions of four new terms not found in any form in
 GPLv2: ``covered work'', ``propagate'', ``convey'', and ``Appropriate Legal
 Notices''.
+
+% FIXME: Transition, GPLv2 ref needed.
+
+Although the definition of ``work based on the Program'' made use of a legal
+term of art, ``derivative work,'' peculiar to US copyright law, we did not
+believe that this presented difficulties as significant as those associated
+with the use of the term ``distribution.''  After all, differently-labeled
+concepts corresponding to the derivative work are recognized in all copyright
+law systems.  That these counterpart concepts might differ to some degree in
+scope and breadth from the US derivative work was simply a consequence of
+varying national treatment of the right of altering a copyrighted work.
+
+%FIXME: should we keep this? maybe a footnote?
+
+Ironically, the criticism we have received regarding the use of
+US-specific legal terminology in the ``work based on the Program''
+definition has come not primarily from readers outside the US, but
+from those within it, and particularly from members of the technology
+licensing bar.  They have argued that the definition of ``work based
+on the Program'' effectively misstates what a derivative work is under
+US law, and they have contended that it attempts, by indirect means,
+to extend the scope of copyleft in ways they consider undesirable.
+They have also asserted that it confounds the concepts of derivative
+and collective works, two terms of art that they assume, questionably,
+to be neatly disjoint under US law.
+
+% FIXME: As above
+
+We do not agree with these views, and we were long puzzled by the
+energy with which they were expressed, given the existence of many
+other, more difficult legal issues implicated by the GPL.
+Nevertheless, we realized that here, too, we can eliminate usage of
+local copyright terminology to good effect.  Discussion of GPLv3 will
+be improved by the avoidance of parochial debates over the
+construction of terms in one imperfectly-drafted copyright statute.
+Interpretation of the license in all countries will be made easier by
+replacement of those terms with neutral terminology rooted in
+description of behavior.
+
+%FIXME: GPLv3, reword a bit.
+
+Draft 2 therefore takes the task of internationalizing the license
+further by removing references to derivative works and by providing a
+more globally useful definition of a work ``based on'' another work.
+We return to the basic principles of users' freedom and the common
+elements of copyright law.  Copyright holders of works of software
+have the exclusive right to form new works by modification of the
+original, a right that may be expressed in various ways in different
+legal systems.  The GPL operates to grant this right to successive
+generations of users, particularly through the copyleft conditions set
+forth in section 5 of GPLv3, which applies to the conveying of works
+based on the Program.  In section 0 we simply define a work based on
+another work to mean ``any modified version for which permission is
+necessary under applicable copyright law,'' without further qualifying
+the nature of that permission, though we make clear that modification
+includes the addition of material.\footnote{We have also removed the
+paragraph in section 5 that makes reference to ``derivative or
+collective works based on the Program.''}
+
+%FIXME: transition
 
 While ``covered by this license'' is a phrase found in GPLv2, defining it
 more complete in a single as ``covered work'' enables some of the wording in
@@ -2233,10 +2295,24 @@ possible in its wording and effect.  When a work is licensed under the GPL,
 the copyright law of some particular country will govern certain legal issues
 arising under the license.  A term like ``distribute'' or its equivalent in
 languages other than English, is used in several national copyright statutes.
+
+Practical experience with GPLv2 revealed the awkwardness of using the
+term ``distribution'' in a license intended for global use.  
 The scope of ``distribution'' in the copyright context can differ from
 country to country.  The GPL does not seek to necessarily use the specific
 meaning of ``distribution'' that exists under United States copyright law or
 any other country's copyright law.
+
+%FIXME: rewrite, FSF third person,e tc.
+
+Even within a single country and language, the term distribution may be
+ambiguous; as a legal term of art, distribution varies significantly in
+meaning among those countries that recognize it.  For example, we have been
+told that in at least one country distribution may not include network
+transfers of software but may include interdepartmental transfers of physical
+copies within an organization.  In many countries the term ``making available
+to the public'' or ``communicating to the public'' is the closest counterpart
+to the generalized notion of distribution that exists under US law.
 
 Therefore, the GPL defines the term ``propagate'' by reference to activities
 that require permission under ``applicable copyright law'', but excludes
@@ -2244,6 +2320,27 @@ execution and private modification from the definition.  GPLv3's definition
 also gives examples of activities that may be included within ``propagation''
 but it also makes clear that, under the copyright laws of a given country,
 ``propagation'' may include other activities as well.
+
+% FIXME: probably merge this in
+
+Propagation is defined by behavior, and not by categories drawn from some
+particular national copyright statute.  We believe that such factually-based
+terminology has the added advantage of being easily understood and applied by
+individual developers and users.
+
+% FIXME: transition here to convey definition, maybe with \subsection {},
+%        also maybe with: Similar is true with the term ``convey''.
+
+we have further internationalized the license by removing references to
+distribution and replacing them with a new factually-based term,
+``conveying.'' Conveying is defined to include activities that constitute
+propagation of copies to others.  With these changes, GPLv3 addresses
+transfers of copies of software in behavioral rather than statutory terms.
+At the same time, we have acknowledged the use of ``making available to the
+public'' in jurisdictions outside the US by adding it as a specific example
+in the definition of ``propagate.'' We decided to leave the precise
+definition of an organizational licensee, and the line drawn between
+licensees and other parties, for determination under local law.
 
 % FIXME: paragraph number change , and more on Convey once definition comes.
 
@@ -2931,6 +3028,32 @@ has been revised slightly to make it clearer.
 No substantive changes have been made in sections 15 and 16.
 
 % FIXME: more, plus 17
+
+% FIXME: Section header needed here about choice of law.
+
+% FIXME: reword into tutorial
+
+Some have asked us to address the difficulties of internationalization
+by including, or permitting the inclusion of, a choice of law
+provision.  We maintain that this is the wrong approach.  Free
+software licenses should not contain choice of law clauses, for both
+legal and pragmatic reasons.  Choice of law clauses are creatures of
+contract, but the substantive rights granted by the GPL are defined
+under applicable local copyright law. Contractual free software
+licenses can operate only to diminish these rights.  Choice of law
+clauses also raise complex questions of interpretation when works of
+software are created by combination and extension.  There is also the
+real danger that a choice of law clause will specify a jurisdiction
+that is hostile to free software principles.
+
+% FIXME: reword into tutorial, \ref to section 7.
+
+Our revised version of section 7 makes explicit our view that the
+inclusion of a choice of law clause by a licensee is the imposition of
+an additional requirement in violation of the GPL.  Moreover, if a
+program author or copyright holder purports to supplement the GPL with
+a choice of law clause, section 7 now permits any licensee to remove
+that clause.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{The Lesser GPL}
