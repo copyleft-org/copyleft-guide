@@ -2711,6 +2711,56 @@ use.
 
 % FIXME: 7d-f
 
+\section{GPLv3~\S7(e): Peer-to-Peer Sharing Networks}
+
+% FIXME: rewrite a bit, maybe drop reference to bitorrent?
+
+Certain decentralized forms of peer-to-peer file sharing present a challenge
+to the unidirectional view of distribution that is implicit in GPLv2 and
+Draft 1 of GPLv3.  It is neither straightforward nor reasonable to identify
+an upstream/downstream link in BitTorrent distribution; such distribution is
+multidirectional, cooperative and anonymous.  In systems like BitTorrent,
+participants act both as transmitters and recipients of blocks of a
+particular file, but they see themselves as users and receivers, and not as
+distributors in any conventional sense.  At any given moment of time, most
+peers will not have the complete file.
+
+% FIXME: rewrite a bit.
+
+The GPL permits distribution of a work in object code form over a network,
+provided that the distributor offers equivalent access to copy the
+Corresponding Source Code ``in the same way through the same place.''  This
+wording might be interpreted to permit BitTorrent distribution of binaries if
+they are packaged together with the source code, but this impractical, for at
+least two reasons. First, even if the source code is packaged with the
+binary, it will only be available to a non-seeding peer at the end of the
+distribution process, but the peer will already have been providing parts of
+the binary to others in the network, functioning rather like a router or a
+cache proxy.  Second, in practice BitTorrent and similar peer-to-peer forms
+of transmission have been less suitable means for distributing source code.
+In large distributions, packaging source code with the binary may result in a
+substantial increase in file size and transmission time.  Source code
+packages themselves tend not to be transmitted through BitTorrent owing to
+reduced demand. There generally will be too few participants downloading the
+same source package at the same time to enable effective seeding and
+distribution.
+
+% FIXME: rewrite a bit.
+
+We have made two changes that recognize and facilitate distribution of
+covered works in object code form using BitTorrent or similar peer-to-peer
+methods.  First, under new subsection 6e, if a licensee conveys such a work
+using peer-to-peer transmission, that licensee is in compliance with section
+6 so long as the licensee knows, and informs other peers where, the object
+code and its Corresponding Source are publicly available at no charge under
+subsection 6d.  The Corresponding Source therefore need not be provided
+through the peer-to-peer system that was used for providing the binary.
+Second, we have revised section 9 to make clear that ancillary propagation of
+a covered work that occurs as part of the process of peer-to-peer file
+transmission does not require acceptance, just as mere receipt and execution
+of the Program does not require acceptance.  Such ancillary propagation is
+permitted without limitation or further obligation.
+
 % FIXME:  removing additional restrictions
 
 % FIXME:  probably mostly still right, needs some updates, though.
