@@ -2801,10 +2801,46 @@ user already has the codes. For example, in secure systems a computer owner
 might possess any keys needed to run a program, while the distributor of the
 program might not have the keys.
 
-% FIXME: installation information
+% FIXME: installation information??
 
 
-Why do distributors only have to provide Installation Information for User Products?
+% FIXME: perhaps this additional information isn't needed, next 3 paras, but
+%        there might be something good here
+
+Another major goal for GPLv3 has been to thwart technical measures such as
+signature checks in hardware to prevent modification of GPLed software on a
+device.  Previous drafts attempted to accomplish this by defining
+"Corresponding Source" to include any encryption or authorization keys
+necessary to install new versions of the software.  A number of members of
+the community questioned the impact and utility of such a definition.
+
+The third discussion draft uses a different strategy to accomplish the same
+task.  Section 6 requires that parties distributing object code provide
+recipients with the source code through certain means.  Now, when those
+distributors pass on the source, they are also required to pass on any
+information or data necessary to install modified software on the
+particular device that included it.  We believe that this will more
+precisely accomplish our goals, and avoid potential problems with expanding
+the definition of source code.  The new strategy should be familiar to free
+software developers: the GNU LGPL has long had similar requirements that
+enable users to link proprietary programs to modified libraries.
+
+In addition, the scope of these requirements has been narrowed.  This draft
+introduces the concept of a "User Product," which includes devices that are
+sold for personal, family, or household use.  Distributors are only
+required to provide installation information when they convey object code
+in a User Product.  After some discussion with committees, we discovered
+that the proposals in the second discussion draft would interfere with a
+number of existing business models that don't seem to be dangerous.  We
+believe that this compromise will achieve the greatest success in
+preventing tivoization.
+
+
+%FIXME: This probably needs work to be brought into clarity with tutorial,
+%next three paragarphs.
+
+Why do distributors only have to provide Installation Information for User
+Products?
 
 Some companies effectively outsource their entire IT department to another
 company. Computers and applications are installed in the company's offices,
@@ -3197,6 +3233,29 @@ software patents threaten to make free programs non-free and to prevent users
 from exercising their rights under the GPL. GPLv3 takes a more comprehensive
 approach to combatting the danger of patents.
 
+% FIXME: This probably needs editing
+
+One major goal for GPLv3 is to provide developers with additional protection
+from being sued for patent infringement.  After much feedback and cooperation
+from the committees, we are now proposing a patent license which closely
+resembles those found in other free software licenses.  This will be more
+comfortable for everyone in the free software community to use, without
+creating undue burdens for distributors.
+
+We have also added new terms to stop distributors from colluding with third
+parties to offer selective patent protection, as Microsoft and Novell have
+recently done.  The GPL is designed to ensure that all users receive the
+same rights; arrangements that circumvent this make a mockery of free
+software, and we must do everything in our power to stop them.
+
+Our strategy has two parts.  First, any license that protects some
+recipients of GPLed software must be extended to all recipients of the
+software.  Second, we prohibit anyone who made such an agreement from
+distributing software released under GPLv3.  We are still considering
+whether or not this ban should apply when a deal was made before these
+terms were written, and we look forward to community input on this issue.
+
+
 % FIXME: just brought in words here, needs rewriting.
 
 is rooted in the basic principles of the GPL.
@@ -3280,6 +3339,21 @@ section 7 permits distribution of a GPL'd work that includes added parts
 covered by terms other than those of the GPL. Such terms may include certain
 kinds of patent retaliation provisions that are broader than those of section
 2.
+
+% FIXME: should we mention Microsoft-Novell at all?
+
+We attack the Microsoft-Novell deal from two angles. First, in the sixth
+paragraph of section 11, the draft says that if you arrange to provide patent
+protection to some of the people who get the software from you, that
+protection is automatically extended to everyone who receives the software,
+no matter how they get it. This means that the patent protection Microsoft
+has extended to Novell's customers would be extended to everyone who uses any
+software Novell distributes under GPLv3.
+
+Second, in the seventh paragraph, the draft says that you are prohibited from
+distributing software under GPLv3 if you make an agreement like the
+Microsoft-Novell deal in the future. This will prevent other distributors
+from trying to make other deals like it.
 
 \section{GPLv3~\S12: Familiar as GPLv2 \S~7}
 
