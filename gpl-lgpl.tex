@@ -2109,6 +2109,9 @@ geographical distribution limitation since GPLv2 was released in 1991. We
 have concluded that this provision is not needed and is not expected to be
 needed in the future, and that it therefore should be removed.
 
+Although a principal reason for removing the provision is the fact that it
+has rarely been used, we have also encountered one current example of its use
+that we find troubling.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Odds, Ends, and Absolutely No Warranty}
@@ -2147,6 +2150,15 @@ Most warranty disclaimer language shout at you.  The
 There is apparently general acceptance that \textsc{all caps} is the
 preferred way to make something conspicuous, and that has over decades worked
 its way into the voodoo tradition of warranty disclaimer writing.
+
+% FIXME: Admittedly, goes here ?
+
+There is authority under United States law suggesting that effective warranty
+disclaimers must be ``conspicuous,'' and that conspicuousness can be
+established by capitalization and is absent when a disclaimer has the same
+typeface as the terms surrounding it (see \textit{Stevenson v.~TRW, Inc.},
+987 F.2d 288, 296 (5th Cir.~1993)).  We have reason to doubt that such
+authority would apply to copyright licenses like the GPL.
 
 Some have argued the GPL is unenforceable in some jurisdictions because
 its disclaimer of warranties is impermissibly broad.  However, GPLv2~\S11
@@ -2253,6 +2265,13 @@ discusses a few of the new ones.
 GPLv3~\S0 includes definitions of four new terms not found in any form in
 GPLv2: ``covered work'', ``propagate'', ``convey'', and ``Appropriate Legal
 Notices''.
+
+% FIXME: modify needs more discussion 
+
+We have made further improvements to the important definitions of ``modify''
+and ``based on,'' providing a complete definition of ``modify'' that refers
+to basic copyright rights, and using this definition of ``modify'' to define
+``modified version of'' and ``work based on,'' now presented as synonyms.
 
 % FIXME: Transition, GPLv2 ref needed.
 
@@ -2470,6 +2489,29 @@ other existing implementations.
 s long as users are truly in a position to install and run
 their modified versions of the program
 
+In our earlier drafts we devoted much care to devising a detailed technical
+definition of the cryptographic information that would enable GPL licensees
+to install functioning modified versions, without affecting legitimate uses
+of encryption.  The result was a provision that some found too complex and
+difficult to understand, while others continued to raise concerns about
+overinclusion.  In fact, the complexity and its resultant problems were never
+necessary, since our underlying goal was quite simple.
+
+In Draft 3 we instead use a definition of ``Installation Information'' in
+section 6 that is as simple and clear as that goal.  Installation Information
+is information that is ``required to install and execute modified versions of
+a covered work \dots from a modified version of its Corresponding Source,''
+in the same User Product for which the covered work is conveyed.  We provide
+guidance concerning how much information must be provided: it ``must suffice
+to ensure that the continued functioning of the modified object code is in no
+case prevented or interfered with solely because modification has been
+made.''  For example, the information provided would be insufficient if it
+enabled a modified version to run only in a disabled fashion, solely because
+of the fact of modification (regardless of the actual nature of the
+modification).  The information need not consist of cryptographic keys;
+Installation Information may be ``any methods, procedures, authorization
+keys, or other information.''
+
 % FIXME: Standard Interface
 
 % FIXME: System Libraries: it's in a different place and changed in later drafts
@@ -2494,6 +2536,20 @@ operating system component, compiler, or interpreter does not trigger
 the requirement to distribute source code.  The more low-level the
 functionality provided by the library, the more likely it is to be
 qualified for this exception.
+
+Because GPLv3 now has requirements referring to Corresponding Source outside
+of the object code conveying requirements of section 6 (see section 10,
+second paragraph, and section 11, third paragraph), it has become necessary
+to define what ``Corresponding Source'' means for a work in source code form.
+Our definition states that it is nothing more than that work itself. It is
+important to note that section 11, paragraph 3 refers to a work that is
+conveyed, and section 10, paragraph 2 refers to a kind of automatic
+counterpart to conveying achieved as the result of a transaction.  The
+permissions of section 5 imply that if one distributes source code, one can
+never be required to provide more than what is distributed.  One always has
+the right to modify a source code work by deleting any part of it, and there
+can be no requirement that free software source code be a whole functioning
+program.
 
 \section{GPLv3~\S2: Basic Permissions}
 
@@ -2530,6 +2586,13 @@ solves this problem in another way, through its automatic licensing
 provision.
 
 % FIXME: new section here, just to talk DRM before the other section.
+
+GPLv3 introduces provisions that respond to the growing practice of
+distributing GPL-covered programs in devices that employ technical means
+to restrict users from installing and running modified versions.  This
+practice thwarts the expectations of developers and users alike, because
+the right to modify is one of the core freedoms the GPL is designed to
+secure.
 
 Technological measures to defeat users' rights --- often described by such
 Orwellian phrases as ``digital rights management,'' which actually means
@@ -2599,6 +2662,22 @@ invasive para-copyright.
 
 % FIXME: Wrong paragraph now.
 
+What was the second paragraph of section 3 in Draft 2, concerning so-called
+anticircumvention law, has been broken up into two paragraphs.  In the first
+paragraph we have replaced the reference to the Digital Millennium Copyright
+Act, a United States statute, with a corresponding international legal
+reference to anticircumvention laws enacted pursuant to the 1996 WIPO treaty
+and any similar laws.  Lawyers outside the United States have worried that a
+United States statutory reference could be read as indicating a choice for
+application of United States law to the license as a whole, which of course
+was not our intention.  Further research has caused us to doubt the view that
+only one or the other paragraph of section 3 will typically be effective in a
+country that has enacted an anticircumvention law.  Moreover, we believe that
+several national anticircumvention laws have been or will be structured more
+similarly to the anticircumvention provisions of the Digital Millennium
+Copyright Act than to the counterpart provisions of the European Union
+Copyright Directive.
+
 The second paragraph of section 3 declares that no GPL'd program is part of
 an effective technological protection measure, regardless of what the program
 does. Ill-advised legislation in the United States and other countries has
@@ -2606,6 +2685,17 @@ prohibited circumvention of such technological measures. If a covered work is
 distributed as part of a system for generating or accessing certain data, the
 effect of this paragraph is to prevent someone from claiming that some other
 GPL'd program that accesses the same data is an illegal circumvention.
+
+we now state more precisely that a conveying party waives the power to forbid
+circumvention of technological measures only to the extent that such
+circumvention is accomplished through the exercise of GPL rights in the
+conveyed work. We have made two changes in the disclaimer of intention
+regarding limitations on the design and use of the work. First, we make clear
+that the referenced ``legal rights'' are specifically rights arising under
+anticircumvention law.  Second, we now refer to the conveying party's rights
+in addition to third party rights, as in some cases the conveying party will
+also be the party legally empowered to enforce or invoke rights arising under
+anticircumvention law.
 
 % FIXME: this needs rewritten 
 
@@ -2771,8 +2861,22 @@ source code available for copying for as long as the downstream distributor
 enables access to the object code.  This codifies what has been our
 interpretation of GPLv2.
 
+% FIXME: where should this go?
+
+We improved the wording of this sentence to provide a clearer expression of
+the intended policy.  Under the 6d option, you may charge for the conveyed
+object code. Those who pay to obtain the object code must be given equivalent
+and gratis access to obtain the Corresponding Source.  (If you convey the
+object code to them gratis, you must likewise make the Corresponding Source
+available to them without charge.) Those who do not obtain the object code
+from you, perhaps because they choose not to pay the fee you charge, are
+outside the scope of the provision; you need not give them any kind of access
+to the Corresponding Source.
+
 %FIXME: 6e, peer-to-peer
 
+Informing the peers is clearly enough; what seemed to be an additional
+knowledge requirement was superfluous wording.
 
 %  FIXME: Not final paragraph anymore. 
 
@@ -2835,6 +2939,112 @@ number of existing business models that don't seem to be dangerous.  We
 believe that this compromise will achieve the greatest success in
 preventing tivoization.
 
+In brief, we condition the right to convey object code in a defined class of
+``User Products,'' under certain circumstances, on providing whatever
+information is required to enable a recipient to replace the object code with
+a functioning modified version.
+
+%FIXME: this really big section on user product stuff may be too much for the
+%       tutorial
+
+In our earlier drafts, the requirement to provide encryption keys
+applied to all acts of conveying object code, as this requirement was
+part of the general definition of Corresponding Source. Section 6 of
+Draft 3 now limits the applicability of the technical restrictions
+provisions to object code conveyed in, with, or specifically for use in
+a defined class of ``User Products.''
+
+In our discussions with companies and governments that use specialized
+or enterprise-level computer facilities, we found that sometimes these
+organizations actually want their systems not to be under their own
+control. Rather than agreeing to this as a concession, or bowing to
+pressure, they ask for this as a preference. It is not clear that we
+need to interfere, and the main problem lies elsewhere. 
+
+While imposing technical barriers to modification is wrong regardless of
+circumstances, the areas where restricted devices are of the greatest
+practical concern today fall within the User Product definition. Most,
+if not all, technically-restricted devices running GPL-covered programs
+are consumer electronics devices, and we expect that to remain true in
+the near future. Moreover, the disparity in clout between the
+manufacturers and these users makes it difficult for the users to reject
+technical restrictions through their weak and unorganized market
+power. Even if limited to User Products, as defined in Draft 3, the
+provision still does the job that needs to be done. Therefore we have
+decided to limit the technical restrictions provisions to User Products
+in this draft.
+
+The core of the User Product definition is a subdefinition of ``consumer
+product'' taken verbatim from the Magnuson-Moss Warranty Act, a federal
+consumer protection law in the United States: ``any tangible personal
+property which is normally used for personal, family, or household
+purposes.''\footnote{15 U.S.C.~\S\ 2301.}  The United States has had
+three decades of experience of liberal judicial and administrative
+interpretation of this definition in a manner favorable to consumer
+rights.\footnote{The Magnuson-Moss consumer product definition itself
+has been influential in the United States and Canada, having been
+adopted in several state and provincial consumer protection laws.}  We
+mean for this body of interpretation to guide interpretation of the
+consumer product subdefinition in section 6, which will provide a degree
+of legal certainty advantageous to device manufacturers and downstream
+licensees alike.  Our incorporation of such legal interpretation is in
+no way intended to work a general choice of United States law for GPLv3
+as a whole.  The paragraph in section 6 defining ``User Product'' and
+``consumer product'' contains an explicit statement to this effect,
+bracketed for discussion.  We will decide whether to retain this
+statement in the license text after gathering comment on it.
+
+One well-established interpretive principle under Magnuson-Moss is that
+ambiguities are resolved in favor of coverage.  That is, in cases where
+it is not clear whether a product falls under the definition of consumer
+product, the product will be treated as a consumer product.\footnote{16
+C.F.R.~\S\ 700.1(a); \textit{McFadden v.~Dryvit Systems, Inc.}, 54
+U.C.C.~Rep.~Serv.2d 934 (D.~Ore.~2004).}  Moreover, for a given product,
+``normally used'' is understood to refer to the typical use of that type
+of product, rather than a particular use by a particular buyer.
+Products that are commonly used for personal as well as commercial
+purposes are consumer products, even if the person invoking rights is a
+commercial entity intending to use the product for commercial
+purposes.\footnote{16 C.F.R. \S \ 700.1(a).  Numerous court decisions
+interpreting Magnuson-Moss are in accord; see, e.g., \textit{Stroebner
+Motors, Inc.~v.~Automobili Lamborghini S.p.A.}, 459 F.~Supp.2d 1028,
+1033 (D.~Hawaii 2006).}  Even a small amount of ``normal'' personal use
+is enough to cause an entire product line to be treated as a consumer
+product under Magnuson-Moss.\footnote{\textit{Tandy Corp.~v.~Marymac
+Industries, Inc.}, 213 U.S.P.Q.~702 (S.D.~Tex.~1981). In this case, the
+court concluded that TRS-80 microcomputers were consumer products, where
+such computers were designed and advertised for a variety of users,
+including small businesses and schools, and had only recently been
+promoted for use in the home.}
+
+We do not rely solely on the definition of consumer product, however,
+because in the area of components of dwellings we consider the settled
+interpretation under Magnuson-Moss underinclusive.  Depending on how
+such components are manufactured or sold, they may or may not be
+considered Magnuson-Moss consumer products.\footnote{Building materials
+that are purchased directly by a consumer from a retailer, for improving
+or modifying an existing dwelling, are consumer products under
+Magnuson-Moss, but building materials that are integral component parts
+of the structure of a dwelling at the time that the consumer buys the
+dwelling are not consumer products. 16 C.F.R.~\S\S~700.1(c)--(f);
+Federal Trade Commission, Final Action Concerning Review of
+Interpretations of Magnuson-Moss Warranty Act, 64 Fed.~Reg.~19,700
+(April 22, 1999); see also, e.g., \textit{McFadden}, 54
+U.C.C.~Rep.~Serv.2d at 934.}  Therefore, we define User Products as a
+superset of consumer products that also includes ``anything designed or
+sold for incorporation into a dwelling.''
+
+Although the User Products rule of Draft 3 reflects a special concern
+for individual purchasers of devices, we wrote the rule to cover a
+category of products, rather than categorizing users.  Discrimination
+against organizational users has no place in a free software license.
+Moreover, a rule that applied to individual use, rather than to use of
+products normally used by individuals, would have too narrow an
+effect. Because of its incorporation of the liberal Magnuson-Moss
+interpretation of ``consumer product,'' the User Products rule benefits
+not only individual purchasers of User Products but also all
+organizational purchasers of those same kinds of products, regardless of
+their intended use of the products.
 
 %FIXME: This probably needs work to be brought into clarity with tutorial,
 %next three paragarphs.
@@ -2867,6 +3077,30 @@ all the hardware you own; the preamble explains, ``If such problems [as
   locked-down hardware] arise substantially in other domains, we stand ready
 to extend this provision to those domains in future versions of the GPL, as
 needed to protect the freedom of users.''
+
+The definition of Installation Information states that the information
+provided ``must suffice to ensure that the continued functioning of the
+modified object code is in no case prevented or interfered with solely
+because modification has been made.''  We did not consider it necessary to
+define ``continued functioning'' further. However, we believed it would be
+appropriate to provide some additional guidance concerning the scope of
+GPLv3-compliant action or inaction that distributors of
+technically-restricted User Products can take with respect to a downstream
+recipient who replaces the conveyed object code with a modified version.  We
+make clear that GPLv3 implies no obligation ``to continue to provide support
+service, warranty, or updates'' for such a work.
+
+Most technically-restricted User Products are designed to communicate across
+networks.  It is important for both users and network providers to know when
+denial of network access to devices running modified versions becomes a GPL
+violation.  We settled on a rule that permits denial of access in two cases:
+``when the modification itself materially and adversely affects the operation
+of the network,'' and when the modification itself ``violates the rules and
+protocols for communication across the network.''  The second case is
+deliberately drawn in general terms.  We intend it to serve as a foundation
+for development of reasonable enforcement policies that respect recipients'
+right to modify while recognizing the legitimate interests of network
+providers.
 
 % FIXME: This needs merged in somewhere in here
 
@@ -2902,6 +3136,19 @@ put.\footnote{There is a clear distinction between this situation and the
   not controlled by a preceding licensor or a third party, the vendor's
   authentication key would also not qualify as part of the Corresponding
   Source under the language we have adopted for Draft 2.}
+
+% FIXME: this needs the right place.
+
+We do not object to the practice of conveying object code in a mode not
+practically susceptible to modification by any party, such as code burned in
+ROM or embedded in silicon.  What we find ethically objectionable is the
+refusal to pass on to the downstream licensee the real right to modify,
+coupled with the retention of that right in the device manufacturer or some
+other party.  Our text has never prohibited distribution in ROM, but we have
+decided to make the point explicitly, for clarity's sake. Accordingly, our
+text states that the requirement to provide Installation Information ``does
+not apply if neither you nor any third party retains the ability to install
+modified object code on the User Product.''
 
 %FIXME: publicly documented format.  This might work as a start on that:
 
@@ -3193,6 +3440,36 @@ enter into compliance, and the licensee receives no notice of the past
 violation within 60 days, then the licensee need not worry about termination
 of rights under the license.
 
+In Draft 3 the termination provision of section 8 has been revised to
+indicate that, if a licensee violates the GPL, a contributor may terminate
+any patent licenses that it granted under the first paragraph of section 11
+to that licensee, in addition to any copyright permissions the contributor
+granted to the licensee.  Therefore, a contributor may terminate the patent
+licenses it granted to a downstream licensee who brings patent infringement
+litigation in violation of section 10.
+
+We have made two substantive changes to section 8.  First, we have clarified
+that patent rights granted under the GPL are among the rights that a
+copyright holder may terminate under section 8.  Therefore, a contributor who
+grants a patent license under the first paragraph of section 11 may terminate
+that patent license, just as that contributor may terminate copyright rights,
+to a downstream recipient who has violated the license.  We think that this
+is a reasonable result, and was already implicit in the wording of the
+termination provision in our earlier drafts.  Moreover, this clarification
+should encourage patent holders to make contributions to GPL-covered
+programs.
+
+Second, we have modified the termination procedure by providing a limited
+opportunity to cure license violations, an improvement that was requested by
+many different members of our community.  If a licensee has committed a
+first-time violation of the GPL with respect to a given copyright holder, but
+the licensee cures the violation within 30 days following receipt of notice
+of the violation, then any of the licensee's GPL rights that have been
+terminated by the copyright holder are ``automatically reinstated.''  The
+addition of the cure opportunity achieves a better balance than our earlier
+section 8 drafts between facilitating enforcement of the license and
+protecting inadvertent violators against unfair results.
+
 \section{GPLv3~\S9: Acceptance}
 
 % FIXME: needs some work here
@@ -3224,6 +3501,24 @@ such a clause, since it is a specific consequence of the general requirement
 that no further restrictions be imposed on downstream recipients of
 GPL-covered code.
 
+Careful readers of the GPL have suggested that its explicit prohibition
+against imposition of further restrictions\footnote{GPLv2, section 6; Draft
+  3, section 10, third paragraph.} has, or ought to have, implications for
+those who assert patents against other licensees.  Draft 2 took some steps to
+clarify this point in a manner not specific to patents, by describing the
+imposition of ``a license fee, royalty, or other charge'' for exercising GPL
+rights as one example of an impermissible further restriction.  In Draft 3 we
+have clarified further that the requirement of non-imposition of further
+restrictions has specific consequences for litigation accusing GPL-covered
+programs of infringement.  Section 10 now states that ``you may not initiate
+litigation (including a cross-claim or counterclaim in a lawsuit) alleging
+that any patent claim is infringed by making, using, selling, offering for
+sale, or importing the Program (or the contribution of any contributor).''
+That is to say, a patent holder's licensed permissions to use a work under
+GPLv3 may be terminated under section 8 if the patent holder files a lawsuit
+alleging that use of the work, or of any upstream GPLv3-licensed work on
+which the work is based, infringes a patent.
+
 \section{GPLv3~\S11: Explicit Patent Licensing}
 \label{GPLv3s11}
 
@@ -3232,6 +3527,255 @@ section 12 of GPLv3) was designed to prevent are one of several ways in which
 software patents threaten to make free programs non-free and to prevent users
 from exercising their rights under the GPL. GPLv3 takes a more comprehensive
 approach to combatting the danger of patents.
+
+Software patenting is a harmful and unjust policy, and should be abolished;
+recent experience makes this all the more evident. Since many countries grant
+patents that can apply to and prohibit software packages, in various guises
+and to varying degrees, we seek to protect the users of GPL-covered programs
+from those patents, while at the same time making it feasible for patent
+holders to contribute to and distribute GPL-covered programs as long as they
+do not attack the users of those programs.
+
+It is generally understood that GPLv2 implies some limits on a licensee's
+power to assert patent claims against the use of GPL-covered works.
+
+Therefore, we have designed GPLv3 to reduce the patent risks that distort and
+threaten the activities of users who make, run, modify and share free
+software.  At the same time, we have given due consideration to practical
+goals such as certainty and administrability for patent holders that
+participate in distribution and development of GPL-covered software.  Our
+policy requires each such patent holder to provide appropriate levels of
+patent assurance to users, according to the nature of the patent holder's
+relationship to the program.
+
+Draft 3 features several significant changes concerning patents.  We have
+made improvements to earlier wording, clarified when patent assertion becomes
+a prohibited restriction on GPL rights, and replaced a distribution-triggered
+non-assertion covenant with a contribution-based patent license grant. We
+have also added provisions to block collusion by patent holders with software
+distributors that would extend patent licenses in a discriminatory way.
+
+
+Draft 3 introduces the terms ``contributor'' and ``contribution,'' which are
+used in the third paragraph of section 10 and the first paragraph of section
+11, discussed successively in the following two subsections.  Section 0
+defines a contributor as ``a party who licenses under this License a work on
+which the Program is based.'' That work is the ``contribution'' of that
+contributor.  In other words, each received GPLv3-covered work is associated
+with one or more contributors, making up the finite set of upstream GPLv3
+licensors for that work. Viewed from the perspective of a recipient of the
+Program, contributors include all the copyright holders for the Program,
+other than copyright holders of material originally licensed under non-GPL
+terms and later incorporated into a GPL-covered work.  The contributors are
+therefore the initial GPLv3 licensors of the Program and all subsequent
+upstream licensors who convey, under the terms of section 5, modified works
+on which the Program is based.
+
+For a contributor whose contribution is a modified work conveyed under
+section 5, the contribution is ``the entire work, as a whole'' which the
+contributor is required to license under GPLv3.  The contribution therefore
+includes not just the material added or altered by the contributor, but also
+the pre-existing material the contributor copied from the upstream version
+and retained in the modified version. Our usage of ``contributor'' and
+``contribution'' should not be confused with the various other ways in which
+those terms are used in certain other free software licenses.\footnote{Cf.,
+  e.g., Apache License, version 2.0, section 1; Eclipse Public License,
+  version 1.0, section 1; Mozilla Public License, version 1.1, section 1.1.}
+
+The term ``patent license,'' as used in the third through fifth
+paragraphs of section 11, is not meant to be confined to agreements
+formally identified or classified as patent licenses.  The new second
+paragraph of section 11 makes this clear by defining ``patent license,''
+for purposes of the subsequent three paragraphs, as ``a patent license,
+a covenant not to bring suit for patent infringement, or any other
+express agreement or commitment, however denominated, not to enforce a
+patent.''  The definition does not include patent licenses that arise by
+implication or operation of law, because the third through fifth
+paragraphs of section 11 are specifically concerned with explicit
+promises that purport to be legally enforceable.
+
+Our previous drafts featured a patent license grant triggered by all
+acts of distribution of GPLv3-covered works.\footnote{In Draft 2 we
+rewrote the patent license as a covenant not to assert patent claims. We
+explain why we reverted to the form of a patent license grant in \S\
+\ref{cov}.} Many patent-holding companies objected to this policy. They
+have made two objections: (1) the far-reaching impact of the patent
+license grant on the patent holder is disproportionate to the act of
+merely distributing code without modification or transformation, and (2)
+it is unreasonable to expect an owner of vast patent assets to exercise
+requisite diligence in reviewing all the GPL-covered software that it
+provides to others.  Some expressed particular concern about the
+consequences of ``inadvertent'' distribution.
+
+The argument that the impact of the patent license grant would be
+``disproportionate,'' that is to say unfair, is not valid. Since
+software patents are weapons that no one should have, and using them for
+aggression against free software developers is an egregious act,
+preventing that act cannot be unfair. 
+
+However, the second argument seems valid in a practical sense.  A
+typical GNU/Linux distribution includes thousands of programs. It would
+be quite difficult for a redistributor with a large patent portfolio to
+review all those programs against that portfolio every time it receives
+and passes on a new version of the distribution. Moreover, this question
+raises a strategic issue. If the GPLv3 patent license requirements
+convince patent-holding companies to remain outside the distribution
+path of all GPL-covered software, then these requirements, no matter how
+strong, will cover few patents. 
+
+We concluded it would be more effective to make a partial concession
+which would lead these companies to feel secure in doing the
+distribution themselves, so that the conditions of section 10 would
+apply to assertion of their patents.  We therefore made the stricter
+section 11 patent license apply only to those distributors that have
+modified the program.  The other changes we have made in sections 10 and
+11 provide strengthened defenses against patent assertion and compensate
+partly for this concession. 
+
+Therefore, in Draft 3, the first paragraph of section 11 states that a
+contributor's patent license covers all the essential patent claims
+implemented by the whole program as that contributor distributes it.
+Contributors of modified works grant a patent license to claims that
+read on ``the entire work, as a whole.'' This is the work that the
+copyleft clause in section 5 requires the contributor to license under
+GPLv3; it includes the material the contributor has copied from the
+upstream version that the contributor has modified.  The first paragraph
+of section 11 does not apply to those that redistribute the program
+without change.\footnote{An implied patent license from the distributor,
+however, may arise by operation of law. See the final paragraph of
+section 11.  Moreover, distributors are subject to the limits on patent
+assertion contained in the third paragraph of section 10.} 
+
+We hope that this decision will result in fairly frequent licensing of
+patent claims by contributors.  A contributor is charged with awareness
+of the fact that it has modified a work and provided it to others; no
+act of contribution should be treated as inadvertent.  Our rule also
+requires no more work, for a contributor, than the weaker rule proposed
+by the patent holders.  Under their rule, the contributor must always
+compare the entire work against its patent portfolio to determine
+whether the combination of the modifications with the remainder of the
+work cause it to read on any of the contributor's patent claims.
+
+
+
+We have made three changes to the definition of ``essential patent
+claims'' in section 0.  This definition now serves exclusively to
+identify the set of patent claims licensed by a contributor under the
+first paragraph of section 11.
+
+First, we have clarified when essential patent claims include
+sublicensable claims that have been licensed to the contributor by a
+third party.\footnote{This issue is typically handled in other free
+software licenses having patent licensing provisions by use of the
+unhelpful term ``licensable,'' which is either left undefined or is
+given an ambiguous definition.}  Most commercial patent license
+agreements that permit sublicensing do so under restrictive terms that
+are inconsistent with the requirements of the GPL.  For example, some
+patent licenses allow the patent licensee to sublicense but require
+collection of royalties from any sublicensees.  The patent licensee
+could not distribute a GPL-covered program and grant the recipient a
+patent sublicense for the program without violating section 12 of
+GPLv3.\footnote{Draft 3 provides a new example in section 12 that makes
+this point clear.}  In rare cases, however, a conveying party can freely
+grant patent sublicenses to downstream recipients without violating the
+GPL.
+
+Draft 3 now defines essential patent claims, for a given party, as a
+subset of the claims ``owned or controlled'' by the party.  The
+definition states that ``control includes the right to grant sublicenses
+in a manner consistent with the requirements of this License.''
+Therefore, in the case of a patent license that requires collection of
+royalties from sublicensees, essential patent claims would not include
+any claims sublicensable under that patent license, because sublicenses
+to those claims could not be granted consistent with section 12.
+
+Second, we now state that essential patent claims are those ``that would
+be infringed by some manner, permitted by this License, of making,
+using, or selling the work.'' This modified wording is intended to make
+clear that a patent claim is ``essential'' if some mode of usage would
+infringe that claim, even if there are other modes of usage that would
+not infringe.
+
+Third, we have clarified that essential patent claims ``do not include
+claims that would be infringed only as a consequence of further
+modification of the work.''  That is to say, the set of essential patent
+claims licensed under the first paragraph of section 11 is fixed by the
+the particular version of the work that was contributed.  The claim set
+cannot expand as a work is further modified downstream.  (If it could,
+then any software patent claim would be included, since any software
+patent claim can be infringed by some further modification of the
+work.)\footnote{However, ``the work'' should not be understood to be
+restricted to a particular mechanical affixation of, or medium for
+distributing, a program, where the same program might be provided in
+other forms or in other ways that may be captured by other patent claims
+held by the contributor.}
+
+
+The downstream shielding provision of section 11 responds particularly
+to the problem of exclusive deals between patent holders and
+distributors, which threaten to distort the free software distribution
+system in a manner adverse to developers and users. Draft 2 added a
+source code availability option to this provision, as a specific
+alternative to the general requirement to shield downstream users from
+patent claims licensed to the distributor. A distributor conveying a
+covered work knowingly relying on a patent license may comply with the
+provision by ensuring that the Corresponding Source of the work is
+publicly available, free of charge.  We retained the shielding option in
+Draft 2 because we did not wish to impose a general requirement to make
+source code available to all, which has never been a GPL condition.
+
+The addition of the source code availability option was supported by the
+free software vendors most likely to be affected by the downstream
+shielding provision.  Enterprises that primarily use and occasionally
+distribute free software, however, raised concerns regarding the
+continued inclusion of a broadly-worded requirement to ``shield,'' which
+appears to have been mistakenly read by those parties as creating an
+obligation to indemnify.  To satisfy these concerns, in Draft 3 we have
+replaced the option to shield with two specific alternatives to the
+source code availability option. The distributor may comply by
+disclaiming the patent license it has been granted for the conveyed
+work, or by arranging to extend the patent license to downstream
+recipients.\footnote{The latter option, if chosen, must be done ``in a
+manner consistent with the requirements of this License''; for example,
+it is unavailable if extension of the patent license would result in a
+violation of section 12. Cf.~the discussion of sublicensable patent
+claims in \S\ \ref{epc}.}  The GPL is intended to permit private
+distribution as well as public distribution, and the addition of these
+options ensures that this remains the case, even though we expect that
+distributors in this situation will usually choose the source code
+availability option.
+
+Without altering its underlying logic, we have modified the phrasing of
+the requirement to make clear that it is activated only if the
+Corresponding Source is not already otherwise publicly available.  (Most
+often it will, in fact, already be available on some network server
+operated by a third party.)  Even if it is not already available, the
+option to ``cause the Corresponding Source to be so available'' can then
+be satisfied by verifying that a third party has acted to make it
+available.  That is to say, the affected distributor need not itself
+host the Corresponding Source to take advantage of the source code
+availability option.  This subtlety may help the distributor avoid
+certain peculiar assumptions of liability.
+
+We have made two other changes to the downstream shielding provision.
+The phrase ``knowingly rely'' was left undefined in our earlier drafts;
+in Draft 3 we have provided a detailed definition.  We have also deleted
+the condition precedent, added in Draft 2, that the relied-upon patent
+license be one that is non-sublicensable and ``not generally available
+to all''; this was imprecise in Draft 2 and is unnecessary in Draft
+3. In nearly all cases in which the ``knowingly relying'' test is met,
+the patent license will indeed not be sublicensable or generally
+available to all on free terms.  If, on the other hand, the patent
+license is generally available under terms consistent with the
+requirements of the GPL, the distributor is automatically in compliance,
+because the patent license has already been extended to all downstream
+recipients.  If the patent license is sublicensable on GPL-consistent
+terms, the distributor may choose to grant sublicenses to downstream
+recipients instead of causing source code to be publicly available.  In
+such a case, if the distributor is also a contributor, it will already
+have granted a patent sublicense by operation of the first paragraph of
+section 11,\footnote{See \S\ \ref{epc}.} and so it need not do anything
+further to comply with the third paragraph.
 
 % FIXME: This probably needs editing
 
@@ -3255,6 +3799,16 @@ distributing software released under GPLv3.  We are still considering
 whether or not this ban should apply when a deal was made before these
 terms were written, and we look forward to community input on this issue.
 
+The patent license grant of the first paragraph of section 11 no longer
+applies to those who merely distribute works without modification. (We
+explain why we made this change in the next subsection.) Such parties are
+nonetheless subject to the conditions stated in section 10.  Unlike the
+patent license, which establishes a defense for downstream users lasting for
+as long as they remain in compliance with the GPL, the commitment not to sue
+that arises under section 10 is one that the distributor can end, so long as
+the distributor also ceases to distribute.  This is because a party who
+initiates patent litigation in violation of section 10 risks termination of
+its licensed permissions by the copyright holders of the work.
 
 % FIXME: just brought in words here, needs rewriting.
 
@@ -3342,6 +3896,20 @@ kinds of patent retaliation provisions that are broader than those of section
 
 % FIXME: should we mention Microsoft-Novell at all?
 
+Section 7 of GPLv2 (now section 12 of GPLv3) has seen some success in
+deterring conduct that would otherwise result in denial of full downstream
+enjoyment of GPL rights.  Experience has shown us that more is necessary,
+however, to ensure adequate community safety where companies act in concert
+to heighten the anticompetitive use of patents that they hold or license.
+Previous drafts of GPLv3 included a ``downstream shielding'' provision in
+section 11, which we have further refined in Draft 3; it is now found in the
+third paragraph of section 11.  In addition, Draft 3 introduces two new
+provisions in section 11, located in the fourth and fifth paragraphs, that
+address the problem of collusive extension of patent forbearance promises
+that discriminate against particular classes of users and against the
+exercise of particular freedoms. This problem has been made more acute by the
+recent Microsoft/Novell deal.
+
 We attack the Microsoft-Novell deal from two angles. First, in the sixth
 paragraph of section 11, the draft says that if you arrange to provide patent
 protection to some of the people who get the software from you, that
@@ -3354,6 +3922,183 @@ Second, in the seventh paragraph, the draft says that you are prohibited from
 distributing software under GPLv3 if you make an agreement like the
 Microsoft-Novell deal in the future. This will prevent other distributors
 from trying to make other deals like it.
+
+A software patent forbids the use of a technique or algorithm, and its
+existence is a threat to all software developers and users.  A patent
+holder can use a patent to suppress any program which implements the
+patented technique, even if thousands of other techniques are
+implemented together with it.  Both free software and proprietary
+software are threatened with death in this way.  
+
+However, patents threaten free software with a fate worse than death: a
+patent holder might also try to use the patent to impose restrictions on
+use or distribution of a free program, such as to make users feel they
+must pay for permission to use it.  This would effectively make it
+proprietary software, exactly what the GPL is intended to prevent.
+
+Novell and Microsoft have recently attempted a new way of using patents
+against our community, which involves a narrow and discriminatory
+promise by a patent holder not to sue customers of one particular
+distributor of a GPL-covered program.  Such deals threaten our community
+in several ways, each of which may be regarded as de facto
+proprietization of the software.  If users are frightened into paying
+that one distributor just to be safe from lawsuits, in effect they are
+paying for permission to use the program.  They effectively deny even
+these customers the full and safe exercise of some of the freedoms
+granted by the GPL.  And they make disfavored free software developers
+and distributors more vulnerable to attacks of patent aggression, by
+dividing them from another part of our community, the commercial users
+that might otherwise come to their defense.
+
+We have added the fourth and fifth paragraphs of section 11 to combat
+this threat.  This subsection briefly describes the operation of the new
+provisions.  We follow it with a more detailed separate note on the
+Microsoft/Novell patent deal, in which we provide an extensive rationale
+for these measures.
+
+As noted, one effect of the discriminatory patent promise is to divide
+and isolate those who make free software from the commercial users to
+whom the promise is extended.  This deprives the noncommercial
+developers of the communal defensive measures against patents made
+possible by the support of those commercial users.  The fourth paragraph
+of section 11 operates to restore effective defenses to the targets of
+patent aggression.
+
+A patent holder becomes subject to the fourth paragraph of section 11
+when it enters into a transaction or arrangement that involves two acts:
+(1) conveying a GPLv3-covered work, and (2) offering to some, but not
+all, of the work's eventual users a patent license for particular
+activities using specific copies of the covered work.  This paragraph
+only operates when the two triggering acts are part of a single
+arrangement, because the patent license is part of the arrangement for
+conveying, which requires copyright permission.  Under those conditions,
+the discriminatory patent license is ``automatically extended to all
+recipients of the covered work and works based on it.''
+
+This provision establishes a defense to infringement allegations brought
+by the patent holder against any users of the program who are not
+covered by the discriminatory patent license.  That is to say, it gives
+all recipients the benefit of the patent promise that the patent holder
+extended only to some. The effect is to make contributing discriminatory
+promises of patent safety to a GPL distribution essentially like
+contributing code. In both cases, the operation of the GPL extends
+license permission to everyone that receives a copy of the program.
+
+
+The fourth paragraph of section 11 gives users a defense against patent
+aggression brought by the party who made the discriminatory patent
+promise that excluded them. By contrast, the fifth paragraph stops free
+software vendors from contracting with patent holders to make
+discriminatory patent promises.  In effect, the fifth paragraph extends
+the principle of section 12 to situations involving collusion between a
+patent holder and a distributor.
+
+Under this provision, a distributor conveying a GPL-covered program may
+not make an arrangement to get a discriminatory patent promise from a
+third party for its customers, covering copies of the program (or
+products that contain the program), if the arrangement requires the
+distributor to make payment to the third party based on the extent of
+its activity in conveying the program, and if the third party is itself
+in the business of distributing software. Unlike the fourth paragraph,
+which creates a legal defense for targets of patent aggression, the
+consequence for violation of the fifth paragraph is termination of GPL
+permissions for the distributor.
+
+The business, technical, and patent cooperation agreement between
+Microsoft and Novell announced in November 2006 has significantly
+affected the development of Draft 3.  The fourth and fifth paragraphs of
+section 11 embody our response to the sort of threat represented by the
+Microsoft/Novell deal, and are designed to protect users from such
+deals, and prevent or deter the making of such deals.
+
+The details of the agreements entered into between Microsoft and Novell,
+though subject to eventual public disclosure through the securities
+regulation system, have not been fully disclosed to this
+point.\footnote{Lawyers employed by the Software Freedom Law Center,
+which is counsel to the Free Software Foundation and other relevant free
+software clients, were accorded limited access to the terms of the deal
+under a non-disclosure agreement between SFLC and Novell.  The reasons
+for delay in the application of securities regulations requiring
+publication of the relevant contracts are unrelated to the deal between
+Microsoft and Novell.}  It is a matter of public knowledge, however,
+that the arrangement calls for Novell to pay a portion of the future
+gross revenue of one of its divisions to Microsoft, and that (as one
+other feature of a complex arrangement) Microsoft has promised Novell's
+customers not to bring patent infringement actions against certain
+specific copies of Novell's SUSE ``Linux''\footnote{This is a GNU/Linux
+distribution, and is properly called SUSE GNU/Linux Enterprise Server.}
+Enterprise Server product for which Novell receives revenue from the
+user, so long as the user does not make or distribute additional copies
+of SLES.
+
+The basic harm that such an agreement can do is to make the free
+software subject to it effectively proprietary.  This result occurs to
+the extent that users feel compelled, by the threat of the patent, to
+get their copies in this way.  So far, the Microsoft/Novell deal does
+not seem to have had this result, or at least not very much: users do
+not seem to be choosing Novell for this reason.  But we cannot take for
+granted that such threats will always fail to harm the community.  We
+take the threat seriously, and we have decided to act to block such
+threats, and to reduce their potential to do harm.  Such deals also
+offer patent holders a crack through which to split the community.
+Offering commercial users the chance to buy limited promises of patent
+safety in effect invites each of them to make a separate peace with
+patent aggressors, and abandon the rest of our community to its fate.
+
+Microsoft has been restrained from patent aggression in the past by the
+vocal opposition of its own enterprise customers, who now also use free
+software systems to run critical applications.  Public statements by
+Microsoft concerning supposed imminent patent infringement actions have
+spurred resistance from users Microsoft cannot afford to alienate.  But
+if Microsoft can gain royalties from commercial customers by assuring
+them that \textit{their} copies of free software have patent licenses
+through a deal between Microsoft and specific GNU/Linux vendors,
+Microsoft would then be able to pressure each user individually, and
+each distributor individually, to treat the software as proprietary.  If
+enough users succumb, it might eventually gain a position to terrify
+noncommercial developers into abandoning the software entirely.
+
+Preventing these harms is the goal of the new provisions of section 11.
+The fourth paragraph deals with the most acute danger posed by
+discrimination among customers, by ensuring that any party who
+distributes others' GPL-covered programs, and makes promises of patent
+safety limited to some but not all recipients of copies of those
+specific programs, automatically extends its promises of patent safety
+to cover all recipients of all copies of the covered works.  This will
+negate part of the harm of the Microsoft/Novell deal, for GPLv3-covered
+software.
+
+In addition to the present deal, however, GPLv3 must act to deter
+similar future arrangements, and it cannot be assumed that all future
+arrangements by Microsoft or other potential patent aggressors will
+involve procuring the conveyance of the program by the party that grants
+the discriminatory promises of patent safety.  Therefore, we need the
+fifth paragraph as well, which is aimed at parties that play the Novell
+role in a different range of possible deals.
+
+Drafting this paragraph was difficult because it is necessary to
+distinguish between pernicious agreements and other kinds of agreements
+which do not have an acutely harmful effect, such as patent
+contributions, insurances, customary cross-license promises to
+customers, promises incident to ordinary asset transfers, and standard
+settlement practices.  We believe that we have achieved this, but it is
+hard to be sure, so we are considering making this paragraph apply only
+to agreements signed in the future.  If we do that, companies would only
+need to structure future agreements in accord with the fifth paragraph,
+and would not face problems from past agreements that cannot be changed
+now.  We are not yet convinced that this is necessary, and we plan to
+ask for more comment on the question. This is why the date-based cutoff
+is included in brackets. 
+
+One drawback of this cutoff date is that it would ``let Novell off''
+from part of the response to its deal with Microsoft. However, this may
+not be a great drawback, because the fourth paragraph will apply to that
+deal. We believe it is sufficient to ensure either the deal's voluntary
+modification by Microsoft or its reduction to comparative harmlessness.
+Novell expected to gain commercial advantage from its patent deal with
+Microsoft; the effects of the fourth paragraph in undoing the harm of
+that deal will necessarily be visited upon Novell.
+
 
 \section{GPLv3~\S12: Familiar as GPLv2 \S~7}
 
@@ -3376,7 +4121,95 @@ the final sentence of GPLv2 section 7, which we consider to be unnecessary.
 
 \section{GPLv3~\S13: The Great Affero Compromise}
 
-% FIXME
+The main purpose of clause 7b4 was to attain GPLv3 compatibility for the
+additional condition of version 1 of the Affero GPL, with a view to
+achieving compatibility for a future version, since version 1 was
+incompatible with GPLv3.\footnote{Version 1 of the Affero GPL contains
+its own copyleft clause, worded identically to that in GPLv2, which
+conflicts with the copyleft clause in GPLv3.  The Affero GPL permits
+relicensing under versions of the GPL later than version 2, but only if
+the later version ``includes terms and conditions substantially
+equivalent to those of this license'' (Affero GPL, version 1, section
+9). The Affero license was written with the expectation that its
+additional requirement would be incorporated into the terms of GPLv3
+itself, rather than being placeable on parts added to a covered work
+through the mechanism of section 7 of GPLv3.}  However, we wrote the
+clause broadly enough to cover a range of other possible terms that
+would differ from the Affero condition in their details. Draft 3 no
+longer pursues the more ambitious goal of allowing compatibility for a
+whole category of Affero-like terms.  In place of 7b4, we have added a
+new section 13 that simply permits GPLv3-covered code to be linked with
+code covered by the forthcoming version 2 of the Affero GPL.
+
+We have made this decision in the face of irreconcilable views from
+different parts of our community.  While we had known that many
+commercial users of free software were opposed to the inclusion of a
+mandatory Affero-like requirement in the body of GPLv3 itself, we were
+surprised at their opposition to its availability through section 7.
+Free software vendors allied to these users joined in their objections,
+as did a number of free software developers arguing on ethical as well
+as practical grounds.
+
+Some of this hostility seemed to be based on a misapprehension that
+Affero-like terms placed on part of a covered work would somehow extend
+to the whole of the work.\footnote{It is possible that the presence of
+the GPLv2-derived copyleft clause in the existing Affero GPL contributed
+to this misunderstanding.}  Our explanations to the contrary did little
+to satisfy these critics; their objections to 7b4 instead evolved into a
+broader indictment of the additional requirements scheme of section 7.
+It was clear, however, that much of the concern about 7b4 stemmed from
+its general formulation.  Many were alarmed at the prospect of GPLv3
+compatibility for numerous Affero-like licensing conditions,
+unpredictable in their details but potentially having significant
+commercial consequences.
+
+On the other hand, many developers, otherwise sympathetic to the policy
+goals of the Affero GPL, have objected to the form of the additional
+requirement in that license.  These developers were generally
+disappointed with our decision to allow Affero-like terms through
+section 7, rather than adopt a condition for GPLv3.  Echoing their
+concerns about the Affero GPL itself, they found fault with the wording
+of the section 7 clause in both of the earlier drafts.  We drafted 7b4
+at a higher level than its Draft 1 counterpart based in part on comments
+from these developers. They considered the Draft 1 clause too closely
+tied to the Affero mechanism of preserving functioning facilities for
+downloading source, which they found too restrictive of the right of
+modification.  The 7b4 rewording did not satisfy them, however. They
+objected to its limitation to terms requiring compliance by network
+transmission of source, and to the technically imprecise or inaccurate
+use of the phrase ``same network session.''
+
+We have concluded that any redrafting of the 7b4 clause would fail to
+satisfy the concerns of both sets of its critics.  The first group
+maintains that GPLv3 should do nothing about the problem of public
+use. The second group would prefer for GPLv3 itself to have an
+Affero-like condition, but that seems to us too drastic. By permitting
+GPLv3-covered code to be linked with code covered by version 2 of the
+Affero GPL, the new section 13 honors our original commitment to
+achieving GPL compatibility for the Affero license.
+
+Version 2 of the Affero GPL is not yet published.  We will work with
+Affero, Inc., and with all other interested members of our community, to
+complete the drafting of this license following the release of Draft 3,
+with a goal of having a final version available by the time of our
+adoption of the final version of GPLv3.  We hope the new Affero license
+will satisfy those developers who are concerned about the issue of
+public use of unconveyed versions but who have concerns about the
+narrowness of the condition in the existing Affero license.
+
+As the second sentence in section 13 indicates, when a combined work is
+made by linking GPLv3-covered code with Affero-covered code, the
+copyleft on one part will not extend to the other part.\footnote{The
+plan is that the additional requirement of the new Affero license will
+state a reciprocal limitation.} That is to say, in such combinations,
+the Affero requirement will apply only to the part that was brought into
+the combination under the Affero license.  Those who receive such a
+combination and do not wish to use code under the Affero requirement may
+remove the Affero-covered portion of the combination.
+
+Those who criticize the permission to link with code under the Affero
+GPL should recognize that most other free software licenses also permit
+such linking. 
 
 \section{GPLv3~\S14: So, When's GPLv4?}
 \label{GPlv2s14}
