@@ -2654,6 +2654,35 @@ We believe that these provisions, taken together, are a minimalist set of
 terms sufficient to protect the free software community against the threat of
 invasive para-copyright.
 
+Large enterprise users of free software often contract with non-employee
+developers, often working offsite, to make modifications intended for
+the user's private or internal use, and often arrange with other
+companies to operate their data centers.  Whether GPLv2 permits these
+activities is not clear and may depend on variations in copyright law.
+The practices seem basically harmless, so we have decided to make it
+clear they are permitted.
+
+GPLv3 now gives an explicit permission for a client to provide a copy of
+its modified software to a contractor exclusively for that contractor to
+modify it further, or run it, on behalf of the client.  However, the
+client can only exercise this control over its own copyrighted changes
+to the GPL-covered program.  The parts of the program it obtained from
+other contributors must be provided to the contractor with the usual GPL
+freedoms.
+
+This permission is stated in section 2.  It permits a user to convey
+covered works to contractors operating exclusively on the user's behalf,
+under the user's direction and control, and to require the contractors
+to keep the user's copyrighted changes confidential, but only if the
+contractor is limited to acting on the user's behalf, just as the user's
+employees would have to act.
+
+The strict conditions in this provision are needed so that it cannot be
+twisted to fit other activities, such as making a program available to
+users or customers.  By making the limits on this provision very narrow,
+we ensure that in all other cases the contractor gets the full freedoms
+of the GPL.
+
 \section{GPLv3~\S3: What Hath DMCA Wrought}
 \label{GPLv3s3}
 
@@ -2712,6 +2741,11 @@ control access to other copyrighted works should practically prevent
 any private or public parties from invoking DMCA-like laws against
 users who escape technical restriction measures implemented by GPL'd
 software.
+
+This section shields users from being subjected to liability under
+anti-circumvention law for exercising their rights under the GPL, so far as
+the GPL can do so.  Some readers seem to have assumed that this provision
+contains a prohibition on DRM; it does not (no part of GPLv3 forbids DRM).
 
 \section{GPLv3~\S4: Verbatim Copying}
 
@@ -3045,6 +3079,34 @@ interpretation of ``consumer product,'' the User Products rule benefits
 not only individual purchasers of User Products but also all
 organizational purchasers of those same kinds of products, regardless of
 their intended use of the products.
+
+we have replaced the Magnuson-Moss
+reference with three sentences that encapsulate the judicial and
+administrative principles established over the past three decades in the
+United States concerning the Magnuson-Moss consumer product definition.
+First, we state that doubtful cases are resolved in favor of coverage
+under the definition.  Second, we indicate that the words ``normally
+used'' in the consumer product definition refer to a typical or common
+use of a class of product, and not the status of a particular user or
+expected or actual uses by a particular user.  Third, we make clear that
+the existence of substantial non-consumer uses of a product does not
+negate a determination that it is a consumer product, unless such
+non-consumer uses represent the only significant mode of use of that
+product.
+
+It should be clear from these added sentences that it is the general
+mode of use of a product that determines objectively whether or not it
+is a consumer product.  One could not escape the effects of the User
+Products provisions by labeling what is demonstrably a consumer product
+in ways that suggest it is ``for professionals,'' for example, contrary
+to what some critics of Draft 3 have suggested.
+
+We have made one additional change to the User Products provisions of
+section 6.  In Draft 3 we made clear that the requirement to provide
+Installation Information implies no requirement to provide warranty or
+support for a work that has been modified or installed on a User
+Product.  The Final Draft adds that there is similarly no requirement to
+provide warranty or support for the User Product itself.
 
 %FIXME: This probably needs work to be brought into clarity with tutorial,
 %next three paragarphs.
@@ -3922,6 +3984,35 @@ Second, in the seventh paragraph, the draft says that you are prohibited from
 distributing software under GPLv3 if you make an agreement like the
 Microsoft-Novell deal in the future. This will prevent other distributors
 from trying to make other deals like it.
+
+The main reason for this is tactical.  We believe we can do more to
+protect the community by allowing Novell to use software under GPL
+version 3 than by forbidding it to do so.  This is because of
+paragraph 6 of section 11 (corresponding to paragraph 4 in Draft 3).
+It will apply, under the Microsoft/Novell deal, because of the coupons
+that Microsoft has acquired that essentially commit it to participate
+in the distribution of the Novell SLES GNU/Linux system.
+
+Microsoft is scrambling to dispose of as many Novell SLES coupons as
+possible prior to the adoption of GPLv3.  Unfortunately for Microsoft,
+those coupons bear no expiration date, and paragraph 6 has no cut-off
+date.  Through its ongoing distribution of coupons, Microsoft will
+have procured the distribution of GPLv3-covered programs as soon as
+they are included in Novell SLES distributions, thereby extending
+patent defenses to all downstream recipients of that software by
+operation of paragraph 6.
+
+A secondary reason is to avoid affecting other kinds of agreements for
+other kinds of activities.  We have tried to take care in paragraph 7
+to distinguish pernicious deals of the Microsoft/Novell type from
+business conduct that is not particularly harmful, but we cannot be
+sure we have entirely succeeded.  There remains some risk that other
+unchangeable past agreements could fall within its scope.
+
+In future deals, distributors engaging in ordinary business practices
+can structure the agreements so that they do not fall under paragraph
+7.  However, it will block Microsoft and other patent aggressors from
+further such attempts to subvert parts of our community.
 
 A software patent forbids the use of a technique or algorithm, and its
 existence is a threat to all software developers and users.  A patent
