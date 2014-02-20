@@ -1,0 +1,8 @@
+# Standard LaTeX ancillary output files
+*.aux
+*.dvi
+*.toc
+# Log files by name, since .log may be of interest in some other context.
+comprehensive-gpl-guide.log
+# bkuhn often makes an x.ps file in intermediate testing.
+x.ps
