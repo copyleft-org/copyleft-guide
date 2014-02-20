@@ -229,15 +229,15 @@ compliance work.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Davrik: Modified GCC SDK}
+\chapter{Bortez: Modified GCC SDK}
 
-In our first case study, we will consider Davrik, a company that
+In our first case study, we will consider Bortez, a company that
 produces software and hardware toolkits to assist OEM vendors, makers
 of consumer electronic devices.
 
 \section{Facts}
 
-One of Davrik's key products is a Software Development Kit (``SDK'')
+One of Bortez's key products is a Software Development Kit (``SDK'')
 designed to assist developers building software for a specific class of
 consumer electronics devices.
 
@@ -256,69 +256,69 @@ FSF was later able to confirm the violation when two additional reports
 surfaced from other violation reporters, both of whom had used the SDK
 professionally and noticed clear similarities to FSF's GNU GCC\@. FSF's
 Compliance Engineer asked the reporters to run standard tests to confirm
-the violation, and it was confirmed that Davrik's SDK was indeed a
-derivative work of GCC\@. Davrik had ported to Windows and added a number
+the violation, and it was confirmed that Bortez's SDK was indeed a
+derivative work of GCC\@. Bortez had ported to Windows and added a number
 of features, including support for a specific consumer device chipset and
 additional features to aid in the linking process (``LP'') for those
 specific devices. FSF explained the rights that the GPL afforded these
-customers and pointed out, for example, that Davrik only needed to provide
+customers and pointed out, for example, that Bortez only needed to provide
 source to those in possession of the binaries, and that the users may need
 to request that source (if \S 3(b) was exercised). The violators
 confirmed that such requests were not answered.
 
-FSF brought the matter to the attention of Davrik, who immediately
+FSF brought the matter to the attention of Bortez, who immediately
 escalated the matter to their attorneys. After a long negotiation,
-Davrik acknowledged that their SDK was indeed a derivative work of
-GCC\@. Davrik released most of the source, but some disagreement
+Bortez acknowledged that their SDK was indeed a derivative work of
+GCC\@. Bortez released most of the source, but some disagreement
 occurred over whether LP was a derivate work of GCC\@. After repeated
-FSF inquiries, Davrik reaudited the source to discover that FSF's
-analysis was correct. Davrik determined that LP included a number of
+FSF inquiries, Bortez reaudited the source to discover that FSF's
+analysis was correct. Bortez determined that LP included a number of
 source files copied from the GCC code-base.
 
 \label{davrik-build-problems}
 Once the full software release was made available, FSF asked the violation
 reporters if it addressed the problem. Reports came back that the source
-did not properly build. FSF asked Davrik to provide better build
+did not properly build. FSF asked Bortez to provide better build
 instructions with the software, and such build instructions were
 incorporated into the next software release.
 
-At FSF's request as well, Davrik informed customers who had previously
+At FSF's request as well, Bortez informed customers who had previously
 purchased the product that the source was now available by announcing
 the availablity on its Web site and via a customer newsletter.
 
-Davrik did have some concerns regarding patents. They wished to include a
+Bortez did have some concerns regarding patents. They wished to include a
 statement with the software release that made sure they were not granting
 any patent permission other than what was absolutely required by GPL\@.
 They understood that their patent assertions could not trump any rights
 granted by GPL\@. The following language was negotiated into the release:
 
 \begin{quotation}
-Subject to the qualifications stated below, Davrik, on behalf of itself
+Subject to the qualifications stated below, Bortez, on behalf of itself
 and its Subsidiaries, agrees not to assert the Claims against you for your
-making, use, offer for sale, sale, or importation of the Davrik's GNU
-Utilities or derivative works of the Davrik's GNU Utilities
+making, use, offer for sale, sale, or importation of the Bortez's GNU
+Utilities or derivative works of the Bortez's GNU Utilities
 (``Derivatives''), but only to the extent that any such Derivatives are
 licensed by you under the terms of the GNU General Public License. The
-Claims are the claims of patents that Davrik or its Subsidiaries have
+Claims are the claims of patents that Bortez or its Subsidiaries have
 standing to enforce that are directly infringed by the making, use, or
-sale of an Davrik Distributed GNU Utilities in the form it was distributed
-by Davrik and that do not include any limitation that reads on hardware;
-the Claims do not include any additional patent claims held by Davrik that
+sale of an Bortez Distributed GNU Utilities in the form it was distributed
+by Bortez and that do not include any limitation that reads on hardware;
+the Claims do not include any additional patent claims held by Bortez that
 cover any modifications of, derivative works based on or combinations with
-the Davrik's GNU Utilities, even if such a claim is disclosed in the same
+the Bortez's GNU Utilities, even if such a claim is disclosed in the same
 patent as a Claim. Subsidiaries are entities that are wholly owned by
-Davrik.
+Bortez.
 
 This statement does not negate, limit or restrict any rights you already
 have under the GNU General Public License version 2.
 \end{quotation}
 
-This quelled Davrik's concerns about other patent licensing they sought to
-do outside of the GPL'd software, and satisfied FSF's concerns that Davrik
+This quelled Bortez's concerns about other patent licensing they sought to
+do outside of the GPL'd software, and satisfied FSF's concerns that Bortez
 give proper permissions to exercise teachings of patents that were
 exercised in their GPL'd software release.
 
-Finally, a GPL Compliance Officer inside Davrik was appointed to take
+Finally, a GPL Compliance Officer inside Bortez was appointed to take
 responsibility for all matters of GPL compliance inside the company.
 Darvik is responsible for informing FSF if the position is given to
 someone else inside the company, and making sure that FSF has direct
@@ -379,8 +379,8 @@ This case introduces a number of concepts regarding GPL enforcement.
 
 \item {\bf Lines between various copyright, patent, and other legal
   mechanisms must be precisely defined and considered.}  The most
-  difficult negotiation point of the Davrik case was drafting language
-  that simultaneously protected Davrik's patent rights outside of the
+  difficult negotiation point of the Bortez case was drafting language
+  that simultaneously protected Bortez's patent rights outside of the
   GPL'd source, but was consistent with the implicit patent grant in
   GPL\@. As we discussed in the first course of this series, there is
   indeed an implicit patent grant with GPL, thanks to \S 6 and \S 7.
@@ -538,7 +538,7 @@ role in GPL compliance.
   code, the GPL is the overriding license.
 
 \item {\bf Compliance Officers are rarely necessary when companies are
-  educated about GPL compliance.}  As we saw in the Davrik case, FSF asks
+  educated about GPL compliance.}  As we saw in the Bortez case, FSF asks
   that a formal ``GPL Compliance Officer'' be appointed inside a
   previously violating organization to shepherd the organization to a
   cooperative approach to GPL compliance. However, when FSF
@@ -698,7 +698,7 @@ could occur between FSF, Polgara and Thesulac. Polgara and Thesulac
 agreed, and that discussion began. Thesulac provided nearly complete
 sources to Polgara, and Polgara made a full software release on their
 Web site. At the time of writing, that software still has some build
-problems (similar to those that occurred with Davrik, as described in
+problems (similar to those that occurred with Bortez, as described in
 Section~\ref{davrik-build-problems}). FSF continues to negotiate with
 Polgara and Thesulac to resolve these problems, which have a clear path to
 a solution and are expected to resolve.
@@ -836,6 +836,6 @@ distribute products based on GPL'd software:
 % LocalWords:  TrollTech administrivia LGPL's MontaVista OpenTV Mitek Arce DVD
 % LocalWords:  unprotectable protectable Unfreedonia chipset CodeSourcery Iqtel
 % LocalWords:  impermissibly Bateman faire minimis Borland uncopyrightable Mgmt
-% LocalWords:  franca downloadable Davrik Davrik's Darvik
+% LocalWords:  franca downloadable Bortez Bortez's Darvik
 % LocalWords:  Slashdot sublicensed Vigorien Vigorien's Haxil Polgara
 % LocalWords:  Thesulac Polgara's Haxil's Thesulac's SDK CD's
