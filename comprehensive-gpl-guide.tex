@@ -1,0 +1,74 @@
+% comprehensive-gpl-guide.tex                                    -*- LaTeX -*-
+%
+% Toplevel file to build the entire book.
+\documentclass[10pt, letterpaper]{book}
+\usepackage{enumerate}
+\usepackage[dvips]{graphicx}
+
+\begin{document}
+\pagestyle{plain}
+\pagenumbering{roman}
+
+\frontmatter
+
+\begin{titlepage}
+
+\begin{center}
+
+{\Large
+{\sc A Comprehensive Tutorial on Copyleft and GPL Licensing, Compliance, and Enforcement}} \\
+
+\vfill
+
+{\parindent 0in
+Copyright \copyright{} 2003, 2004, 2005 \hspace{.2in} Free Software Foundation, Inc.
+
+\vspace{.3in}
+
+The copyright holders hereby grant the freedom to copy, modify, convey,
+Adapt, and/or redistribute this work under the terms of the Creative Commons
+Attribution Share Alike 4.0 International License.  A copy of that license is
+available at \verb=https://creativecommons.org/licenses/by-sa/4.0/legalcode=.
+
+Each part of this book is separately this same license, but copyrighted by
+different authors at different times.  Each part therefore also contains its
+own copyright and licensing notice.  The notice above is for the entire work,
+and includes all.
+}
+\end{center}
+\end{titlepage}
+
+\chapter{Preface}
+
+This tutorial is the culmination of nearly a decade of studying and writing
+about software freedom licensing and the GPL\@.  Each part of this tutorial
+is a course unto itself, educating the reader on a myriad of topics from the
+deep details of the GPLv2 and GPLv3, common business models in the copyleft
+licensing area (both the friendly and unfriendly kind), best practices for
+compliance with the GPL, both for engineers and managers, as well as
+real-world case studies of GPL enforcement matters.
+
+It is unlikely that all the information herein is necessary to learn all at
+once, and therefore this tutorial likely serves best as a reference book.
+The material herein has been used as the basis for numerous live tutorials
+and discussion groups since 2002, and the materials have been periodically
+updated.   They likely stand on their own as excellent reference material.
+
+However, if you are reading these course materials without attending a live
+tutorial session, please note that this material is merely a summary of the
+highlights of the various CLE and other tutorial courses based on this
+material.  Please be aware that during the actual courses, class discussion
+supplements this printed curriculum.  Simply reading it is not equivalent to
+attending the course.
+
+\tableofcontents
+
+\mainmatter
+
+\input{gpl-lgpl}
+
+%\input{compliance-guide}
+
+%\input{enforcement-case-studies}
+
+\end{document}
