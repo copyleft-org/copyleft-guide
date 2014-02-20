@@ -1,0 +1,9 @@
+% BEGIN CODE TO FORCE NO PAGE NUMBER ON ToC
+\usepackage{tocloft}
+\addtocontents{toc}{\cftpagenumbersoff{part}} %% Similarly for subsection, figure... as you wish
+\addtocontents{toc}{\cftpagenumbersoff{section}} %% Similarly for subsection, figure... as you wish
+\addtocontents{toc}{\cftpagenumbersoff{chapter}}
+\addtocontents{toc}{\cftpagenumbersoff{section}} %% Similarly for subsection, figure... as you wish
+\addtocontents{toc}{\cftpagenumbersoff{subsection}} %% Similarly for subsection, figure... as you wish
+\renewcommand{\cftdot}{} %empty {} for no dots. you can have any symbol inside. For example put {\ensuremath{\ast}} and see what happens.
+% END  CODE TO FORCE NO PAGE NUMBER ON ToC
