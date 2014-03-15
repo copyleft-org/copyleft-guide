@@ -1,9 +1,18 @@
 % comprehensive-gpl-guide.tex                                    -*- LaTeX -*-
 %
 % Toplevel file to build the entire book.
-\documentclass[10pt, letterpaper]{book}
+\documentclass[10pt, letterpaper, openany, oneside]{book}
+% I'm somewhat convinced that this book would be better formatted using
+%  the memoir class :
+%    http://www.ctan.org/pkg/memoir
+%   http://mirror.unl.edu/ctan/macros/latex/contrib/memoir/memman.pdf
+
+% For the moment, I've thrown in fancychap because I don't have time to
+% research memoir.
+
 \usepackage{hyperref}
 \usepackage{enumerate}
+\usepackage[Bjarne]{fncychap}
 \usepackage[dvips]{graphicx}
 \usepackage[verbose, twoside, dvips,
               paperwidth=8.5in, paperheight=11in,
