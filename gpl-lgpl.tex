@@ -867,6 +867,69 @@ GPLv3 and its terms are discussed in detail in Chapter\~ref{GPLv3}.
 
 \section{The Innovation of Optional ``Or Any Later'' Version}
 
+An interesting fact of all GPL licenses is that the are ultimate multiple
+choices for use of the license.  The FSF is the primary steward of GPL (as
+discussed later in \S~\ref{GPLv2s9} and \S~\ref{GPLv2s14}).  However, those
+who wish to license works under GPL are not required to automatically accept
+changes made by the FSF for their own copyrighted works.
+
+Each licensor may chose three different methods of licensing, as follows:
+
+\begin{itemize}
+
+\item explicitly name a single version of GPL for their work (usually
+  indicated in shorthand by saying the license is ``GPLv$X$-only''), or
+
+\item name no version of the GPL, thus they allow their downstream recipients
+  to select any version of the GPL they chose (usually indicated in shorthand
+  by saying the license is simply ``GPL''), or
+
+\item name a specific version of GPL and give downstream recipients the
+  option to chose that version ``or any later version as published by the
+  FSF'' (usually indicated by saying the license is
+  ``GPLv$X$-or-later'')\footnote{The shorthand of ``GPL$X+$'' is also popular
+    for this situation.  The authors of this tutorial prefer ``-or-later''
+    syntax, because it (a) mirrors the words ``or'' and ``later from the
+    licensing statement, (b) the $X+$ doesn't make it abundantly clear that
+    $X$ is clearly included as a license option and (c) the $+$ symbol has
+    other uses in computing (such as with regular expressions) that mean
+    something different.}
+\end{itemize}
+
+\label{license-compatibility-first-mentioned}
+
+Oddly, this flexibility has received (in the opinion of the authors, undue)
+criticism, primarily because of the complex and oft-debated notion of
+``license compatibility'' (which is explained in detail in
+\S~\ref{license-compatibility}).  Copyleft licenses are generally
+incompatible with each other, because the details of how they implement
+copyleft differs.  Specifically, copyleft works only because of its
+requirement that downstream licensors use the \texit{same} license for
+combined and modified works.  As such, software licensed under the terms of
+``GPLv2-only'' cannot be combined with works licensed ``GPLv3-or-later''.
+This is admittedly a frustrating outcome.
+
+Other copyleft licenses that appeared after GPL, such
+as the Creative Commons ``Share Alike'' licenses, the Eclipse Public License
+and the Mozilla Public License \textbf{require} all copyright holders chosing
+to use any version of those licenses to automatically accept and relicense
+their copyrighted works under new versions.  Of course ,Creative Commons, the
+Eclipse Foundation, and the Mozilla Foundation (like the FSF) have generally
+served as excellent stewards of their licenses.  Copyright holders using
+those licenses seems to find it acceptable that to fully delegate all future
+licensing decisions for their copyrights to these organizations without a
+second thought.
+
+However, note that FSF gives herein the control of copyright holders to
+decide whether or not to implicitly trust the FSF in its work of drafting
+future GPL versions.  The FSF, for its part, does encourage copyright holders
+to chose by default ``GPLv$X$-or-later'' (where $X$ is the most recent
+version of the GPL published by the FSF).  However, the FSF \textbf{does not
+  mandate} that a choice to use any GPL requires a copyright holder ceding
+its authority for future licensing decisions to the FSF.  In fact, the FSF
+considered this possibility for GPLv3 and chose not to do so, instead opting
+for the third-party steward designation clause discussed in
+Section~\ref{GPlv3S14}.
 
 \section{Complexities of Two Simultaneously Popular Copylefts}
 
@@ -2078,6 +2141,9 @@ So end the terms and conditions of the GNU General Public License.
 
 \section{GPLv3 \S 6: Non-Source and Corresponding Source}
 
+\section{Understanding License Compatibility}
+\label{license-compatibility}
+
 \section{GPLv3 \S 7: Explicit Compatibility}
 
 \section{GPLv3 \S 8: A Lighter Termination}
@@ -2093,7 +2159,7 @@ So end the terms and conditions of the GNU General Public License.
 \section{GPLv3 \S 13: The Great Affero Compromise}
 
 \section{GPLv3 \S 14: So, When's GPLv4?}
-
+\label{GPlv2s14}
 \section{GPLv3 \S 15--17: Warranty Disclaimers and Liability Limitation}
 
 
