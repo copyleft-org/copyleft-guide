@@ -1608,20 +1608,20 @@ electronic file storage.
 
 Therefore, for GPL'd software to be useful, the GPL, since it governs the
 rules for creation of derivative works, must grant permission for the
-generation of binaries. Furthermore, notwithstanding the relative
+generation of binaries.  Furthermore, notwithstanding the relative
 popularity of source-based GNU/Linux distributions like Gentoo, users find
-it extremely convenient to receive distribution of binary software. Such
+it extremely convenient to receive distribution of binary software.  Such
 distribution is the redistribution of derivative works of the software's
-source code. GPLv2~\S3 addresses the matter of creation and distribution of
+source code.  GPLv2~\S3 addresses the matter of creation and distribution of
 binary versions.
 
 Under GPLv2~\S3, binary versions may be created and distributed under the
 terms of GPLv2~\S1--2, so all the material previously discussed applies
-here. However, GPLv2~\S3 must go a bit further. Access to the software's
+here.  However, GPLv2~\S3 must go a bit further.  Access to the software's
 source code is an incontestable prerequisite for the exercise of the
-fundamental freedoms to modify and improve the software. Making even
+fundamental freedoms to modify and improve the software.  Making even
 the most trivial changes to a software program at the binary level is
-effectively impossible. GPLv2~\S3 must ensure that the binaries are never
+effectively impossible.  GPLv2~\S3 must ensure that the binaries are never
 distributed without the source code, so that these freedoms are passed
 through the distribution chain.
 
@@ -1630,7 +1630,7 @@ distribution of source code along with binaries. The most common and the
 least complicated is the option given under GPLv2~\S3(a).
 
 GPLv2~\S3(a) offers the option to directly accompany the source code alongside
-the distribution of the binaries. This is by far the most convenient
+the distribution of the binaries.  This is by far the most convenient
 option for most distributors, because it means that the source-code
 provision obligations are fully completed at the time of binary
 distribution (more on that later).
@@ -1638,59 +1638,57 @@ distribution (more on that later).
 Under GPLv2~\S3(a), the source code provided must be the ``corresponding source
 code.''  Here ``corresponding'' primarily means that the source code
 provided must be that code used to produce the binaries being distributed.
-That source code must also be ``complete.''  A later paragraph of GPLv2~\S3
-explains in detail what is meant by ``complete.''  In essence, it is all
+That source code must also be ``complete''.   GPLv2~\S3's penultimate paragraph
+explains in detail what is meant by ``complete''.  In essence, it is all
 the material that a programmer of average skill would need to actually use
-the source code to produce the binaries she has received. Complete source
+the source code to produce the binaries she has received.  Complete source
 is required so that, if the licensee chooses, she should be able to
-exercise her freedoms to modify and redistribute changes. Without the
+exercise her freedoms to modify and redistribute changes.  Without the
 complete source, it would not be possible to make changes that were
 actually directly derived from the version received.
 
 Furthermore, GPLv2~\S3 is defending against a tactic that has in fact been
-seen in FSF's GPL enforcement. Under GPL, if you pay a high price for
+seen in GPL enforcement.  Under GPL, if you pay a high price for
 a copy of GPL'd binaries (which comes with corresponding source, of
 course), you have the freedom to redistribute that work at any fee you
-choose, or not at all. Sometimes, companies attempt a GPL-violating
+choose, or not at all.  Sometimes, companies attempt a GPL-violating
 cozenage whereby they produce very specialized binaries (perhaps for
-an obscure architecture). They then give source code that does
+an obscure architecture).  They then give source code that does
 correspond, but withhold the ``incantations'' and build plans they
 used to make that source compile into the specialized binaries.
 Therefore, GPLv2~\S3 requires that the source code include ``meta-material'' like
 scripts, interface definitions, and other material that is used to
-``control compilation and installation'' of the binaries. In this
+``control compilation and installation'' of the binaries.  In this
 manner, those further down the distribution chain are assured that
 they have the unabated freedom to build their own derivative works
 from the sources provided.
 
-FSF (as authors of GPL) realizes that software distribution comes in many
-forms. Embedded manufacturers, for example, have the freedom to put
-GPL'd software into their PDAs with very tight memory and space
-constraints. In such cases, putting the source right alongside the
-binaries on the machine itself might not be an option. While it is
+Software distribution comes in many
+forms.  Embedded manufacturers, for example, have the freedom to put
+GPL'd software into mobile devices with very tight memory and space
+constraints.  In such cases, putting the source right alongside the
+binaries on the machine itself might not be an option.  While it is
 recommended that this be the default way that people comply with GPL, the
 GPL does provide options when such distribution is infeasible.
 
 GPLv2~\S3, therefore, allows source code to be provided on any physical
 ``medium customarily used for software interchange.''  By design, this
-phrase covers a broad spectrum. At best, FSF can viably release a new GPL
-every ten years or so. Thus, phrases like this must be adaptive to
-changes in the technology. When GPL version 2 was first published in June
+phrase covers a broad spectrum --- the phrase seeks to pre-adapt to
+changes in  technology.  When GPLv22 was first published in June
 1991, distribution on magnetic tape was still common, and CD was
-relatively new. Today, CD is the default, and for larger systems DVD-R is
-gaining adoption. This language must adapt with changing technology.
+relatively new.  By 2002, CD is the default.  By 2007, DVD's were the
+default.  Now, it's common to give software on USB drives and SD card.  This
+language in the license must adapt with changing technology.
 
-Meanwhile, the binding created by the word ``customarily'' is key. Many
+Meanwhile, the binding created by the word ``customarily'' is key.  Many
 incorrectly believe that distributing binary on CD and source on the
-Internet is acceptable. In the corporate world, it is indeed customary to
-simply download CDs worth of data over a T1 or email large file
-attachments. However, even today in the USA, many computer users with
-CD-ROM drives are not connected to the Internet, and most people connected
-to the Internet are connected via a 56K dial-up connection. Downloading
-CDs full of data is not customary for them in the least. In some cities
+Internet is acceptable.  In the corporate world in industrialized countries, it is indeed customary to
+simply download a CDs' worth of data quickly.  However, even today in the USA, many computer users are not connected to the Internet, and most people connected
+to the Internet still have limited download speeds.  Downloading
+CDs full of data is not customary for them in the least.  In some cities
 in Africa, computers are becoming more common, but Internet connectivity
-is still available only at a few centralized locations. Thus, the
-``customs'' here must be normalized for a worldwide userbase. Simply
+is still available only at a few centralized locations.  Thus, the
+``customs'' here are normalized for a worldwide userbase.  Simply
 providing source on the Internet --- while it is a kind, friendly and
 useful thing to do --- is not usually sufficient.
 
@@ -1703,77 +1701,76 @@ sufficient to comply with GPLv2~\S3.
 \medskip
 
 As is shown above, Under GPLv2~\S3(a), embedded manufacturers can put the
-binaries on the device and ship the source code along on a CD\@. However,
-sometimes this turns out to be too costly. Including a CD with every
+binaries on the device and ship the source code along on a CD\@.  However,
+sometimes this turns out to be too costly.  Including a CD with every
 device could prove too costly, and may practically (although not legally)
-prohibit using GPL'd software. For this situation and others like it, \S
-3(b) is available.
+prohibit using GPL'd software. For this situation and others like it, GPlv2\S~3(b) is available.
 
 GPLv2~\S3(b) allows a distributor of binaries to instead provide a written
-offer for source code alongside those binaries. This is useful in two
-specific ways. First, it may turn out that most users do not request the
+offer for source code alongside those binaries.  This is useful in two
+specific ways.  First, it may turn out that most users do not request the
 source, and thus the cost of producing the CDs is saved --- a financial
-and environmental windfall. In addition, along with a GPLv2~\S3(b) compliant
+and environmental windfall.  In addition, along with a GPLv2~\S3(b) compliant
 offer for source, a binary distributor might choose to \emph{also} give a
-URL for source code. Many who would otherwise need a CD with source might
+URL for source code.  Many who would otherwise need a CD with source might
 turn out to have those coveted high bandwidth connections, and are able to
 download the source instead --- again yielding environmental and financial
 windfalls.
 
 However, note that regardless of how many users prefer to get the
 source online, GPLv2~\S3(b) does place lasting long-term obligations on the
-binary distributor. The binary distributor must be prepared to honor
+binary distributor.  The binary distributor must be prepared to honor
 that offer for source for three years and ship it out (just as they
 would have had to do under GPLv2~\S3(a)) at a moment's notice when they
-receive such a request. There is real organizational cost here:
+receive such a request.  There is real organizational cost here:
 support engineers must be trained how to route source requests, and
 source CD images for every release version for the last three years
 must be kept on hand to burn such CDs quickly. The requests might not
 even come from actual customers; the offer for source must be valid
-for ``any third party.''
+for ``any third party''.
 
 That phrase is another place where some get confused --- thinking again
-that full public distribution of source is required. The offer for source
+that full public distribution of source is required.  The offer for source
 must be valid for ``any third party'' because of the freedoms of
-redistribution granted by GPLv2~\S\S1--2. A company may ship a binary image
-and an offer for source to only one customer. However, under GPL, that
+redistribution granted by GPLv2~\S\S1--2.  A company may ship a binary image
+and an offer for source to only one customer.  However, under GPL, that
 customer has the right to redistribute that software to the world if she
-likes. When she does, that customer has an obligation to make sure that
+likes.  When she does, that customer has an obligation to make sure that
 those who receive the software from her can exercise their freedoms under
 GPL --- including the freedom to modify, rebuild, and redistribute the
 source code.
 
 GPLv2~\S3(c) is created to save her some trouble, because by itself GPLv2~\S3(b)
-would unfairly favor large companies. GPLv2~\S3(b) allows the
+would unfairly favor large companies.  GPLv2~\S3(b) allows the
 separation of the binary software from the key tool that people can use
 to exercise their freedom. The GPL permits this separation because it is
 good for redistributors, and those users who turn out not to need the
-source. However, to ensure equal rights for all software users, anyone
+source.  However, to ensure equal rights for all software users, anyone
 along the distribution chain must have the right to get the source and
 exercise those freedoms that require it.
 
 Meanwhile, GPLv2~\S3(b)'s compromise primarily benefits companies who
-distribute binary software commercially. Without GPLv2~\S3(c), that benefit
+distribute binary software commercially.  Without GPLv2~\S3(c), that benefit
 would be at the detriment of the companies' customers; the burden of
 source code provision would be unfairly shifted to the companies'
-customers. A customer, who had received binaries with a GPLv2~\S3(b)-compliant
+customers.  A customer, who had received binaries with a GPLv2~\S3(b)-compliant
 offer, would be required under GPLv2 (sans GPLv2~\S3(c)) to acquire the source,
-merely to give a copy of the software to a friend who needed it. GPLv2~\S3(c)
+merely to give a copy of the software to a friend who needed it.  GPLv2~\S3(c)
 reshifts this burden to entity who benefits from GPLv2~\S3(b).
 
 GPLv2~\S3(c) allows those who undertake \emph{noncommercial} distribution to
-simply pass along a GPLv2~\S3(b)-compliant source code offer. The customer who
+simply pass along a GPLv2~\S3(b)-compliant source code offer.  The customer who
 wishes to give a copy to her friend can now do so without provisioning the
-source, as long as she gives that offer to her friend. By contrast, if
+source, as long as she gives that offer to her friend.  By contrast, if
 she wanted to go into business for herself selling CDs of that software,
 she would have to acquire the source and either comply via GPLv2~\S3(a), or
 write her own GPLv2~\S3(b)-compliant source offer.
 
 This process is precisely the reason why a GPLv2~\S3(b) source offer must be
-valid for all third parties. At the time the offer is made, there is no
+valid for all third parties.  At the time the offer is made, there is no
 way of knowing who might end up noncommercially receiving a copy of the
-software. Companies who choose to comply via GPLv2~\S3(b) must thus be
-prepared to honor all incoming source code requests. For this and the
+software.  Companies who choose to comply via GPLv2~\S3(b) must thus be
+prepared to honor all incoming source code requests.  For this and the
 many other additional necessary complications under GPLv2~\S\S3(b--c), it is
 only rarely a better option than complying via GPLv2~\S3(a).
 
