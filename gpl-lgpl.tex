@@ -1,8 +1,8 @@
 % gpl-lgpl.tex                                                  -*- LaTeX -*-
 %      Tutorial Text for the Detailed Study and Analysis of GPL and LGPL course
 %
-% Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
-% Copyright (C) 2014             Bradley M. Kuhn
+% Copyright (C) 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
+% Copyright (C) 2014                   Bradley M. Kuhn
 
 % License: CC-By-SA-4.0
 
@@ -28,12 +28,13 @@
 {\parindent 0in
 \tutorialpartsplit{``Detailed Analysis of the GNU GPL and Related Licenses''}{This part} is: \\
 \begin{tabbing}
-Copyright \= \copyright{} 2003, 2004, 2005 \= \hspace{.2in} Free Software Foundation, Inc. \\
+Copyright \= \copyright{} 2003, 2004, 2005, 2006 \= \hspace{.2in} Free Software Foundation, Inc. \\
 Copyright \= \copyright{} 2014 \= \hspace{.2in} Bradley M. Kuhn \\
 \end{tabbing}
 
 Authors of \tutorialpartsplit{``Detailed Analysis of the GNU GPL and Related Licenses''}{this part} are: \\
 
+Free Software Foundation, Inc. \\
 Bradley M. Kuhn \\
 David ``Novalis'' Turner \\
 Daniel B. Ravicher \\
@@ -2066,6 +2067,14 @@ copyright holders.  Some have used GPLv2~\S8 to explain various odd special
 topics of distribution, but generally speaking, this section is not
 particularly useful and was actually removed in GPLv3.
 
+% FIXME: integrate this into this section.
+
+To our knowledge, no one has invoked this section to add an explicit
+geographical distribution limitation since GPLv2 was released in 1991. We
+have concluded that this provision is not needed and is not expected to be
+needed in the future, and that it therefore should be removed.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Odds, Ends, and Absolutely No Warranty}
 
@@ -2174,41 +2183,551 @@ GPLv3 that's possible is by default less than a decade.
 These two factors usually cause even new students of GPL to start with GPLv2
 and move on to GPLv3, and this tutorial follows that pattern.
 
+We recognize that, overall, the changes made in GPLv3 have increased the
+complexity of the license. We would have liked to oblige those who have asked
+us for a simpler and shorter GPL, but we had to give priority to making GPLv3
+do the job that needs to be done.
+
 \section{GPLv3~\S0: Giving In On ``Defined Terms''}
+
+% FIXME: intro defined terms
+
+% FIXME: rewrite to FOUR new terms
+
+Section 0 includes definitions of two new terms: ``covered work'' and
+``propagate.''  The use of the term ``covered work'' enables some of the
+wording in the revised GPL to be simpler and clearer.
+
+% FIXME: rewrite propagate 
+
+The term ``propagate'' serves two purposes.  First, ``propagate'' provides
+a simple and convenient means for distinguishing between the kinds of
+uses of a work that the GPL imposes conditions on and the kinds of
+uses that the GPL does not (for the most part) impose conditions
+on.
+
+Second, ``propagate'' furthers our goal of making the license as
+global as possible in its wording and effect. When a work is licensed
+under the GPL, the copyright law of some particular country will
+govern certain legal issues arising under the license. A term like
+``distribute,'' or its equivalent in languages other than English, is
+used in several national copyright statutes.  The scope of
+``distribution'' in the copyright context can differ from country to
+country. We do not wish to force on the GPL the specific meaning of
+``distribution'' that exists under United States copyright law or any
+other country's copyright law.
+
+We therefore define the term ``propagate'' by reference to activities
+that require permission under ``applicable copyright law,'' but we
+exclude execution and private modification from the definition. Our
+definition gives examples of activities that may be included within
+``propagation,'' but it also makes clear that, under the copyright laws
+of a given country, ``propagation'' may include other activities as well.
+
+% FIXME: paragraph number change , and more on Convey once definition comes.
+
+The third paragraph of section 2 represents another effort to compensate for
+variation in national copyright law.  We distinguish between propagation that
+enables parties other than the licensee to make or receive copies, and other
+forms of propagation.  As noted above, the meaning of ``distribution'' under
+copyright law varies from country to country, including with respect to
+whether making copies available to other parties (such as related public or
+corporate entities) is ``distribution.'' ``Propagation,'' however, is a term
+not tied to any statutory language.  Propagation that does not enable other
+parties to make or receive copies --- for example, making private copies or
+privately viewing the program --- is permitted unconditionally.  Propagation
+that does enable other parties to make or receive copies is permitted as
+``distribution,'' subject to the conditions set forth in sections 4--6.
+
+% FIXME: Appropriate Legal Notices
 
 \section{GPLv3~\S1: Understanding CCS}
 
+% FIXME: Talk briefly about importance of CCS and reference compliance guide
+
+% FIXME: reword source code a bit
+
+Section 1 retains GPLv2's definition of ``source code'' and adds an
+explicit definition of ``object code'' as ``any non-source version of a
+work.''  Object code is not restricted to a narrow technical meaning and
+is to be understood broadly as including any form of the work other than
+the preferred form for making modifications to it.  Object code
+therefore includes any kind of transformed version of source code, such
+as bytecode.  The definition of object code also ensures that licensees
+cannot escape their obligations under the GPL by resorting to shrouded
+source or obfuscated programming.
+
+% FIXME: More about CCS here.
+
+% FIXME: CCS Coresponding Source updated to newer definition in later drafts
+
+The definition of ``Complete Corresponding Source Code'' given in the
+second paragraph of section 1 is as broad as necessary to protect users'
+exercise of their rights under the GPL. We follow the definition with
+particular examples to remove any doubt that they are to be considered
+Complete Corresponding Source Code. We wish to make completely clear
+that a licensee cannot avoid complying with the requirements of the GPL
+by dynamically linking an add-on component to the original version of a
+program.
+
+Though the definition of Complete Corresponding Source Code in the
+second paragraph of section 1 is expansive, it is not sufficient to
+protect users' freedoms in many circumstances.  For example, a GPL'd
+program, or a modified version of such a program, might need to be
+signed with a key or authorized with a code in order for it to run on
+a particular machine and function properly. Similarly, a program that
+produces digitally-restricted files might require a decryption code in
+order to read the output.  
+
+% FIXME: Standard Interface
+
+% FIXME: System Libraries: it's in a different place and changed in later drafts
+
+The final paragraph of section 1 revises the exception to the source code
+distribution requirement in GPLv2 that we have sometimes called the system
+library exception. This exception has been read to prohibit certain
+distribution arrangements that we consider reasonable and have not sought to
+prevent, such as distribution of gcc linked with a non-free C library that is
+included as part of a larger non-free system. This is not to say that such
+non-free libraries are legitimate; rather, preventing free software from
+linking with these libraries would hurt free software more than it would hurt
+proprietary software.
+
+As revised, the exception has two parts. Part (a) rewords the GPLv2
+exception for clarity but also removes the words ``unless that
+component itself accompanies the executable.''  By itself, (a) would
+be too permissive, allowing distributors to evade their
+responsibilities under the GPL.  We have therefore added part (b) to
+specify when a system library that is an adjunct of a major essential
+operating system component, compiler, or interpreter does not trigger
+the requirement to distribute source code.  The more low-level the
+functionality provided by the library, the more likely it is to be
+qualified for this exception.
+
 \section{GPLv3~\S2: Basic Permissions}
+
+% FIXME: phrase ``unmodified Program'' appears due to User Products exception
+
+We have included the first sentence of section 2 to further internationalize
+the GPL. Under the copyright laws of some countries, it may be necessary for
+a copyright license to include an explicit provision setting forth the
+duration of the rights being granted. In other countries, including the
+United States, such a provision is unnecessary but permissible.
+
+The first paragraph of section 2 also acknowledges that licensees under the
+GPL enjoy rights of copyright fair use, or the equivalent under applicable
+law. These rights are compatible with, and not in conflict with, the freedoms
+that the GPL seeks to protect, and the GPL cannot and should not restrict
+them.
+
+% FIXME: propagate and convey
+
+Section 2 distinguishes between activities of a licensee that are permitted
+without limitation and activities that trigger additional requirements. The
+second paragraph of section 2 guarantees the basic freedoms of privately
+modifying and running the program. However, the right to privately modify and
+run the program is terminated if the licensee brings a patent infringement
+lawsuit against anyone for activities relating to a work based on the
+program.
+
 
 \section{GPLv3~\S3: What Hath DMCA Wrought}
 \label{GPLv3s3}
+
+% FIXME: reference the section in DMCA about this, maybe already there in
+%        GPLv2 section?
+
+% FIXME: Wrong paragraph now.
+
+The second paragraph of section 3 declares that no GPL'd program is part of
+an effective technological protection measure, regardless of what the program
+does. Ill-advised legislation in the United States and other countries has
+prohibited circumvention of such technological measures. If a covered work is
+distributed as part of a system for generating or accessing certain data, the
+effect of this paragraph is to prevent someone from claiming that some other
+GPL'd program that accesses the same data is an illegal circumvention.
+
 \section{GPLv3~\S4: Verbatim Copying}
+
+% FIXME: there appear to be minor changes here in later drafts, fix that.
+
+Section 4 has been revised from its corresponding section in GPLv2 in light
+of the new section 7 on license compatibility. A distributor of verbatim
+copies of the program's source code must obey any existing additional terms
+that apply to parts of the program. In addition, the distributor is required
+to keep intact all license notices, including notices of such additional
+terms.
 
 \section{GPLv3~\S5: Modified Source}
 
+% FIXME: 5(a) is slightly different in final version
+
+Section 5 contains a number of changes relative to the corresponding section
+in GPLv2. Subsection 5a slightly relaxes the requirements regarding notice of
+changes to the program. In particular, the modified files themselves need no
+longer be marked. This reduces administrative burdens for developers of
+modified versions of GPL'd software.
+
+Under subsection 5a, as in the corresponding provision of GPLv2, the notices
+must state ``the date of any change,'' which we interpret to mean the date of
+one or more of the licensee's changes.  The best practice would be to include
+the date of the latest change.  However, in order to avoid requiring revision
+of programs distributed under ``GPL version 2 or later,'' we have retained
+the existing wording.
+
+% FIXME:  It's now (b) and (c).  Also, ``validity'' of proprietary
+%         relicensing?  Give me a break.  I'll fix that.
+
+Subsection 5b is the central copyleft provision of the license.  It now
+states that the GPL applies to the whole of the work.  The license must be
+unmodified, except as permitted by section 7, which allows GPL'd code to be
+combined with parts covered by certain other kinds of free software licensing
+terms. Another change in subsection 5b is the removal of the words ``at no
+charge,'' which was often misinterpreted by commentators.  The last sentence
+of subsection 5b explicitly recognizes the validity of disjunctive
+dual-licensing.
+
+%  FIXME: 5d.  Related to Appropriatey Legal notices
+
+
+% follows 5d now, call it the ``final paragraph''
+
+The paragraph following subsection 5c has been revised for clarity, but the
+underlying meaning is unchanged. When independent non-derivative sections are
+distributed for use in a combination that is a covered work, the whole of the
+combination must be licensed under the GPL, regardless of the form in which
+such combination occurs, including combination by dynamic linking. The final
+sentence of the paragraph adapts this requirement to the new compatibility
+provisions of section 7.
+
 \section{GPLv3~\S6: Non-Source and Corresponding Source}
+
+Section 6 of GPLv3, which clarifies and revises GPLv2 section 3, requires
+distributors of GPL'd object code to provide access to the corresponding
+source code, in one of four specified ways. As noted above, ``object code''
+in GPLv3 is defined broadly to mean any non-source version of a work.
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+Subsections 6a and 6b now apply specifically to distribution of object code
+in a physical product. Physical products include embedded systems, as well as
+physical software distribution media such as CDs. As in GPLv2, the
+distribution of object code may either be accompanied by the machine-readable
+source code, or it may be accompanied by a written offer to provide the
+machine-readable source code to any third party. GPLv3 clarifies that the
+medium for software interchange on which the machine-readable source code is
+provided must be a durable physical medium. Subsection 6b does not prevent a
+distributor from offering to provide source code to a third party by some
+other means, such as transmission over a network, so long as the option of
+obtaining source code on a physical medium is presented.
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+Subsection 6b revises the requirements for the written offer to provide
+source code. As before, the offer must remain valid for at least three
+years. In addition, even after three years, a distributor of a product
+containing GPL'd object code must offer to provide source code for as long as
+the distributor also continues to offer spare parts or customer support for
+the product model. We believe that this is a reasonable and appropriate
+requirement; a distributor should be prepared to provide source code if he or
+she is prepared to provide support for other aspects of a physical product.
+
+% FIXME: 10x language is gone.
+
+Subsection 6b also increases the maximum permitted price for providing a copy
+of the source code. GPLv2 stated that the price could be no more than the
+cost of physically performing source distribution; GPLv3 allows the price to
+be up to ten times the distributor's cost. It may not be practical to expect
+some organizations to provide such copies at cost. Moreover, permitting such
+organizations to charge ten times the cost is not particularly harmful, since
+some recipient of the code can be expected to make the code freely available
+on a public network server. We also recognize that there is nothing wrong
+with profiting from providing copies of source code, provided that the price
+of a copy is not so unreasonably high as to make it effectively unavailable.
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+Subsection 6c gives narrower permission than the corresponding subsection in
+GPLv2.  The option of including a copy of an offer received in accordance
+with subsection 6b is available only for private distribution of object code;
+moreover, such private distribution is restricted to ``occasional
+non-commercial distribution.''  This subsection makes clear that a
+distributor cannot comply with the GPL merely by making object code available
+on a publicly-accessible network server accompanied by a copy of the written
+offer to provide source code received from an upstream distributor.
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+New subsection 6d, which revises the final paragraph of GPLv2 section 3,
+addresses distribution of object code by offering access to copy the code
+from a designated place, such as by enabling electronic access to a network
+server.  Subsection 6d clarifies that the distributor must offer equivalent
+access to copy the source code ``in the same way through the same place.''
+This wording permits a distributor to offer a third party access to both
+object code and source code on a single network portal or web page, even
+though the access may include links to different physical servers.  For
+example, a downstream distributor may provide a link to an upstream
+distributor's server and arrange with the operator of that server to keep the
+source code available for copying for as long as the downstream distributor
+enables access to the object code.  This codifies what has been our
+interpretation of GPLv2.
+
+%FIXME: 6e, peer-to-peer
+
+
+%  FIXME: Not final paragraph anymore. 
+
+The final paragraph of section 6 takes account of the fact that the Complete
+Corresponding Source Code may include added parts that carry non-GPL terms,
+as permitted by section 7.
+
+% FIXME: update lock-down section to work with more recent drafts
+
+Though the definition of Complete Corresponding Source Code in the second
+paragraph of section 1 is expansive, it is not sufficient to protect users'
+freedoms in many circumstances. For example, a GPL'd program, or a modified
+version of such a program, might need to be signed with a key or authorized
+with a code in order for it to run on a particular machine and function
+properly. Similarly, a program that produces digitally-restricted files might
+require a decryption code in order to read the output.
+
+The third paragraph of section 1 addresses this problem by making clear that
+Complete Corresponding Source Code includes any such encryption,
+authorization, and decryption codes. By requiring the inclusion of this
+information whenever the GPL requires distribution of Complete Corresponding
+Source Code, we thwart efforts to obstruct the goals of the GPL, and we
+ensure that users will remain in control over their own machines. We
+recognize an exception where use of the program normally implies that the
+user already has the codes. For example, in secure systems a computer owner
+might possess any keys needed to run a program, while the distributor of the
+program might not have the keys.
+
+% FIXME: installation information
+
+%FIXME: publicly documented format
 
 \section{Understanding License Compatibility}
 \label{license-compatibility}
 
+% FIXME: reword intro to license compatibility
+
+Another challenge facing the free software community is the proliferation of
+incompatible free software licenses. Of course, we cannot make the GPL
+compatible with all such licenses. GPLv3 contains provisions that are
+designed to reduce license incompatibility by making it easier for developers
+to combine code carrying non-GPL terms with GPL'd code.
+
+
 \section{GPLv3~\S7: Explicit Compatibility}
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+In GPLv3 we take a new approach to the issue of combining GPL'd code with
+code governed by the terms of other free software licenses. Our view, though
+it was not explicitly stated in GPLv2 itself, was that GPLv2 allowed such
+combinations only if the non-GPL licensing terms permitted distribution under
+the GPL and imposed no restrictions on the code that were not also imposed by
+the GPL. In practice, we supplemented this policy with a structure of
+exceptions for certain kinds of combinations.
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+Section 7 of GPLv3 implements a more explicit policy on license
+compatibility. It formalizes the circumstances under which a licensee may
+release a covered work that includes an added part carrying non-GPL terms. We
+distinguish between terms that provide additional permissions, and terms that
+place additional requirements on the code, relative to the permissions and
+requirements established by applying the GPL to the code.
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+Section 7 first explicitly allows added parts covered by terms with
+additional permissions to be combined with GPL'd code. This codifies our
+existing practice of regarding such licensing terms as compatible with the
+GPL. A downstream user of a combined GPL'd work who modifies such an added
+part may remove the additional permissions, in which case the broader
+permissions no longer apply to the modified version, and only the terms of
+the GPL apply to it.
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+In its treatment of terms that impose additional requirements, section 7
+extends the range of licensing terms with which the GPL is compatible. An
+added part carrying additional requirements may be combined with GPL'd code,
+but only if those requirements belong to an set enumerated in section 7. We
+must, of course, place some limit on the kinds of additional requirements
+that we will accept, to ensure that enhanced license compatibility does not
+defeat the broader freedoms advanced by the GPL. Unlike terms that grant
+additional permissions, terms that impose additional requirements cannot be
+removed by a downstream user of the combined GPL'd work, because no such user
+would have the right to do so.
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+Under subsections 7a and 7b, the requirements may include preservation of
+copyright notices, information about the origins of the code or alterations
+of the code, and different warranty disclaimers. Under subsection 7c, the
+requirements may include limitations on the use of names of contributors and
+on the use of trademarks for publicity purposes. In general, we permit these
+requirements in added terms because many free software licenses include them
+and we consider them to be unobjectionable. Because we support trademark fair
+use, the limitations on the use of trademarks may seek to enforce only what
+is required by trademark law, and may not prohibit what would constitute fair
+use.
+
+% FIXME: 7d-f
+
+% FIXME:  removing additional restrictions
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+Section 7 requires a downstream user of a covered work to preserve the
+non-GPL terms covering the added parts just as they must preserve the GPL, as
+long as any substantial portion of those parts is present in the user's
+version.
+
 
 \section{GPLv3~\S8: A Lighter Termination}
 
+% FIXME:  probably mostly still right, needs some updates, though.
+
+GPLv2 provided for automatic termination of the rights of a person who
+copied, modified, sublicensed, or distributed a work in violation of the
+license.  Automatic termination can be too harsh for those who have committed
+an inadvertent violation, particularly in cases involving distribution of
+large collections of software having numerous copyright holders.  A violator
+who resumes compliance with GPLv2 would need to obtain forgiveness from all
+copyright holders, but even to contact them all might be impossible.
+
+% FIXME: needs to be updated to describe more complex termination
+
+Section 8 of GPLv3 replaces automatic termination with a non-automatic
+termination process.  Any copyright holder for the licensed work may opt to
+terminate the rights of a violator of the license, provided that the
+copyright holder has first given notice of the violation within 60 days of
+its most recent occurrence. A violator who has been given notice may make
+efforts to enter into compliance and may request that the copyright holder
+agree not exercise the right of termination; the copyright holder may choose
+to grant or refuse this request.
+
+% FIXME: needs to be updated to describe more complex termination
+
+If a licensee who is in violation of GPLv3 acts to correct the violation and
+enter into compliance, and the licensee receives no notice of the past
+violation within 60 days, then the licensee need not worry about termination
+of rights under the license.
+
 \section{GPLv3~\S9: Acceptance}
+
+% FIXME
 
 \section{GPLv3~\S10: Explicit Downstream License}
 
+% FIXME
+
 \section{GPLv3~\S11: Explicit Patent Licensing}
 \label{GPLv3s11}
+
+% FIXME:  probably needs a lot of work, these provisions changed over time.
+
+GPLv3 adds a new section on licensing of patents. GPLv2 relies on an implied
+patent license. The doctrine of implied license is one that is recognized
+under United States patent law but may not be recognized in other
+jurisdictions. We have therefore decided to make the patent license grant
+explicit in GPLv3. Under section 11, a redistributor of a GPL'd work
+automatically grants a nonexclusive, royalty-free and worldwide license for
+any patent claims held by the redistributor, if those claims would be
+infringed by the work or a reasonably contemplated use of the work.
+
+% FIXME:  probably needs a lot of work, these provisions changed over time.
+
+The patent license is granted both to recipients of the redistributed work
+and to any other users who have received any version of the work. Section 11
+therefore ensures that downstream users of GPL'd code and works derived from
+GPL'd code are protected from the threat of patent infringement allegations
+made by upstream distributors, regardless of which country's laws are held to
+apply to any particular aspect of the distribution or licensing of the GPL'd
+code.
+
+% FIXME:  probably needs a lot of work, these provisions changed over time.
+
+A redistributor of GPL'd code may benefit from a patent license that has been
+granted by a third party, where the third party otherwise could bring a
+patent infringement lawsuit against the redistributor based on the
+distribution or other use of the code. In such a case, downstream users of
+the redistributed code generally remain vulnerable to the applicable patent
+claims of the third party. This threatens to defeat the purposes of the GPL,
+for the third party could prevent any downstream users from exercising the
+freedoms that the license seeks to guarantee.
+
+% FIXME:  probably needs a lot of work, these provisions changed over time.
+
+The second paragraph of section 11 addresses this problem by requiring the
+redistributor to act to shield downstream users from these patent claims. The
+requirement applies only to those redistributors who distribute knowingly
+relying on a patent license. Many companies enter into blanket patent
+cross-licensing agreements. With respect to some such agreements, it would
+not be reasonable to expect a company to know that a particular patent
+license covered by the agreement, but not specifically mentioned in it,
+protects the company's distribution of GPL'd code.
+
+% FIXME: does this still fit with the final retaliation provision?
+
+This narrowly-targeted patent retaliation provision is the only form of
+patent retaliation that GPLv3 imposes by its own force. We believe that it
+strikes a proper balance between preserving the freedom of a user to run and
+modify a program, and protecting the rights of other users to run, modify,
+copy, and distribute code free from threats by patent holders. It is
+particularly intended to discourage a GPL licensee from securing a patent
+directed to unreleased modifications of GPL'd code and then suing the
+original developers or others for making their own equivalent modifications.
+
+Several other free software licenses include significantly broader patent
+retaliation provisions. In our view, too little is known about the
+consequences of these forms of patent retaliation. As we explain below,
+section 7 permits distribution of a GPL'd work that includes added parts
+covered by terms other than those of the GPL. Such terms may include certain
+kinds of patent retaliation provisions that are broader than those of section
+2.
+
 \section{GPLv3~\S12: Familiar as GPLv2 \S 7}
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+The wording in the first sentence of section 12 has been revised
+slightly to clarify that an agreement, such as a litigation settlement
+agreement or a patent license agreement, is one of the ways in which
+conditions may be ``imposed'' on a GPL licensee that may contradict the
+conditions of the GPL, but which do not excuse the licensee from
+compliance with those conditions.  This change codifies what has been
+our interpretation of GPLv2.  
+
+% FIXME:  probably mostly still right, needs some updates, though.
+
+We have removed the limited severability clause of GPLv2 section 7 as a
+matter of tactical judgment, believing that this is the best way to ensure
+that all provisions of the GPL will be upheld in court. We have also removed
+the final sentence of GPLv2 section 7, which we consider to be unnecessary.
 
 \section{GPLv3~\S13: The Great Affero Compromise}
 
+% FIXME
+
 \section{GPLv3~\S14: So, When's GPLv4?}
 \label{GPlv2s14}
+
+% FIXME Say more
+
+No substantive change has been made in section 14. The wording of the section
+has been revised slightly to make it clearer.
+
+% FIXME; proxy
+
 \section{GPLv3~\S15--17: Warranty Disclaimers and Liability Limitation}
 
+No substantive changes have been made in sections 15 and 16.
+
+% FIXME: more, plus 17
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{The Lesser GPL}
