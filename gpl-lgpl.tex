@@ -2241,6 +2241,18 @@ shorter GPL\@.  Ultimately, the FSF gave priority to making GPLv3 a better
 copyleft in the spirit of past GPL's.  Obsession for concision should never
 trump software freedom.
 
+The FSF had many different, important goals in seeking to upgrade to GPLv3.
+However, one important goal that is often lost in the discussion of policy
+minutia is a rather simple but important issue.  Namely, FSF sought to assure
+that GPLv3 was more easily internationalized than GPLv2.  In particular, the
+FSF sought to ease interpretation of GPL in other countries by replacement of
+USA-centric\footnote{See Section~\ref{non-usa-copyright} of this tutorial for
+  a brief discussion about non-USA copyright systems.}  copyright phrases and
+wording with neutral terminology rooted in description of behavior rather
+than specific statue.  As can be seen in the section-by-section discussion of
+GPLv3 that follows, nearly every section had changes related to issues of
+internationalization.
+ 
 \section{GPLv3~\S0: Giving In On ``Defined Terms''}
 
 One of lawyers' most common complaints about GPLv2 is that defined terms in
@@ -2261,82 +2273,55 @@ adds one.  Most of these defined terms are somewhat straightforward and bring
 forward better worded definitions from GPLv2.  Herein, this tutorial
 discusses a few of the new ones.
 
-% FIXME: it's now five, ``Modify''
+GPLv3~\S0 includes definitions of five new terms not found in any form in
+GPLv2: ``modify'' ``covered work'', ``propagate'', ``convey'', and
+``Appropriate Legal Notices''. 
 
-GPLv3~\S0 includes definitions of four new terms not found in any form in
-GPLv2: ``covered work'', ``propagate'', ``convey'', and ``Appropriate Legal
-Notices''.
+\subsection{Modify and the Work Based on the Program}
 
-% FIXME: modify needs more discussion 
-
-We have made further improvements to the important definitions of ``modify''
-and ``based on,'' providing a complete definition of ``modify'' that refers
-to basic copyright rights, and using this definition of ``modify'' to define
-``modified version of'' and ``work based on,'' now presented as synonyms.
-
-% FIXME: Transition, GPLv2 ref needed.
-
-Although the definition of ``work based on the Program'' made use of a legal
-term of art, ``derivative work,'' peculiar to USA copyright law, we did not
-believe that this presented difficulties as significant as those associated
-with the use of the term ``distribution.''  After all, differently-labeled
+GPLv2 included a defined term, ``work based on the Program'', but also used
+the term ``modify'' and ``based on'' throughout the license.  GPLv2's ``work
+based on the Program'' definition made use of a legal term of art,
+``derivative work'', which is peculiar to USA copyright law.  However,
+ironically, the most criticism of USA-specific legal terminology in GPLv2's
+``work based on the Program'' definition historically came not primarily from
+readers outside the USA, but from those within it\footnote{The FSF noted in
+  that it did not generally agree with these views, and expressed puzzlement
+  by the energy with which they were expressed, given the existence of many
+  other, more difficult legal issues implicated by the GPL.  Nevertheless,
+  the FSF argued that it made sense to eliminate usage of local copyright
+  terminology to good effect.}.  Admittedly, even though differently-labeled
 concepts corresponding to the derivative work are recognized in all copyright
-law systems.  That these counterpart concepts might differ to some degree in
-scope and breadth from the USA derivative work was simply a consequence of
-varying national treatment of the right of altering a copyrighted work.
+law systems, these counterpart concepts might differ to some degree in scope
+and breadth from the USA derivative work.
 
-%FIXME: should we keep this? maybe a footnote?
+The goal and intention of GPLv2 was always to cover all rights governed by
+relevant copyright law, in the USA and elsewhere.  GPLv3 therefore takes the
+task of internationalizing the license further by removing references to
+derivative works and by providing a more globally useful definition.  The new
+definition returns to the common elements of copyright law.  Copyright
+holders of works of software have the exclusive right to form new works by
+modification of the original --- a right that may be expressed in various
+ways in different legal systems.  GPLv3 operates to grant this right to
+successive generations of users (particularly through the copyleft conditions
+set forth in GPLv3~\S5, as described later in this tutorial in its
+\S~\ref{GPLv3s5}).  Here in GPLv3~\S0, ``modify'' refers to basic copyright
+rights, and then this definition of ``modify'' is used to define ``modified
+version of'' and ``work based on,'' as synonyms.
 
-Ironically, the criticism we have received regarding the use of
-USA-specific legal terminology in the ``work based on the Program''
-definition has come not primarily from readers outside the USA, but
-from those within it, and particularly from members of the technology
-licensing bar.  They have argued that the definition of ``work based
-on the Program'' effectively misstates what a derivative work is under
-USA law, and they have contended that it attempts, by indirect means,
-to extend the scope of copyleft in ways they consider undesirable.
-They have also asserted that it confounds the concepts of derivative
-and collective works, two terms of art that they assume, questionably,
-to be neatly disjoint under USA law.
-
-% FIXME: As above
-
-We do not agree with these views, and we were long puzzled by the
-energy with which they were expressed, given the existence of many
-other, more difficult legal issues implicated by the GPL.
-Nevertheless, we realized that here, too, we can eliminate usage of
-local copyright terminology to good effect.  Discussion of GPLv3 will
-be improved by the avoidance of parochial debates over the
-construction of terms in one imperfectly-drafted copyright statute.
-Interpretation of the license in all countries will be made easier by
-replacement of those terms with neutral terminology rooted in
-description of behavior.
-
-%FIXME: GPLv3, reword a bit.
-
-Draft 2 therefore takes the task of internationalizing the license
-further by removing references to derivative works and by providing a
-more globally useful definition of a work ``based on'' another work.
-We return to the basic principles of users' freedom and the common
-elements of copyright law.  Copyright holders of works of software
-have the exclusive right to form new works by modification of the
-original, a right that may be expressed in various ways in different
-legal systems.  The GPL operates to grant this right to successive
-generations of users, particularly through the copyleft conditions set
-forth in section 5 of GPLv3, which applies to the conveying of works
-based on the Program.  In section 0 we simply define a work based on
-another work to mean ``any modified version for which permission is
-necessary under applicable copyright law,'' without further qualifying
-the nature of that permission, though we make clear that modification
-includes the addition of material.\footnote{We have also removed the
-paragraph in section 5 that makes reference to ``derivative or
-collective works based on the Program.''}
 
 %FIXME: transition
 
 While ``covered by this license'' is a phrase found in GPLv2, defining it
 more complete in a single as ``covered work'' enables some of the wording in
 GPLv3 to be simpler and clearer than its GPLv2 counterparts.
+
+
+%FIXME: should we keep this? maybe a footnote?
+
+
+%FIXME: GPLv3, reword a bit.
+
 
 % FIXME: does propagate  definition still work the same way in final draft?
 
