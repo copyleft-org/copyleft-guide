@@ -6,3 +6,8 @@
 comprehensive-gpl-guide.log
 # bkuhn often makes an x.ps file in intermediate testing.
 x.ps
+# Emacs temporary files
+*~
+\#*\#
+.\#*
+auto-save-list
