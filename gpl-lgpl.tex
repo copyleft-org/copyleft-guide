@@ -2381,86 +2381,73 @@ traditionally required preserved into one definition.
 
 Note finally that not all defined terms in GPLv3 appear in GPLv3~\S0.
 Specifically, those defined terms that are confined in use to a single
-section are defined in the section in which they are used.  In this tutorial,
-those defined terms are discussed in the section where they are defined and
+section are defined in the section in which they are used, and GPLv3~\S1
+contains those definitions focused on source code.  In this tutorial, those
+defined terms are discussed in the section where they are defined and/or
 used.
-
 
 \section{GPLv3~\S1: Understanding CCS}
 
-% FIXME: Talk briefly about importance of CCS and reference compliance guide
+Ensuring that users have the source code to the software they receive and the
+freedom to modify remains the paramount right embodied in the Free Software
+Definition (found in \S~\ref{Free Software Definition} of this tutorial).  As
+such, GPLv3~\S1 is likely one of the most important sections of GPLv3, as it
+contains all the defined terms related to this important software freedom.
 
-% FIXME: verify this still matches final GPLv3 text.
-% FIXME:  link to GPLv2 tutorial sections if possible and where appropriate.
+\subsection{Source Code Definition}
 
-GPLv3\~S1 retains GPLv2's definition of ``source code'' and adds an explicit
-definition of ``object code'' as ``any non-source version of a work''.
-Object code is not restricted to a narrow technical meaning and is to be
-understood broadly as including any form of the work other than the preferred
+First, GPLv3\~S1 retains GPLv2's definition of ``source code'' and adds an
+explicit definition of ``object code'' as ``any non-source version of a
+work''.  Object code is not restricted to a narrow technical meaning and is
+understood broadly to include any form of the work other than the preferred
 form for making modifications to it.  Object code therefore includes any kind
 of transformed version of source code, such as bytecode or minified
 Javascript.  The definition of object code also ensures that licensees cannot
 escape their obligations under the GPL by resorting to shrouded source or
 obfuscated programming.
 
-% FIXME: CCS Coresponding Source updated to newer definition in later drafts
+\subsection{CCS Definition}
 
-Keeping with the desire to ``round up'' definitions that were spread
-throughout the text of GPLv2, the definition of CCS\footnote{Note that the
-  preferred term by those who work with both GPLv2 and GPLv3 is ``Complete
-  Corresponding Source'', abbreviated to ``CCS''.  Admittedly, the word
-  ``complete'' no longer appears in GPLv3 (which uses the word ``all''
-  instead).  However, both GPLv2 and the early drafts of GPLv3 itself used
-  the word complete, and early GPLv3 drafts even included the phrase
-  ``Complete Corresponding Source''.  Meanwhile, use of the acronym ``CCS''
-  (sometimes, ``C\&CS'') was so widespread among GPL enforcers that its use
-  continues even though GPLv3-focused experts tend to say just the defined
-  term of ``Corresponding Source''.}, or, as GPLv3 officially calls it,
-``Corresponding Source'', is given in GPLv3~\S1\P4.  This definition is as
-broad as necessary to protect users' exercise of their rights under the
-GPL\@.  We follow the definition with particular examples to remove any doubt
-that they are to be considered Complete Corresponding Source Code.  We wish to
-make completely clear that a licensee cannot avoid complying with the
-requirements of the GPL by dynamically linking an add-on component to the
-original version of a program.
+The definition of CCS\footnote{Note that the preferred term for those who
+  work regularly with both GPLv2 and GPLv3 is ``Complete Corresponding
+  Source'', abbreviated to ``CCS''.  Admittedly, the word ``complete'' no
+  longer appears in GPLv3 (which uses the word ``all'' instead).  However,
+  both GPLv2 and the early drafts of GPLv3 itself used the word ``complete'',
+  and early GPLv3 drafts even called this defined term ``Complete
+  Corresponding Source''.  Meanwhile, use of the acronym ``CCS'' (sometimes,
+  ``C\&CS'') was so widespread among GPL enforcers that its use continues
+  even though GPLv3-focused experts tend to say just the defined term of
+  ``Corresponding Source''.}, or, as GPLv3 officially calls it,
+``Corresponding Source'' in GPLv3~\S1\P4 is possibly the most complex
+definition in the license.
 
-%FIXME: Merge this in with previous paragarph
+The CCS definition is broad so as to protect users' exercise of their rights
+under the GPL\@.  The definition includes with particular examples to remove
+any doubt that they are to be considered CCS\@.  GPLv3 seeks to make it
+completely clear that a licensee cannot avoid complying with the requirements
+of the GPL by dynamically linking a subprogram component to the original
+version of a program.  The example also clarifies that the shared libraries
+and dynamically linked subprograms that are included in Corresponding Source
+are those that the work is ``specifically'' designed to require, which
+clarifies that they do not include libraries invoked by the work that can be
+readily substituted by other existing implementations.  While copyleft
+advocates never doubted this was required under GPLv2's definition of CCS,
+making it abundantly clear with an extra example.
 
-The definition of Corresponding Source (``Complete Corresponding Source
-Code'' in Draft1) is the most complex definition in the license.
+GPL, as always, seeks to ensure users are truly in a position to install and
+run their modified versions of the program; the CCS definition is designed to
+be expansive to ensure this software freedom.  However, although the
+definition of CCS is expansive, it is not sufficient to protect users'
+freedoms in many circumstances.  For example, a GPL'd program, or a modified
+version of such a program, might be locked-down and restricted.  The
+requirements in GPLv3~\S6 (discussed in Section~\ref{GPLv3s6} of this
+tutorial) handle that issue.  (Early drafts of GPLv3 included those
+requirements in the definition of CCS; however, given that the lock-down
+issue only comes up in distribution of object code, it is more logical to
+place those requirements with the parts of GPLv3 dealing directly with object
+code distribution).
 
-% FIXME: This needs work
-
-Though the definition of Complete Corresponding Source Code in the
-second paragraph of section 1 is expansive, it is not sufficient to
-protect users' freedoms in many circumstances.  For example, a GPL'd
-program, or a modified version of such a program, might need to be
-signed with a key or authorized with a code in order for it to run on
-a particular machine and function properly. Similarly, a program that
-produces digitally-restricted files might require a decryption code in
-order to read the output.  
-
-% FIXME: FSF third person, and verify it still matches GPLv3 text.
-
-We clarify that the shared libraries and dynamically linked subprograms that
-are included in Corresponding Source are those that the work is
-``specifically'' designed to require, making it clearer that they do not
-include libraries invoked by the work that can be readily substituted by
-other existing implementations.
-
-
-%  FIXME: merge in with a forward-reference to Installation Information.
-
-s long as users are truly in a position to install and run
-their modified versions of the program
-
-In our earlier drafts we devoted much care to devising a detailed technical
-definition of the cryptographic information that would enable GPL licensees
-to install functioning modified versions, without affecting legitimate uses
-of encryption.  The result was a provision that some found too complex and
-difficult to understand, while others continued to raise concerns about
-overinclusion.  In fact, the complexity and its resultant problems were never
-necessary, since our underlying goal was quite simple.
+% FIXME: this goes somewhere else
 
 In Draft 3 we instead use a definition of ``Installation Information'' in
 section 6 that is as simple and clear as that goal.  Installation Information
@@ -2502,12 +2489,9 @@ the requirement to distribute source code.  The more low-level the
 functionality provided by the library, the more likely it is to be
 qualified for this exception.
 
-Because GPLv3 now has requirements referring to Corresponding Source outside
-of the object code conveying requirements of section 6 (see section 10,
-second paragraph, and section 11, third paragraph), it has become necessary
-to define what ``Corresponding Source'' means for a work in source code form.
-Our definition states that it is nothing more than that work itself. It is
-important to note that section 11, paragraph 3 refers to a work that is
+% FIXME: These don't belong here
+
+It is important to note that section 11, paragraph 3 refers to a work that is
 conveyed, and section 10, paragraph 2 refers to a kind of automatic
 counterpart to conveying achieved as the result of a transaction.  The
 permissions of section 5 imply that if one distributes source code, one can
