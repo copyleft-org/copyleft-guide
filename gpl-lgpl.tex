@@ -2911,26 +2911,19 @@ limitation or further obligation.
 
 \subsection{User Products, Installation Information and Device Lock-Down}
 
-% FIXME: perhaps this additional information isn't needed, next 3 paras, but
-%        there might be something good here
+As discussed in \S~\ref{GPLv3-drm} of this tutorial, GPLv3 seeks thwart
+technical measures such as signature checks in hardware to prevent
+modification of GPLed software on a device.
 
-Another major goal for GPLv3 has been to thwart technical measures such as
-signature checks in hardware to prevent modification of GPLed software on a
-device.  Previous drafts attempted to accomplish this by defining
-"Corresponding Source" to include any encryption or authorization keys
-necessary to install new versions of the software.  A number of members of
-the community questioned the impact and utility of such a definition.
+To address this issue, GPLv3~\S6 requires that parties distributing object
+code provide recipients with the source code through certain means.  When
+those distributors pass on the CCS, they are also required to pass on any
+information or data necessary to install modified software on the particular
+device that included it.  (This strategy is not unlike that used in LGPLv2.1
+to enable users to link proprietary programs to modified libraries.)
 
-The third discussion draft uses a different strategy to accomplish the same
-task.  Section 6 requires that parties distributing object code provide
-recipients with the source code through certain means.  Now, when those
-distributors pass on the source, they are also required to pass on any
-information or data necessary to install modified software on the
-particular device that included it.  We believe that this will more
-precisely accomplish our goals, and avoid potential problems with expanding
-the definition of source code.  The new strategy should be familiar to free
-software developers: the GNU LGPL has long had similar requirements that
-enable users to link proprietary programs to modified libraries.
+% FIXME-LATER: LGPLv2.1 section should talk about this explicitly and this
+%              should be a forward reference here
 
 \label{user-product}
 In addition, the scope of these requirements has been narrowed.  This draft
