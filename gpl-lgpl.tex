@@ -2876,25 +2876,22 @@ blocks of a particular file, but they perceive the experience merely as users
 and receivers, and not as distributors in any conventional sense.  At any
 given moment of time, most peers will not have the complete file.
 
-% FIXME: rewrite a bit.
-
-The GPL permits distribution of a work in object code form over a network,
-provided that the distributor offers equivalent access to copy the
-Corresponding Source Code ``in the same way through the same place.''  This
-wording might be interpreted to permit BitTorrent distribution of binaries if
-they are packaged together with the source code, but this impractical, for at
-least two reasons. First, even if the source code is packaged with the
-binary, it will only be available to a non-seeding peer at the end of the
-distribution process, but the peer will already have been providing parts of
-the binary to others in the network, functioning rather like a router or a
-cache proxy.  Second, in practice BitTorrent and similar peer-to-peer forms
-of transmission have been less suitable means for distributing source code.
-In large distributions, packaging source code with the binary may result in a
-substantial increase in file size and transmission time.  Source code
-packages themselves tend not to be transmitted through BitTorrent owing to
-reduced demand. There generally will be too few participants downloading the
-same source package at the same time to enable effective seeding and
-distribution.
+Meanwhile, GPLv3~\S6(d) permits distribution of a work in object code form
+over a network, provided that the distributor offers equivalent access to
+copy the Corresponding Source Code ``in the same way through the same
+place''.  This wording might be interpreted to permit peer-to-peer
+distribution of binaries \textit{if} they are packaged together with the CCS,
+but such packaging impractical, for at least three reasons.  First, even if
+the CCS is packaged with the object code, it will only be available to a
+non-seeding peer at the end of the distribution process, but the peer will
+already have been providing parts of the binary to others in the network.
+Second, in practice, peer-to-peer forms of transmission are poorly suited
+means for distributing CCS.  In large distributions, packaging CCS with the
+object code may result in a substantial increase in file size and
+transmission time.  Third, in current practice, CCS packages themselves tend
+\textit{not} to be transmitted through BitTorrent --- owing to reduced demand
+-- thus, there generally will be too few participants downloading the same
+source package at the same time to enable effective seeding and distribution.
 
 % FIXME: rewrite a bit.
 
