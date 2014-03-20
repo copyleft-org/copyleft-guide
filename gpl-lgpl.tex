@@ -3165,47 +3165,42 @@ additional requirements in violation of the GPL.  It can be seen that
 additional permissions in other licenses do not raise any problems of license
 compatibility.
 
-In GPLv3 we take a new approach to the issue of combining GPL'd code with
-code governed by the terms of other free software licenses. Our view, though
-it was not explicitly stated in GPLv2 itself, was that GPLv2 allowed such
+GPLv3  took a new approach to the issue of combining GPL'd code with
+code governed by the terms of other software freedom licenses.  Traditional
+GPLv2 license compatibility theory (which was not explicitly stated in GPLv2
+itself, but treated as a license interpretation matter by the FSF) held that GPLv2 allowed such
 combinations only if the non-GPL licensing terms permitted distribution under
 the GPL and imposed no restrictions on the code that were not also imposed by
-the GPL. In practice, we supplemented this policy with a structure of
+the GPL\@.  In practice, the FSF historically supplemented that policy with a structure of
 exceptions for certain kinds of combinations.
 
-% FIXME:  probably mostly still right, needs some updates, though.
-
-Section 7 of GPLv3 implements a more explicit policy on license
-compatibility. It formalizes the circumstances under which a licensee may
-release a covered work that includes an added part carrying non-GPL terms. We
-distinguish between terms that provide additional permissions, and terms that
+GPLv3~\S7  implements a more explicit policy on license
+compatibility.  It formalizes the circumstances under which a licensee may
+release a covered work that includes an added part carrying non-GPL terms. 
+GPLv3~\S7 distinguish between terms that provide additional permissions, and terms that
 place additional requirements on the code, relative to the permissions and
 requirements established by applying the GPL to the code.
 
-% FIXME:  probably mostly still right, needs some updates, though.
-
-Section 7 first explicitly allows added parts covered by terms with
-additional permissions to be combined with GPL'd code. This codifies our
+As discussed in the previous section of this tutorial, GPLv3~\S7 first and foremost explicitly allows added parts covered by terms with
+additional permissions to be combined with GPL'd code. This codifies the
 existing practice of regarding such licensing terms as compatible with the
-GPL. A downstream user of a combined GPL'd work who modifies such an added
+GPL\@. A downstream user of a combined GPL'd work who modifies such an added
 part may remove the additional permissions, in which case the broader
 permissions no longer apply to the modified version, and only the terms of
 the GPL apply to it.
 
-% FIXME:  probably mostly still right, needs some updates, though.
-
-In its treatment of terms that impose additional requirements, section 7
-extends the range of licensing terms with which the GPL is compatible. An
+In its treatment of terms that impose additional requirements, GPLv3\S7
+extends the range of licensing terms with which the GPL is compatible.  An
 added part carrying additional requirements may be combined with GPL'd code,
-but only if those requirements belong to an set enumerated in section 7. We
-must, of course, place some limit on the kinds of additional requirements
-that we will accept, to ensure that enhanced license compatibility does not
-defeat the broader freedoms advanced by the GPL. Unlike terms that grant
+but only if those requirements belong to an set enumerated in GPLv3\S7. There
+are, of course,  limits on the acceptable additional requirements, which to
+ensures that enhanced license compatibility does not
+defeat the broader software-freedom-defending terms of the GPL\@. Unlike terms that grant
 additional permissions, terms that impose additional requirements cannot be
-removed by a downstream user of the combined GPL'd work, because no such user
-would have the right to do so.
-
-% FIXME:  probably mostly still right, needs some updates, though.
+removed by a downstream user of the combined GPL'd work, because only in the
+pathological case\footnote{Theoretically, a user could collect copyright
+  assignment from all known contributors and then do this, but this would
+  indeed be the pathological case.}  would a user have the right to do so.
 
 Under subsections 7a and 7b, the requirements may include preservation of
 copyright notices, information about the origins of the code or alterations
