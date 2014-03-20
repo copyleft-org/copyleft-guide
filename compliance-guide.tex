@@ -52,8 +52,9 @@ often in public Usenet discussions.\footnote{One example is the public
   outcry over NeXT's attempt to make the Objective-C front-end to GCC
   proprietary.}  Over the next decade, the Free Software Foundation (FSF),
 which holds copyrights in many GNU programs, was the only visible entity
-actively enforcing its GPL'd copyrights on behalf of the community of
-Free/Libre and Open Source Software (free software) developers.  FSF's enforcement
+actively enforcing its GPL'd copyrights on behalf of the software freedom
+community.
+FSF's enforcement
 was generally a private process; the FSF contacted violators
 confidentially and helped them to comply with the license.  Most
 violations were pursued this way until the early 2000's.
@@ -81,7 +82,7 @@ violations resulting from preventable problems such as inadequate
 attention to licensing of upstream software, misconceptions about the
 GPL's terms, and poor communication between software developers and their
 management.  In this document, we highlight these problems and describe
-best practices to encourage corporate users of free software to reevaluate their
+best practices to encourage corporate Free Software users to reevaluate their
 approach to GPL'd software and avoid future violations.
 
 SFLC continues to conduct GPL enforcement and compliance efforts for many
@@ -96,7 +97,7 @@ when a violation occurs.
 \chapter{Best Practices to Avoid Common Violations}
 \label{best-practices}
 
-Unlike highly permissive free software licenses (such as the ISC license), which
+Unlike highly permissive licenses (such as the ISC license), which
 typically only require preservation of copyright notices, the GPL places a
 number of important requirements upon licensees.  These requirements are
 carefully designed to uphold certain values and standards of the software
@@ -110,7 +111,7 @@ GPL violations are often caused or compounded by a failure to adopt sound
 practices for the incorporation of GPL'd components into a company's
 internal development environment.  In this section, we introduce some best
 practices for software tool selection, integration and distribution,
-inspired by and congruent with free software methodologies.  We suggest companies
+inspired by and congruent with software freedom methodologies.  We suggest companies
 establish such practices before building a product based on GPL'd
 software.\footnote{This document addresses compliance with GPLv2,
   GPLv3, LGPLv2, and LGPLv3.  Advice on avoiding the most common
@@ -139,7 +140,7 @@ under the LGPL (e.g., the GNU C Library).  Sometimes, these programs have
 been patched or slightly improved by direct modification of their sources,
 resulting unequivocally in a derivative work.  Alongside these programs,
 companies often distribute fully independent, proprietary programs,
-developed from scratch, which are designed to run on the free software operating
+developed from scratch, which are designed to run on the Free Software operating
 system but do not combine with, link to, modify, or otherwise derive from
 the GPL'd components.\footnote{However, these programs do often combine
   with LGPL'd libraries. This is discussed in detail in \S~\ref{lgpl}.}
@@ -183,15 +184,15 @@ failure in the software acquisition and procurement process.  Integration
 of third-party proprietary software typically requires a formal
 arrangement and management/legal oversight before the developers
 incorporate the software.  By contrast, your developers often obtain and
-integrate free software without intervention. The ease of acquisition, however,
+integrate Free Software without intervention. The ease of acquisition, however,
 does not mean the oversight is any less necessary.  Just as your legal
 and/or management team negotiates terms for inclusion of any proprietary
-software, they should be involved in all decisions to bring free software into your
+software, they should be involved in all decisions to bring Free Software into your
 product.
 
 Simple, engineering-oriented rules help provide a stable foundation for
 free software integration.  Ask your software developers to send an email to a
-standard place describing each new free software component they add to the system,
+standard place describing each new Free Software component they add to the system,
 and have them include a brief description of how they will incorporate it
 into the product.  Make sure they use a revision control system, and have
 store the upstream versions of all software in a ``vendor branch'' or
@@ -203,7 +204,7 @@ chaotic and poorly-sourced development process has begun, the challenges
 of determining and cataloging the presence of GPL'd components is
 difficult.  If you are in that situation, we recommend the
 \href{http://fossology.org/}{Fossology system}, which analyzes a
-source-code base and produces a list of free software licenses that may apply to
+source-code base and produces a list of Free Software licenses that may apply to
 the code.  Fossology can help you build a catalog of the sources you have
 already used to build your product.  You can then expand that into a more
 structured inventory and process.
@@ -618,7 +619,7 @@ Linux\footnote{``Linux'' refers only to the kernel, not the larger system
   as a whole.} and a filesystem.  That filesystem contains various binary
 programs, including some GPL'd binaries, alongside some proprietary
 binaries that are separate works (i.e., not derived from, nor based on
-free software sources).  Consider what, in this case, constitutes adequate
+freely-licensed sources).  Consider what, in this case, constitutes adequate
 ``scripts to control compilation and installation'' or items ``needed to
 generate, install and run'' the GPL'd programs.
 
@@ -661,9 +662,9 @@ build scripts, and packaging scripts.
 
 Nonetheless, in the interest of goodwill and the spirit of the GPL, most
 companies do provide the compiler itself when they are able, particularly
-when the compiler is based on GCC\@ or another free software compiler.  If you have
+when the compiler is based on GCC\@ or another copylefted compiler.  If you have
 a GCC-based system, it is your prerogative to redistribute that GCC
-version (binaries plus sources) to your customers.  We in the free software
+version (binaries plus sources) to your customers.  We in the software freedom
 community encourage you to do this, since it often makes it easier for
 users to exercise their software freedom.  However, if you chose to take
 this recommendation, ensure that your GCC distribution is itself
@@ -681,7 +682,7 @@ it requires that you give the user all the essential non-proprietary facts
 that you had at your disposal to build the software.  Therefore, if you
 choose not to distribute the compiler, you should include a {\sc readme}
 about where you got it, what version it was, and who to contact to acquire
-it, regardless of whether your compiler is free software, proprietary, or
+it, regardless of whether your compiler is Free Software, proprietary, or
 internally developed.
 
 \section{Best Practices and Corresponding Source}
@@ -763,9 +764,9 @@ let the conversation lapse until the situation is fully resolved.
 Proactively follow up with synchronous communication means to be sure
 communications sent by non-reliable means (such as email) were received.
 
-Remember that the free software community generally values open communication and
+Remember that the software freedom community generally values open communication and
 cooperation, and these values extend to GPL enforcement.  You will
-generally find that free software developers and their lawyers are willing to
+generally find that software freedom developers and their lawyers are willing to
 have a reasonable dialogue and will work with you to resolve a violation
 once you open the channels of communication in a friendly way.
 
@@ -840,11 +841,11 @@ copyright holders often require.
 
 \begin{itemize}
 
-\item {\bf Compliance on all free software copyrights}.  Copyright holders of free software
+\item {\bf Compliance on all Free Software copyrights}.  Copyright holders of Free Software
   often want a company to demonstrate compliance for all GPL'd software in
   a distribution, not just their own.  A copyright holder may refuse to
   reinstate your right to distribute one program unless and until you
-  comply with the licenses of all free software in your distribution.
+  comply with the licenses of all Open Source and Free Software in your distribution.
  
 \item {\bf Notification to past recipients}.  Users to whom you previously
   distributed non-compliant software should receive a communication
@@ -854,10 +855,10 @@ copyright holders often require.
   situations), an alternative form of notice may be required (such as a
   magazine advertisement).
 
-\item {\bf Appointment of a GPL Compliance Officer.}  The free software community
+\item {\bf Appointment of a GPL Compliance Officer.}  The software freedom community
   values personal accountability when things go wrong.  Copyright holders
   often require that you name someone within the violating company
-  officially responsible for free software license compliance, and that this
+  officially responsible for Open Source and Free Software license compliance, and that this
   individual serve as the key public contact for the community when
   compliance concerns arise.
 
@@ -952,7 +953,7 @@ violations are resolved much more smoothly (at least from the point of
 view of the redistributor).
 
 Consider the cost of potential violations in your acquisition process.
-Using free software allows software vendors to reduce costs significantly, but be
+Using Free Software allows software vendors to reduce costs significantly, but be
 wary of vendors who have done so without regard for the licenses.  If your
 vendor's costs seem ``too good to be true,'' you may ultimately bear the
 burden of the vendor's inattention to GPL compliance.  Ask the right
@@ -988,7 +989,7 @@ completely unmodifiable\footnote{Consider that the iPhone, a device
   and modified within 48 hours of its release.}, users are generally on
 notice that they risk voiding their warranties and losing their update and
 support services when they make modifications.\footnote{A popular t-shirt
-  in the free software community reads: ``I void warranties.''.  Our community is
+  in the software freedom community reads: ``I void warranties.''.  Our community is
   well-known for modifying products with full knowledge of the
   consequences.  GPLv3's ``Installation Instructions'' section merely
   confirms that reality, and makes sure GPL rights can be fully exercised,
@@ -1011,7 +1012,7 @@ requirements.
 Compliance is straightforward when the entirety of your enterprise is
 well-informed and well-coordinated.  The receptionists should know how to
 route a GPL source request or accusation of infringement.  The lawyers
-should know the basic provisions of free software licenses and your source
+should know the basic provisions of Free Software licenses and your source
 disclosure requirements, and should explain those details to the software
 developers.  The software developers should use a version control system
 that allows them to associate versions of source with distributed
@@ -1020,7 +1021,7 @@ art can understand, and inform the lawyers when they bring in new
 software.  Managers should build systems and procedures that keep everyone
 on target.  With these practices in place, any organization can comply
 with the GPL without serious effort, and receive the substantial benefits
-of good citizenship in the free software community, and lots of great code
+of good citizenship in the software freedom community, and lots of great code
 ready-made for their products.
 
 \vfill
