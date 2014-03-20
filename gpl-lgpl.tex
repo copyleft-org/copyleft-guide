@@ -2925,6 +2925,8 @@ to enable users to link proprietary programs to modified libraries.)
 % FIXME-LATER: LGPLv2.1 section should talk about this explicitly and this
 %              should be a forward reference here
 
+\subsubsection{User Products}
+
 \label{user-product}
 
 The scope of these requirements are narrow.  GPLv3~\S6 introduces the concept
@@ -3028,85 +3030,47 @@ product.  One could not escape the effects of the User Products provisions by
 labeling what is demonstrably a consumer product in ways that suggest it is
 ``for professionals'', for example.
 
-% FIXME: this needs integration
 
-In Draft 3 we instead use a definition of ``Installation Information'' in
-section 6 that is as simple and clear as that goal.  Installation Information
-is information that is ``required to install and execute modified versions of
-a covered work \dots from a modified version of its Corresponding Source,''
-in the same User Product for which the covered work is conveyed.  We provide
-guidance concerning how much information must be provided: it ``must suffice
-to ensure that the continued functioning of the modified object code is in no
-case prevented or interfered with solely because modification has been
-made.''  For example, the information provided would be insufficient if it
-enabled a modified version to run only in a disabled fashion, solely because
-of the fact of modification (regardless of the actual nature of the
-modification).  The information need not consist of cryptographic keys;
-Installation Information may be ``any methods, procedures, authorization
-keys, or other information.''
+\subsubsection{Installation Information}
 
-%FIXME: This probably needs work to be brought into clarity with tutorial,
-%next three paragarphs.
+With the User Products definition complete,  The ``Installation Information''
+definition uses that to define what those receiving object code inside a User
+Product must receive.
 
-Why do distributors only have to provide Installation Information for User
-Products?
+Installation Information is information that is ``required to install and
+execute modified versions of a covered work \dots from a modified version of
+its'' CCS, in the same User Product for which the covered work is conveyed.
+GPLv3 provides guidance concerning how much information must be provided: it
+``must suffice to ensure that the continued functioning of the modified
+object code is in no case prevented or interfered with solely because
+modification has been made.''  For example, the information provided would be
+insufficient if it enabled a modified version to run only in a disabled
+fashion, solely because of the fact of modification (regardless of the actual
+nature of the modification).  The information need not consist of
+cryptographic keys; Installation Information may be ``any methods,
+procedures, authorization keys, or other information''.
 
-Some companies effectively outsource their entire IT department to another
-company. Computers and applications are installed in the company's offices,
-but managed remotely by some service provider. In some of these situations,
-the hardware is locked down; only the service provider has the key, and the
-customers consider that to be a desirable security feature.
-
-We think it's unfortunate that people would be willing to give up their
-freedom like this.  But they should be able to fend for themselves, and the
-market provides plenty of alternatives to these services that would not lock
-them down. As a result, we have introduced this compromise to the draft:
-distributors are only required to provide Installation Information when
-they're distributing the software on a User Product, where the customers'
-buying power is likely to be less organized.
-
-This is a compromise of strategy, and not our ideals. Given the environment
-we live in today --- where Digital Restrictions Management is focused largely
-in consumer devices, and everyone, including large companies, is becoming
-increasingly worried about the effects of DRM thanks to recent developments
-like the release of Microsoft's Windows Vista --- we think that the proposed
-language will still provide us with enough leverage to effectively thwart
-DRM. We still believe you have a fundamental right to modify the software on
-all the hardware you own; the preamble explains, ``If such problems [as
-  locked-down hardware] arise substantially in other domains, we stand ready
-to extend this provision to those domains in future versions of the GPL, as
-needed to protect the freedom of users.''
-
-The definition of Installation Information states that the information
-provided ``must suffice to ensure that the continued functioning of the
-modified object code is in no case prevented or interfered with solely
-because modification has been made.''  We did not consider it necessary to
-define ``continued functioning'' further. However, we believed it would be
-appropriate to provide some additional guidance concerning the scope of
+Note that GPLv3 does not define ``continued functioning'' further.  However,
+GPLv3 does provide some additional guidance concerning the scope of
 GPLv3-compliant action or inaction that distributors of
 technically-restricted User Products can take with respect to a downstream
-recipient who replaces the conveyed object code with a modified version.  We
-make clear that GPLv3 implies no obligation ``to continue to provide support
-service, warranty, or updates'' for such a work.
+recipient who replaces the conveyed object code with a modified version.
+First of all, GPLv3 makes clear that GPLv3 implies no obligation ``to
+continue to provide support service, warranty, or updates'' for such a work.
 
-Most technically-restricted User Products are designed to communicate across
-networks.  It is important for both users and network providers to know when
-denial of network access to devices running modified versions becomes a GPL
-violation.  We settled on a rule that permits denial of access in two cases:
-``when the modification itself materially and adversely affects the operation
-of the network,'' and when the modification itself ``violates the rules and
-protocols for communication across the network.''  The second case is
-deliberately drawn in general terms.  We intend it to serve as a foundation
-for development of reasonable enforcement policies that respect recipients'
-right to modify while recognizing the legitimate interests of network
-providers.
+Second, most technically-restricted User Products are designed to communicate
+across networks.  It is important for both users and network providers to
+know when denial of network access to devices running modified versions
+becomes a GPL violation.  GPLv3 permits denial of access in two cases: ``when
+the modification itself materially and adversely affects the operation of the
+network,'' and when the modification itself ``violates the rules and
+protocols for communication across the network''.  The second case is
+deliberately drawn in general terms, and it serves as a foundation for
+reasonable enforcement policies that respect recipients' right to modify
+while recognizing the legitimate interests of network providers.
 
-We have made one additional change to the User Products provisions of section
-6.  In Draft 3 we made clear that the requirement to provide Installation
-Information implies no requirement to provide warranty or support for a work
-that has been modified or installed on a User Product.  The Final Draft adds
-that there is similarly no requirement to provide warranty or support for the
-User Product itself.
+Finally, GPLv3\S6 makes it clear that there is also no requirement to
+provide warranty or support for the User Product itself.
 
 % FIXME: This needs merged in somewhere in here
 
