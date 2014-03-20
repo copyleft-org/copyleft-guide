@@ -1573,6 +1573,7 @@ say that this restriction is any way unreasonable is simply ludicrous.)
 
 \medskip
 
+\label{GPLv2s2-at-no-charge}
 The next phrase of note in GPLv2~\S2(b) is ``licensed \ldots at no charge.''
 This phrase  confuses many.  The sloppy reader points out this as ``a
 contradiction in GPL'' because (in their confused view) that clause of GPLv2~\S2 says that redistributors cannot
@@ -2736,32 +2737,35 @@ services for the support of that software.
 \section{GPLv3~\S5: Modified Source}
 \label{GPLv3s5}
 
-% FIXME: 5(a) is slightly different in final version
+GPLv3\S5 is the rewrite of GPLv2\S2, which was discussed in \S~\ref{GPLv2s2}
+of this tutorial.  This section discusses the changes found in GPLv3\S5
+compared to GPLv2\S2.
 
-Section 5 contains a number of changes relative to the corresponding section
-in GPLv2. Subsection 5a slightly relaxes the requirements regarding notice of
-changes to the program. In particular, the modified files themselves need no
-longer be marked. This reduces administrative burdens for developers of
-modified versions of GPL'd software.
+GPLv3\S5(a) still requires modified versions be marked with ``relevant
+date'', but no longer says ``the date of any change''.  The best practice is
+to include the date of the latest and/or most significant changes and who
+made those.  Of course, compared to its GPLv2\S2(a), GPLv3\S5(a) slightly
+relaxes the requirements regarding notice of changes to the program.  In
+particular, the modified files themselves need no longer be marked.  This
+reduces administrative burdens for developers of modified versions of GPL'd
+software.
 
-Under subsection 5a, as in the corresponding provision of GPLv2, the notices
-must state ``the date of any change,'' which we interpret to mean the date of
-one or more of the licensee's changes.  The best practice would be to include
-the date of the latest change.  However, in order to avoid requiring revision
-of programs distributed under ``GPL version 2 or later,'' we have retained
-the existing wording.
 
 % FIXME:  It's now (b) and (c).  Also, ``validity'' of proprietary
 %         relicensing?  Give me a break.  I'll fix that.
 
-Subsection 5b is the central copyleft provision of the license.  It now
-states that the GPL applies to the whole of the work.  The license must be
-unmodified, except as permitted by section 7, which allows GPL'd code to be
-combined with parts covered by certain other kinds of free software licensing
-terms. Another change in subsection 5b is the removal of the words ``at no
-charge,'' which was often misinterpreted by commentators.  The last sentence
-of subsection 5b explicitly recognizes the validity of disjunctive
-dual-licensing.
+GPLv3\S5(c) is the primary source-code-related copyleft provision of GPL (The
+object-code-related copyleft provisions are in GPLv3\S6, discussed in
+\S~\ref{GPLv3s6} of this tutorial).  Compared to GPLv2\S2(b), GPLv3\S5(c)
+states that the GPL applies to the whole of the work.  Such was stated
+already in GPLv2\S2(b), in ``in whole or in part'', but this simplified
+wording makes it clear the entire covered work
+
+GPLv3\S5(c) notes that the license text itself must be unmodified (except as
+permitted by GPLv3\S7.. Another change in GPLv3\S5(c) is the removal of the
+words ``at no charge,'' which was often is misunderstood upon na\"{i}ve
+reading of in GPLv2\S(b) (as discussed in \S~\ref{GPLv2s2-at-no-charge} of this
+tutorial).
 
 %  FIXME: 5d.  Related to Appropriatey Legal notices
 
