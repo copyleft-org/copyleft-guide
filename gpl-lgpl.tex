@@ -1717,6 +1717,7 @@ binaries on the machine itself might not be an option.  While it is
 recommended that this be the default way that people comply with GPL, the
 GPL does provide options when such distribution is infeasible.
 
+\label{GPLv2s3-medium-customarily}
 GPLv2~\S3, therefore, allows source code to be provided on any physical
 ``medium customarily used for software interchange.''  By design, this
 phrase covers a broad spectrum --- the phrase seeks to pre-adapt to
@@ -2769,85 +2770,72 @@ words ``at no charge,'' which was often is misunderstood upon na\"{i}ve
 reading of in GPLv2\S(b) (as discussed in \S~\ref{GPLv2s2-at-no-charge} of this
 tutorial).
 
-%  FIXME: 5d.  Related to Appropriatey Legal notices
+%  FIXME-LATER: Write up something on 5d, and related it to Appropriate Legal Notices.
 
 
-% follows 5d now, call it the ``final paragraph''
+Note that of GPLv2~\S2's penultimate and ante-penultimate paragraphs are now
+handled adequately by the definitions in GPLv3\S0 and as such, have no direct
+analogs in GPLv3.
 
-The paragraph following subsection 5c has been revised for clarity, but the
-underlying meaning is unchanged. When independent non-derivative sections are
-distributed for use in a combination that is a covered work, the whole of the
-combination must be licensed under the GPL, regardless of the form in which
-such combination occurs, including combination by dynamic linking. The final
-sentence of the paragraph adapts this requirement to the new compatibility
-provisions of section 7.
-
-We have added these words to the aggregation clause to eliminate any question
-that GPLv3 alters the scope of the copyleft as understood and applied under
-GPLv2. In GPLv3, as in GPLv2, addition of modules or other parts to a program
-results in a new program based on the old program, with different functional
-characteristics created by the merger of two expressions: the original
-program and the added parts.  Such added parts are ``by their nature
-extensions of'' the old program, and therefore the entire new program which
-they and the old program form must be licensed under the GPL.  As subsection
-5c states, packaging of a work has no bearing on the scope of copyleft.
+GPLv2~\S2's final paragraph, however, is reworded and expanded into the final
+paragraph of GPLv3\S5, which now also covers issues related to copyright
+compilations (but not compilations into object code --- that's in the next
+section!).  The intent and scope is the same as was intended in GPLv2.
 
 \section{GPLv3~\S6: Non-Source and Corresponding Source}
 \label{GPLv3s6}
 
-Section 6 of GPLv3, which clarifies and revises GPLv2 section 3, requires
-distributors of GPL'd object code to provide access to the corresponding
-source code, in one of four specified ways. As noted above, ``object code''
-in GPLv3 is defined broadly to mean any non-source version of a work.
+GPLv3~\S6 clarifies and revises GPLv2~\S3.  It requires distributors of GPL'd
+object code to provide access to the corresponding source code, in one of
+four specified ways.  As noted in \S~\ref{GPLv3s0}, ``object code'' in GPLv3
+is defined broadly to mean any non-source version of a work.
 
 % FIXME:  probably mostly still right, needs some updates, though.
 
-Subsections 6a and 6b now apply specifically to distribution of object code
-in a physical product. Physical products include embedded systems, as well as
-physical software distribution media such as CDs. As in GPLv2, the
-distribution of object code may either be accompanied by the machine-readable
-source code, or it may be accompanied by a written offer to provide the
-machine-readable source code to any third party. GPLv3 clarifies that the
-medium for software interchange on which the machine-readable source code is
-provided must be a durable physical medium. Subsection 6b does not prevent a
-distributor from offering to provide source code to a third party by some
-other means, such as transmission over a network, so long as the option of
-obtaining source code on a physical medium is presented.
+GPLv3~\S6(a--b) now apply specifically to distribution of object code in a
+physical product.  Physical products include embedded systems, as well as
+physical software distribution media such as CDs.  As in GPLv2~\S3 (discussed
+in \S~\ref{GPLv2s3} of this tutorial), the distribution of object code may
+either be accompanied by the machine-readable source code, or it may be
+accompanied by a valid written offer to provide the machine-readable source
+code.  However, unlike in GPLv2, that offer cannot be exercised by any third
+party; rather, only those ``who possesses the object code'' it can exercised
+the offer.  (Note that this is a substantial narrowing of requirements of
+offer fulfillment, and is a wonderful counterexample to dispute claims that
+the GPLv3 has more requirements than GPLv2.)
 
 % FIXME:  probably mostly still right, needs some updates, though.
 
-Subsection 6b revises the requirements for the written offer to provide
-source code. As before, the offer must remain valid for at least three
-years. In addition, even after three years, a distributor of a product
+GPLv3~\S6(b) further revises the requirements for the written offer to
+provide source code. As before, the offer must remain valid for at least
+three years. In addition, even after three years, a distributor of a product
 containing GPL'd object code must offer to provide source code for as long as
 the distributor also continues to offer spare parts or customer support for
-the product model. We believe that this is a reasonable and appropriate
-requirement; a distributor should be prepared to provide source code if he or
-she is prepared to provide support for other aspects of a physical product.
+the product model.  This is a reasonable and appropriate requirement; a
+distributor should be prepared to provide source code if he or she is
+prepared to provide support for other aspects of a physical product.
 
-% FIXME: 10x language is gone.
+GPLv3~\S6(a--b) clarifies that the medium for software interchange on which
+the machine-readable source code is provided must be a durable physical
+medium.  GPLv3~\S6(b)(2), however, permits a distributor to instead offer to
+provide source code from a network server instead, which is yet another
+example GPLv3 looser in its requirements than GPLv2 (see
+\S~\ref{GPLv2s3-medium-customarily} for details).
 
-Subsection 6b also increases the maximum permitted price for providing a copy
-of the source code. GPLv2 stated that the price could be no more than the
-cost of physically performing source distribution; GPLv3 allows the price to
-be up to ten times the distributor's cost. It may not be practical to expect
-some organizations to provide such copies at cost. Moreover, permitting such
-organizations to charge ten times the cost is not particularly harmful, since
-some recipient of the code can be expected to make the code freely available
-on a public network server. We also recognize that there is nothing wrong
-with profiting from providing copies of source code, provided that the price
-of a copy is not so unreasonably high as to make it effectively unavailable.
+% FIXME-LATER: more information about source provision, cost of physically
+% performing, reasonable fees, medium customary clearly being said durable
+% connecting back to previous text
 
-% FIXME:  probably mostly still right, needs some updates, though.
+GPLv3\S6(c) gives narrower permission than GPLv2\S3(c).  The ``pass along''
+option for GPLv3\S6(c)(1) offers is now available only for individual
+distribution of object code; moreover, such individual distribution can occur
+only ``occasionally and noncommercially.''  A distributor cannot comply with
+the GPL merely by making object code available on a publicly-accessible
+network server accompanied by a copy of the written offer to provide source
+code received from an upstream distributor.
 
-Subsection 6c gives narrower permission than the corresponding subsection in
-GPLv2.  The option of including a copy of an offer received in accordance
-with subsection 6b is available only for private distribution of object code;
-moreover, such private distribution is restricted to ``occasional
-non-commercial distribution.''  This subsection makes clear that a
-distributor cannot comply with the GPL merely by making object code available
-on a publicly-accessible network server accompanied by a copy of the written
-offer to provide source code received from an upstream distributor.
+%FIXME-LATER: tie back to the discussion of the occasional offer pass along
+%             stuff in GPLv2 this 
 
 % FIXME:  probably mostly still right, needs some updates, though.
 
