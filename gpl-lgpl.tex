@@ -2463,30 +2463,49 @@ never be required to provide more than that.  One always has the right to
 modify a source code work by deleting any part of it, and there can be no
 requirement that free software source code be a whole functioning program.
 
-% FIXME: Standard Interface
+\section{The System Library Exception}
 
-% FIXME: System Libraries: it's in a different place and changed in later drafts
+The previous section skipped over one part of the CCS definition, the
+so-called system library exception.  The ``System Libraries'' definition (and
+the ``Standard Interface'' and ``Major Component'' definitions, which it
+includes) are designed as part
 
-The final paragraph of section 1 revises the exception to the source code
-distribution requirement in GPLv2 that we have sometimes called the system
-library exception. This exception has been read to prohibit certain
-distribution arrangements that we consider reasonable and have not sought to
-prevent, such as distribution of gcc linked with a non-free C library that is
-included as part of a larger non-free system. This is not to say that such
-non-free libraries are legitimate; rather, preventing free software from
-linking with these libraries would hurt free software more than it would hurt
-proprietary software.
+to permit certain distribution arrangements that are considered reasonable by
+copyleft advocates.  The system library exception is designed to allow
+copylefted software to link with these libraries when such linking would hurt
+software freedom more than it would hurt proprietary software.
 
-As revised, the exception has two parts. Part (a) rewords the GPLv2
-exception for clarity but also removes the words ``unless that
-component itself accompanies the executable.''  By itself, (a) would
-be too permissive, allowing distributors to evade their
-responsibilities under the GPL.  We have therefore added part (b) to
-specify when a system library that is an adjunct of a major essential
-operating system component, compiler, or interpreter does not trigger
-the requirement to distribute source code.  The more low-level the
-functionality provided by the library, the more likely it is to be
-qualified for this exception.
+The system library exception has two parts.  Part (a) rewords the GPLv2
+exception for clarity replaces GPLv2's words ``unless that component itself
+accompanies the executable'' with ``which is not part of the Major
+Component''.  The goal here is to not require disclosure of source code of
+certain libraries, such as necessary Microsoft Windows DLLs (which aren't
+part of Windows' kernel but accompany it) that are required for functioning
+of copylefted programs compiled for Windows.
+
+However, in isolation, (a) would be too permissive, as it would sometimes
+allowing distributors to evade important GPL requirements.  Part (b) reigns
+in (a).  Specifically, (b) specifies only a few functionalities that a the
+system library may provide and still qualify for the exception.  The goal is
+to ensure system libraries are truly adjunct to a major essential operating
+system component, compiler, or interpreter.  The more low-level the
+functionality provided by the library, the more likely it is to be qualified
+for this exception.
+
+Admittedly, the system library exception is a frequently discussed topic of
+obsessed GPL theorists.  The amount that has been written on the system
+library exception (both the GPLv2 and GPLv3 versions of it), if included
+herein,  could easily increase this section of the tutorial to a length
+greater than all the others.
+
+Like any exception to the copyleft requirements of GPL, would-be GPL
+violators frequently look to the system library exception as a potential
+software freedom circumvention technique.  When considering whether or not a
+library qualifies for the system library exception, here is a pragmatic
+thesis to consider, based on the combined decades of experience in GPL
+interpretation of this tutorial's authors: the harder and more strained the
+reader must study and read the system library exception, the more likely it
+is that the library in question does not qualify for it.
 
 % FIXME: These don't belong here
 
