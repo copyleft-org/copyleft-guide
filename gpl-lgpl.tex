@@ -3585,93 +3585,90 @@ the final sentence of GPLv2 section 7, which the FSF consider to be unnecessary.
 
 \section{GPLv3~\S13: The Great Affero Compromise}
 
-The main purpose of clause 7b4 was to attain GPLv3 compatibility for the
-additional condition of version 1 of the Affero GPL, with a view to
-achieving compatibility for a future version, since version 1 was
-incompatible with GPLv3.\footnote{Version 1 of the Affero GPL contains
-its own copyleft clause, worded identically to that in GPLv2, which
-conflicts with the copyleft clause in GPLv3.  The Affero GPL permits
-relicensing under versions of the GPL later than version 2, but only if
-the later version ``includes terms and conditions substantially
-equivalent to those of this license'' (Affero GPL, version 1, section
-9). The Affero license was written with the expectation that its
+The Affero GPL was written with the expectation that its
 additional requirement would be incorporated into the terms of GPLv3
-itself, rather than being placeable on parts added to a covered work
-through the mechanism of section 7 of GPLv3.}  However, we wrote the
-clause broadly enough to cover a range of other possible terms that
-would differ from the Affero condition in their details. Draft 3 no
-longer pursues the more ambitious goal of allowing compatibility for a
-whole category of Affero-like terms.  In place of 7b4, we have added a
-new section 13 that simply permits GPLv3-covered code to be linked with
-code covered by the forthcoming version 2 of the Affero GPL.
+itself.  Many software freedom advocates, including some authors of this
+tutorial, advocated heavily for that, and fully expected it to happen.
 
-We have made this decision in the face of irreconcilable views from
-different parts of our community.  While we had known that many
-commercial users of free software were opposed to the inclusion of a
-mandatory Affero-like requirement in the body of GPLv3 itself, we were
-surprised at their opposition to its availability through section 7.
-Free software vendors allied to these users joined in their objections,
-as did a number of free software developers arguing on ethical as well
-as practical grounds.
+The FSF, however, chose not to include the Affero clause in GPLv3, due to
+what it called  ``irreconcilable views from
+different parts of the community''.  Many
+commercial users of Free Software were opposed to the inclusion of a
+mandatory Affero-like requirement in the body of GPLv3 itself.  In fact, some
+wealthier companies even threatened to permanently fund forks of many FSF
+copyrighted-programs under GPLv2 if the Affero clause appeared in GPLv3.
 
-Some of this hostility seemed to be based on a misapprehension that
-Affero-like terms placed on part of a covered work would somehow extend
-to the whole of the work.\footnote{It is possible that the presence of
-the GPLv2-derived copyleft clause in the existing Affero GPL contributed
-to this misunderstanding.}  Our explanations to the contrary did little
-to satisfy these critics; their objections to 7b4 instead evolved into a
-broader indictment of the additional requirements scheme of section 7.
-It was clear, however, that much of the concern about 7b4 stemmed from
-its general formulation.  Many were alarmed at the prospect of GPLv3
-compatibility for numerous Affero-like licensing conditions,
-unpredictable in their details but potentially having significant
-commercial consequences.
+Meanwhile, there was disagreement even among copyleft enthusiasts about the
+importance of the provision.  A coalition never formed, and ultimately the
+more powerful interest implicitly allied with the companies who deeply opposed
+the Affero clause such that the FSF felt the Affero clause would need its own
+license, but one compatible with GPLv3. 
 
-On the other hand, many developers, otherwise sympathetic to the policy
-goals of the Affero GPL, have objected to the form of the additional
-requirement in that license.  These developers were generally
-disappointed with our decision to allow Affero-like terms through
-section 7, rather than adopt a condition for GPLv3.  Echoing their
-concerns about the Affero GPL itself, they found fault with the wording
-of the section 7 clause in both of the earlier drafts.  We drafted 7b4
-at a higher level than its Draft 1 counterpart based in part on comments
-from these developers. They considered the Draft 1 clause too closely
-tied to the Affero mechanism of preserving functioning facilities for
-downloading source, which they found too restrictive of the right of
-modification.  The 7b4 rewording did not satisfy them, however. They
-objected to its limitation to terms requiring compliance by network
-transmission of source, and to the technically imprecise or inaccurate
-use of the phrase ``same network session.''
+GPLv3~\S13 makes GPLv3 compatible with the AGPLv3, so that at least code can
+be shared between AGPLv3'd and GPLv3' projects, even if the Affero clause
+does not automatically apply to all GPLv3'd works.
 
-We have concluded that any redrafting of the 7b4 clause would fail to
-satisfy the concerns of both sets of its critics.  The first group
-maintains that GPLv3 should do nothing about the problem of public
-use. The second group would prefer for GPLv3 itself to have an
-Affero-like condition, but that seems to us too drastic. By permitting
-GPLv3-covered code to be linked with code covered by version 2 of the
-Affero GPL, the new section 13 honors our original commitment to
-achieving GPL compatibility for the Affero license.
+%FIXME-LATER:  no time to do this justice, will come back later, instead the
+%above.
 
-Version 2 of the Affero GPL is not yet published.  We will work with
-Affero, Inc., and with all other interested members of our community, to
-complete the drafting of this license following the release of Draft 3,
-with a goal of having a final version available by the time of our
-adoption of the final version of GPLv3.  We hope the new Affero license
-will satisfy those developers who are concerned about the issue of
-public use of unconveyed versions but who have concerns about the
-narrowness of the condition in the existing Affero license.
+%% Some of this hostility seemed to be based on a misapprehension that
+%% Affero-like terms placed on part of a covered work would somehow extend
+%% to the whole of the work.\footnote{It is possible that the presence of
+%% the GPLv2-derived copyleft clause in the existing Affero GPL contributed
+%% to this misunderstanding.}  Our explanations to the contrary did little
+%% to satisfy these critics; their objections to 7b4 instead evolved into a
+%% broader indictment of the additional requirements scheme of section 7.
+%% It was clear, however, that much of the concern about 7b4 stemmed from
+%% its general formulation.  Many were alarmed at the prospect of GPLv3
+%% compatibility for numerous Affero-like licensing conditions,
+%% unpredictable in their details but potentially having significant
+%% commercial consequences.
 
-As the second sentence in section 13 indicates, when a combined work is
-made by linking GPLv3-covered code with Affero-covered code, the
-copyleft on one part will not extend to the other part.\footnote{The
-plan is that the additional requirement of the new Affero license will
-state a reciprocal limitation.} That is to say, in such combinations,
-the Affero requirement will apply only to the part that was brought into
-the combination under the Affero license.  Those who receive such a
-combination and do not wish to use code under the Affero requirement may
-remove the Affero-covered portion of the combination.
+%% On the other hand, many developers, otherwise sympathetic to the policy
+%% goals of the Affero GPL, have objected to the form of the additional
+%% requirement in that license.  These developers were generally
+%% disappointed with our decision to allow Affero-like terms through
+%% section 7, rather than adopt a condition for GPLv3.  Echoing their
+%% concerns about the Affero GPL itself, they found fault with the wording
+%% of the section 7 clause in both of the earlier drafts.  We drafted 7b4
+%% at a higher level than its Draft 1 counterpart based in part on comments
+%% from these developers. They considered the Draft 1 clause too closely
+%% tied to the Affero mechanism of preserving functioning facilities for
+%% downloading source, which they found too restrictive of the right of
+%% modification.  The 7b4 rewording did not satisfy them, however. They
+%% objected to its limitation to terms requiring compliance by network
+%% transmission of source, and to the technically imprecise or inaccurate
+%% use of the phrase ``same network session.''
 
-Those who criticize the permission to link with code under the Affero
+%% We have concluded that any redrafting of the 7b4 clause would fail to
+%% satisfy the concerns of both sets of its critics.  The first group
+%% maintains that GPLv3 should do nothing about the problem of public
+%% use. The second group would prefer for GPLv3 itself to have an
+%% Affero-like condition, but that seems to us too drastic. By permitting
+%% GPLv3-covered code to be linked with code covered by version 2 of the
+%% Affero GPL, the new section 13 honors our original commitment to
+%% achieving GPL compatibility for the Affero license.
+
+%% Version 2 of the Affero GPL is not yet published.  We will work with
+%% Affero, Inc., and with all other interested members of our community, to
+%% complete the drafting of this license following the release of Draft 3,
+%% with a goal of having a final version available by the time of our
+%% adoption of the final version of GPLv3.  We hope the new Affero license
+%% will satisfy those developers who are concerned about the issue of
+%% public use of unconveyed versions but who have concerns about the
+%% narrowness of the condition in the existing Affero license.
+
+%% As the second sentence in section 13 indicates, when a combined work is
+%% made by linking GPLv3-covered code with Affero-covered code, the
+%% copyleft on one part will not extend to the other part.\footnote{The
+%% plan is that the additional requirement of the new Affero license will
+%% state a reciprocal limitation.} That is to say, in such combinations,
+%% the Affero requirement will apply only to the part that was brought into
+%% the combination under the Affero license.  Those who receive such a
+%% combination and do not wish to use code under the Affero requirement may
+%% remove the Affero-covered portion of the combination.
+
+Meanwhile, those who criticize the permission to link with code under the Affero
 GPL should recognize that most other free software licenses also permit
 such linking. 
 
