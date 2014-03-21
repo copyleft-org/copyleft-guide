@@ -270,10 +270,12 @@ source that corresponds to any deployed binary.
 
 Too many software projects rely on only one or a very few team members who
 know how to build and assemble the final released product.  Such knowledge
-centralization not only creates engineering redundancy issues, but it also
-endangers GPL compliance, which requires you to provide build scripts.
+centralization not only creates engineering redundancy issues, but also
+thwarts GPL compliance.  Specifically, CCS does not just require source code,
+but scripts and other material that explain how to control compilation and
+installation of the executable and object code.
 
-Avoid relying on a ``build guru'', a single developer who is the only one
+Thus, avoid relying on a ``build guru'', a single developer who is the only one
 who knows how to produce your final product. Make sure the build process
 is well defined.  Train every developer on the build process for the final
 binary distribution, including (in the case of embedded software)
