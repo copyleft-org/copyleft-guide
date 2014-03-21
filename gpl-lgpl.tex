@@ -3287,211 +3287,149 @@ royalties.  This section is an appropriate place for such a clause, since it
 is a specific consequence of the general requirement that no further
 restrictions be imposed on downstream recipients of GPL-covered code.
 
-Careful readers of the GPL have suggested that its explicit prohibition
-against imposition of further restrictions\footnote{GPLv2, section 6; Draft
-  3, section 10, third paragraph.} has, or ought to have, implications for
-those who assert patents against other licensees.  Draft 2 took some steps to
-clarify this point in a manner not specific to patents, by describing the
-imposition of ``a license fee, royalty, or other charge'' for exercising GPL
-rights as one example of an impermissible further restriction.  In Draft 3 we
-have clarified further that the requirement of non-imposition of further
-restrictions has specific consequences for litigation accusing GPL-covered
-programs of infringement.  Section 10 now states that ``you may not initiate
-litigation (including a cross-claim or counterclaim in a lawsuit) alleging
-that any patent claim is infringed by making, using, selling, offering for
-sale, or importing the Program (or the contribution of any contributor).''
-That is to say, a patent holder's licensed permissions to use a work under
-GPLv3 may be terminated under section 8 if the patent holder files a lawsuit
-alleging that use of the work, or of any upstream GPLv3-licensed work on
-which the work is based, infringes a patent.
+% FIXME-LATER: This text needs further study before I can conclude it belongs
+% in this tutorial:
+
+%% Careful readers of the GPL have suggested that its explicit prohibition
+%% against imposition of further restrictions\footnote{GPLv2, section 6; Draft
+%%   3, section 10, third paragraph.} has, or ought to have, implications for
+%% those who assert patents against other licensees.  Draft 2 took some steps to
+%% clarify this point in a manner not specific to patents, by describing the
+%% imposition of ``a license fee, royalty, or other charge'' for exercising GPL
+%% rights as one example of an impermissible further restriction.  In Draft 3 we
+%% have clarified further that the requirement of non-imposition of further
+%% restrictions has specific consequences for litigation accusing GPL-covered
+%% programs of infringement.  Section 10 now states that ``you may not initiate
+%% litigation (including a cross-claim or counterclaim in a lawsuit) alleging
+%% that any patent claim is infringed by making, using, selling, offering for
+%% sale, or importing the Program (or the contribution of any contributor).''
+%% That is to say, a patent holder's licensed permissions to use a work under
+%% GPLv3 may be terminated under section 8 if the patent holder files a lawsuit
+%% alleging that use of the work, or of any upstream GPLv3-licensed work on
+%% which the work is based, infringes a patent.
 
 \section{GPLv3~\S11: Explicit Patent Licensing}
 \label{GPLv3s11}
 
-% FIXME: These don't belong here, but it's closer to where it ought to be now.
-
-It is important to note that section 11, paragraph 3 refers to a work that is
-conveyed, and section 10, paragraph 2 refers to a kind of automatic
-counterpart to conveying achieved as the result of a transaction. 
-
-The patent licensing practices that section 7 of GPLv2 (corresponding to
-section 12 of GPLv3) was designed to prevent are one of several ways in which
-software patents threaten to make free programs non-free and to prevent users
-from exercising their rights under the GPL. GPLv3 takes a more comprehensive
-approach to combatting the danger of patents.
-
 Software patenting is a harmful and unjust policy, and should be abolished;
 recent experience makes this all the more evident. Since many countries grant
 patents that can apply to and prohibit software packages, in various guises
-and to varying degrees, we seek to protect the users of GPL-covered programs
+and to varying degrees, GPLv3 seeks to protect the users of GPL-covered programs
 from those patents, while at the same time making it feasible for patent
 holders to contribute to and distribute GPL-covered programs as long as they
 do not attack the users of those programs.
 
 It is generally understood that GPLv2 implies some limits on a licensee's
 power to assert patent claims against the use of GPL-covered works.
+However, the patent licensing practices that GPLv2~\S7 (corresponding to
+GPLv3~\S12) is designed to prevent is only one of several ways in which
+software patents threaten to make free programs non-free and to prevent users
+from exercising their rights under the GPL. GPLv3 takes a more comprehensive
+approach to combatting the danger of patents.
 
-Therefore, we have designed GPLv3 to reduce the patent risks that distort and
-threaten the activities of users who make, run, modify and share free
-software.  At the same time, we have given due consideration to practical
+GPLv2~\S7 has seen some success in deterring conduct that would otherwise
+result in denial of full downstream enjoyment of GPL rights, and thus it is
+preserved in GPLv3~\S12.  Experience has shown that more is necessary,
+however, to ensure adequate community safety where companies act in concert
+to heighten the anticompetitive use of patents that they hold or license.
+
+Therefore,  GPLv3 is designed to reduce the patent risks that distort and
+threaten the activities of users who make, run, modify and share Free
+Software.  At the same time, GPLv3 gives favorable consideration to practical
 goals such as certainty and administrability for patent holders that
-participate in distribution and development of GPL-covered software.  Our
+participate in distribution and development of GPL-covered software.  GPLv3's
 policy requires each such patent holder to provide appropriate levels of
 patent assurance to users, according to the nature of the patent holder's
 relationship to the program.
 
-Draft 3 features several significant changes concerning patents.  We have
-made improvements to earlier wording, clarified when patent assertion becomes
-a prohibited restriction on GPL rights, and replaced a distribution-triggered
-non-assertion covenant with a contribution-based patent license grant. We
-have also added provisions to block collusion by patent holders with software
-distributors that would extend patent licenses in a discriminatory way.
+\subsection{The Contributor's Explicit Patent License}
 
-
-Draft 3 introduces the terms ``contributor'' and ``contribution,'' which are
-used in the third paragraph of section 10 and the first paragraph of section
-11, discussed successively in the following two subsections.  Section 0
-defines a contributor as ``a party who licenses under this License a work on
-which the Program is based.'' That work is the ``contribution'' of that
-contributor.  In other words, each received GPLv3-covered work is associated
-with one or more contributors, making up the finite set of upstream GPLv3
-licensors for that work. Viewed from the perspective of a recipient of the
-Program, contributors include all the copyright holders for the Program,
-other than copyright holders of material originally licensed under non-GPL
-terms and later incorporated into a GPL-covered work.  The contributors are
-therefore the initial GPLv3 licensors of the Program and all subsequent
-upstream licensors who convey, under the terms of section 5, modified works
-on which the Program is based.
-
-For a contributor whose contribution is a modified work conveyed under
-section 5, the contribution is ``the entire work, as a whole'' which the
-contributor is required to license under GPLv3.  The contribution therefore
-includes not just the material added or altered by the contributor, but also
-the pre-existing material the contributor copied from the upstream version
-and retained in the modified version. Our usage of ``contributor'' and
-``contribution'' should not be confused with the various other ways in which
-those terms are used in certain other free software licenses.\footnote{Cf.,
-  e.g., Apache License, version 2.0, section 1; Eclipse Public License,
-  version 1.0, section 1; Mozilla Public License, version 1.1, section 1.1.}
-
-The term ``patent license,'' as used in the third through fifth
-paragraphs of section 11, is not meant to be confined to agreements
-formally identified or classified as patent licenses.  The new second
-paragraph of section 11 makes this clear by defining ``patent license,''
-for purposes of the subsequent three paragraphs, as ``a patent license,
-a covenant not to bring suit for patent infringement, or any other
-express agreement or commitment, however denominated, not to enforce a
-patent.''  The definition does not include patent licenses that arise by
-implication or operation of law, because the third through fifth
-paragraphs of section 11 are specifically concerned with explicit
-promises that purport to be legally enforceable.
-
-Our previous drafts featured a patent license grant triggered by all
-acts of distribution of GPLv3-covered works.\footnote{In Draft 2 we
-rewrote the patent license as a covenant not to assert patent claims. We
-explain why we reverted to the form of a patent license grant in \S\
-\ref{cov}.} Many patent-holding companies objected to this policy. They
-have made two objections: (1) the far-reaching impact of the patent
-license grant on the patent holder is disproportionate to the act of
-merely distributing code without modification or transformation, and (2)
-it is unreasonable to expect an owner of vast patent assets to exercise
-requisite diligence in reviewing all the GPL-covered software that it
-provides to others.  Some expressed particular concern about the
-consequences of ``inadvertent'' distribution.
+Specifically, the ideal might have been for GPLv3 to feature a patent license
+grant triggered by all acts of distribution of GPLv3-covered works.  The FSF
+considered it during the GPLv3 drafting process, but many patent-holding
+companies objected to this policy.  They have made two objections: (1) the
+far-reaching impact of the patent license grant on the patent holder is
+disproportionate to the act of merely distributing code without modification
+or transformation, and (2) it is unreasonable to expect an owner of vast
+patent assets to exercise requisite diligence in reviewing all the
+GPL-covered software that it provides to others.  Some expressed particular
+concern about the consequences of ``inadvertent'' distribution.
 
 The argument that the impact of the patent license grant would be
-``disproportionate,'' that is to say unfair, is not valid. Since
+``disproportionate'',  that is to say unfair, is not valid. Since
 software patents are weapons that no one should have, and using them for
-aggression against free software developers is an egregious act,
-preventing that act cannot be unfair. 
+aggression against free software developers is an egregious act (thus
+preventing that act cannot be unfair). 
 
 However, the second argument seems valid in a practical sense.  A
-typical GNU/Linux distribution includes thousands of programs. It would
+typical GNU/Linux distribution includes thousands of programs.  It would
 be quite difficult for a redistributor with a large patent portfolio to
 review all those programs against that portfolio every time it receives
-and passes on a new version of the distribution. Moreover, this question
+and passes on a new version of the distribution.  Moreover, this question
 raises a strategic issue. If the GPLv3 patent license requirements
 convince patent-holding companies to remain outside the distribution
 path of all GPL-covered software, then these requirements, no matter how
 strong, will cover few patents. 
 
-We concluded it would be more effective to make a partial concession
+GPLv3 therefore makes a partial concession
 which would lead these companies to feel secure in doing the
-distribution themselves, so that the conditions of section 10 would
-apply to assertion of their patents.  We therefore made the stricter
-section 11 patent license apply only to those distributors that have
+distribution themselves. GPLv3~\S11
+applies only to those distributors that have
 modified the program.  The other changes we have made in sections 10 and
 11 provide strengthened defenses against patent assertion and compensate
 partly for this concession. 
 
-Therefore, in Draft 3, the first paragraph of section 11 states that a
-contributor's patent license covers all the essential patent claims
-implemented by the whole program as that contributor distributes it.
-Contributors of modified works grant a patent license to claims that
-read on ``the entire work, as a whole.'' This is the work that the
-copyleft clause in section 5 requires the contributor to license under
-GPLv3; it includes the material the contributor has copied from the
-upstream version that the contributor has modified.  The first paragraph
-of section 11 does not apply to those that redistribute the program
+Therefore, GPLv3~\S11 introduces the terms ``contributor'', ``contributor version'', and
+``essential patent claims'', which are
+used in the GPLv3~\S11\P3.   Viewed from the perspective of a recipient of the
+Program, contributors include all the copyright holders for the Program,
+other than copyright holders of material originally licensed under non-GPL
+terms and later incorporated into a GPL-covered work.  The contributors are
+therefore the initial GPLv3 licensors of the Program and all subsequent
+upstream licensors who convey, under the terms of GPLv3~\S5, modified covered
+works.
+Thus, the ``contributor version'' includes the material the contributor has copied from the
+upstream version that the contributor has modified.  GPLv3~\S11\P3
+ does not apply to those that redistribute the program
 without change.\footnote{An implied patent license from the distributor,
-however, may arise by operation of law. See the final paragraph of
-section 11.  Moreover, distributors are subject to the limits on patent
-assertion contained in the third paragraph of section 10.} 
+however, often arises.  See \S~\ref{gpl-implied-patent-grant} in this tutorial}
+In other words, the ``contributor version'' includes not just
+the material added or altered by the contributor, but also the pre-existing
+material the contributor copied from the upstream version and retained in the
+modified version.  (GPLv3's usage of ``contributor'' and ``contribution'' should
+not be confused with the various other ways in which those terms are used in
+certain other free software licenses\footnote{Cf., e.g., Apache License,
+  version 2.0, section 1; Eclipse Public License, version 1.0, section 1;
+  Mozilla Public License, version 1.1, section 1.1.}.)
 
-We hope that this decision will result in fairly frequent licensing of
-patent claims by contributors.  A contributor is charged with awareness
-of the fact that it has modified a work and provided it to others; no
-act of contribution should be treated as inadvertent.  Our rule also
-requires no more work, for a contributor, than the weaker rule proposed
-by the patent holders.  Under their rule, the contributor must always
-compare the entire work against its patent portfolio to determine
-whether the combination of the modifications with the remainder of the
-work cause it to read on any of the contributor's patent claims.
+Some details of the ``essential patent claims'' definition deserve special
+mention.  ``Essential patent claims'', for a given party, are a subset of the
+claims ``owned or controlled'' by the party.  They do include sublicensable
+claims that have been licensed to the contributor by a third
+party.\footnote{This issue is typically handled in other software freedom
+  licenses having patent licensing provisions by use of the unhelpful term
+  ``licensable,'' which is either left undefined or is given an ambiguous
+  definition.}  Most commercial patent license agreements that permit
+sublicensing do so under restrictive terms that are inconsistent with the
+requirements of the GPL\@.  For example, some patent licenses allow the
+patent licensee to sublicense but require collection of royalties from any
+sublicensees.  The patent licensee could not distribute a GPL-covered program
+and grant the recipient a patent sublicense for the program without violating
+section 12 of GPLv3.\footnote{GPLv3 also provides an example in section 12
+  that makes this point clear.}  In rare cases, however, a conveying party
+can freely grant patent sublicenses to downstream recipients without
+violating the GPL\@.
 
+Additionally, ``essential patent claims'' are those patents ``that would be
+infringed by some manner, permitted by this License, of making, using, or
+selling the work''.  This intends to make clear that a patent claim is
+``essential'' if some mode of usage would infringe that claim, even if there
+are other modes of usage that would not infringe.
 
-
-We have made three changes to the definition of ``essential patent
-claims'' in section 0.  This definition now serves exclusively to
-identify the set of patent claims licensed by a contributor under the
-first paragraph of section 11.
-
-First, we have clarified when essential patent claims include
-sublicensable claims that have been licensed to the contributor by a
-third party.\footnote{This issue is typically handled in other free
-software licenses having patent licensing provisions by use of the
-unhelpful term ``licensable,'' which is either left undefined or is
-given an ambiguous definition.}  Most commercial patent license
-agreements that permit sublicensing do so under restrictive terms that
-are inconsistent with the requirements of the GPL.  For example, some
-patent licenses allow the patent licensee to sublicense but require
-collection of royalties from any sublicensees.  The patent licensee
-could not distribute a GPL-covered program and grant the recipient a
-patent sublicense for the program without violating section 12 of
-GPLv3.\footnote{Draft 3 provides a new example in section 12 that makes
-this point clear.}  In rare cases, however, a conveying party can freely
-grant patent sublicenses to downstream recipients without violating the
-GPL.
-
-Draft 3 now defines essential patent claims, for a given party, as a
-subset of the claims ``owned or controlled'' by the party.  The
-definition states that ``control includes the right to grant sublicenses
-in a manner consistent with the requirements of this License.''
-Therefore, in the case of a patent license that requires collection of
-royalties from sublicensees, essential patent claims would not include
-any claims sublicensable under that patent license, because sublicenses
-to those claims could not be granted consistent with section 12.
-
-Second, we now state that essential patent claims are those ``that would
-be infringed by some manner, permitted by this License, of making,
-using, or selling the work.'' This modified wording is intended to make
-clear that a patent claim is ``essential'' if some mode of usage would
-infringe that claim, even if there are other modes of usage that would
-not infringe.
-
-Third, we have clarified that essential patent claims ``do not include
+Finally, ``essential patent claims \ldots do not include
 claims that would be infringed only as a consequence of further
-modification of the work.''  That is to say, the set of essential patent
-claims licensed under the first paragraph of section 11 is fixed by the
+modification of the work.''  The set of essential patent
+claims licensed  is fixed by the
 the particular version of the work that was contributed.  The claim set
 cannot expand as a work is further modified downstream.  (If it could,
 then any software patent claim would be included, since any software
@@ -3502,424 +3440,130 @@ distributing, a program, where the same program might be provided in
 other forms or in other ways that may be captured by other patent claims
 held by the contributor.}
 
+\medskip
 
-The downstream shielding provision of section 11 responds particularly
-to the problem of exclusive deals between patent holders and
-distributors, which threaten to distort the free software distribution
-system in a manner adverse to developers and users. Draft 2 added a
-source code availability option to this provision, as a specific
-alternative to the general requirement to shield downstream users from
-patent claims licensed to the distributor. A distributor conveying a
-covered work knowingly relying on a patent license may comply with the
-provision by ensuring that the Corresponding Source of the work is
-publicly available, free of charge.  We retained the shielding option in
-Draft 2 because we did not wish to impose a general requirement to make
-source code available to all, which has never been a GPL condition.
+Ideally, this contributor patent policy will result in fairly frequent licensing of patent
+claims by contributors.  A contributor is charged with awareness of the fact
+that it has modified a work and provided it to others; no act of contribution
+should be treated as inadvertent.  GPLv3's rule also requires no more work, for a
+contributor, than the weaker rule proposed by the patent holders.  Under
+their rule, the contributor must always compare the entire work against its
+patent portfolio to determine whether the combination of the modifications
+with the remainder of the work cause it to read on any of the contributor's
+patent claims.
 
-The addition of the source code availability option was supported by the
-free software vendors most likely to be affected by the downstream
-shielding provision.  Enterprises that primarily use and occasionally
-distribute free software, however, raised concerns regarding the
-continued inclusion of a broadly-worded requirement to ``shield,'' which
-appears to have been mistakenly read by those parties as creating an
-obligation to indemnify.  To satisfy these concerns, in Draft 3 we have
-replaced the option to shield with two specific alternatives to the
-source code availability option. The distributor may comply by
-disclaiming the patent license it has been granted for the conveyed
-work, or by arranging to extend the patent license to downstream
-recipients.\footnote{The latter option, if chosen, must be done ``in a
-manner consistent with the requirements of this License''; for example,
-it is unavailable if extension of the patent license would result in a
-violation of section 12. Cf.~the discussion of sublicensable patent
-claims in \S\ \ref{epc}.}  The GPL is intended to permit private
-distribution as well as public distribution, and the addition of these
-options ensures that this remains the case, even though we expect that
-distributors in this situation will usually choose the source code
-availability option.
+\subsection{Conveyors' Patent Licensing}
 
-Without altering its underlying logic, we have modified the phrasing of
-the requirement to make clear that it is activated only if the
-Corresponding Source is not already otherwise publicly available.  (Most
-often it will, in fact, already be available on some network server
-operated by a third party.)  Even if it is not already available, the
-option to ``cause the Corresponding Source to be so available'' can then
-be satisfied by verifying that a third party has acted to make it
-available.  That is to say, the affected distributor need not itself
-host the Corresponding Source to take advantage of the source code
-availability option.  This subtlety may help the distributor avoid
-certain peculiar assumptions of liability.
+The remaining patent licensing in GPLv3 deals with patent licenses that are
+granted by conveyance.  The licensing is not as complete or far reaching at
+the contributor patent licenses discussed in the preceding section.
 
-We have made two other changes to the downstream shielding provision.
-The phrase ``knowingly rely'' was left undefined in our earlier drafts;
-in Draft 3 we have provided a detailed definition.  We have also deleted
-the condition precedent, added in Draft 2, that the relied-upon patent
-license be one that is non-sublicensable and ``not generally available
-to all''; this was imprecise in Draft 2 and is unnecessary in Draft
-3. In nearly all cases in which the ``knowingly relying'' test is met,
-the patent license will indeed not be sublicensable or generally
-available to all on free terms.  If, on the other hand, the patent
-license is generally available under terms consistent with the
-requirements of the GPL, the distributor is automatically in compliance,
-because the patent license has already been extended to all downstream
-recipients.  If the patent license is sublicensable on GPL-consistent
-terms, the distributor may choose to grant sublicenses to downstream
-recipients instead of causing source code to be publicly available.  In
-such a case, if the distributor is also a contributor, it will already
-have granted a patent sublicense by operation of the first paragraph of
-section 11,\footnote{See \S\ \ref{epc}.} and so it need not do anything
-further to comply with the third paragraph.
+The term ``patent license,'' as used in GPLv3~\S11\P4--6, is not meant to be
+confined to agreements formally identified or classified as patent licenses.
+GPLv3~\S11\P3  makes this clear by defining ``patent
+license,'' for purposes of the subsequent three paragraphs, as ``any express
+agreement or commitment, however denominated, not to enforce a patent
+(such as an express permission to practice a patent or covenant not to
+sue for patent infringement)''
 
-% FIXME: This probably needs editing
+% FIME-LATER: I want to ask Fontana about this before adding it.
 
-One major goal for GPLv3 is to provide developers with additional protection
-from being sued for patent infringement.  After much feedback and cooperation
-from the committees, we are now proposing a patent license which closely
-resembles those found in other free software licenses.  This will be more
-comfortable for everyone in the free software community to use, without
-creating undue burdens for distributors.
+% The definition does not include patent licenses that arise by
+% implication or operation of law, because the third through fifth paragraphs
+% of section 11 are specifically concerned with explicit promises that purport
+% to be legally enforceable.
 
-We have also added new terms to stop distributors from colluding with third
-parties to offer selective patent protection, as Microsoft and Novell have
-recently done.  The GPL is designed to ensure that all users receive the
-same rights; arrangements that circumvent this make a mockery of free
-software, and we must do everything in our power to stop them.
+GPLv3~\S11\P5 is commonly called GPLv3's downstream shielding provision.  It
+responds particularly to the problem of exclusive deals between patent
+holders and distributors, which threaten to distort the free software
+distribution system in a manner adverse to developers and users.  The
+fundamental idea is to make a trade-off between assuring a patent license for
+downstream and making  (possibly patent-encumbered) CCS publicly available.
 
-Our strategy has two parts.  First, any license that protects some
-recipients of GPLed software must be extended to all recipients of the
-software.  Second, we prohibit anyone who made such an agreement from
-distributing software released under GPLv3.  We are still considering
-whether or not this ban should apply when a deal was made before these
-terms were written, and we look forward to community input on this issue.
+Simply put, in nearly all cases in which the ``knowingly relying'' test is
+met, the patent license will indeed not be sublicensable or generally
+available to all on free terms.  If, on the other hand, the patent license is
+generally available under terms consistent with the requirements of the GPL,
+the distributor is automatically in compliance, because the patent license
+has already been extended to all downstream recipients.  Finally, if the
+patent license is sublicensable on GPL-consistent terms, the distributor may
+choose to grant sublicenses to downstream recipients instead of causing the
+CCS to be publicly available.  (In such a case, if the distributor is also a
+contributor, it will already have granted a patent sublicense anyway, and so
+it need not do anything further to comply with the third paragraph.)
 
-The patent license grant of the first paragraph of section 11 no longer
-applies to those who merely distribute works without modification. (We
-explain why we made this change in the next subsection.) Such parties are
-nonetheless subject to the conditions stated in section 10.  Unlike the
-patent license, which establishes a defense for downstream users lasting for
-as long as they remain in compliance with the GPL, the commitment not to sue
-that arises under section 10 is one that the distributor can end, so long as
-the distributor also ceases to distribute.  This is because a party who
-initiates patent litigation in violation of section 10 risks termination of
-its licensed permissions by the copyright holders of the work.
+Admittedly, public disclosure of CCS is not necessarily required in by other
+sections of the GPL, and the FSF in drafting GPLv3 did not necessarily wish
+to impose a general requirement to make source code available to all, which
+has never been a GPL condition.  However, many vendors who produce products
+that include copylefted software, and who most likely to be affected by the
+downstream shielding provision, lobbied for the addition of the source code
+availability option, so it remains.
 
-% FIXME: just brought in words here, needs rewriting.
+Meanwhile, two specific alternatives to the source code availability option
+are also available. The distributor may comply by disclaiming the patent
+license it has been granted for the conveyed work, or by arranging to extend
+the patent license to downstream recipients\footnote{The latter option, if
+  chosen, must be done ``in a manner consistent with the requirements of this
+  License''; for example, it is unavailable if extension of the patent
+  license would result in a violation of GPLv3~\S 12.}.  The GPL is intended
+to permit private distribution as well as public distribution, and the
+addition of these options ensures that this remains the case, even though it
+remains likely that distributors in this situation will usually choose the
+source code availability option.
 
-is rooted in the basic principles of the GPL.
-Our license has always stated that distributors may not impose further
-restrictions on users' exercise of GPL rights.  To make the suggested
-distinction between contribution and distribution is to allow a
-distributor to demand patent royalties from a direct or indirect
-recipient, based on claims embodied in the distributed code. This
-undeniably burdens users with an additional legal restriction on their
-rights, in violation of the license.
+Note that GPLv3~\S11\P5 is activated only if the CCS is not already otherwise
+publicly available.  (Most often it will, in fact, already be available on
+some network server operated by a third party.)  Even if it is not already
+available, the option to ``cause the Corresponding Source to be so
+available'' can then be satisfied by verifying that a third party has acted
+to make it available.  That is to say, the affected distributor need not
+itself host the CCS to take advantage of the source code availability option.
+This subtlety may help the distributor avoid certain peculiar assumptions of
+liability.
 
-%FIXME: possible useful text, but maybe not.
+Note that GPLv3~\S11\P6--7 are designed to stop distributors from colluding with
+third parties to offer selective patent protection.  GPLv3 is designed to
+ensure that all users receive the same rights; arrangements that circumvent
+this make a mockery of free software, and we must do everything in our power
+to stop them.
 
-In the covenant provided in the revised section 11, the set of claims
-that a party undertakes not to assert against downstream users are that
-party's ``essential patent claims'' in the work conveyed by the party.
-``Essential patent claims,'' a new term defined in section 0, are simply
-all claims ``that would be infringed by making, using, or selling the
-work.''  We have abandoned the phrase ``reasonably contemplated use.''
-This change makes the obligations of distributing patent holders more
-predictable.
-
-% FIXME:  probably needs a lot of work, these provisions changed over time.
-
-GPLv3 adds a new section on licensing of patents. GPLv2 relies on an implied
-patent license. The doctrine of implied license is one that is recognized
-under United States patent law but may not be recognized in other
-jurisdictions. We have therefore decided to make the patent license grant
-explicit in GPLv3. Under section 11, a redistributor of a GPL'd work
-automatically grants a nonexclusive, royalty-free and worldwide license for
-any patent claims held by the redistributor, if those claims would be
-infringed by the work or a reasonably contemplated use of the work.
-
-% FIXME:  probably needs a lot of work, these provisions changed over time.
-
-The patent license is granted both to recipients of the redistributed work
-and to any other users who have received any version of the work. Section 11
-therefore ensures that downstream users of GPL'd code and works derived from
-GPL'd code are protected from the threat of patent infringement allegations
-made by upstream distributors, regardless of which country's laws are held to
-apply to any particular aspect of the distribution or licensing of the GPL'd
-code.
-
-% FIXME:  probably needs a lot of work, these provisions changed over time.
-
-A redistributor of GPL'd code may benefit from a patent license that has been
-granted by a third party, where the third party otherwise could bring a
-patent infringement lawsuit against the redistributor based on the
-distribution or other use of the code. In such a case, downstream users of
-the redistributed code generally remain vulnerable to the applicable patent
-claims of the third party. This threatens to defeat the purposes of the GPL,
-for the third party could prevent any downstream users from exercising the
-freedoms that the license seeks to guarantee.
-
-% FIXME:  probably needs a lot of work, these provisions changed over time.
-
-The second paragraph of section 11 addresses this problem by requiring the
-redistributor to act to shield downstream users from these patent claims. The
-requirement applies only to those redistributors who distribute knowingly
-relying on a patent license. Many companies enter into blanket patent
-cross-licensing agreements. With respect to some such agreements, it would
-not be reasonable to expect a company to know that a particular patent
-license covered by the agreement, but not specifically mentioned in it,
-protects the company's distribution of GPL'd code.
-
-% FIXME: does this still fit with the final retaliation provision?
-
-This narrowly-targeted patent retaliation provision is the only form of
-patent retaliation that GPLv3 imposes by its own force. We believe that it
-strikes a proper balance between preserving the freedom of a user to run and
-modify a program, and protecting the rights of other users to run, modify,
-copy, and distribute code free from threats by patent holders. It is
-particularly intended to discourage a GPL licensee from securing a patent
-directed to unreleased modifications of GPL'd code and then suing the
-original developers or others for making their own equivalent modifications.
-
-Several other free software licenses include significantly broader patent
-retaliation provisions. In our view, too little is known about the
-consequences of these forms of patent retaliation. As we explain below,
-section 7 permits distribution of a GPL'd work that includes added parts
-covered by terms other than those of the GPL. Such terms may include certain
-kinds of patent retaliation provisions that are broader than those of section
-2.
-
-% FIXME: should we mention Microsoft-Novell at all?
-
-Section 7 of GPLv2 (now section 12 of GPLv3) has seen some success in
-deterring conduct that would otherwise result in denial of full downstream
-enjoyment of GPL rights.  Experience has shown us that more is necessary,
-however, to ensure adequate community safety where companies act in concert
-to heighten the anticompetitive use of patents that they hold or license.
-Previous drafts of GPLv3 included a ``downstream shielding'' provision in
-section 11, which we have further refined in Draft 3; it is now found in the
-third paragraph of section 11.  In addition, Draft 3 introduces two new
-provisions in section 11, located in the fourth and fifth paragraphs, that
-address the problem of collusive extension of patent forbearance promises
-that discriminate against particular classes of users and against the
-exercise of particular freedoms. This problem has been made more acute by the
-recent Microsoft/Novell deal.
-
-We attack the Microsoft-Novell deal from two angles. First, in the sixth
-paragraph of section 11, the draft says that if you arrange to provide patent
+First, GPLv3~\S11\P6 states that any license that protects some recipients of
+GPLed software must be extended to all recipients of the software.  
+If conveyors arrange to provide patent
 protection to some of the people who get the software from you, that
 protection is automatically extended to everyone who receives the software,
-no matter how they get it. This means that the patent protection Microsoft
-has extended to Novell's customers would be extended to everyone who uses any
-software Novell distributes under GPLv3.
+no matter how they get it. 
 
-Second, in the seventh paragraph, the draft says that you are prohibited from
-distributing software under GPLv3 if you make an agreement like the
-Microsoft-Novell deal in the future. This will prevent other distributors
-from trying to make other deals like it.
+Second, GPLv3~\S11\P7
+prohibit anyone who made such an agreement from distributing software
+released under GPLv3.    Conveyors are prohibited from
+distributing software under GPLv3 if the conveyor makes an agreement of that
+nature in the future.
 
-The main reason for this is tactical.  We believe we can do more to
-protect the community by allowing Novell to use software under GPL
-version 3 than by forbidding it to do so.  This is because of
+The date in GPLv3~\S11\P7 likely seems arbitrary to those who did not follow
+the GPLv3 drafting process.  This issue was hotly debated during the drafting of
+GPLv3, but ultimately one specific deal of this type --- a deal between Microsoft
+and Novell for Microsoft to provide so-called ``coupons'' to Microsoft customers to redeem
+for copies of Novell's GNU/Linux distribution with a Microsoft patent license -- was
+designed to be excluded.
+
+The main reason for this was a tactical decision by the FSF.  FSF believed they can do more to
+protect the community by allowing Novell to use software under GPLv3
+than by forbidding it to do so.  This is because of
 paragraph 6 of section 11 (corresponding to paragraph 4 in Draft 3).
 It will apply, under the Microsoft/Novell deal, because of the coupons
 that Microsoft has acquired that essentially commit it to participate
 in the distribution of the Novell SLES GNU/Linux system.
 
-Microsoft is scrambling to dispose of as many Novell SLES coupons as
-possible prior to the adoption of GPLv3.  Unfortunately for Microsoft,
-those coupons bear no expiration date, and paragraph 6 has no cut-off
-date.  Through its ongoing distribution of coupons, Microsoft will
-have procured the distribution of GPLv3-covered programs as soon as
-they are included in Novell SLES distributions, thereby extending
-patent defenses to all downstream recipients of that software by
-operation of paragraph 6.
-
-A secondary reason is to avoid affecting other kinds of agreements for
-other kinds of activities.  We have tried to take care in paragraph 7
-to distinguish pernicious deals of the Microsoft/Novell type from
-business conduct that is not particularly harmful, but we cannot be
-sure we have entirely succeeded.  There remains some risk that other
-unchangeable past agreements could fall within its scope.
-
+The FSF also gave a secondary reason:  to avoid affecting other kinds of agreements for
+other kinds of activities.  While GPLv3 sought to 
+distinguish pernicious deals of the Microsoft/Novell type from
+business conduct that is not particularly harmful, the FSF also did not
+assume success in that drafting, and thus there remained some risk that other
+unchangeable past agreements could fall within the  scope of GPLv3~\S11\P7.
 In future deals, distributors engaging in ordinary business practices
-can structure the agreements so that they do not fall under paragraph
-7.  However, it will block Microsoft and other patent aggressors from
-further such attempts to subvert parts of our community.
-
-A software patent forbids the use of a technique or algorithm, and its
-existence is a threat to all software developers and users.  A patent
-holder can use a patent to suppress any program which implements the
-patented technique, even if thousands of other techniques are
-implemented together with it.  Both free software and proprietary
-software are threatened with death in this way.  
-
-However, patents threaten free software with a fate worse than death: a
-patent holder might also try to use the patent to impose restrictions on
-use or distribution of a free program, such as to make users feel they
-must pay for permission to use it.  This would effectively make it
-proprietary software, exactly what the GPL is intended to prevent.
-
-Novell and Microsoft have recently attempted a new way of using patents
-against our community, which involves a narrow and discriminatory
-promise by a patent holder not to sue customers of one particular
-distributor of a GPL-covered program.  Such deals threaten our community
-in several ways, each of which may be regarded as de facto
-proprietization of the software.  If users are frightened into paying
-that one distributor just to be safe from lawsuits, in effect they are
-paying for permission to use the program.  They effectively deny even
-these customers the full and safe exercise of some of the freedoms
-granted by the GPL.  And they make disfavored free software developers
-and distributors more vulnerable to attacks of patent aggression, by
-dividing them from another part of our community, the commercial users
-that might otherwise come to their defense.
-
-We have added the fourth and fifth paragraphs of section 11 to combat
-this threat.  This subsection briefly describes the operation of the new
-provisions.  We follow it with a more detailed separate note on the
-Microsoft/Novell patent deal, in which we provide an extensive rationale
-for these measures.
-
-As noted, one effect of the discriminatory patent promise is to divide
-and isolate those who make free software from the commercial users to
-whom the promise is extended.  This deprives the noncommercial
-developers of the communal defensive measures against patents made
-possible by the support of those commercial users.  The fourth paragraph
-of section 11 operates to restore effective defenses to the targets of
-patent aggression.
-
-A patent holder becomes subject to the fourth paragraph of section 11
-when it enters into a transaction or arrangement that involves two acts:
-(1) conveying a GPLv3-covered work, and (2) offering to some, but not
-all, of the work's eventual users a patent license for particular
-activities using specific copies of the covered work.  This paragraph
-only operates when the two triggering acts are part of a single
-arrangement, because the patent license is part of the arrangement for
-conveying, which requires copyright permission.  Under those conditions,
-the discriminatory patent license is ``automatically extended to all
-recipients of the covered work and works based on it.''
-
-This provision establishes a defense to infringement allegations brought
-by the patent holder against any users of the program who are not
-covered by the discriminatory patent license.  That is to say, it gives
-all recipients the benefit of the patent promise that the patent holder
-extended only to some. The effect is to make contributing discriminatory
-promises of patent safety to a GPL distribution essentially like
-contributing code. In both cases, the operation of the GPL extends
-license permission to everyone that receives a copy of the program.
-
-
-The fourth paragraph of section 11 gives users a defense against patent
-aggression brought by the party who made the discriminatory patent
-promise that excluded them. By contrast, the fifth paragraph stops free
-software vendors from contracting with patent holders to make
-discriminatory patent promises.  In effect, the fifth paragraph extends
-the principle of section 12 to situations involving collusion between a
-patent holder and a distributor.
-
-Under this provision, a distributor conveying a GPL-covered program may
-not make an arrangement to get a discriminatory patent promise from a
-third party for its customers, covering copies of the program (or
-products that contain the program), if the arrangement requires the
-distributor to make payment to the third party based on the extent of
-its activity in conveying the program, and if the third party is itself
-in the business of distributing software. Unlike the fourth paragraph,
-which creates a legal defense for targets of patent aggression, the
-consequence for violation of the fifth paragraph is termination of GPL
-permissions for the distributor.
-
-The business, technical, and patent cooperation agreement between
-Microsoft and Novell announced in November 2006 has significantly
-affected the development of Draft 3.  The fourth and fifth paragraphs of
-section 11 embody our response to the sort of threat represented by the
-Microsoft/Novell deal, and are designed to protect users from such
-deals, and prevent or deter the making of such deals.
-
-The details of the agreements entered into between Microsoft and Novell,
-though subject to eventual public disclosure through the securities
-regulation system, have not been fully disclosed to this
-point.\footnote{Lawyers employed by the Software Freedom Law Center,
-which is counsel to the Free Software Foundation and other relevant free
-software clients, were accorded limited access to the terms of the deal
-under a non-disclosure agreement between SFLC and Novell.  The reasons
-for delay in the application of securities regulations requiring
-publication of the relevant contracts are unrelated to the deal between
-Microsoft and Novell.}  It is a matter of public knowledge, however,
-that the arrangement calls for Novell to pay a portion of the future
-gross revenue of one of its divisions to Microsoft, and that (as one
-other feature of a complex arrangement) Microsoft has promised Novell's
-customers not to bring patent infringement actions against certain
-specific copies of Novell's SUSE ``Linux''\footnote{This is a GNU/Linux
-distribution, and is properly called SUSE GNU/Linux Enterprise Server.}
-Enterprise Server product for which Novell receives revenue from the
-user, so long as the user does not make or distribute additional copies
-of SLES.
-
-The basic harm that such an agreement can do is to make the free
-software subject to it effectively proprietary.  This result occurs to
-the extent that users feel compelled, by the threat of the patent, to
-get their copies in this way.  So far, the Microsoft/Novell deal does
-not seem to have had this result, or at least not very much: users do
-not seem to be choosing Novell for this reason.  But we cannot take for
-granted that such threats will always fail to harm the community.  We
-take the threat seriously, and we have decided to act to block such
-threats, and to reduce their potential to do harm.  Such deals also
-offer patent holders a crack through which to split the community.
-Offering commercial users the chance to buy limited promises of patent
-safety in effect invites each of them to make a separate peace with
-patent aggressors, and abandon the rest of our community to its fate.
-
-Microsoft has been restrained from patent aggression in the past by the
-vocal opposition of its own enterprise customers, who now also use free
-software systems to run critical applications.  Public statements by
-Microsoft concerning supposed imminent patent infringement actions have
-spurred resistance from users Microsoft cannot afford to alienate.  But
-if Microsoft can gain royalties from commercial customers by assuring
-them that \textit{their} copies of free software have patent licenses
-through a deal between Microsoft and specific GNU/Linux vendors,
-Microsoft would then be able to pressure each user individually, and
-each distributor individually, to treat the software as proprietary.  If
-enough users succumb, it might eventually gain a position to terrify
-noncommercial developers into abandoning the software entirely.
-
-Preventing these harms is the goal of the new provisions of section 11.
-The fourth paragraph deals with the most acute danger posed by
-discrimination among customers, by ensuring that any party who
-distributes others' GPL-covered programs, and makes promises of patent
-safety limited to some but not all recipients of copies of those
-specific programs, automatically extends its promises of patent safety
-to cover all recipients of all copies of the covered works.  This will
-negate part of the harm of the Microsoft/Novell deal, for GPLv3-covered
-software.
-
-In addition to the present deal, however, GPLv3 must act to deter
-similar future arrangements, and it cannot be assumed that all future
-arrangements by Microsoft or other potential patent aggressors will
-involve procuring the conveyance of the program by the party that grants
-the discriminatory promises of patent safety.  Therefore, we need the
-fifth paragraph as well, which is aimed at parties that play the Novell
-role in a different range of possible deals.
-
-Drafting this paragraph was difficult because it is necessary to
-distinguish between pernicious agreements and other kinds of agreements
-which do not have an acutely harmful effect, such as patent
-contributions, insurances, customary cross-license promises to
-customers, promises incident to ordinary asset transfers, and standard
-settlement practices.  We believe that we have achieved this, but it is
-hard to be sure, so we are considering making this paragraph apply only
-to agreements signed in the future.  If we do that, companies would only
-need to structure future agreements in accord with the fifth paragraph,
-and would not face problems from past agreements that cannot be changed
-now.  We are not yet convinced that this is necessary, and we plan to
-ask for more comment on the question. This is why the date-based cutoff
-is included in brackets. 
-
-One drawback of this cutoff date is that it would ``let Novell off''
-from part of the response to its deal with Microsoft. However, this may
-not be a great drawback, because the fourth paragraph will apply to that
-deal. We believe it is sufficient to ensure either the deal's voluntary
-modification by Microsoft or its reduction to comparative harmlessness.
-Novell expected to gain commercial advantage from its patent deal with
-Microsoft; the effects of the fourth paragraph in undoing the harm of
-that deal will necessarily be visited upon Novell.
-
+can structure the agreements so that they do not fall under GPLv3~\S11\P7.
 
 \section{GPLv3~\S12: Familiar as GPLv2 \S~7}
 
