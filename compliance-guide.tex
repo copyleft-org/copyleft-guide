@@ -211,20 +211,26 @@ software, they should gently facilitate all decisions to bring Free Software int
 product.
 
 Simple, engineering-oriented rules help provide a stable foundation for
-free software integration.  Ask your software developers to send an email to a
+Free Software integration.  For example, simply ask your software developers to send an email to a
 standard place describing each new Free Software component they add to the system,
 and have them include a brief description of how they will incorporate it
-into the product.  Make sure they use a revision control system, and have
+into the product.  Further, make sure developers use a revision control
+system (such as Git or Mercurial), and have
 store the upstream versions of all software in a ``vendor branch'' or
 similar mechanism, whereby they can easily track and find the main version
-of the software and local changes made.
+of the software and, separately, any local changes.
 
-Such procedures are best instituted at your project's launch.  Once a
-chaotic and poorly-sourced development process has begun, the challenges
-of determining and cataloging the presence of GPL'd components is
-difficult.  If you are in that situation, we recommend the
+Such procedures are best instituted at your project's launch.  Once 
+chaotic and poorly-sourced development processes begin, cataloging the
+presence of GPL'd components  becomes challenging.
+
+Such a situation often requires use of a tool to ``catch up'' your knowledge
+about what software your product includes.  Most commonly, companies choose
+some software licensing scanning tool to inspect the codebase.  However,
+there are few tools that are themselves Free Software.  Thus, GPL enforcers
+usually recommend the GPL'd
 \href{http://fossology.org/}{Fossology system}, which analyzes a
-source-code base and produces a list of Free Software licenses that may apply to
+source code base and produces a list of Free Software licenses that may apply to
 the code.  Fossology can help you build a catalog of the sources you have
 already used to build your product.  You can then expand that into a more
 structured inventory and process.
