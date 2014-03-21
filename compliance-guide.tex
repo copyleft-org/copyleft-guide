@@ -245,15 +245,26 @@ software.  To comply with GPL's CCS requirements, the distributor
 distribution.
 
 In an unfortunately large number of our enforcement cases, the violating
-company's engineering team had difficulty reconstructing the precise
-sources for a given binary distributed by the company.  Ensure that your
-developers are using revision control systems properly.  Have them mark or
-tag the full source tree corresponding to builds distributed to customers.
-Finally, check that your developers store all parts of the software
+company's engineering team had difficulty reconstructing the CCS
+for binaries distributed by the company.  Here are three simple rules to
+follow to decrease the likelihood of this occurance:
+
+\begin{itemize}
+
+\item Ensure that your
+developers are using revision control systems properly.
+
+\item Have developers mark or ``tag'' the full source tree corresponding to
+  builds distributed to customers
+
+\item Check that your developers store all parts of the software
 development in the revision control system, including {\sc readme}s, build
-scripts, engineers' notes, and documentation.  Your developers will also
-benefit from a system that tracks the precise version of source that
-corresponds to any deployed binary.
+scripts, engineers' notes, and documentation.
+\end{itemize}
+
+Your developers will benefit anyway from these rules.  Developers will be
+happier in their jobs if their tools already track the precise version of
+source that corresponds to any deployed binary.
 
 \section{Avoid the ``Build Guru''}
 
