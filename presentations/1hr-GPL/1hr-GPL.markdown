@@ -144,3 +144,28 @@
 </p>
 </span>
 
+# Conditional Permissions
+
++ A copyleft license grants copyright permissions, conditionally.
+
++ Think of the phrase: &ldquo;provided that&rdquo;
+
++ &ldquo;provided that&rdquo;: appears (in some form) only
+
++ 4 times in GPLv2
+
++ 9 times in GPLv3.
+
+# Compare To Proprietary Licenses
+
++ Yes, the GPL has its requirements.
+
++ But *none* of these activities are ever permitted under proprietary
+  licenses.
+
++ If you don't like what the GPL requires you to do, then just tell your
+  client to use the proprietary software instead.
+
++ That way, they know the answer to every question is &ldquo;no&;rdquo,
+
++ rather than: &ldquo;yes, but only as long as you &hellip;&rdquo;
