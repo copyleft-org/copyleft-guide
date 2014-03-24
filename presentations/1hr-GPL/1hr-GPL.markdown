@@ -131,7 +131,7 @@
 
 + General concept: copyleft.
 
-+ Specific implementation: GPL
++ Specific implementation: GPL.
 
 <hr/>
 
