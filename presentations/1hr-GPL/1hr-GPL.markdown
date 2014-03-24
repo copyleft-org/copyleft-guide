@@ -94,10 +94,9 @@
     + both enforce the GPL.
     + if your client violates, you will hear from one of us.
 
-+ Such access to drafters, interpreters, enforcers is likely highly unique.
++ Such access to drafters, interpreters, enforcers is highly unique.
 
-+ Someday, someone in this room may (or already has) sit across the table
-  from you in negotiations.
++ Someday, we may (or already have) sit across the table from you.
 
 + Our transparency does make your job easier. 
 
