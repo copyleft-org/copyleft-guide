@@ -258,7 +258,7 @@ invalidate such permission if you have separately received it.
 </p>
 </span>
 
-# GPLv2&sect;2&para; ante-penultimate &amp; penultimate
+# GPLv2&sect;2&para; penultimates
 
 <span class="fitonslide">
 <p>
