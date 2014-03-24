@@ -63,3 +63,20 @@
 
 + Who would want to hear from?
 
+# Restaurant Lawyer: What'd You Study?
+
++ Figure out the motivations behind the building code:
+      + What parts are arcane and less important to inspectors?
+      + How do inspections work?
+      + What are the penalties?
+
++ Figure out the same for health &amp; safety:
+      + Who inspects, and when?
+      + What's the health code say, and what checklist do inspectors use?
+
++ Is there any way the two interrelate?
+
++ Who is in charge of all this?
+
++ What was the purpose and intent of these regulations?
+
