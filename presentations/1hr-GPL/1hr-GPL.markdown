@@ -77,7 +77,57 @@
 # Why Listen To Us?
 
 + FSF: Understanding the purpose and intent of the GPL.
-
+    
 + Conservancy &amp; FSF:
     + both enforce the GPL.
     + if your client violates, you will hear from one of us.
+
++ Such access to drafters, interpreters, enforcers is likely highly unique.
+
++ Someday, someone in this room may (or already has) sit across the table
+  from you in negotiations.
+
++ Our transparency does make your job easier. 
+
+# The Mindset of GPL
+
++ GPL protects software freedom.
+
++ Ultimate goal: make sure every user has the four freedoms.
+
++ Freedom to run the software.
+
++ Freedom to study and modify the software.
+
++ Freedom to share the software.
+
++ Freedom to distribute modified versions.
+
++ Every clause in GPL was designed to uphold one of these freedoms.
+     + Or, it's a compromise of drafting in adoption vs. freedom debate.
+
+# Using Copyright
+
++ GPL is primarily a copyright license.
+
++ Software is copyrighted.
+
++ License grants key freedoms.
+
++ Requirement prohibit activities that take away freedoms.
+
++ General concept: copyleft.
+
++ Specific implementation: GPL
+
+<hr/>
+
+<span class="fitonslide">
+
+> an original works of authorship fixed in any tangible medium of expression &hellip;  from which they can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device
+
+<p align=right>
+ &mdash; 17 USC \S~102
+</p>
+</span>
+
