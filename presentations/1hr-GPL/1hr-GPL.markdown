@@ -128,10 +128,10 @@
 
 <span class="fitonslide">
 
-> an original works of authorship fixed in any tangible medium of expression &hellip;  from which they can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device
+> Copyright protection subsists &hellip; original works of authorship fixed in any tangible medium of expression &hellip;  from which they can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device.
 
 <p align=right>
- &mdash; 17 USC \S~102
+ &mdash; <a href="http://www.law.cornell.edu/uscode/text/17/102">17 USC &sect;102</a>
 </p>
 </span>
 
