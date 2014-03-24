@@ -315,3 +315,29 @@ on the Program.
   companies discovered to subjugate users.
       + GPL uses the fact that binaries are modifications (which are often
         distribution) to prevent that subjugation.
+
+# GPLv2 &sect; 3(a-b)
+
+<span class="fitonslide">
+<p>
+<span class="fitonslide">
+<p>[GPLv2&sect;]3. You may copy and distribute the Program (or a work based on it,
+under Section 2) in object code or executable form under the terms of
+Sections 1 and 2 above provided that you also do one of the following:
+<br/>
+<br/>
+a) Accompany it with the complete corresponding machine-readable
+source code, which must be distributed under the terms of Sections
+1 and 2 above on a medium customarily used for software interchange; or,
+<br/>
+<br/>
+b) Accompany it with a written offer, valid for at least three
+years, to give any third party, for a charge no more than your
+cost of physically performing source distribution, a complete
+machine-readable copy of the corresponding source code, to be
+distributed under the terms of Sections 1 and 2 above on a medium
+customarily used for software interchange;
+</p>
+</span>
+
+
