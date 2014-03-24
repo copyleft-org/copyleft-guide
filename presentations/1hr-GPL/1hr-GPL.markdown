@@ -105,14 +105,10 @@
 + GPL protects software freedom.
 
 + Ultimate goal: make sure every user has the four freedoms.
-
-+ Freedom to run the software.
-
-+ Freedom to study and modify the software.
-
-+ Freedom to share the software.
-
-+ Freedom to distribute modified versions.
+     + Freedom to run the software.
+     + Freedom to study and modify the software.
+     + Freedom to share the software.
+     + Freedom to distribute modified versions.
 
 + Every clause in GPL was designed to uphold one of these freedoms.
      + Or, it's a compromise of drafting in adoption vs. freedom debate.
