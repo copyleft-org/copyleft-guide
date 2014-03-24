@@ -32,7 +32,7 @@
 
 + Materials presented will mix the simple &amp; complex.
 
-+ We cannot possible cover the entire GPL in one hour.
++ We cannot possibly cover the entire GPL in one hour.
 
 + Discuss: motivations, origins, then a few of GPL's sections.
 
@@ -81,4 +81,3 @@
 + Conservancy &amp; FSF:
     + both enforce the GPL.
     + if your client violates, you will hear from us.
-
