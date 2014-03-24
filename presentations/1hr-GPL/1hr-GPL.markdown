@@ -158,7 +158,7 @@
 + If you don't like what the GPL requires you to do, then just tell your
   client to use the proprietary software instead.
 
-+ That way, they know the answer to every question is &ldquo;no&;rdquo,
++ That way, they know the answer to every question is &ldquo;no&;rdquo;
 
 + rather than: &ldquo;yes, but only as long as you &hellip;&rdquo;
 
