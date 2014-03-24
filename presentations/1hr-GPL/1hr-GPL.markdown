@@ -373,7 +373,6 @@ Corresponding Source from a network server at no charge.
 </p>
 </span>
 
-
 # GPLv3 &sect; 1 &para; 1, 4-6
 
 <span class="fitonslide">
