@@ -36,6 +36,8 @@
 
 + Discuss: motivations, origins, then a few of GPL's sections.
 
++ I understand the mix of backgrounds in the audience.
+
 # A Restaurant's Lawyer?
 
 + Considering why you want to learn this.
