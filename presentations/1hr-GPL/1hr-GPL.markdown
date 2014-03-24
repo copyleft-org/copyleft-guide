@@ -36,3 +36,10 @@
     + both enforce the GPL.
     + if your client violates, you will hear from us.
 
+# How this Hour Will Go?
+
++ Materials presented will mix the simple &amp; complex.
+
++ We cannot possible cover the entire GPL in one hour.
+
++ Discuss: motivations, origins, then a few of GPL's sections.
