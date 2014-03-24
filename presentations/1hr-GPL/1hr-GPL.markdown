@@ -405,3 +405,15 @@ The Corresponding Source for a work in source code form is that
 same work.
 </p>
 </span>
+
+
+# The GPL is a Complex Topic
+
++ An in-depth seminar on GPL's provisions is a one-day course &hellip;
+     + &hellip; but the written materials discuss every section in depth.
+
++ Keep in mind: every requirement has a carefully considered purpose to
+  uphold freedom of users.
+
++ Software freedom licenses have a moral perspective.
+      + This is probably the most difficult thing for lawyers to understand.
