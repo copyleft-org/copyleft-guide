@@ -280,3 +280,38 @@ collective works based on the Program.
 
 </span>
 
+# GPLv3 &sect;0 &para;1-5
+<span class="fitonslide">
+<p>
+  "Copyright" also means copyright-like laws that apply to other kinds of
+works, such as semiconductor masks.
+<br/>
+<br/>
+  "The Program" refers to any copyrightable work licensed under this
+License.  Each licensee is addressed as "you".  "Licensees" and
+"recipients" may be individuals or organizations.
+<br/>
+<br/>
+To "modify" a work means to copy from or adapt all or part of the work
+in a fashion requiring copyright permission, other than the making of an
+exact copy.  The resulting work is called a "modified version" of the
+earlier work or a work "based on" the earlier work.
+<br/>
+<br/>
+  A "covered work" means either the unmodified Program or a work based
+on the Program.
+</p>
+
+# Binaries (i.e., Object Code) are Modifications
+
++ Software that the computer understands is different than software humans
+  read.
+
++ There is often a process required to modify (and/or translate) the software
+  from human-readable
+      + This process can be done ahead of time.
+
++ Separation of source and binary was the first way proprietary software
+  companies discovered to subjugate users.
+      + GPL uses the fact that binaries are modifications (which are often
+        distribution) to prevent that subjugation.
