@@ -169,3 +169,15 @@
 + That way, they know the answer to every question is &ldquo;no&;rdquo,
 
 + rather than: &ldquo;yes, but only as long as you &hellip;&rdquo;
+
+# The Technical Gap
+
++ Understanding GPL well requires a some software expertise &amp; legal
+  expertise.
+
++ You don't have to be a professional on either side to grok it.
+     + but you're best off if you're a professional in one &amp; an amateur
+       in the other. 
+
++ Most important technical concepts you need:
+     + source code, binaries, methods of distribution.
