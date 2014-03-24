@@ -80,4 +80,4 @@
 
 + Conservancy &amp; FSF:
     + both enforce the GPL.
-    + if your client violates, you will hear from us.
+    + if your client violates, you will hear from one of us.
