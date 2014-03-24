@@ -230,7 +230,34 @@ parties under the terms of this License.
 </p>
 </span>
 
-# GPLv2&sect; 2 &para; ante-penultimate &amp; penultimate
+# GPLv3&sect;5(a-c)
+
+<span class="fitonslide">
+<p>
+You may convey a work based on the Program, or the modifications to
+produce it from the Program, in the form of source code under the
+terms of section 4, provided that you also meet all of these conditions:
+<br/>
+<br/>
+a) The work must carry prominent notices stating that you modified it, and
+giving a relevant date.
+<br/>
+<br/>
+b) The work must carry prominent notices stating that it is released under
+this License and any conditions added under section 7.  This requirement
+modifies the requirement in section 4 to "keep intact all notices".
+<br/>
+<br/>
+c) You must license the entire work, as a whole, under this License to anyone
+who comes into possession of a copy.  This License will therefore apply,
+along with any applicable section 7 additional terms, to the whole of the
+work, and all its parts, regardless of how they are packaged.  This License
+gives no permission to license the work in any other way, but it does not
+invalidate such permission if you have separately received it.
+</p>
+</span>
+
+# GPLv2&sect;2&para; ante-penultimate &amp; penultimate
 
 <span class="fitonslide">
 <p>
