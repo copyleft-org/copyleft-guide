@@ -6,3 +6,10 @@
 
 <cite>IANAL</cite>
 
+# My Affiliations
+
++ Formerly had John's job, Executive Director of FSF, years ago.
+
++ Currently: on Board of Directors of FSF.
+
++ President of Software Freedom Conservancy.
