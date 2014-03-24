@@ -81,12 +81,11 @@
       + Who inspects, and when?
       + What's the health code say, and what checklist do inspectors use?
 
-+ Is there any way the two interrelate?
-
-+ Who is in charge of all this?
-
-+ What was the purpose and intent of these regulations?
-
++ Likely Questions:
+      + Who's in charge of all this?
+      + What's purpose and intent of these regulations?
+      + Can I meet the inspectors?
+      
 # Why Listen To Us?
 
 + FSF: Understanding the purpose and intent of the GPL.
