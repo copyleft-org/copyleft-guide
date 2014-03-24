@@ -17,6 +17,7 @@
 # How These Orgs Relate to GPL?
 
 + FSF
+    + Invented copyleft.
     + Authors &amp; stewards of the GPL.
     + Holder of copyrights on many key GNU programs &hellip;
     + &hellip; and therefore enforcers of those copyrights.
