@@ -2,6 +2,19 @@
 % Bradley M. Kuhn
 % Monday 24 March 2014
 
+# Audience Polls
+
++ My goal here is to move faster or slower based on audience knowledge.
+
++ There are folks in this audience who have worked with this stuff for years,
+  and those who are completely new.
+
++ We want these presentations to be valuable to all of you.
+
++ Please, don't be embarrassed:
+     + Ever GPL expert in the world, including me, started as a student who
+       knew none of this.
+
 # IANAL
 
 <cite>IANAL</cite>
