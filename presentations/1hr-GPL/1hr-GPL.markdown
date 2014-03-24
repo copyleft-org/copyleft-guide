@@ -172,3 +172,40 @@
 
 + Most important technical concepts you need:
      + source code, binaries, methods of distribution.
+
+# Considering Sections of the GPL
+
++ With the remaining time &hellip;
+     + in interest of the experts in the audience &hellip;
+     + let's dig into a few specific sections.
+
++ GPL &hearts; 17 USC&sect;106(2) &amp; 17 USC&sect;106(3)
+
++ Modification and distribution.
+
+# Why Permission to Modify?
+
++ Your new copyrights are your copyrights:
+     + you are affixing it in a tangible medium.
+
++ Exclusive right of copyright holders:
+     + Control on &ldquo;preparation of derivative works&rdquo;
+     + Distribution of the work.
+     + Note the combination of these.
+     
++ Again, see 17 USC&sect;106
+
++ N.B.: &ldquo;derivative works&rdquo; is USA-centric, modify is more international)
+
+# Modification As a Center Provision
+
++ GPL's primary copyright hook is copyright controls on the right to modify.
+
++ GPL's central tenant:
+
++ You can make a modified version of various types privately as much as you'd like.
+
++ When you distribute that modified version, you have requirements to meet.
+
++ Technological considerations dictate necessity of more complex rules for
+certain types of modifications.
