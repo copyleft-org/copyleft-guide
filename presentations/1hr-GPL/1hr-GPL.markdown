@@ -116,12 +116,9 @@
 # Using Copyright
 
 + GPL is primarily a copyright license.
-
-+ Software is copyrighted.
-
-+ License grants key freedoms.
-
-+ Requirement prohibit activities that take away freedoms.
+      + Software is copyrighted.
+      + License grants key freedoms.
+      + Requirement prohibit activities that take away freedoms.
 
 + General concept: copyleft.
 
