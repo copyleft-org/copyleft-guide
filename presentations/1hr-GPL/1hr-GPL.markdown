@@ -43,3 +43,23 @@
 + We cannot possible cover the entire GPL in one hour.
 
 + Discuss: motivations, origins, then a few of GPL's sections.
+
+# A Restaurant's Lawyer?
+
++ Considering why you want to learn this.
+
++ What if your client was a restaurant?
+
++ What would you want to need to know?
+
+# Restaurant Lawyer: What'd You Study?
+
++ If you were a restaurant's lawyer:
+
++ Probably three areas of law you'd focus on:
+     + building codes.
+     + health and safety regulations.
+     + tax regulations.
+
++ Who would want to hear from?
+
