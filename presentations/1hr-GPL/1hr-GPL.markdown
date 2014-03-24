@@ -303,7 +303,7 @@ earlier work or a work "based on" the earlier work.
 on the Program.
 </p>
 
-# Binaries (i.e., Object Code) are Modifications
+# Binaries (Object Code) are Modifications
 
 + Software that the computer understands is different than software humans
   read.
