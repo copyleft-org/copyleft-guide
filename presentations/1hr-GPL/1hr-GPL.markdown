@@ -209,3 +209,47 @@
 
 + Technological considerations dictate necessity of more complex rules for
 certain types of modifications.
+
+# GPLv2&sect;2(a-b)
+
+<span class="fitonslide">
+<p>[GPLv2&sect;]2. You may modify your copy or copies of the Program or any
+portion of it, thus forming a work based on the Program, and copy and
+distribute such modifications or work under the terms of Section 1 above,
+provided that you also meet all of these conditions:
+<br/>
+<br/>
+a) You must cause the modified files to carry prominent notices stating
+that you changed the files and the date of any change.
+<br/>
+<br/>
+b) You must cause any work that you distribute or publish, that in
+whole or in part contains or is derived from the Program or any
+part thereof, to be licensed as a whole at no charge to all third
+parties under the terms of this License.
+</p>
+</span>
+
+# GPLv2&sect; 2 &para; ante-penultimate &amp; penultimate
+
+<span class="fitonslide">
+<p>
+These requirements apply to the modified work as a whole.  If
+identifiable sections of that work are not derived from the Program,
+and can be reasonably considered independent and separate works in
+themselves, then this License, and its terms, do not apply to those
+sections when you distribute them as separate works.  But when you
+distribute the same sections as part of a whole which is a work based
+on the Program, the distribution of the whole must be on the terms of
+this License, whose permissions for other licensees extend to the
+entire whole, and thus to each and every part regardless of who wrote it.
+<br/>
+<br/>
+Thus, it is not the intent of this section to claim rights or contest
+your rights to work written entirely by you; rather, the intent is to
+exercise the right to control the distribution of derivative or
+collective works based on the Program.
+</p>
+
+</span>
+
