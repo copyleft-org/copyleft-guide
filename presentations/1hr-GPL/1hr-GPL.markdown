@@ -2,6 +2,7 @@
 % Bradley M. Kuhn
 % Monday 24 March 2014
 
+
 # Audience Polls
 
 + My goal here is to move faster or slower based on audience knowledge.
@@ -320,7 +321,6 @@ on the Program.
 
 <span class="fitonslide">
 <p>
-<span class="fitonslide">
 <p>[GPLv2&sect;]3. You may copy and distribute the Program (or a work based on it,
 under Section 2) in object code or executable form under the terms of
 Sections 1 and 2 above provided that you also do one of the following:
