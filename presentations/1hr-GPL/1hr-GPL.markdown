@@ -210,7 +210,7 @@
 + Technological considerations dictate necessity of more complex rules for
 certain types of modifications.
 
-# GPLv2&sect;2(a-b)
+# GPLv2 &sect; 2(a-b)
 
 <span class="fitonslide">
 <p>[GPLv2&sect;]2. You may modify your copy or copies of the Program or any
