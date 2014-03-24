@@ -27,3 +27,12 @@
     + Holder of some copyrights on its member projects.
     + Enforcer of GPL on behalf of many copyright holders in:
     + BusyBox, Samba, Mercurial, and the kernel named Linux.
+
+# Why Listen To Us?
+
++ FSF: Understanding the purpose and intent of the GPL.
+
++ Conservancy &amp; FSF:
+    + both enforce the GPL.
+    + if your client violates, you will hear from us.
+
