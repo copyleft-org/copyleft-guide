@@ -1627,6 +1627,38 @@ software alongside proprietary software or other unrelated Free Software,
 as long as the terms of GPL are adhered to for those packages that are
 truly GPL'd.
 
+\subsection{Right to Private Modification} 
+\label{gplv2-private-modification}
+
+The issue of private modifications of GPLv2'd works deserves special
+attention.  While these rights are clearly explicit in GPLv3~\S2\P2 (see
+\~S\ref{GPLv3S2} of this tutorial for details), the permission to create
+private modifications is mostly implicit in GPLv2.  Most notably, the
+requirements of GPLv2~\S2 (and GPLv2~\S3, which will be discussed next) are
+centered around two different copyright controls: both modification
+\emph{and} distribution.  As such, GPLv2~\S2's requirements need only be met
+when a modified version is distributed; one need not follow them for modified
+versions that are not distributed\footnote{As a matter of best practice, it's
+  useful to assume that all software may eventually be distributed later,
+  even if there no plans for distribution at this time.  Too often, GPL
+  violations occur because of a late distribution decision of software that
+  was otherwise never intended for distribution.}.
+
+However, the careful reader of GPLv2 will notice that, unlike GPLv3, no other
+clauses of the license actually give explicit permission to make private
+modifications.  Since modification of software is a control governed by
+copyright, a modifier needs permission from the copyright holder to engage in
+that activity.
+
+In practice, however, traditional GPLv2 interpretation has always assumed
+that blanket permission to create non-distributed modified versions was
+available, and the
+\href{http://www.gnu.org/licenses/gpl-faq.html#GPLRequireSourcePostedPublic}{FSF
+  has long opined that distribution of modified versions is never mandatory}.
+This issue is one of many where GPLv3 clarifies in explicit text the implicit
+policy and intent that was solidified via long-standing interpretation of
+GPLv2.
+
 \section{GPLv2~\S3: Producing Binaries}
 \label{GPLv2s3}
 
@@ -2559,8 +2591,9 @@ permitted without limitation and activities that trigger additional
 requirements.  Specifically, GPLv3~\S2\P2 guarantees the basic freedoms of
 privately modifying and running the program.  While these basic freedoms were
 generally considered a standard part of users' rights under GPLv2 as well,
-the GPLv3 states them herein more explicitly.  (In other words, there is no
-direct analog to the first sentence of GPLv3~\S2\P2 in GPLv2.)
+the GPLv3 states them herein more explicitly.  In other words, there is no
+direct analog to the first sentence of GPLv3~\S2\P2 in GPLv2
+(See \S~\ref{gplv2-private-modification} of this tutorial for more on this issue.)
 
 Also, GPLv3~\S2\P2 gives an explicit permission for a client to provide a
 copy of its modified software to a contractor exclusively for that contractor
