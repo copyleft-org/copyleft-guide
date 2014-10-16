@@ -1061,16 +1061,16 @@ not for the definition itself, which is rather straightforward, but
 because it clears up a common misconception about the GPL\@.
 
 The GPL is often mistakenly criticized because it fails to give a
-definition of ``derivative work''.  In fact, it would be incorrect and
-problematic if the GPL attempted to define this.  A copyright license, in
-fact, has no control over what may or may not be a derivative work.  This
-matter is left up to copyright law and the courts --- not the licenses that utilize it.
+definition of ``derivative work'' or ``combined work''.  In fact, it would be incorrect and
+problematic if the GPL attempted to define these terms.  A copyright license, in
+fact, has no control over the rules of copyright themselves.  Such rules are
+the domain of copyright law and the courts --- not the licenses that utilize
+those systems.
 
-It is certainly true that copyright law as a whole does not propose clear
-and straightforward guidelines for what is and is not a derivative
-software work under copyright law.  However, no copyright license --- not
-even the GNU GPL --- can be blamed for this.  Legislators and court
-opinions must give us guidance to decide the border cases.
+Copyright law as a whole doesn't propose clear and straightforward guidelines
+for identifying the derivative and/or combined works of software.  However,
+no copyright license --- not even the GNU GPL --- can be blamed for this.
+Legislators and court opinions must give us guidance in borderline cases.
 
 \section{GPLv2~\S1: Verbatim Copying}
 \label{GPLv2s1}
@@ -1531,7 +1531,7 @@ GPLv2~\S2(b), and they
 can be a source of great confusion when not properly understood.
 
 In considering GPLv2~\S2(b), first note the qualifier: it \textit{only} applies to
-derivative works that ``you distribute or publish''.  Despite years of
+derivative, combined and/or modified works that ``you distribute or publish''.  Despite years of
 education efforts on this matter, many still believe that modifiers
 of GPL'd software \textit{must} publish or otherwise
 share their changes.  On the contrary, GPLv2~\S2(b) {\bf does not apply if} the
@@ -1548,16 +1548,15 @@ following text:
 \begin{quote}
 ``...that in whole or part contains or is derived from the Program or any part thereof.''
 \end{quote}
-Again, the GPL relies here on what the copyright law says is a derivative
-work.  If, under copyright law, the modified version ``contains or is
+Again, the GPL relies here on copyright law.
+If, under copyright law, the modified version ``contains or is
 derived from'' the GPL'd software, then the requirements of GPLv2~\S2(b)
 apply.  The GPL invokes its control as a copyright license over the
 modification of the work in combination with its control over distribution
 of the work.
 
-The final clause of GPLv2~\S2(b) describes what the licensee must do if she is
-distributing or publishing a work that is deemed a derivative work under
-copyright law --- namely, the following:
+The final clause of GPLv2~\S2(b) describes what the licensee must do if she
+distributes or publishes a modified version of the work --- namely, the following:
 \begin{quote}
 [The work must] be licensed as a whole at no charge to all third parties
 under the terms of this License.
@@ -1573,7 +1572,7 @@ ideas into the tangible medium of electronic file storage.  That
 programmer is indeed the copyright holder of those new changes.  However,
 those changes are part and parcel to the original work distributed to
 the programmer under GPL\@. Thus, the license of the original work
-affects the license of the new whole derivative work.
+affects the license of the new whole combined and/or derivative work.
 
 % {\cal I}
 \newcommand{\gplusi}{$\mathcal{G\!\!+\!\!I}$}
@@ -1600,7 +1599,7 @@ product --- would its copyright holders  give you permission to create and distr
 \gplusi{} without paying them a hefty sum?)  The license of \workg{}, the
 GPL, states the  options for the copyright holder of \worki{}
 who may want to create and distribute \gplusi{}. The  GPL's pre-granted
-permission to create and distribute derivative works, provided the terms
+permission to create and distribute combined and/or derivative works, provided the terms
 of the GPL are upheld, goes far above and beyond the permissions that one
 would get with a typical work not covered by a copyleft license.  (Thus, to
 say that this condition is any way unreasonable is simply ludicrous.)
@@ -1630,14 +1629,14 @@ available to the public at large.  However, the text here does not say
 that.  Instead, it says that the licensing under terms of the GPL must
 extend to anyone who might, through the distribution chain, receive a copy
 of the software.  Distribution to all third parties is not mandated here,
-but GPLv2~\S2(b) does require re-distributors to license the derivative works in
+but GPLv2~\S2(b) does require re-distributors to license the whole work in
 a way that extends to all third parties who may ultimately receive a
 copy of the software.
 
 In summary, GPLv2\ 2(b) says what terms under which the third parties must
 receive this no-charge license.  Namely, they receive it ``under the terms
 of this License'', the GPLv2.  When an entity \emph{chooses} to redistribute
-a derivative work of GPL'd software, the license of that whole 
+a work based on GPL'd software, the license of that whole 
 work must be GPL and only GPL\@.  In this manner, GPLv2~\S2(b) dovetails nicely
 with GPLv2~\S6 (as discussed in Section~\ref{GPLv2s6} of this tutorial).
 
@@ -1711,7 +1710,7 @@ be fully useful.  Without the binaries, be they in object or executable
 form, the software serves only the didactic purposes of computer science.
 
 Under copyright law, binary representations of the software are simply
-derivative works of the source code.  Applying a systematic process (i.e.,
+modified versions (and/or derivative works) of the source code.  Applying a systematic process (i.e.,
 ``compilation''\footnote{``Compilation'' in this context refers to the
   automated computing process of converting source code into binaries.  It
   has absolutely nothing to do with the term ``compilation'' in copyright statues.}) to a work of source code yields binary code. The binary
@@ -1719,11 +1718,11 @@ code is now a new work of expression fixed in the tangible medium of
 electronic file storage.
 
 Therefore, for GPL'd software to be useful, the GPL, since it governs the
-rules for creation of derivative works, must grant permission for the
+rules for creation of modified works, must grant permission for the
 generation of binaries.  Furthermore, notwithstanding the relative
 popularity of source-based GNU/Linux distributions like Gentoo, users find
 it extremely convenient to receive distribution of binary software.  Such
-distribution is the redistribution of derivative works of the software's
+distribution is the redistribution of modified works of the software's
 source code.  GPLv2~\S3 addresses the matter of creation and distribution of
 binary versions.
 
@@ -1772,7 +1771,7 @@ Therefore, GPLv2~\S3 requires that the source code include ``meta-material'' lik
 scripts, interface definitions, and other material that is used to
 ``control compilation and installation'' of the binaries.  In this
 manner, those further down the distribution chain are assured that
-they have the unabated freedom to build their own derivative works
+they have the unabated freedom to build their own modified works
 from the sources provided.
 
 Software distribution comes in many
@@ -1939,7 +1938,7 @@ limited to the patent claims covered by the code as licensed by the patentee.
 In contrast, a GPLv2 licensee, under the doctrine of implied patent license, 
 is free to practice any patent claims held by the licensor that cover 
 ``reasonably contemplated uses'' of the GPL'd code, which may very well 
-include creation and distribution of derivative works since the GPL's terms, 
+include creation and distribution of modified works since the GPL's terms, 
 under which the patented code is distributed, expressly permits such activity.
 
 
@@ -1979,14 +1978,14 @@ For example, if Company \compA{} has a patent on advanced Web browsing, but
 also licenses a Web browsing program under the GPLv2, then it
 cannot assert the patent against any party based on that party's use of 
 Company \compA{}'s GPL'ed Web browsing software program, or on that party's
-creation and use of derivative works of that GPL'ed program.  However, if a
+creation and use of modified versions of that GPL'ed program.  However, if a
 party uses that program without
 complying with the GPLv2, then Company \compA{} can assert both copyright
 infringement claims against the non-GPLv2-compliant party and
 infringement of the patent, because the implied patent license only
 extends to use of the software in accordance with the GPLv2. Further, if
 Company \compB{} distributes a competitive advanced Web browsing program 
-that is not a derivative work of Company \compA{}'s GPL'd Web browsing software
+that is not a modified version of Company \compA{}'s GPL'd Web browsing software
 program, Company \compA{} is free to assert its patent against any user or
 distributor of that product. It is irrelevant whether Company \compB's
 program is also distributed under the GPLv2, as Company \compB{} can not grant
@@ -3805,12 +3804,11 @@ Terms to Your New Programs'' to just the bare essentials.
 \chapter{The Lesser GPL}
 
 As we have seen in our consideration of the GPL, its text is specifically
-designed to cover all possible derivative works under copyright law. Our
-goal in designing the GPL was to make sure that any derivative work of GPL'd
-software was itself released under the GPL when distributed. Reaching as far
-as copyright law will allow is the most direct way to reach that goal.
+designed to cover all possible derivative, modified and/or combined works under copyright law. Our
+goal in designing the GPL was to maximize its use of the controls of
+copyright law to maximize the number of works that were covered by GPL. 
 
-However, while the strategic goal is to bring as much Free Software
+However, while the strategic goal of software freedom is to bring as much Free Software
 into the world as possible, particular tactical considerations
 regarding software freedom dictate different means. Extending the
 copyleft effect as far as copyright law allows is not always the most
@@ -3851,11 +3849,11 @@ the GNU/Linux platform be released under the GPL\@.
 Since all applications on a Unix-like system depend on the C library, it
 means that they must link with that library to function on the system. In
 other words, all applications running on a Unix-like system must be
-combined with the C library to form a new whole derivative work that is
+combined with the C library to form a new whole work that is
 composed of the original application and the C library. Thus, if glibc
 were GPL'd, each and every application distributed for use on GNU/Linux
 would also need to be GPL'd, since to even function, such applications
-would need to be combined into larger derivative works by linking with
+would need to be combined into larger works by linking with
 glibc.
 
 At first glance, such an outcome seems like a windfall for Free Software
@@ -3947,12 +3945,10 @@ same legal mechanisms and are enforced precisely the same way.
 
 We strike a difference only in the early portions of the license.
 Namely, in the LGPL we go into deeper detail of granting various permissions to
-create derivative works, so the re-distributors can make
-some proprietary derivatives. Since we simply do not allow the
-license to stretch as far as copyright law does regarding what
-derivative works must be relicensed under the same terms, we must go
-further to explain which derivative works we will allow to be
-proprietary. Thus, we'll see that the front matter of the LGPL is a
+create certain types of combinations, modifications and derivations.
+The LGPL does not stretch the requirements as far as copyright law does regarding what
+works must be relicensed under the same terms.  Therefore, LGPL must
+in detail explain which works can be proprietary.  Thus, we'll see that the front matter of the LGPL is a
 bit more wordy and detailed with regards to the permissions granted to
 those who modify or redistribute the software.
 
@@ -3992,37 +3988,37 @@ or modified Free version or to make their own modifications, even if they
 cannot modify the primary software program that links to that library.
 
 Finally, the preamble introduces two terms used throughout the license to
-clarify between the different types of derivative works: ``works that use
+clarify between the different types of combined works: ``works that use
 the library,'' and ``works based on the library.''  Unlike the GPL, the LGPL must
-draw some lines regarding derivative works. We do this here in this
+draw some lines regarding permissibly proprietary combined works.  We do this here in this
 license because we specifically seek to liberalize the rights afforded to
-those who make derivative works. In the GPL, we reach as far as copyright law
+those who make combined works. In the GPL, we reach as far as copyright law
 allows. In the LGPL, we want to draw a line that allows some derivative works
 copyright law would otherwise prohibit if the copyright holder exercised
 his full permitted controls over the work.
 
 \section{An Application: A Work that Uses the Library}
 
-In the effort to allow certain proprietary derivative works and prohibit
-others, the LGPL distinguishes between two classes of derivative works:
+In the effort to allow certain proprietary works and prohibit
+others, the LGPL distinguishes between two classes of works:
 ``works based on the library,'' and ``works that use the library.''  The
-distinction is drawn on the bright line of binary (or runtime) derivative
-works and source code derivatives. We will first consider the definition
+distinction is drawn on the bright line of binary (or runtime) combined
+works and modified versions of source code. We will first consider the definition
 of a ``work that uses the library,'' which is set forth in LGPLv2.1~\S5.
 
 We noted in our discussion of GPLv2~\S3 (discussed in
 Section~\ref{GPLv2s3} of this document) that binary programs when
-compiled and linked with GPL'd software are derivative works of that GPL'd
-software. This includes both linking that happens at compile-time (when
+compiled and linked with GPL'd software are covered as a whole by GPL\@.
+This includes both linking that happens at compile-time (when
 the binary is created) or at runtime (when the binary -- including library
 and main program both -- is loaded into memory by the user). In GPL,
-binary derivative works are controlled by the terms of the license (in GPLv2~\S3),
-and distributors of such binary derivatives must release full
+binary works are controlled by the terms of the license (in GPLv2~\S3),
+and distributors of such binary works must release full
 corresponding source\@.
 
-In the case of LGPL, these are precisely the types of derivative works
-we wish to permit. This scenario, defined in LGPL as ``a work that uses
-the library,'' works as follows:
+The LGPL, by contrast, allows partial proprietarization of such binary works.
+This scenario, defined in LGPL as ``a work that uses the library,'' works as
+follows:
 
 \newcommand{\workl}{$\mathcal{L}$}
 \newcommand{\lplusi}{$\mathcal{L\!\!+\!\!I}$}
@@ -4040,10 +4036,10 @@ the library,'' works as follows:
 \item The new copyright holder, for her software to be useful, realizes
   that it cannot run without combining \worki{} and \workl{}.
   Specifically, when she creates a running binary program, that running
-  binary must be a derivative work, called \lplusi{}, that the user can
+  binary must be a combined work, called \lplusi{}, that the user can
   run.
 
-\item Since \lplusi{} is a derivative work of both \worki{} and \workl{},
+\item Since \lplusi{} is a based on both \worki{} and \workl{},
   the license of \workl{} (the LGPL) can put restrictions on the license
   of \lplusi{}. In fact, this is what the LGPL does.
 
@@ -4064,7 +4060,7 @@ In addition, the only reason that LGPLv2.1 has any control over the licensing
 of a ``work that uses the library'' is for the same reason that GPL has
 some say over separate and independent works. Namely, such controls exist
 because the {\em binary combination\/} (\lplusi{}) that must be created to
-make the separate work (\worki{}) at all useful is a derivative work of
+make the separate work (\worki{}) at all useful is a  work based on
 the LGPLv2.1'd software (\workl{}).
 
 Thus, a two-question test that will help indicate if a particular work is
@@ -4076,8 +4072,8 @@ a ``work that uses the library'' under LGPLv2.1 is as follows:
   completely independent work that stands by itself, and includes no
   source code from \workl{}?
 
-\item When the source code is compiled, does it create a derivative work
-  by combining with \workl{}, either by static (compile-time) or dynamic
+\item When the source code is compiled, does it combine into a single work
+  with \workl{}, either by static (compile-time) or dynamic
   (runtime) linking, to create a new binary work, \lplusi{}?
 \end{enumerate}
 
@@ -4093,24 +4089,26 @@ warranted.
 \section{The Library, and Works Based On It}
 
 In short, a ``work based on the library'' could be defined as any
-derivative work of LGPL'd software that cannot otherwise fit the
+work based on the LGPL'd software that cannot otherwise fit the
 definition of a ``work that uses the library.''  A ``work based on the
-library'' extends the full width and depth of copyright derivative works,
-in the same sense that the GPL does.
+library'' extends the full width and depth of derivative, combined and/or
+modified works under copyright law, in the same sense that the GPL does.
 
 Most typically, one creates a ``work based on the library'' by directly
 modifying the source of the library. Such a work could also be created by
 tightly integrating new software with the library. The lines are no doubt
 fuzzy, just as they are with GPL'd works, since copyright law gives us no
-litmus test for derivative works of a software program.
+litmus test for determining if a given work is a derivative or otherwise a
+modified version of another software program.
 
 Thus, the test to use when considering whether something is a ``work
 based on the library'' is as follows:
 
 \begin{enumerate}
 
-\item Is the new work, when in source form, a derivative work under
-  copyright law of the LGPL'd work?
+\item Is the new work, when in source form, a derivative and/or modified
+  work of, and/or a combined work with the LGPL'd work under
+  copyright law?
 
 \item Is there no way in which the new work fits the definition of a
   ``work that uses the library''?
@@ -4124,9 +4122,9 @@ based on the library'' and a ``work that uses the library.''
 
 In our years of work with the LGPLv2.1, however, we have never seen a work
 of software that was not clearly one or the other; the line is quite
-bright. At times, though, we have seen cases where a derivative work
-appeared in some ways to be a work that used the library and in other
-ways a work based on the library. We overcame this problem by
+bright. At times, though, we have seen cases where a particularly  large work
+in some ways seemed to be both to both a work that used the library and 
+a work based on the library. We overcame this problem by
 dividing the work into smaller subunits. It was soon discovered that
 what we actually had were three distinct components: the original
 LGPL'd work, a specific set of works that used that library, and a
@@ -4156,22 +4154,23 @@ when those modules are {\em linked\/} into a full binary executable.
 
 As we have discussed, the assembly of modules can happen at compile-time
 or at runtime. Legally, there is no distinction between the two --- both
-create a derivative work by copying and combining portions of one work and
+create a modified version of the work by copying and combining portions of one work and
 mixing them with another. However, under LGPL, there is a case in the
 compilation process where the legal implications are different.
-Specifically, while we know that a ``work that uses the library'' is one
-whose final binary is a derivative work, but whose source is not, there
+To understand this phenomenon, we consider that a ``work that uses the
+library'' is typically one whose final binary is a work based on the Program,
+but whose source is not.  However, sometimes, there
 are cases where the object code --- that intermediate step between source
-and final binary --- is a derivative work created by copying verbatim code
+and final binary --- is a work created by copying and modifying code
 from the LGPL'd software.
 
 For efficiency, when a compiler turns source code into object code, it
 sometimes places literal portions of the copyrighted library code into the
 object code for an otherwise separate independent work. In the normal
-scenario, the derivative would not be created until final assembly and
+scenario, the final combined work would not be created until final assembly and
 linking of the executable occurred. However, when the compiler does this
 efficiency optimization, at the intermediate object code step, a
-derivative work is created.
+combined work is created.
 
 LGPLv2.1~\S5\P4 is designed to handle this specific case. The intent of
 the license is clearly that simply compiling software to ``make use'' of
@@ -4265,7 +4264,7 @@ conditions:
 \item Binary distribution of the library only, covered in LGPLv2.1~\S4,
   which is effectively equivalent to LGPLv2.1~\S3
 
-\item Creating aggregates of libraries that are not derivative works of
+\item Creating aggregates of libraries that are separate and independent works from
   each other, and distributing them as a unit (in LGPLv2.1~\S7)
 
 \end{itemize}
@@ -4392,9 +4391,12 @@ much. The glib answer is that by releasing the whole product as Free
 Software, it is always easy to comply with the GPL. However,
 admittedly to the dismay of FSF, many modern and complex software
 systems are built using both proprietary and GPL'd components that are
-not legally derivative works of each other. Sometimes, it is easier simply to
-improve existing GPL'd application than to start from scratch. In
-exchange for that benefit, the license requires that the modifier gives
+clearly and legally separate and independent works, merely aggregated
+together on the same device.
+
+However, it's sometimes is easier, quicker, and cheaper to simply to
+improve existing GPL'd application than to start from scratch.  In
+exchange for this amazing benefit, the license requires that the modifier gives
 back to the commons that made the work easier in the first place. It is a
 reasonable trade-off and a way to help build a better world while also
 making a profit.
