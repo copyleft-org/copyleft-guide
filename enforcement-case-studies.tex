@@ -798,6 +798,107 @@ Linux.  A decade later, this situation remains largely unresolved.
 
 \end{enumerate}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIXME: expand title, etc.
+\chapter{ThinkPengiun}
+
+% FIXME
+This case study discusses one the best source code releases we've seen, which
+was provided alongside the ThinkPengiun TPE-NWIFIROUTER.  The method of
+distribution (complete source accompanying the product) and the way the source
+was laid out provide very good examples of how to make things easier for both
+the distributor and the purchaser of the hardware containing GPLed components.
+
+\section{Root Filesystem and Kernel Compilation}
+
+* We found a CD included in the box that the ThinkPenguin TPE-NWIFIROUTER
+  shipped in, labelled "libreCMC v1.2.1 source code".  On the CD, there was a
+  README file at the top level, which mentioned that to build the software, one
+  needed a GNU/Linux system as well as a list of approximately 10 packages.
+  These sorts of plain text instructions are helpful because we know what kind
+  of system we are expected to use, and what commands we should run on it.  Such
+  instructions are not strictly required, as an obviously-named shell script may
+  suffice, but they are helpful in clarifying any ambiguities that may arise.
+* Since the instructions didn't mention a specific distro to use, we ran the
+  build on an amd64 Debian 6 machine we had, after confirming the packages were
+  installed.  In particular, we ran "make", as described in the instructions in
+  the README.  The instructions said that "make menuconfig" could be used to
+  adjust the settings, but it appeared this step was optional ("Please note that
+  the default configuration is what was used to build the firmware image for
+  your router. It is advised that you use this configuration.") so we chose to
+  skip straight to the "make" step instead.  This was done after extracting the
+  librecmc-v1.2.1.tar.bz2 tarball, which was not explicitly spelled out (this
+  should ideally be added to the README), but was implied by the
+  "u-boot_reflash" file (in the same directory as the README), which explicitly
+  used the other tarball.  The build took about 40 minutes to run on our system.
+* It was helpful to know that we could use "make menuconfig" for configuration
+  changes, as being able to modify the source is an important part of the GPL's
+  requirements.  Adding instructions like these shows that the distributor is
+  aware of and interested in promoting the spirit of the GPL, by making it
+  easier to modify the source than may be strictly required by the GPL's text.
+* The "make" step completed successfully on our system and resulted in several
+  files being generated in the bin/ar71xx directory, namely firmware images.
+  There appeared to be several filesystem and kernel images, for different
+  hardware versions.  It was unclear which one to install on the particular
+  device we received or how to install it, both of which should have been
+  mentioned in the README.
+* The above installation issue is mitigated by the availability of a web UI in
+  the product that performs firmware image installation.  It would be best if
+  instructions like those at http://librecmc.org/librecmc/wiki?name=Tp+MR3020
+  were included in the README, as the user cannot be expected to infer that or
+  to find such a link.
+
+\section{U-Boot Compilation}
+
+* As mentioned above, we also found a "u-boot_reflash" file at the top level of
+  the included source CD.  We followed the instructions for compiling U-Boot,
+  which were fairly straight-forward.  One modification would be to mention that
+  "\$U-BOOT_SRC" referred to the extracted source directory, which was implied,
+  but should have been explicit.
+* Additionally, we noticed that the included toolchain binaries, which were used
+  by the U-Boot compilation process by default, did not run on our system.  In
+  particular, we received this error:
+
+mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC_2.14' not found (required by mips-librecmc-linux-uclibc-gcc.bin)
+
+* We found that by removing toolchain/bin and symlinking the toolchain built for
+  the filesystem/kernel above in its place, we were able to complete the U-Boot
+  build.  Specifically, we symlinked toolchain/bin to:
+
+  ../../staging_dir/toolchain-mips_34kc_gcc-4.6-linaro_uClibc-0.9.33.2/bin
+
+* Ideally the pre-built toolchain binaries should not be included and a symlink
+  as mentioned above should be created by default, with a mention that the
+  U-Boot build depends on the previous build for its toolchain.
+* After compilation completed successfully, we found a new U-Boot image in the
+  bin directory.  The instructions explained how to install it on the device.
+
+\section{Installation}
+
+% FIXME: add more details once install tests have been completed
+
+\section{Minor Infractions}
+
+As mentioned above, there were a few minor infractions.  These made it slightly
+difficult to complete the build and installation without additional context, but
+did not make the build impossible to complete without more information, such as
+missing source code for kernel modules or depending on a specific cross-compiler
+but not mentioning which one or, better yet, including its source code, which
+are both more problematic infractions.  These minor infractions were:
+
+% FIXME: clarify seriousness of no install instructions; lack of clarity in
+% which version to install could be more problematic
+
+* Not mentioning how to extract the source tarball and then where to run the
+  "make" command.
+* Not mentioning how to install the kernel and root filesystem on the device;
+  this is the biggest of these 3 issues but a bit less troublesome than it would
+  otherwise have been since the web-based firmware update process is well-known.
+* Using pre-built toolchain binaries that don't work on all systems instead of
+  the ones that are built in a separate step, but not moved to the right place.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % COMMENT OUT THIS CHAPTER.
 % FIXME: is this material moot now that we include the compliance guide?
