@@ -22,13 +22,13 @@ You may also
 and [download a PDF of the Guide as well](http://copyleft.org/guide/comprehensive-gpl-guide.pdf).
 
 Note the
-[canonical repository for this project is on gitorious](https://gitorious.org/copyleft-org/tutorial/source/master:). Copies
-of this repository on other sites is for informational and backup purposes
-only.
+[canonical repository for this project is on gitorious](https://gitorious.org/copyleft-org/tutorial/source/master:).
+Typically, copies of this repository on  sites other than gitorious are for informational and backup
+purposes only.
 
 ## Contributing
 
 Patches to this project are welcome.  Please
 [submit a merge request on Gitorious](https://gitorious.org/gpl-compliance-tools/merge_requests).
-If you cannot use that, you can email patches directly to Bradley.  You can
+If you cannot use that, you may email patches directly to Bradley.  You can
 find his email address in the commit logs.
