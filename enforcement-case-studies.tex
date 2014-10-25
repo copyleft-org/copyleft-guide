@@ -842,17 +842,33 @@ the distributor and the purchaser of the hardware containing GPLed components.
   should ideally be added to the README), but was implied by the
   "u-boot_reflash" file (in the same directory as the README), which explicitly
   used the other tarball.  The build took about 40 minutes to run on our system.
+
+% FIXME: Above, I'd like to see more ``walk through'' of the step by step
+% instructions.  The text is a bit terse: could be expanded to talk more.
+
+
 * It was helpful to know that we could use "make menuconfig" for configuration
   changes, as being able to modify the source is an important part of the GPL's
   requirements.  Adding instructions like these shows that the distributor is
   aware of and interested in promoting the spirit of the GPL, by making it
   easier to modify the source than may be strictly required by the GPL's text.
+
+% FIXME: We should somewhere (perhaps on each step we discuss) talk about
+% what often goes wrong on those steps, and why this is right.  As written
+% now, there is no driving home of the fact that it is uncommon that things
+% are so smooth. :)
+  
 * The "make" step completed successfully on our system and resulted in several
   files being generated in the bin/ar71xx directory, namely firmware images.
   There appeared to be several filesystem and kernel images, for different
   hardware versions.  It was unclear which one to install on the particular
   device we received or how to install it, both of which should have been
   mentioned in the README.
+
+
+% FIXME: Below, we probably want to talk to them to add this, and also, be a
+% bit more expansive.
+  
 * The above installation issue is mitigated by the availability of a web UI in
   the product that performs firmware image installation.  It would be best if
   instructions like those at http://librecmc.org/librecmc/wiki?name=Tp+MR3020
