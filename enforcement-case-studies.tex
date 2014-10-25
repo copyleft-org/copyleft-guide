@@ -829,23 +829,49 @@ the distributor and the purchaser of the hardware containing GPLed components.
 % FIXME: Spend some  time here (admittedly a digression: maybe refer to
 % another section later?) about how it's ok to specify a specific build
 % environment.
-  
-* Since the instructions didn't mention a specific distro to use, we ran the
-  build on an amd64 Debian 6 machine we had, after confirming the packages were
-  installed.  In particular, we ran "make", as described in the instructions in
-  the README.  The instructions said that "make menuconfig" could be used to
-  adjust the settings, but it appeared this step was optional ("Please note that
-  the default configuration is what was used to build the firmware image for
-  your router. It is advised that you use this configuration.") so we chose to
-  skip straight to the "make" step instead.  This was done after extracting the
-  librecmc-v1.2.1.tar.bz2 tarball, which was not explicitly spelled out (this
-  should ideally be added to the README), but was implied by the
-  "u-boot_reflash" file (in the same directory as the README), which explicitly
-  used the other tarball.  The build took about 40 minutes to run on our system.
+
+* The actual building of the source code was completed in the following way:
+** Since the instructions didn't mention a specific distro to use, we ran the
+   build on an amd64 Debian 6 machine we had.  The only distro requirement was:
+
+To build your own firmware you need to have access to a GNU/Linux system
+(case-sensitive filesystem required).
+
+** The README mentioned that:
+
+"In order to build firmware images for your router,the
+following needs to be installed :
+
+gcc, binutils, bzip2, flex, python, perl, make, find,
+grep, diff, unzip, gawk, getopt, libz-dev and libc headers."
+
+   So we ran "dpkg --list" and confirmed that each package was installed (this
+   is indicated by a leading "ii" on the line containing the package).  Other
+   GNU/Linux distributions may have other ways of determing which packages are
+   installed.
+** We then extracted the LibreCMC tarball by running
+   "tar --posix -jxpf /media/libreCMC_v1_2_1_SRC/librecmc-v1.2.1.tar.bz2".  The
+   CD did contain another tarball (librecmc-u-boot.tar.bz2), but there appeared
+   to be separate instructions for that (in the u-boot_reflash text file in the
+   same directory).  Having the README be more explicit about this would be nice
+   but did not ultimately prevent us from determing the proper steps to execute.
+** The README mentioned the following optional step, which we skipped because
+   we did not need to modify the configuration for our initial build:
+
+Please use "make menuconfig" to configure your appreciated
+configuration for the toolchain and firmware. Please note that
+the default configuration is what was used to build the firmware
+image for your router. It is advised that you use this configuration.
+
+** The next instruction was 'Simply running "make" will build your firmware.'
+   So we entered the "librecmc" directory that had been created from the above
+   "tar" command and then ran "make".  The build took about 40 minutes to run on
+   our system.
 
 % FIXME: Above, I'd like to see more ``walk through'' of the step by step
 % instructions.  The text is a bit terse: could be expanded to talk more.
-
+% FIXME(dg): Hopefully the above will suffice.  I can expand more/differently if
+% such is desired.
 
 * It was helpful to know that we could use "make menuconfig" for configuration
   changes, as being able to modify the source is an important part of the GPL's
