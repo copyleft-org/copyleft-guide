@@ -930,6 +930,41 @@ mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC_2.14' not fou
 
 % FIXME: add more details once install tests have been completed
 
+\section{Firmware Comparison}
+
+To ensure that the CCS did indeed correspond to the firmware that was shipped on
+the router, we compared the firmware image that we built using the above steps
+with the filesystem we found on the device itself.  The comparison steps we used
+were:
+
+* Extract the filesystem from the image we built by running find-firmware.pl
+  from https://gitorious.org/gpl-compliance-tools/gpl-compliance-scripts on
+  librecmc-ar71xx-generic-tl-wr841n-v8-squashfs-factory.bin from the bin/ar71xx
+  directory mentioned above (we noticed that our router said "Ver:8.2" on the
+  bottom).  Then run squashfs4.2/squashfs-tools/bat-unsquashfs42 from
+  bat-extratools (at http://www.binaryanalysis.org/en/content/show/download )
+  on the resulting morx0.squash and use the filesystem in the new squashfs-root
+  directory for comparison.
+* Login to the web interface (at http://192.168.10.1/ ) from a computer that is
+  connected to the router.
+* Set a password using the provided link at the top (the UI warns that no
+  password is set and asks the user to change it).
+* Login to the router via SSH, using the root user and the password we just set.
+* Compare representative directory listings and binaries to ensure the set of
+  included files (on the router) is similar to those found in the firmware image
+  we created (whose contents are now in the local squashfs-root directory).  In
+  particular, we did the following comparisons:
+** List the /bin folder ("ls -l /bin") and confirm the list of files is the same
+   and that the file sizes are similar.
+** Check the "strings" output of /bin/busybox to confirm it was similar in both
+   places (similar number of lines and content of lines).  One cannot directly
+   compare the binaries because the slight compilation variations will cause
+   some bits to be different.
+** Do the above two steps for /lib/modules, /usr/bin, and other directories with
+   a significant number of binaries.
+
+% FIXME: add details about how to compare the kernel binary
+
 \section{Minor Infractions}
 
 As mentioned above, there were a few minor infractions.  These made it slightly
