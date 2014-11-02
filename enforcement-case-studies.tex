@@ -901,10 +901,6 @@ image for your router. It is advised that you use this configuration.
   
 * The "make" step completed successfully on our system and resulted in several
   files being generated in the bin/ar71xx directory, namely firmware images.
-  There appeared to be several filesystem and kernel images, for different
-  hardware versions.  It was unclear which one to install on the particular
-  device we received or how to install it, both of which should have been
-  mentioned in the README.
 ** This step is normally where we run into the greatest number of build issues
    (and thus compliance problems).  In many cases, the "make" step will fail due
    to a missing package or because toolchain paths are not setup correctly.  As
@@ -915,6 +911,11 @@ image for your router. It is advised that you use this configuration.
    instructions makes it easier for the end user to successfully build the
    source release.
 
+* There appeared to be several filesystem and kernel images, for different
+  hardware versions.  It was unclear which one to install on the particular
+  device we received or how to install it, both of which should have been
+  mentioned in the README.
+
 % FIXME: Below, we probably want to talk to them to add this, and also, be a
 % bit more expansive.
   
@@ -923,6 +924,27 @@ image for your router. It is advised that you use this configuration.
   instructions like those at http://librecmc.org/librecmc/wiki?name=Tp+MR3020
   were included in the README, as the user cannot be expected to infer that or
   to find such a link.
+
+\section{Root Filesystem and Kernel Installation}
+
+As mentioned above, the specific steps for installing an updated firmware image
+were not provided, but we found that the firmware update method available in the
+web interface worked fine.  In particular, we went to http://192.168.10.1/ in
+our browser, then logged in and chose System -> Backup / Flash Firmware.  From
+there, we went to the "Flash new firmware image" section and selected the
+librecmc-ar71xx-generic-tl-wr841n-v8-squashfs-sysupgrade.bin image in the
+bin/ar71xx directory mentioned above.  We chose the "v8" image because we found
+our router said "v8.2" on the bottom and "sysupgrade" because we were doing a
+firmware upgrade rather than a fresh install.
+
+When we clicked "Flash image...", we were prompted to confirm the MD5 hash of
+the image to flash and then clicked "Proceed" to flash the image.  The process
+took about one minute, at which point we were back at the web UI login screen.
+We logged in and found that the Kernel Log section showed we were running the
+new kernel.
+
+We then logged in via SSH again and ran "busybox", which printed the new version
+string, showing it was using our newly-compiled version (given the date).
 
 \section{U-Boot Compilation}
 
@@ -960,9 +982,55 @@ mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC_2.14' not fou
 
      enforcement-case-studies_log-output/thinkpenguin_u-boot-finish_build.log
 
-\section{Installation}
+\section{U-Boot Installation}
 
-% FIXME: add more details once install tests have been completed
+We obtained a serial cable along with our router, in order to complete the
+U-Boot installation per the instructions in u-boot_reflash.  However, we were
+only able to read data from the serial port; we were unable to interrupt the
+boot process or access the U-Boot console to complete the U-Boot re-flash.  Here
+are the steps we tried:
+
+* We found the serial cable included was a USB serial adapter that had a male
+  USB type A connector on one end and 4 female jumper wires at the other end.
+  These female jumper wires were red, black, white, and green.
+* The instructions did not specify how to connect these wires, but we were able
+  to determine this in part using the "v8.4" image (close to our "v8.2" router)
+  at http://wiki.openwrt.org/toh/tp-link/tl-wr841nd#serial.console .  Aside from
+  power and ground (red and black), we did have to guess which of the wires was
+  RX and TX.  By experimentation we found that green was RX and white was TX.
+  When we tried the other way, we received no data to our serial console at boot
+  time.
+* We did have to use the included jumper pin gender changer with the USB serial
+  adapter, which we put through the holes on the router's mainboard and then
+  connected to the USB serial adapter.  The fit was fairly loose so it would be
+  nice if future router versions included a tighter gender changer or (ideally)
+  had the jumper pins soldered onto the board to begin with (so no gender
+  changer would be required).
+* We used 115200 8N1 as our serial console settings (with no hardware or
+  software flow control).  This was tested with both the minicom and screen
+  commands.  We found that if we connected all 4 wires on the USB serial adapter
+  that the router would start without additional power and our console would
+  receive the startup messages.  We could replicate the same behavior by
+  omitting the power cable from the USB serial adapter (red wire) and connecting
+  the main power adapter to the router instead.
+* While we did see the U-Boot and kernel boot logs in our serial console, we
+  were unable to interrupt the boot process as u-boot_reflash indicated we
+  should.  We suspect this is a misconfiguration of our serial console, but it's
+  unclear exactly how it is misconfigured, as we were able to receive data fine
+  (we just couldn't send data to the router).
+* As a result, we were unable to complete the U-Boot installation test.  We did
+  appreciate that installation instructions were included, though these
+  instructions should be updated to include more specifics about connecting the
+  serial cable.  Since ThinkPenguin does have the option to ship a serial
+  adapter with the router, it would be helpful if instructions specific to that
+  adapter were included, as the wiring configuration one should use was unclear.
+* Additionally, instructions for removing the router's case should be included.
+  We found that the two screws that needed removal to open the case were hidden
+  underneath rubber feet on the case.  Indicating which feet need removal to
+  unscrew the case would be helpful.  The instructions should also note that the
+  case needs to be carefully separated once the screws are removed; it
+  effectively snaps apart, but care must be taken to avoid breaking the plastic
+  fasteners that keep the case together after the screws are removed.
 
 \section{Firmware Comparison}
 
@@ -996,8 +1064,14 @@ were:
    some bits to be different.
 ** Do the above two steps for /lib/modules, /usr/bin, and other directories with
    a significant number of binaries.
-
-% FIXME: add details about how to compare the kernel binary
+** To check that the kernel is sufficiently similar, compare the "dmesg" output
+   both before and after flashing the new firmware.  The kernel version string
+   should be similar, but should have a different build date and user@host
+   indicator.  The kernel binary itself is not easily accessible from an SSH
+   login, but may be retrievable using the U-Boot console (the start address of
+   the kernel in flash appears to be 0x9F000000, based on the u-boot_reflash
+   instructions).  We were not able to verify this, due to the serial connection
+   issues (see above section on U-Boot installation).
 
 \section{Minor Infractions}
 
@@ -1018,6 +1092,13 @@ are both more problematic infractions.  These minor infractions were:
   otherwise have been since the web-based firmware update process is well-known.
 * Using pre-built toolchain binaries that don't work on all systems instead of
   the ones that are built in a separate step, but not moved to the right place.
+  We were able to build corresponding toolchain binaries from source (though
+  for a slightly different target) so this is not a severe toolchain violation
+  of the type we normally find (where toolchain binaries are provided without
+  source).  However, including instructions to use the built toolchain binaries
+  instead would be best, or alternatively specifying the distribution on which
+  the toolchain binaries must be run (to avoid being unable to run them as we
+  were).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
