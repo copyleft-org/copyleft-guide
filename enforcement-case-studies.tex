@@ -800,10 +800,9 @@ Linux.  A decade later, this situation remains largely unresolved.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% FIXME: expand title, etc.
+% FIXME: make this section properly TeX-formatted
 \chapter{ThinkPenguin Wireless Router: A study in Excellent CCS}
 
-% FIXME
 This case study does a step-by-step build and installation analysis of  one
 of the best Complete, Corresponding Source (CCS) releases we've seen.  The
 CSS release studied here was provided for the binary distribution of a
@@ -825,10 +824,22 @@ the distributor and the purchaser of the hardware containing GPLed components.
   of system we are expected to use, and what commands we should run on it.  Such
   instructions are not strictly required, as an obviously-named shell script may
   suffice, but they are helpful in clarifying any ambiguities that may arise.
+** Since it appears that this source release will build on a wide range of
+   distributions, it was fine that no specific distribution was specified.
+   However, most source releases we see will only build on a very specific
+   distribution, due to a variety of assumptions made about the build
+   environment.  While such a situation is not ideal in the general sense, it is
+   fine to specify a particular distribution that must be use to build the
+   source release (such as "Debian 7 amd64"), from a compliance perspective.
+   As an example, we noticed such an assumption later on in this source release,
+   but it would be easy to correct in the instructions in this situation (see
+   "`GLIBC_2.14' not found" below).
 
 % FIXME: Spend some  time here (admittedly a digression: maybe refer to
 % another section later?) about how it's ok to specify a specific build
 % environment.
+% FIXME(dg): Hopefully the above will suffice.  I can expand more/differently if
+% such is desired.
 
 * The actual building of the source code was completed in the following way:
 ** Since the instructions didn't mention a specific distro to use, we ran the
@@ -885,6 +896,8 @@ image for your router. It is advised that you use this configuration.
 % what often goes wrong on those steps, and why this is right.  As written
 % now, there is no driving home of the fact that it is uncommon that things
 % are so smooth. :)
+% FIXME(dg): Hopefully the below will suffice.  I can expand more/differently if
+% such is desired.  (I presume the above comment relates to the below text.)
   
 * The "make" step completed successfully on our system and resulted in several
   files being generated in the bin/ar71xx directory, namely firmware images.
@@ -892,7 +905,15 @@ image for your router. It is advised that you use this configuration.
   hardware versions.  It was unclear which one to install on the particular
   device we received or how to install it, both of which should have been
   mentioned in the README.
-
+** This step is normally where we run into the greatest number of build issues
+   (and thus compliance problems).  In many cases, the "make" step will fail due
+   to a missing package or because toolchain paths are not setup correctly.  As
+   a result, it is important to test the provided instructions on a clean system
+   before distributing the binaries and corresponding source.  Listing the
+   specific GNU/Linux distribution and any non-default packages required for the
+   build (ie. those installed before testing the instructions) in the build
+   instructions makes it easier for the end user to successfully build the
+   source release.
 
 % FIXME: Below, we probably want to talk to them to add this, and also, be a
 % bit more expansive.
