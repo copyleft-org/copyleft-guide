@@ -1,0 +1,22 @@
+denver@cherry:~/thinkpenguin/extract/librecmc-u-boot$ TMPDATE=`date`; time make tplink_wr841n_v8; echo $?; echo "$TMPDATE"; date
+======= Configuring for TP-Link TL-WR841N/D v8 at: Fri Oct 17 11:22:10 EDT 2014 =======
+mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC_2.14' not found (required by mips-librecmc-linux-uclibc-gcc.bin)
+Makefile:219: warning: overriding commands for target `board/ar7240/db12x/libdb12x.a'
+Makefile:188: warning: ignoring old commands for target `board/ar7240/db12x/libdb12x.a'
+Makefile:219: warning: overriding commands for target `cpu/mips/libmips.a'
+Makefile:188: warning: ignoring old commands for target `cpu/mips/libmips.a'
+Makefile:219: warning: overriding commands for target `cpu/mips/ar7240/libar7240.a'
+Makefile:188: warning: ignoring old commands for target `cpu/mips/ar7240/libar7240.a'
+mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC_2.14' not found (required by mips-librecmc-linux-uclibc-gcc.bin)
+mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC_2.14' not found (required by mips-librecmc-linux-uclibc-gcc.bin)
+make[2]: *** No rule to make target `.depend'.  Stop.
+make[1]: *** [depend] Error 2
+make: *** [tplink_wr841n_v8] Error 2
+
+real	0m0.070s
+user	0m0.017s
+sys	0m0.061s
+2
+Fri Oct 17 11:22:10 EDT 2014
+Fri Oct 17 11:22:10 EDT 2014
+denver@cherry:~/thinkpenguin/extract/librecmc-u-boot$

@@ -1,0 +1,116 @@
+denver@cherry:~/thinkpenguin/extract/librecmc-u-boot$ TMPDATE=`date`; time make tplink_wr841n_v8; echo $?; echo "$TMPDATE"; date
+Makefile:219: warning: overriding commands for target `board/ar7240/db12x/libdb12x.a'
+Makefile:188: warning: ignoring old commands for target `board/ar7240/db12x/libdb12x.a'
+Makefile:219: warning: overriding commands for target `cpu/mips/libmips.a'
+Makefile:188: warning: ignoring old commands for target `cpu/mips/libmips.a'
+Makefile:219: warning: overriding commands for target `cpu/mips/ar7240/libar7240.a'
+Makefile:188: warning: ignoring old commands for target `cpu/mips/ar7240/libar7240.a'
+======= Configuring for TP-Link TL-WR841N/D v8 at: Fri Oct 17 11:29:30 EDT 2014 =======
+Makefile:219: warning: overriding commands for target `board/ar7240/db12x/libdb12x.a'
+Makefile:188: warning: ignoring old commands for target `board/ar7240/db12x/libdb12x.a'
+Makefile:219: warning: overriding commands for target `cpu/mips/libmips.a'
+Makefile:188: warning: ignoring old commands for target `cpu/mips/libmips.a'
+Makefile:219: warning: overriding commands for target `cpu/mips/ar7240/libar7240.a'
+Makefile:188: warning: ignoring old commands for target `cpu/mips/ar7240/libar7240.a'
+a - crc32.o
+a - ctype.o
+a - display_options.o
+a - ldiv.o
+a - string.o
+a - vsprintf.o
+a - LzmaWrapper.o
+a - LzmaDecode.o
+a - main.o
+a - cmd_bootm.o
+a - cmd_boot.o
+a - cmd_flash.o
+a - cmd_mem.o
+a - cmd_custom.o
+a - cmd_net.o
+a - cmd_nvedit.o
+a - cmd_itest.o
+a - command.o
+a - console.o
+a - devices.o
+a - dlmalloc.o
+a - environment.o
+a - env_common.o
+a - env_nowhere.o
+a - exports.o
+a - flash.o
+a - lists.o
+a - env_flash.o
+a - hush.o
+a - db12x.o
+a - ../common/ar7240_pci.o
+a - ../common/ar7240_flash.o
+a - ../common/athrs27_phy.o
+a - ../common/lowlevel_init_934x.o
+a - cpu.o
+a - cache.o
+meminit.c: In function 'wasp_ddr_initial_config':
+meminit.c:242:2: warning: 'type' may be used uninitialized in this function [-Wuninitialized]
+meminit.c:205:2: warning: 'tap_val' may be used uninitialized in this function [-Wuninitialized]
+meminit.c:223:2: warning: 'cycle_val' may be used uninitialized in this function [-Wuninitialized]
+meminit.c:186:3: warning: 'ext_mod' may be used uninitialized in this function [-Wuninitialized]
+meminit.c:164:2: warning: 'ddr_config2' may be used uninitialized in this function [-Wuninitialized]
+meminit.c:161:2: warning: 'ddr_config' may be used uninitialized in this function [-Wuninitialized]
+ar7240_serial.c: In function 'ar7240_sys_frequency':
+ar7240_serial.c:51:52: warning: unused variable 'frac' [-Wunused-variable]
+ar7240_serial.c:51:45: warning: unused variable 'nfrac' [-Wunused-variable]
+a - meminit.o
+a - ar7240_serial.o
+a - ag934x.o
+a - board.o
+a - time.o
+a - mips_linux.o
+a - netconsole.o
+a - pci.o
+a - net.o
+a - tftp.o
+a - rarp.o
+a - eth.o
+a - bootp.o
+a - sntp.o
+a - httpd.o
+a - date.o
+a - uip.o
+a - uip_arch.o
+a - uip_arp.o
+a - httpd.o
+a - fs.o
+a - bootstrap_board.o
+a - LzmaDecode.o
+a - string.o
+a - crc32.o
+a - LzmaWrapper.o
+a - time.o
+Image Name:   u-boot image
+Created:      Fri Oct 17 11:29:34 2014
+Image Type:   MIPS Linux Firmware (lzma compressed)
+Data Size:    48569 Bytes = 47.43 kB = 0.05 MB
+Load Address: 0x80010000
+Entry Point:  0x80010000
+make[1]: Entering directory `/home/denver/thinkpenguin/extract/librecmc-u-boot'
+
+======= Preparing 64KB file filled with 0xFF... =======
+64+0 records in
+128+0 records out
+65536 bytes (66 kB) copied, 0.000202628 s, 323 MB/s
+
+======= Copying U-Boot image... =======
+123+1 records in
+123+1 records out
+63305 bytes (63 kB) copied, 0.000114554 s, 553 MB/s
+
+======= U-Boot image ready, size: 65536 bytes =======
+
+make[1]: Leaving directory `/home/denver/thinkpenguin/extract/librecmc-u-boot'
+
+real	0m3.658s
+user	0m2.643s
+sys	0m1.052s
+0
+Fri Oct 17 11:29:30 EDT 2014
+Fri Oct 17 11:29:34 EDT 2014
+denver@cherry:~/thinkpenguin/extract/librecmc-u-boot$

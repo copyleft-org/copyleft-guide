@@ -1,0 +1,201 @@
+denver@cherry:~/thinkpenguin/extract/librecmc$ TMPDATE=`date`; time make; echo $?; echo "$TMPDATE"; date
+Collecting package info: done
+Collecting target info: done
+Checking 'working-make'... ok.
+Checking 'case-sensitive-fs'... ok.
+Checking 'getopt'... ok.
+Checking 'fileutils'... ok.
+Checking 'working-gcc'... ok.
+Checking 'working-g++'... ok.
+Checking 'ncurses'... ok.
+Checking 'zlib'... ok.
+Checking 'gawk'... ok.
+Checking 'unzip'... ok.
+Checking 'bzip2'... ok.
+Checking 'perl'... ok.
+Checking '/usr/bin/python'... ok.
+Checking 'wget'... ok.
+Checking 'git'... ok.
+Checking 'gnutar'... ok.
+Checking 'svn'... ok.
+Checking 'openssl'... ok.
+Checking 'gnu-find'... ok.
+Checking 'getopt-extended'... ok.
+Checking 'non-root'... ok.
+ make[1] world
+ make[2] tools/install
+ make[3] -C tools/patch compile
+ make[3] -C tools/patch install
+ make[3] -C tools/m4 compile
+ make[3] -C tools/m4 install
+ make[3] -C tools/sed compile
+ make[3] -C tools/sed install
+ make[3] -C tools/libtool compile
+ make[3] -C tools/libtool install
+ make[3] -C tools/autoconf compile
+ make[3] -C tools/autoconf install
+ make[3] -C tools/pkg-config compile
+ make[3] -C tools/pkg-config install
+ make[3] -C tools/xz compile
+ make[3] -C tools/xz install
+ make[3] -C tools/automake compile
+ make[3] -C tools/automake install
+ make[3] -C tools/gmp compile
+ make[3] -C tools/gmp install
+ make[3] -C tools/mpfr compile
+ make[3] -C tools/mpfr install
+ make[3] -C tools/mpc compile
+ make[3] -C tools/mpc install
+ make[3] -C tools/libelf compile
+ make[3] -C tools/libelf install
+ make[3] -C tools/flex compile
+ make[3] -C tools/flex install
+ make[3] -C tools/bison compile
+ make[3] -C tools/bison install
+ make[3] -C tools/mklibs compile
+ make[3] -C tools/mklibs install
+ make[3] -C tools/sstrip compile
+ make[3] -C tools/sstrip install
+ make[3] -C tools/ipkg-utils compile
+ make[3] -C tools/ipkg-utils install
+ make[3] -C tools/genext2fs compile
+ make[3] -C tools/genext2fs install
+ make[3] -C tools/e2fsprogs compile
+ make[3] -C tools/e2fsprogs install
+ make[3] -C tools/mtd-utils compile
+ make[3] -C tools/mtd-utils install
+ make[3] -C tools/mkimage compile
+ make[3] -C tools/mkimage install
+ make[3] -C tools/firmware-utils compile
+ make[3] -C tools/firmware-utils install
+ make[3] -C tools/patch-image compile
+ make[3] -C tools/patch-image install
+ make[3] -C tools/findutils compile
+ make[3] -C tools/findutils install
+ make[3] -C tools/quilt compile
+ make[3] -C tools/quilt install
+ make[3] -C tools/yaffs2 compile
+ make[3] -C tools/yaffs2 install
+ make[3] -C tools/flock compile
+ make[3] -C tools/flock install
+ make[3] -C tools/padjffs2 compile
+ make[3] -C tools/padjffs2 install
+ make[3] -C tools/mm-macros compile
+ make[3] -C tools/mm-macros install
+ make[3] -C tools/xorg-macros compile
+ make[3] -C tools/xorg-macros install
+ make[3] -C tools/xfce-macros compile
+ make[3] -C tools/xfce-macros install
+ make[3] -C tools/missing-macros compile
+ make[3] -C tools/missing-macros install
+ make[3] -C tools/cmake compile
+ make[3] -C tools/cmake install
+ make[3] -C tools/scons compile
+ make[3] -C tools/scons install
+ make[3] -C tools/bc compile
+ make[3] -C tools/bc install
+ make[3] -C tools/lzma-old compile
+ make[3] -C tools/lzma-old install
+ make[3] -C tools/squashfs compile
+ make[3] -C tools/squashfs install
+ make[3] -C tools/lzma compile
+ make[3] -C tools/lzma install
+ make[3] -C tools/squashfs4 compile
+ make[3] -C tools/squashfs4 install
+ make[2] toolchain/install
+ make[3] -C toolchain/gdb prepare
+ make[3] -C toolchain/gdb compile
+ make[3] -C toolchain/gdb install
+ make[3] -C toolchain/binutils prepare
+ make[3] -C toolchain/binutils compile
+ make[3] -C toolchain/binutils install
+ make[3] -C toolchain/gcc/minimal prepare
+ make[3] -C toolchain/gcc/minimal compile
+ make[3] -C toolchain/gcc/minimal install
+ make[3] -C toolchain/kernel-headers prepare
+ make[3] -C toolchain/kernel-headers compile
+ make[3] -C toolchain/kernel-headers install
+ make[3] -C toolchain/uClibc/headers prepare
+ make[3] -C toolchain/uClibc/headers compile
+ make[3] -C toolchain/uClibc/headers install
+ make[3] -C toolchain/gcc/initial prepare
+ make[3] -C toolchain/gcc/initial compile
+ make[3] -C toolchain/gcc/initial install
+ make[3] -C toolchain/uClibc prepare
+ make[3] -C toolchain/uClibc compile
+ make[3] -C toolchain/uClibc install
+ make[3] -C toolchain/gcc/final prepare
+ make[3] -C toolchain/gcc/final compile
+ make[3] -C toolchain/gcc/final install
+ make[3] -C toolchain/uClibc/utils prepare
+ make[3] -C toolchain/uClibc/utils compile
+ make[3] -C toolchain/uClibc/utils install
+ make[2] target/compile
+ make[3] -C target/linux compile
+ make[2] package/cleanup
+ make[2] package/compile
+ make[3] -C package/libs/toolchain compile
+ make[3] -C package/libs/libnl-tiny compile
+ make[3] -C package/libs/libjson-c compile
+ make[3] -C package/utils/lua compile
+ make[3] -C package/libs/libubox compile
+ make[3] -C package/system/ubus compile
+ make[3] -C package/system/uci compile
+ make[3] -C package/network/config/netifd compile
+ make[3] -C package/system/opkg host-compile
+ make[3] -C package/system/ubox compile
+ make[3] -C package/system/procd compile
+ make[3] -C package/base-files compile
+ make[3] -C package/boot/uboot-envtools compile
+ make[3] -C package/kernel/gpio-button-hotplug compile
+ make[3] -C package/kernel/linux compile
+ make[3] -C package/network/services/hostapd compile
+ make[3] -C package/network/utils/iw compile
+ make[3] -C package/kernel/mac80211 compile
+ make[3] -C package/libs/gettext compile
+ make[3] -C package/libs/libiconv compile
+ make[3] -C package/libs/libtool compile
+ make[3] -C package/libs/cyassl compile
+ make[3] -C package/libs/ocf-crypto-headers compile
+ make[3] -C package/libs/zlib compile
+ make[3] -C package/libs/openssl compile
+ make[3] -C package/libs/polarssl compile
+ make[3] -C package/libs/ustream-ssl compile
+ make[3] -C package/luci/contrib/package/freifunk-common compile
+ make[3] -C package/network/utils/iptables compile
+ make[3] -C package/network/config/firewall compile
+ make[3] -C package/network/utils/iproute2 compile
+ make[3] -C package/luci/contrib/package/freifunk-gwcheck compile
+ make[3] -C package/luci/contrib/package/freifunk-mapupdate compile
+ make[3] -C package/network/services/uhttpd compile
+ make[3] -C package/network/utils/iwinfo compile
+ make[3] -C package/utils/lua host-compile
+ make[3] -C package/utils/px5g compile
+ make[3] -C package/network/services/relayd compile
+ make[3] -C package/luci/contrib/package/luci compile
+ make[3] -C package/network/config/swconfig compile
+ make[3] -C package/network/ipv6/odhcp6c compile
+ make[3] -C package/network/services/dnsmasq compile
+ make[3] -C package/network/services/dropbear compile
+ make[3] -C package/network/services/odhcpd compile
+ make[3] -C package/libs/libpcap compile
+ make[3] -C package/network/utils/linux-atm compile
+ make[3] -C package/network/utils/resolveip compile
+ make[3] -C package/network/services/ppp compile
+ make[3] -C package/system/mtd compile
+ make[3] -C package/system/opkg compile
+ make[3] -C package/utils/busybox compile
+ make[2] package/install
+ make[3] package/preconfig
+ make[2] target/install
+ make[3] -C target/linux install
+ make[3] -C target/toolchain install
+ make[2] package/index
+
+real	38m37.344s
+user	30m46.725s
+sys	6m33.225s
+0
+Fri Oct 17 09:44:56 EDT 2014
+Fri Oct 17 10:23:34 EDT 2014
+denver@cherry:~/thinkpenguin/extract/librecmc$

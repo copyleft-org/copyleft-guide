@@ -866,7 +866,9 @@ image for your router. It is advised that you use this configuration.
 ** The next instruction was 'Simply running "make" will build your firmware.'
    So we entered the "librecmc" directory that had been created from the above
    "tar" command and then ran "make".  The build took about 40 minutes to run on
-   our system.
+   our system.  The command used and output from running it are available here:
+
+    enforcement-case-studies_log-output/thinkpenguin_librecmc-complete.log
 
 % FIXME: Above, I'd like to see more ``walk through'' of the step by step
 % instructions.  The text is a bit terse: could be expanded to talk more.
@@ -914,17 +916,28 @@ image for your router. It is advised that you use this configuration.
 
 mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC_2.14' not found (required by mips-librecmc-linux-uclibc-gcc.bin)
 
+  The complete log output (including the command used to run it) is here:
+
+     enforcement-case-studies_log-output/thinkpenguin_u-boot-build_fail.log
+
 * We found that by removing toolchain/bin and symlinking the toolchain built for
   the filesystem/kernel above in its place, we were able to complete the U-Boot
   build.  Specifically, we symlinked toolchain/bin to:
 
   ../../staging_dir/toolchain-mips_34kc_gcc-4.6-linaro_uClibc-0.9.33.2/bin
 
+  Output from the symlink operation can be found here:
+
+     enforcement-case-studies_log-output/thinkpenguin_u-boot-create_symlink.log
+
 * Ideally the pre-built toolchain binaries should not be included and a symlink
   as mentioned above should be created by default, with a mention that the
   U-Boot build depends on the previous build for its toolchain.
 * After compilation completed successfully, we found a new U-Boot image in the
   bin directory.  The instructions explained how to install it on the device.
+  Output from the successful build (after the symlink was created) is here:
+
+     enforcement-case-studies_log-output/thinkpenguin_u-boot-finish_build.log
 
 \section{Installation}
 

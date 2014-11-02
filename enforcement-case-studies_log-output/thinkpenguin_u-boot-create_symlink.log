@@ -1,0 +1,4 @@
+denver@cherry:~/thinkpenguin/extract/librecmc-u-boot$ mv toolchain/bin toolchain/old_bin
+denver@cherry:~/thinkpenguin/extract/librecmc-u-boot$ cd toolchain/
+denver@cherry:~/thinkpenguin/extract/librecmc-u-boot/toolchain$ ln -s ../../librecmc/staging_dir/toolchain-mips_34kc_gcc-4.6-linaro_uClibc-0.9.33.2/bin .
+denver@cherry:~/thinkpenguin/extract/librecmc-u-boot/toolchain$
