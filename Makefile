@@ -109,7 +109,7 @@ install: all
 	rsync -HavP --delete $(HTML_OUTPUT_DIR)/ $(WEB_INSTALL_DIR)/
 	chmod -R oug+r $(WEB_INSTALL_DIR)
 	find $(WEB_INSTALL_DIR) -type d -exec chmod gou+rx {} \;
-
+	cd $(WEB_INSTALL_DIR); /bin/ln -sf comprehensive-gpl-guide.html index.html
 clean:
 	/bin/rm -f $(BOOK_BASE).ps $(BOOK_BASE).pdf $(BOOK_BASE).log texput.log $(BOOK_BASE).lg $(BOOK_BASE).tmp $(BOOK_BASE).xref *.4ct *.4tc *.aux *.dvi $(BOOK_BASE)*.html *.idv *.lg *.tmp $(BOOK_BASE).css $(BOOK_BASE).log $(BOOK_BASE).out $(BOOK_BASE)-js.* cm*png
 	/bin/rm -rf public_html
