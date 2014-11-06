@@ -833,7 +833,7 @@ the distributor and the purchaser of the hardware containing GPLed components.
    source release (such as "Debian 7 amd64"), from a compliance perspective.
    As an example, we noticed such an assumption later on in this source release,
    but it would be easy to correct in the instructions in this situation (see
-   "`GLIBC_2.14' not found" below).
+   "`GLIBC\verb0_02.14' not found" below).
 
 % FIXME: Spend some  time here (admittedly a digression: maybe refer to
 % another section later?) about how it's ok to specify a specific build
@@ -861,9 +861,9 @@ grep, diff, unzip, gawk, getopt, libz-dev and libc headers."
    GNU/Linux distributions may have other ways of determing which packages are
    installed.
 ** We then extracted the LibreCMC tarball by running
-   "tar --posix -jxpf /media/libreCMC_v1_2_1_SRC/librecmc-v1.2.1.tar.bz2".  The
+   "tar --posix -jxpf /media/libreCMC\verb0_0v1\verb0_02\verb0_01\verb0_0SRC/librecmc-v1.2.1.tar.bz2".  The
    CD did contain another tarball (librecmc-u-boot.tar.bz2), but there appeared
-   to be separate instructions for that (in the u-boot_reflash text file in the
+   to be separate instructions for that (in the u-boot\verb0_0reflash text file in the
    same directory).  Having the README be more explicit about this would be nice
    but did not ultimately prevent us from determing the proper steps to execute.
 ** The README mentioned the following optional step, which we skipped because
@@ -879,7 +879,7 @@ image for your router. It is advised that you use this configuration.
    "tar" command and then ran "make".  The build took about 40 minutes to run on
    our system.  The command used and output from running it are available here:
 
-    enforcement-case-studies_log-output/thinkpenguin_librecmc-complete.log
+    enforcement-case-studies\verb0_0log-output/thinkpenguin\verb0_0librecmc-complete.log
 
 % FIXME: Above, I'd like to see more ``walk through'' of the step by step
 % instructions.  The text is a bit terse: could be expanded to talk more.
@@ -948,30 +948,30 @@ string, showing it was using our newly-compiled version (given the date).
 
 \section{U-Boot Compilation}
 
-* As mentioned above, we also found a "u-boot_reflash" file at the top level of
+* As mentioned above, we also found a "u-boot\verb0_0reflash" file at the top level of
   the included source CD.  We followed the instructions for compiling U-Boot,
   which were fairly straight-forward.  One modification would be to mention that
-  "\$U-BOOT_SRC" referred to the extracted source directory, which was implied,
+  "\$U-BOOT\verb0_0SRC" referred to the extracted source directory, which was implied,
   but should have been explicit.
 * Additionally, we noticed that the included toolchain binaries, which were used
   by the U-Boot compilation process by default, did not run on our system.  In
   particular, we received this error:
 
-mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC_2.14' not found (required by mips-librecmc-linux-uclibc-gcc.bin)
+mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC`\verb0_02.14' not found (required by mips-librecmc-linux-uclibc-gcc.bin)
 
   The complete log output (including the command used to run it) is here:
 
-     enforcement-case-studies_log-output/thinkpenguin_u-boot-build_fail.log
+     enforcement-case-studies\verb0_0log-output/thinkpenguin\verb0_0u-boot-build\verb0_0fail.log
 
 * We found that by removing toolchain/bin and symlinking the toolchain built for
   the filesystem/kernel above in its place, we were able to complete the U-Boot
   build.  Specifically, we symlinked toolchain/bin to:
 
-  ../../staging_dir/toolchain-mips_34kc_gcc-4.6-linaro_uClibc-0.9.33.2/bin
+  ../../staging\verb0_0dir/toolchain-mips\verb0_034kc\verb0_0gcc-4.6-linaro\verb0_0uClibc-0.9.33.2/bin
 
   Output from the symlink operation can be found here:
 
-     enforcement-case-studies_log-output/thinkpenguin_u-boot-create_symlink.log
+     enforcement-case-studies\verb0_0log-output/thinkpenguin\verb0_0u-boot-create\verb0_0symlink.log
 
 * Ideally the pre-built toolchain binaries should not be included and a symlink
   as mentioned above should be created by default, with a mention that the
@@ -980,12 +980,12 @@ mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC_2.14' not fou
   bin directory.  The instructions explained how to install it on the device.
   Output from the successful build (after the symlink was created) is here:
 
-     enforcement-case-studies_log-output/thinkpenguin_u-boot-finish_build.log
+     enforcement-case-studies\verb0_0log-output/thinkpenguin\verb0_0u-boot-finish\verb0_0build.log
 
 \section{U-Boot Installation}
 
 We obtained a serial cable along with our router, in order to complete the
-U-Boot installation per the instructions in u-boot_reflash.  However, we were
+U-Boot installation per the instructions in u-boot\verb0_0reflash.  However, we were
 only able to read data from the serial port; we were unable to interrupt the
 boot process or access the U-Boot console to complete the U-Boot re-flash.  Here
 are the steps we tried:
@@ -995,7 +995,7 @@ are the steps we tried:
   These female jumper wires were red, black, white, and green.
 * The instructions did not specify how to connect these wires, but we were able
   to determine this in part using the "v8.4" image (close to our "v8.2" router)
-  at http://wiki.openwrt.org/toh/tp-link/tl-wr841nd#serial.console .  Aside from
+  at \url{http://wiki.openwrt.org/toh/tp-link/tl-wr841nd#serial.console} .  Aside from
   power and ground (red and black), we did have to guess which of the wires was
   RX and TX.  By experimentation we found that green was RX and white was TX.
   When we tried the other way, we received no data to our serial console at boot
@@ -1014,7 +1014,7 @@ are the steps we tried:
   omitting the power cable from the USB serial adapter (red wire) and connecting
   the main power adapter to the router instead.
 * While we did see the U-Boot and kernel boot logs in our serial console, we
-  were unable to interrupt the boot process as u-boot_reflash indicated we
+  were unable to interrupt the boot process as u-boot\verb0_0reflash indicated we
   should.  We suspect this is a misconfiguration of our serial console, but it's
   unclear exactly how it is misconfigured, as we were able to receive data fine
   (we just couldn't send data to the router).
@@ -1069,7 +1069,7 @@ were:
    should be similar, but should have a different build date and user@host
    indicator.  The kernel binary itself is not easily accessible from an SSH
    login, but may be retrievable using the U-Boot console (the start address of
-   the kernel in flash appears to be 0x9F000000, based on the u-boot_reflash
+   the kernel in flash appears to be 0x9F000000, based on the u-boot\verb0_0reflash
    instructions).  We were not able to verify this, due to the serial connection
    issues (see above section on U-Boot installation).
 
