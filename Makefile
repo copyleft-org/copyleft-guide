@@ -4,6 +4,10 @@ ifndef BOOK_BASE
 BOOK_BASE=comprehensive-gpl-guide
 endif
 
+ifndef WEB_INSTALL_DIR
+WEB_INSTALL_DIR = /path/to/html/install/directory
+endif
+
 LATEX_INPUT_FILES = $(BOOK_BASE).tex compliance-guide.tex license-texts.tex enforcement-case-studies.tex gpl-lgpl.tex
 BOOK_CLASS_FILE = gpl-book.cls
 
@@ -90,6 +94,9 @@ $(HTML_OUTPUT_DIR)/$(BOOK_BASE).html: $(LATEX_INPUT_FILES) $(BOOK_CLASS_FILE)
 $(BOOK_BASE).dvi: $(LATEX_INPUT_FILES) $(EPS_FIGS) ${BOOK_CLASS_FILE}
 	$(LATEX)  $(BOOK_BASE).tex
 	$(LATEX)  $(BOOK_BASE).tex
+
+install: html
+	rsync -HavP --delete $(HTML_OUTPUT_DIR)/ $(WEB_INSTALL_DIR)/
 
 clean:
 	/bin/rm -f $(BOOK_BASE).ps $(BOOK_BASE).pdf $(BOOK_BASE).log texput.log $(BOOK_BASE).lg $(BOOK_BASE).tmp $(BOOK_BASE).xref *.4ct *.4tc *.aux *.dvi $(BOOK_BASE)*.html *.idv *.lg *.tmp $(BOOK_BASE).css $(BOOK_BASE).log $(BOOK_BASE).out $(BOOK_BASE)-js.* cm*png
