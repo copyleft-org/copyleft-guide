@@ -12,6 +12,11 @@ You can build this project with the following command:
 
 HTML output will be in the public_html directory and a PDF file will be in  comprehensive-gpl-guide.pdf.
 
+You may need to first install texlive, tex4ht and a few other things.  On
+Debian-based systems, this command may work as root:
+
+    # aptitude install texlive-full make tex4ht
+
 You can also [download a prebuilt PDF file](http://ebb.org/bkuhn/articles/copyleft-book.pdf).
 
 Note the
