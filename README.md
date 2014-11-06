@@ -6,9 +6,11 @@ Public Licenses and copyleft (as applied to software).
 The primary item of interest is an omnibus book on copyleft that is built
 from the comprehensive-GPL-guide.tex file.
 
-You can likely build a PDF file from:
+You can build this project with the following command:
 
-    $ pdflatex comprehensive-gpl-guide.tex && pdflatex comprehensive-gpl-guide.tex && pdflatex comprehensive-gpl-guide.tex
+    $ make
+
+HTML output will be in the public_html directory and a PDF file will be in  comprehensive-gpl-guide.pdf.
 
 You can also [download a prebuilt PDF file](http://ebb.org/bkuhn/articles/copyleft-book.pdf).
 
