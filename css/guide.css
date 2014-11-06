@@ -1,3 +1,10 @@
 body > p.noindent {
     text-indent:1em;
 }
+body {
+    max-width: 680px;
+    margin: 0 auto !important;
+    float: none !important;
+    font-family: Georgia, serif;
+}
+.tabbing{padding-left: 2px; padding-right:2px;}
