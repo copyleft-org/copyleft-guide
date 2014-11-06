@@ -67,8 +67,8 @@ $(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html: $(LATEX_INPUT_FILES) $(WEB_CONF
 	mkdir -p $(HTML_OUTPUT_DIR)/monolithic/css
 	/bin/rm -f $(BOOK_BASE)*.html
 	/bin/rm -f $(BOOK_BASE)*.js
-	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,xhtml,mouseover"
-	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,xhtml,mouseover"
+	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,xhtml,mouseover,fn-in"
+	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,xhtml,mouseover,fn-in"
 	mv ${BOOK_BASE}*js $(HTML_OUTPUT_DIR)/monolithic/js
 	/bin/rm -f $(BOOK_BASE)*.html
 	/bin/rm -f $(BOOK_BASE)*.js
@@ -76,7 +76,7 @@ $(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html: $(LATEX_INPUT_FILES) $(WEB_CONF
 	mv $(BOOK_BASE)*html $(HTML_OUTPUT_DIR)/monolithic
 	mv cm*png $(HTML_OUTPUT_DIR)/monolithic
 	mv ${BOOK_BASE}*css $(HTML_OUTPUT_DIR)/monolithic
-	/bin/rm -f ${BOOK_BASE}*aux ${BOOK_BASE}*idv ${BOOK_BASE}*lg ${BOOK_BASE}*tmp ${BOOK_BASE}*4ct ${BOOK_BASE}*4tc ${BOOK_BASE}*toc ${BOOK_BASE}*out ${BOOK_BASE}*xref
+	/bin/rm -f ${BOOK_BASE}*aux ${BOOK_BASE}*dvi ${BOOK_BASE}*idv ${BOOK_BASE}*lg ${BOOK_BASE}*tmp ${BOOK_BASE}*4ct ${BOOK_BASE}*4tc ${BOOK_BASE}*toc ${BOOK_BASE}*out ${BOOK_BASE}*xref
 
 jscssmonolitic: $(CSS_FILES) $(JAVASCRIPT_FILES)
 	cp -pa js/*js $(HTML_OUTPUT_DIR)/monolithic/js
@@ -87,15 +87,15 @@ $(HTML_OUTPUT_DIR)/$(BOOK_BASE).html: $(LATEX_INPUT_FILES)  $(WEB_CONFIG_FILE)
 	mkdir -p $(HTML_OUTPUT_DIR)/css
 	/bin/rm -f $(BOOK_BASE)*.html
 	/bin/rm -f $(BOOK_BASE)*.js
-	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,xhtml,3,next,mouseover"
+	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,xhtml,3,next,mouseover,fn-in"
 	mv ${BOOK_BASE}*js $(HTML_OUTPUT_DIR)/js
 	/bin/rm -f $(BOOK_BASE)*.html
 	/bin/rm -f $(BOOK_BASE)*.js
-	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,3,next,webhacks"
+	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,3,next,fn-in"
 	mv ${BOOK_BASE}*css $(HTML_OUTPUT_DIR)
 	mv ${BOOK_BASE}*html $(HTML_OUTPUT_DIR)
 	mv cm*png $(HTML_OUTPUT_DIR)
-	/bin/rm -f ${BOOK_BASE}*aux ${BOOK_BASE}*idv ${BOOK_BASE}*lg ${BOOK_BASE}*tmp ${BOOK_BASE}*4ct ${BOOK_BASE}*4tc ${BOOK_BASE}*toc ${BOOK_BASE}*out ${BOOK_BASE}*xref
+	/bin/rm -f ${BOOK_BASE}*aux ${BOOK_BASE}*dvi ${BOOK_BASE}*idv ${BOOK_BASE}*lg ${BOOK_BASE}*tmp ${BOOK_BASE}*4ct ${BOOK_BASE}*4tc ${BOOK_BASE}*toc ${BOOK_BASE}*out ${BOOK_BASE}*xref
 
 jscss: $(CSS_FILE) $(JAVASCRIPT_FILES)
 	cp -pa js/*js $(HTML_OUTPUT_DIR)/js
