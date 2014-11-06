@@ -76,7 +76,7 @@ $(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html: $(LATEX_INPUT_FILES) $(WEB_CONF
 	mv $(BOOK_BASE)*html $(HTML_OUTPUT_DIR)/monolithic
 	mv cm*png $(HTML_OUTPUT_DIR)/monolithic
 	mv ${BOOK_BASE}*css $(HTML_OUTPUT_DIR)/monolithic
-	/bin/rm -f ${BOOK_BASE}*idv ${BOOK_BASE}*lg ${BOOK_BASE}*tmp ${BOOK_BASE}*4ct ${BOOK_BASE}*4tc ${BOOK_BASE}*toc ${BOOK_BASE}*out ${BOOK_BASE}*xref
+	/bin/rm -f ${BOOK_BASE}*aux ${BOOK_BASE}*idv ${BOOK_BASE}*lg ${BOOK_BASE}*tmp ${BOOK_BASE}*4ct ${BOOK_BASE}*4tc ${BOOK_BASE}*toc ${BOOK_BASE}*out ${BOOK_BASE}*xref
 
 jscssmonolitic: $(CSS_FILES) $(JAVASCRIPT_FILES)
 	cp -pa js/*js $(HTML_OUTPUT_DIR)/monolithic/js
@@ -95,7 +95,7 @@ $(HTML_OUTPUT_DIR)/$(BOOK_BASE).html: $(LATEX_INPUT_FILES)  $(WEB_CONFIG_FILE)
 	mv ${BOOK_BASE}*css $(HTML_OUTPUT_DIR)
 	mv ${BOOK_BASE}*html $(HTML_OUTPUT_DIR)
 	mv cm*png $(HTML_OUTPUT_DIR)
-	/bin/rm -f ${BOOK_BASE}*idv ${BOOK_BASE}*lg ${BOOK_BASE}*tmp ${BOOK_BASE}*4ct ${BOOK_BASE}*4tc ${BOOK_BASE}*toc ${BOOK_BASE}*out ${BOOK_BASE}*xref
+	/bin/rm -f ${BOOK_BASE}*aux ${BOOK_BASE}*idv ${BOOK_BASE}*lg ${BOOK_BASE}*tmp ${BOOK_BASE}*4ct ${BOOK_BASE}*4tc ${BOOK_BASE}*toc ${BOOK_BASE}*out ${BOOK_BASE}*xref
 
 jscss: $(CSS_FILE) $(JAVASCRIPT_FILES)
 	cp -pa js/*js $(HTML_OUTPUT_DIR)/js
