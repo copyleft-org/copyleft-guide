@@ -1,5 +1,5 @@
-body > p.noindent {
-    text-indent:1em;
+p.indent {
+    text-indent: 0em;
 }
 body {
     max-width: 680px;
