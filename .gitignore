@@ -11,3 +11,9 @@ x.ps
 \#*\#
 .\#*
 auto-save-list
+public_html
+*.idv
+*.lg
+*.tmp
+*.xref
+*.log
