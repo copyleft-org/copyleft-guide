@@ -53,12 +53,12 @@ html:	$(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html $(HTML_OUTPUT_DIR)/$(BOOK_
 .fig.pstex:
 	$(FIG2DEV) -L pstex $< > $@
 
-$(BOOK_BASE).pdf: $(PDF_FIGS) $(LATEX_INPUT_FILES) $(BOOK_CLASS_FILE)
+$(BOOK_BASE).pdf: $(PDF_FIGS) $(LATEX_INPUT_FILES)
 	$(PDFLATEX) $(BOOK_BASE)
 	$(PDFLATEX) $(BOOK_BASE)
 	$(PDFLATEX) $(BOOK_BASE)
 
-$(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html: $(LATEX_INPUT_FILES) $(BOOK_CLASS_FILE)
+$(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html: $(LATEX_INPUT_FILES)
 	mkdir -p $(HTML_OUTPUT_DIR)/monolithic/js
 	mkdir -p $(HTML_OUTPUT_DIR)/monolithic/css
 	/bin/rm -f $(BOOK_BASE)*.html
@@ -75,7 +75,7 @@ $(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html: $(LATEX_INPUT_FILES) $(BOOK_CLA
 	cp -pa js/*js $(HTML_OUTPUT_DIR)/monolithic/js
 	cp -pa css/*css $(HTML_OUTPUT_DIR)/monolithic/css
 
-$(HTML_OUTPUT_DIR)/$(BOOK_BASE).html: $(LATEX_INPUT_FILES) $(BOOK_CLASS_FILE)
+$(HTML_OUTPUT_DIR)/$(BOOK_BASE).html: $(LATEX_INPUT_FILES)
 	mkdir -p $(HTML_OUTPUT_DIR)/js
 	mkdir -p $(HTML_OUTPUT_DIR)/css
 	/bin/rm -f $(BOOK_BASE)*.html
@@ -91,12 +91,14 @@ $(HTML_OUTPUT_DIR)/$(BOOK_BASE).html: $(LATEX_INPUT_FILES) $(BOOK_CLASS_FILE)
 	cp -pa js/*js $(HTML_OUTPUT_DIR)/js
 	cp -pa css/*css $(HTML_OUTPUT_DIR)/css
 
-$(BOOK_BASE).dvi: $(LATEX_INPUT_FILES) $(EPS_FIGS) ${BOOK_CLASS_FILE}
+$(BOOK_BASE).dvi: $(LATEX_INPUT_FILES) $(EPS_FIGS)
 	$(LATEX)  $(BOOK_BASE).tex
 	$(LATEX)  $(BOOK_BASE).tex
 
 install: html
 	rsync -HavP --delete $(HTML_OUTPUT_DIR)/ $(WEB_INSTALL_DIR)/
+	chmod -R oug+r $(WEB_INSTALL_DIR)
+	find $(WEB_INSTALL_DIR) -type d -exec chmod gou+rx {} \;
 
 clean:
 	/bin/rm -f $(BOOK_BASE).ps $(BOOK_BASE).pdf $(BOOK_BASE).log texput.log $(BOOK_BASE).lg $(BOOK_BASE).tmp $(BOOK_BASE).xref *.4ct *.4tc *.aux *.dvi $(BOOK_BASE)*.html *.idv *.lg *.tmp $(BOOK_BASE).css $(BOOK_BASE).log $(BOOK_BASE).out $(BOOK_BASE)-js.* cm*png
