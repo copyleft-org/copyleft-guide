@@ -11,6 +11,10 @@ endif
 LATEX_INPUT_FILES = $(BOOK_BASE).tex compliance-guide.tex license-texts.tex enforcement-case-studies.tex gpl-lgpl.tex
 BOOK_CLASS_FILE = gpl-book.cls
 
+CSS_FILES = css/*.css
+JAVASCRIPT_FILES = js/*.js
+WEB_CONFIG_FILE = webhacks.cfg
+
 HTML_OUTPUT_DIR = public_html
 
 TEX4HT=tex4ht
@@ -26,7 +30,7 @@ all:	err $(BOOK_BASE).pdf $(BOOK_BASE).ps html
 
 pdf:	err $(BOOK_BASE).pdf
 
-html:	$(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html $(HTML_OUTPUT_DIR)/$(BOOK_BASE).html pdf $(BOOK_BASE).ps
+html:	$(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html $(HTML_OUTPUT_DIR)/$(BOOK_BASE).html pdf $(BOOK_BASE).ps jscssmonolitic jscss
 	/bin/ln -f $(BOOK_BASE).ps $(HTML_OUTPUT_DIR)/$(BOOK_BASE).ps
 	/bin/ln -f $(BOOK_BASE).pdf $(HTML_OUTPUT_DIR)/$(BOOK_BASE).pdf
 
@@ -58,7 +62,7 @@ $(BOOK_BASE).pdf: $(PDF_FIGS) $(LATEX_INPUT_FILES)
 	$(PDFLATEX) $(BOOK_BASE)
 	$(PDFLATEX) $(BOOK_BASE)
 
-$(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html: $(LATEX_INPUT_FILES)
+$(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html: $(LATEX_INPUT_FILES) $(WEB_CONFIG_FILE)
 	mkdir -p $(HTML_OUTPUT_DIR)/monolithic/js
 	mkdir -p $(HTML_OUTPUT_DIR)/monolithic/css
 	/bin/rm -f $(BOOK_BASE)*.html
@@ -72,10 +76,13 @@ $(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html: $(LATEX_INPUT_FILES)
 	mv $(BOOK_BASE)*html $(HTML_OUTPUT_DIR)/monolithic
 	mv cm*png $(HTML_OUTPUT_DIR)/monolithic
 	mv ${BOOK_BASE}*css $(HTML_OUTPUT_DIR)/monolithic
+	/bin/rm -f ${BOOK_BASE}*idv ${BOOK_BASE}*lg ${BOOK_BASE}*tmp ${BOOK_BASE}*4ct ${BOOK_BASE}*4tc ${BOOK_BASE}*toc ${BOOK_BASE}*out ${BOOK_BASE}*xref
+
+jscssmonolitic: $(CSS_FILES) $(JAVASCRIPT_FILES)
 	cp -pa js/*js $(HTML_OUTPUT_DIR)/monolithic/js
 	cp -pa css/*css $(HTML_OUTPUT_DIR)/monolithic/css
 
-$(HTML_OUTPUT_DIR)/$(BOOK_BASE).html: $(LATEX_INPUT_FILES)
+$(HTML_OUTPUT_DIR)/$(BOOK_BASE).html: $(LATEX_INPUT_FILES)  $(WEB_CONFIG_FILE)
 	mkdir -p $(HTML_OUTPUT_DIR)/js
 	mkdir -p $(HTML_OUTPUT_DIR)/css
 	/bin/rm -f $(BOOK_BASE)*.html
@@ -88,6 +95,9 @@ $(HTML_OUTPUT_DIR)/$(BOOK_BASE).html: $(LATEX_INPUT_FILES)
 	mv ${BOOK_BASE}*css $(HTML_OUTPUT_DIR)
 	mv ${BOOK_BASE}*html $(HTML_OUTPUT_DIR)
 	mv cm*png $(HTML_OUTPUT_DIR)
+	/bin/rm -f ${BOOK_BASE}*idv ${BOOK_BASE}*lg ${BOOK_BASE}*tmp ${BOOK_BASE}*4ct ${BOOK_BASE}*4tc ${BOOK_BASE}*toc ${BOOK_BASE}*out ${BOOK_BASE}*xref
+
+jscss: $(CSS_FILE) $(JAVASCRIPT_FILES)
 	cp -pa js/*js $(HTML_OUTPUT_DIR)/js
 	cp -pa css/*css $(HTML_OUTPUT_DIR)/css
 
@@ -95,7 +105,7 @@ $(BOOK_BASE).dvi: $(LATEX_INPUT_FILES) $(EPS_FIGS)
 	$(LATEX)  $(BOOK_BASE).tex
 	$(LATEX)  $(BOOK_BASE).tex
 
-install: html
+install: all
 	rsync -HavP --delete $(HTML_OUTPUT_DIR)/ $(WEB_INSTALL_DIR)/
 	chmod -R oug+r $(WEB_INSTALL_DIR)
 	find $(WEB_INSTALL_DIR) -type d -exec chmod gou+rx {} \;
