@@ -326,12 +326,66 @@ ThinkPenguin.
 
 * We found a CD included in the box that the ThinkPenguin TPE-NWIFIROUTER
   shipped in, labelled "libreCMC v1.2.1 source code".  On the CD, there was a
-  README file at the top level, which mentioned that to build the software, one
-  needed a GNU/Linux system as well as a list of approximately 10 packages.
-  These sorts of plain text instructions are helpful because we know what kind
-  of system we are expected to use, and what commands we should run on it.  Such
-  instructions are not strictly required, as an obviously-named shell script may
-  suffice, but they are helpful in clarifying any ambiguities that may arise.
+The CD found in the box was labeled ``libreCMC v1.2.1 source code'', and
+contained 407 megabytes of data.  The investigator copied this ISO and
+examined its contents.   Upon doing so, the investigator immediately found a
+file called ``README'' at the top-level directory.
+
+\lstset{tabsize=2}
+\begin{lstlisting}[language=bash]
+  $ dd if=/dev/cdrom of=libreCMC_v1.2.1_SRC.iso
+  $ mkdir libCMC
+  $ sudo mount -o loop ./libreCMC_v1.2.1_SRC.iso libCMC
+  mount: block device /path/to/libreCMC_v1.2.1_SRC.iso is write-protected, mounting read-only
+  $ ls -1 libCMC
+  bin
+  librecmc-u-boot.tar.bz2
+  librecmc-v1.2.1.tar.bz2
+  README
+  u-boot_reflash
+  $ cat libCMC/README
+\end{lstlisting}
+\label{thinkpenguin-toplevel-readme}
+The investigator therefore knew immediately to begin the CCS check by
+studying the contents of the ``README'', which contained the appropriate
+details to get started with a build:
+\begin{quotation}
+
+In order to build firmware images for your router,the following needs to be
+installed:
+
+gcc, binutils, bzip2, flex, python, perl, make, find, grep, diff, unzip,
+gawk, getopt, libz-dev and libc headers.
+
+Please use ``make menuconfig'' to configure your appreciated configuration
+for the toolchain and firmware. Please note that the default configuration is
+what was used to build the firmware image for your router. It is advised that
+you use this configuration.
+
+Simply running ``make'' will build your firmware.  The build system will
+download all sources, build the cross-compile toolchain, the kernel and all
+chosen applications.
+
+To build your own firmware you need to have access to a GNU/Linux system
+(case-sensitive filesystem required).
+\end{quotation}
+
+In other words, the first ``script'' that investigator ran in building
+testing this CCS candidate was the above, which ran on the investigator's own
+brain --- like a script of a play.  Less glibly, instructions written in
+English are particularly necessary for parts of the build and installation
+process that cannot require some amount of actual intelligence to complete.
+In this case, the investigator was able to determine the requirements for the
+host system to use when constructing the firmware for the embedded device.
+
+GPL does not, of course, give specific guidance on the form or location of
+such instructions.  Community-oriented GPL enforcers generally use a
+reasonableness standard to evaluate such instructions.  If an investigator of
+average skill in embedded firmware construction can surmise the proper
+procedures to build and install a replacement firmware, the instructions are
+likely sufficient to meet GPL's requirements.  However, in this case, the
+instructions are more abundant and give more detail.
+
 ** Since it appears that this source release will build on a wide range of
    distributions, it was fine that no specific distribution was specified.
    However, most source releases we see will only build on a very specific
@@ -622,6 +676,14 @@ are both more problematic infractions.  These minor infractions were:
     obligations at the time of distribution} (provided, of course, that the
   distributor is otherwise in compliance with copyleft.
   
+\item {\bf Include top-level build instructions in a natural language (such
+  as English) in a \hyperref[thinkpenguin-toplevel-readme]{clear and
+    conspicuous place}.}  Copyleft licenses require that someone reasonably
+  skilled in the art can reproduce your work.  Ultimately, sometimes
+  instructions written in English are necessary, and often easier than trying
+  to write programmed scripts to do everything.  The ``script'' included can
+  certainly be more like the script of a play and less like a Bash script.
+
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
