@@ -106,7 +106,9 @@ $(BOOK_BASE).dvi: $(LATEX_INPUT_FILES) $(EPS_FIGS)
 	$(LATEX)  $(BOOK_BASE).tex
 
 install: all
-	rsync -HavP --delete $(HTML_OUTPUT_DIR)/ $(WEB_INSTALL_DIR)/
+	chmod -R oug+r $(HTML_OUTPUT_DIR)
+	find $(HTML_OUTPUT_DIR) -type d -exec chmod gou+rx {} \;
+	rsync -HavP --delete --delay-updates $(HTML_OUTPUT_DIR)/ $(WEB_INSTALL_DIR)/
 	chmod -R oug+r $(WEB_INSTALL_DIR)
 	find $(WEB_INSTALL_DIR) -type d -exec chmod gou+rx {} \;
 	cd $(WEB_INSTALL_DIR); /bin/ln -sf comprehensive-gpl-guide.html index.html
