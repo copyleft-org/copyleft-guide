@@ -402,56 +402,75 @@ require a very specific host system.   Even in this case, a
 \hyperref[thinkpenguin-glibc-214-issue]{minor annoyance was found that more
   detailed instructions would address}.
 
-* The actual building of the source code was completed in the following way:
-** Since the instructions didn't mention a specific distro to use, we ran the
-   build on an amd64 Debian 6 machine we had.  The only distro requirement was:
+Anyway, since these instructions did not specify a specific host system, the
+investigator simply used his own amd64 Debian 6 desktop system.  Before
+beginning, the investigator used the following command:
 
-To build your own firmware you need to have access to a GNU/Linux system
-(case-sensitive filesystem required).
+\lstset{tabsize=2}
+\begin{lstlisting}[language=bash]
+  $ dpkg --list | egrep '^iii' | less
+\end{lstlisting}
 
-** The README mentioned that:
+to verify that the required packages listed in the README were
+installed\footnote{The \verb0dpkg0 command is a Debian-specific way of
+  finding installed packages.}.
 
-"In order to build firmware images for your router,the
-following needs to be installed :
 
-gcc, binutils, bzip2, flex, python, perl, make, find,
-grep, diff, unzip, gawk, getopt, libz-dev and libc headers."
+Next, the investigator then extracted the primary source package with the
+following command:
 
-   So we ran "dpkg --list" and confirmed that each package was installed (this
-   is indicated by a leading "ii" on the line containing the package).  Other
-   GNU/Linux distributions may have other ways of determing which packages are
-   installed.
-** We then extracted the LibreCMC tarball by running
-   "tar --posix -jxpf /media/libreCMC\verb0_0v1\verb0_02\verb0_01\verb0_0SRC/librecmc-v1.2.1.tar.bz2".  The
-   CD did contain another tarball (librecmc-u-boot.tar.bz2), but there appeared
-   to be separate instructions for that (in the u-boot\verb0_0reflash text file in the
-   same directory).  Having the README be more explicit about this would be nice
-   but did not ultimately prevent us from determing the proper steps to execute.
-** The README mentioned the following optional step, which we skipped because
-   we did not need to modify the configuration for our initial build:
+\lstset{tabsize=2}
+\begin{lstlisting}[language=bash]
+  $ tar --posix -jxpf libCMC/librecmc-v1.2.1.tar.bz2
+\end{lstlisting}
 
-Please use "make menuconfig" to configure your appreciated
-configuration for the toolchain and firmware. Please note that
-the default configuration is what was used to build the firmware
-image for your router. It is advised that you use this configuration.
+The investigator did notice an additional source release, entitled
+``librecmc-u-boot.tar.bz2''.  The investigator concluded upon simple
+inspection that the instructions found in ``u-boot\verb0_0reflash'' were
+specific instructions for that part of the CCS\@.  This was a minor
+annoyance, and ideally the ``README'' would list that fact, but the existing
+layout met the reasonable standard that community-oriented GPL enforcers
+typically apply, since the skilled investigator could determine the correct
+course of action with a few moments of study.
 
-** The next instruction was 'Simply running "make" will build your firmware.'
-   So we entered the "librecmc" directory that had been created from the above
-   "tar" command and then ran "make".  The build took about 40 minutes to run on
-   our system.  The command used and output from running it are available here:
+The investigator then noted the additional step offered by the ``README'',
+which read:
+\begin{quotation}
+Please use ``make menuconfig'' to configure your appreciated configuration
+for the toolchain and firmware. Please note that the default configuration is
+what was used to build the firmware image for your router. It is advised that
+you use this configuration.
+\end{quotation}
 
-    enforcement-case-studies\verb0_0log-output/thinkpenguin\verb0_0librecmc-complete.log
+This instruction actually goes above and beyond the requirements of GPL\@.
+Specifically, the instruction guides users in their first step toward
+exercising the freedom to modify the software.  While the GPL does contain
+requirements that facility the freedom to modify (such as ensuring the CCS is
+in the ``preferred form \hellip for making modifications to it'' form, it
+does not require that you write specific instructions explaining how
+modifications might be undertaken.  This instruction therefore exemplifies
+the exceptional quality of this particular CCS\@.
 
-% FIXME: Above, I'd like to see more ``walk through'' of the step by step
-% instructions.  The text is a bit terse: could be expanded to talk more.
-% FIXME(dg): Hopefully the above will suffice.  I can expand more/differently if
-% such is desired.
+%FIXME: add a \hyperref to some ``preferred for for modification'' stuff above.
 
-* It was helpful to know that we could use "make menuconfig" for configuration
-  changes, as being able to modify the source is an important part of the GPL's
-  requirements.  Adding instructions like these shows that the distributor is
-  aware of and interested in promoting the spirit of the GPL, by making it
-  easier to modify the source than may be strictly required by the GPL's text.
+However, for purposes of the CCS verification process, typically the
+investigator avoids any unnecessary changes to the source code during the
+build process, lest the investigator err and cause the build to fail through
+his own modification, and thus incorrectly identify the CCS as inadequate.
+Therefore, the investigator proceeded to simply run:
+
+\lstset{tabsize=2}
+\begin{lstlisting}[language=bash]
+  $ cd libCMC
+  $ make
+\end{lstlisting}
+
+and waited approximately 40 minutes for the build to complete\footnote{Build
+  times will likely vary widely on various host systems}.  The investigator
+kept a
+\href{https://gitorious.org/copyleft-org/tutorial/source/master:enforcement-case-studies_log-output/thinkpenguin_librecmc-complete.log}{full
+  log of the build}, which is not included herein due its size (approximately
+7.2K of text).
 
 % FIXME: We should somewhere (perhaps on each step we discuss) talk about
 % what often goes wrong on those steps, and why this is right.  As written
