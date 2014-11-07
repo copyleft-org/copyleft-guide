@@ -8,9 +8,9 @@
          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC By SA 4.0 International</a></li>\Hnewline}}
 
 \newcommand{\selectmulti}{\HCode{<li class="active">HTML</li>\Hnewline
-       <li><a href="/guide/monolithic">HTML (single page)</li>\Hnewline}}
-\newcommand{\selectmonolith}{\HCode{<li><a href="/guide/">HTML</li>\Hnewline
-       <li><a class="active">HTML (single page)</li>\Hnewline}}
+       <li><a href="/guide/monolithic">HTML (1 page)</a></li>\Hnewline}}
+\newcommand{\selectmonolith}{\HCode{<li><a href="/guide/">HTML</a></li>\Hnewline
+       <li><a class="active">HTML (1 page)</li>\Hnewline}}
 
 \newcommand{\finishmymenu}{\HCode{<li><a href="/guide/comprehensive-gpl-guide.pdf">PDF</li>\Hnewline
        <li><a href="/guide/comprehensive-gpl-guide.ps">Postscript</li>\Hnewline
