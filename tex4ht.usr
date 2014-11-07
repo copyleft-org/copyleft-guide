@@ -12,8 +12,8 @@
 \newcommand{\selectmonolith}{\HCode{<li><a href="/guide/">HTML</a></li>\Hnewline
        <li><a class="active">HTML (1 page)</li>\Hnewline}}
 
-\newcommand{\finishmymenu}{\HCode{<li><a href="/guide/comprehensive-gpl-guide.pdf">PDF</li>\Hnewline
-       <li><a href="/guide/comprehensive-gpl-guide.ps">Postscript</li>\Hnewline
+\newcommand{\finishmymenu}{\HCode{<li><a href="/guide/comprehensive-gpl-guide.pdf">PDF</a></li>\Hnewline
+       <li><a href="/guide/comprehensive-gpl-guide.ps">Postscript</a></li>\Hnewline
        </ul>\Hnewline}}
 
 \:CheckOption{monolith} \if:Option
