@@ -16,4 +16,6 @@
 
 \:CheckOption{monolith} \if:Option
    \newcommand{\monolith}{\Configure{@BODY}{\startmymenu\selectmonolith\finishmymenu\HCode{</nav></div></footer>}}}
+ \else
+   \newcommand{\monolith}{}
  \fi
