@@ -372,7 +372,7 @@ In other words, the first ``script'' that investigator ran in building
 testing this CCS candidate was the above, which ran on the investigator's own
 brain --- like a script of a play.  Less glibly, instructions written in
 English are particularly necessary for parts of the build and installation
-process that cannot require some amount of actual intelligence to complete.
+process that require some amount of actual intelligence to complete.
 In this case, the investigator was able to determine the requirements for the
 host system to use when constructing the firmware for the embedded device.
 
@@ -386,7 +386,7 @@ instructions are more abundant and give more detail.
 
 These instructions are more general than typical.  Often, top-level build
 instructions will specifically name a host distribution to use, such as
-``Debian 7 installed on a amd64 system with the following packages
+``Debian 7 installed on an amd64 system with the following packages
 installed''.  If the build will not complete on any other system,
 instructions should have such details.  However, in this case, the CCS can
 build on a wide range of distributions, and thus no specific distribution was
@@ -395,7 +395,7 @@ specified.
 \label{thinkpenguin-specific-host-system}
 
 In this specific case, the developers of the libreCMC project (on which the
-TPE-NWIFIROUTER is based) have clearly made effort to ensure the CCS builds
+TPE-NWIFIROUTER is based) have clearly made an effort to ensure the CCS builds
 on a variety of host systems.  The investigator was in fact dubious upon
 seeing these instructions, since finicky embedded build processes usually
 require a very specific host system.   Even in this case, a
