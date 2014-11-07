@@ -87,11 +87,11 @@ $(HTML_OUTPUT_DIR)/$(BOOK_BASE).html: $(LATEX_INPUT_FILES)  $(WEB_CONFIG_FILE)
 	mkdir -p $(HTML_OUTPUT_DIR)/css
 	/bin/rm -f $(BOOK_BASE)*.html
 	/bin/rm -f $(BOOK_BASE)*.js
-	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,xhtml,3,next,mouseover,fn-in"
+	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,xhtml,2,next,mouseover,fn-in"
 	mv ${BOOK_BASE}*js $(HTML_OUTPUT_DIR)/js
 	/bin/rm -f $(BOOK_BASE)*.html
 	/bin/rm -f $(BOOK_BASE)*.js
-	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,3,next,fn-in"
+	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,2,next,fn-in"
 	mv ${BOOK_BASE}*css $(HTML_OUTPUT_DIR)
 	mv ${BOOK_BASE}*html $(HTML_OUTPUT_DIR)
 	mv cm*png $(HTML_OUTPUT_DIR)
