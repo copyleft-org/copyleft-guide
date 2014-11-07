@@ -72,7 +72,7 @@ $(HTML_OUTPUT_DIR)/monolithic/$(BOOK_BASE).html: $(LATEX_INPUT_FILES) $(WEB_CONF
 	mv ${BOOK_BASE}*js $(HTML_OUTPUT_DIR)/monolithic/js
 	/bin/rm -f $(BOOK_BASE)*.html
 	/bin/rm -f $(BOOK_BASE)*.js
-	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,xhtml"
+	$(HTLATEX) comprehensive-gpl-guide.tex "webhacks,xhtml,fn-in"
 	mv $(BOOK_BASE)*html $(HTML_OUTPUT_DIR)/monolithic
 	mv cm*png $(HTML_OUTPUT_DIR)/monolithic
 	mv ${BOOK_BASE}*css $(HTML_OUTPUT_DIR)/monolithic
