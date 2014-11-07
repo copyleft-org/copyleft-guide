@@ -642,44 +642,57 @@ compilation).
 
 \section{Firmware Comparison}
 
-To ensure that the CCS did indeed correspond to the firmware that was shipped on
-the router, we compared the firmware image that we built using the above steps
-with the filesystem we found on the device itself.  The comparison steps we used
-were:
+To ensure that CCS did corresponds properly to the firmware original
+installed on the TPE-NWIFIROUTER, the investigator compared the built
+firmware image with the filesystem originally found on the device itself.
+The comparison steps we as follows:
 
-* Extract the filesystem from the image we built by running find-firmware.pl
-  from https://gitorious.org/gpl-compliance-tools/gpl-compliance-scripts on
-  librecmc-ar71xx-generic-tl-wr841n-v8-squashfs-factory.bin from the bin/ar71xx
-  directory mentioned above (we noticed that our router said "Ver:8.2" on the
-  bottom).  Then run squashfs4.2/squashfs-tools/bat-unsquashfs42 from
-  bat-extratools (at http://www.binaryanalysis.org/en/content/show/download )
-  on the resulting morx0.squash and use the filesystem in the new squashfs-root
-  directory for comparison.
-* Login to the web interface (at http://192.168.10.1/ ) from a computer that is
+\begin{enumerate}
+  
+\item Extract the filesystem from the image we built by running
+  \href{https://gitorious.org/copyleft-org/gpl-compliance-scripts/source/master:find-firmware.pl}{find-firmware.pl}
+  on ``bin/ar71xx/librecmc-ar71xx-generic-tl-wr841n-v8-squashfs-factory.bin''
+  bottom), and running
+  \href{http://www.binaryanalysis.org/en/content/show/download}{bat-extratools}'
+  ``squashfs4.2/squashfs-tools/bat-unsquashfs42'' (at ) on the resulting
+  morx0.squash and use the filesystem in the new squashfs-root directory for
+  comparison.
+
+\item Login to the router's web interface (at \url{http://192.168.10.1/ }) from a computer that is
   connected to the router.
-* Set a password using the provided link at the top (the UI warns that no
-  password is set and asks the user to change it).
-* Login to the router via SSH, using the root user and the password we just set.
-* Compare representative directory listings and binaries to ensure the set of
+  
+\item Set a password using the provided link at the top (since the router's
+  UI warns that no password is set and asks the user to change it).
+  
+\item Login to the router via SSH, using the root user with the
+  aforementioned password.
+  
+\item Compare representative directory listings and binaries to ensure the set of
   included files (on the router) is similar to those found in the firmware image
   we created (whose contents are now in the local squashfs-root directory).  In
   particular, we did the following comparisons:
-** List the /bin folder ("ls -l /bin") and confirm the list of files is the same
-   and that the file sizes are similar.
-** Check the "strings" output of /bin/busybox to confirm it was similar in both
-   places (similar number of lines and content of lines).  One cannot directly
+
+  \begin{enumerate}
+  \item List the /bin folder (``ls -l /bin'') and confirm the list of files is the same
+    and that the file sizes are similar.
+    
+  \item Check the ``strings'' output of ``/bin/busybox'' to confirm it was similar in both
+   places (similar number of lines and content of lines).  (One cannot directly
    compare the binaries because the slight compilation variations will cause
-   some bits to be different.
-** Do the above two steps for /lib/modules, /usr/bin, and other directories with
+   some bits to be different.)
+ \item Do the above two steps for ``/lib/modules'', ``/usr/bin'', and other directories with
    a significant number of binaries.
-** To check that the kernel is sufficiently similar, compare the "dmesg" output
-   both before and after flashing the new firmware.  The kernel version string
-   should be similar, but should have a different build date and user@host
-   indicator.  The kernel binary itself is not easily accessible from an SSH
-   login, but may be retrievable using the U-Boot console (the start address of
-   the kernel in flash appears to be 0x9F000000, based on the u-boot\verb0_0reflash
-   instructions).  We were not able to verify this, due to the serial connection
-   issues (see above section on U-Boot installation).
+   
+ \item Check that the kernel is sufficiently similar.  The investigator
+   compared the "dmesg" output both before and after flashing the new
+   firmware.  As the investigator expected, the kernel version string was
+   similar, but had a different build date and user@host indicator.  (The
+   kernel binary itself is not easily accessible from an SSH login, but was
+   retrievable using the U-Boot console (the start address of the kernel in
+   flash appears to be 0x9F000000, based on the ``u-boot\verb0_0reflash''
+   instructions).
+  \end{enumerate}
+\end{enumerate}
 
 \section{Minor Infractions}
 
