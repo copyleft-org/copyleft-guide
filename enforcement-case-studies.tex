@@ -307,6 +307,17 @@ complies with binary distribution requirements(such as those
     Related Licenses}}{discussed herein \S~\ref{GPLv2s3} and
   \S~\ref{GPLv3s6}}.
 
+\label{thinkpenguin-included-ccs}
+
+Therefore, the investigator first purchased the TPE-NWIFIROUTER through an
+online order, and when the package arrived, examined the contents of the box.
+The investigator immediately discovered that ThinkPenguin had taken advice
+from \S~\ref{offer-for-source} in this guide, and have chosen to use
+\hyperref[GPLv2s3a]{GPLv2\S3(a)} and \hyperref[GPLv3s6]{GPLv3s6}, rather an
+using the \hperref[offer-for-source]{problematic offer for source
+  provisions}.  This choice not only speeds up the investigation (since there
+is no CCS offer to test), but also simplifies the compliance requirements for
+ThinkPenguin.
 
 \section{Root Filesystem and Kernel Compilation}
 
@@ -593,6 +604,22 @@ are both more problematic infractions.  These minor infractions were:
   instead would be best, or alternatively specifying the distribution on which
   the toolchain binaries must be run (to avoid being unable to run them as we
   were).
+
+\section{Lessons Learned}
+
+  
+\begin{enumerate}
+
+\item Even though copyleft licenses have them,
+  \hyperref[thinkpenguin-included-ccs]{\bf avoid the offer-for-source
+    provisions.}  Not only does including the CCS alongside binary
+  distribution make violation investigation and compliance confirmation
+  substantially easier, but more importantly it also
+  \hyperref[offer-for-source]{completes the distributor's CCS compliance
+    obligations at the time of distribution} (provided, of course, that the
+  distributor is otherwise in compliance with copyleft.
+  
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Bortez: Modified GCC SDK}
