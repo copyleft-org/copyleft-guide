@@ -526,7 +526,9 @@ annoyances, however, while building U-Boot:
 
 \lstset{tabsize=2}
 \begin{lstlisting}
-mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC`_2.14' not found (required by mips-librecmc-linux-uclibc-gcc.bin)
+mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6:
+   version `GLIBC`_2.14' not found
+     (required by mips-librecmc-linux-uclibc-gcc.bin)
 \end{lstlisting}
 
    (The
@@ -541,7 +543,9 @@ mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC`_2.14' not fo
 
 \lstset{tabsize=2}
 \begin{lstlisting}
-$ ln -s ../../staging_dir/toolchain-mips_34kc\verb_gcc-4.6-linaro_uClibc-0.9.33.2/bin toolchain/bin
+  $ ln -s \
+  ../../staging_dir/toolchain-mips_34kc_gcc-4.6-linaro_uClibc-0.9.33.2/bin \
+  toolchain/bin
 \end{lstlisting}
 
 
