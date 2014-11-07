@@ -274,7 +274,7 @@ Fortunately, thanks in large part to the FSF's
     software freedom}.  Products must meet
   \href{http://www.fsf.org/resources/hw/endorsement/criteria}{strict
     standards for RYF certification}, and among them is a pristine example of
-  CCS\@}, electronics products have begun to appear on the market that are
+  CCS\@.}, electronics products have begun to appear on the market that are
 held to a higher standard of copyleft compliance.  As such, for the first
 time in the history of copyleft, CCS experts have pristine examples to study
 and present as exemplars worthy of emulation.
@@ -466,7 +466,7 @@ Therefore, the investigator proceeded to simply run:
 \end{lstlisting}
 
 and waited approximately 40 minutes for the build to complete\footnote{Build
-  times will likely vary widely on various host systems}.  The investigator
+  times will likely vary widely on various host systems.}.  The investigator
 kept a
 \href{https://gitorious.org/copyleft-org/tutorial/source/master:enforcement-case-studies_log-output/thinkpenguin_librecmc-complete.log}{full
   log of the build}, which is not included herein due its size (approximately
@@ -511,13 +511,13 @@ The investigator then turned his attention to the file,
 ``u-boot\verb0_0reflash'' instructions.  These instructions explained how to
 build and install the bootloader for the device.
 
-The investigator followed the instructions for compiling u-Boot, and found
+The investigator followed the instructions for compiling U-Boot, and found
 them quite straight-forward.  The investigator discovered two minor
-annoyances, however, while building U-Boot: 
+annoyances, however, while building U-Boot:
 
 \begin{itemize}
 
- \item the variable \verb0$U-BOOT_SRC0 was used as a placeholder for the name
+ \item The variable \verb0$U-BOOT_SRC0 was used as a placeholder for the name
    of the extracted source directory.  This was easy to surmise and was not a
    compliance issue (per the reasonableness standard), but explicitly stating
    that at the top of the instructions would be helpful.
@@ -540,7 +540,7 @@ mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6:
 
    This issue is an annoyance, not a compliance problem.  It was clear from
    context that these binaries were simply for a different architecture, and
-   the investigator simply removed ``toolchain/bin'' and used a symlink the
+   the investigator simply removed ``toolchain/bin'' and used a symlink to
    utilize the toolchain already built earlier (during the compilation
    discussed in \S~\ref{thinkpenguin-main-build}):
 
@@ -649,20 +649,20 @@ compilation).
 
 \section{Firmware Comparison}
 
-To ensure that CCS did corresponds properly to the firmware original
+To ensure the CCS did indeed correspond to the firmware original
 installed on the TPE-NWIFIROUTER, the investigator compared the built
 firmware image with the filesystem originally found on the device itself.
-The comparison steps we as follows:
+The comparison steps were as follows:
 
 \begin{enumerate}
   
 \item Extract the filesystem from the image we built by running
   \href{https://gitorious.org/copyleft-org/gpl-compliance-scripts/source/master:find-firmware.pl}{find-firmware.pl}
   on ``bin/ar71xx/librecmc-ar71xx-generic-tl-wr841n-v8-squashfs-factory.bin''
-  bottom), and running
+  and then running
   \href{http://www.binaryanalysis.org/en/content/show/download}{bat-extratools}'
-  ``squashfs4.2/squashfs-tools/bat-unsquashfs42'' (at ) on the resulting
-  morx0.squash and use the filesystem in the new squashfs-root directory for
+  ``squashfs4.2/squashfs-tools/bat-unsquashfs42'' on the resulting
+  morx0.squash, using the filesystem in the new squashfs-root directory for
   comparison.
 
 \item Login to the router's web interface (at \url{http://192.168.10.1/ }) from a computer that is
@@ -683,7 +683,7 @@ The comparison steps we as follows:
   \item List the /bin folder (``ls -l /bin'') and confirm the list of files is the same
     and that the file sizes are similar.
     
-  \item Check the ``strings'' output of ``/bin/busybox'' to confirm it was similar in both
+  \item Check the ``strings'' output of ``/bin/busybox'' to confirm it is similar in both
    places (similar number of lines and content of lines).  (One cannot directly
    compare the binaries because the slight compilation variations will cause
    some bits to be different.)
@@ -696,8 +696,8 @@ The comparison steps we as follows:
    similar, but had a different build date and user@host indicator.  (The
    kernel binary itself is not easily accessible from an SSH login, but was
    retrievable using the U-Boot console (the start address of the kernel in
-   flash appears to be 0x9F000000, based on the ``u-boot\verb0_0reflash''
-   instructions).
+   flash appears to be 0x9F020000, based on the boot messages seen in the
+   serial console).
   \end{enumerate}
 \end{enumerate}
 
@@ -720,7 +720,7 @@ annoyances were discovered:
   device; the user must assume the web UI must be used.
 
 \item Including pre-built toolchain binaries that don't work on all systems,
-  and failure to built  toolchain binaries to the right location.
+  and failure to put built toolchain binaries in the right location.
 \end{itemize}
 
 \section{Lessons Learned}
@@ -738,7 +738,7 @@ can be learned here:
   substantially easier, but more importantly it also
   \hyperref[offer-for-source]{completes the distributor's CCS compliance
     obligations at the time of distribution} (provided, of course, that the
-  distributor is otherwise in compliance with copyleft.
+  distributor is otherwise in compliance with copyleft).
   
 \item {\bf Include top-level build instructions in a natural language (such
   as English) in a \hyperref[thinkpenguin-toplevel-readme]{clear and
@@ -757,8 +757,9 @@ can be learned here:
 
 \item {\bf Seek to adhere to the spirit of copyleft, not just the letter of
   the license}.  ThinkPenguin uses encouragement of  users to improve and
-  make their devices better as commercial differentiator.  Copyleft advocates
-  remain baffled why other companies have not realized how large the market for
+  make their devices better as a commercial differentiator.  Copyleft advocates
+  remain baffled as to why other companies have not realized how the large the
+  market for
   users who seek hackable devices continues to grow.  By going beyond the
   mere minimal requirements of GPL, companies can immediately reap the
   benefits in that target market.
