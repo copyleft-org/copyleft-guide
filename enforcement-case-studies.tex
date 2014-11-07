@@ -471,6 +471,7 @@ kept a
 \href{https://gitorious.org/copyleft-org/tutorial/source/master:enforcement-case-studies_log-output/thinkpenguin_librecmc-complete.log}{full
   log of the build}, which is not included herein due its size (approximately
 7.2K of text).
+\label{thinkpenguin-main-build}
 
 Upon competition of the ``make'' process, the investigator immediately found
 (almost to his surprise) several large firmware files in the ``bin/ar71xx''
@@ -533,39 +534,56 @@ compilation).
 
 \section{U-Boot Compilation}
 
-* As mentioned above, we also found a "u-boot\verb0_0reflash" file at the top level of
-  the included source CD.  We followed the instructions for compiling U-Boot,
-  which were fairly straight-forward.  One modification would be to mention that
-  "\$U-BOOT\verb0_0SRC" referred to the extracted source directory, which was implied,
-  but should have been explicit.
-* Additionally, we noticed that the included toolchain binaries, which were used
-  by the U-Boot compilation process by default, did not run on our system.  In
-  particular, we received this error:
+%FIXME: link to u-boot reflash, maybe put it in log-output dir?
 
-mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC`\verb0_02.14' not found (required by mips-librecmc-linux-uclibc-gcc.bin)
+The investigator then turned his attention to the file,
+``u-boot\verb0_0reflash'' instructions.  These instructions explained how to
+build and install the bootloader for the device.
 
-  The complete log output (including the command used to run it) is here:
+The investigator followed the instructions for compiling u-Boot, and found
+them quite straight-forward.  The investigator discovered two minor
+annoyances, however, while building U-Boot: 
 
-     enforcement-case-studies\verb0_0log-output/thinkpenguin\verb0_0u-boot-build\verb0_0fail.log
+\begin{itemize}
 
-* We found that by removing toolchain/bin and symlinking the toolchain built for
-  the filesystem/kernel above in its place, we were able to complete the U-Boot
-  build.  Specifically, we symlinked toolchain/bin to:
+ \item the variable \verb0$U-BOOT_SRC0 was used as a placeholder for the name
+   of the extracted source directory.  This was easy to surmise and was not a
+   compliance issue (per the reasonableness standard), but explicitly stating
+   that at the top of the instructions would be helpful.
 
-  ../../staging\verb0_0dir/toolchain-mips\verb0_034kc\verb0_0gcc-4.6-linaro\verb0_0uClibc-0.9.33.2/bin
+\item Toolchain binaries were included and used by default by the build
+  process.  These binaries were not the appropriate ones for the
+  investigator's host system, and the build failed with the following error:
 
-  Output from the symlink operation can be found here:
+\lstset{tabsize=2}
+\begin{lstlisting}
+mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6: version `GLIBC`_2.14' not found (required by mips-librecmc-linux-uclibc-gcc.bin)
+\end{lstlisting}
 
-     enforcement-case-studies\verb0_0log-output/thinkpenguin\verb0_0u-boot-create\verb0_0symlink.log
+   (The
+\href{https://gitorious.org/copyleft-org/tutorial/source/master:enforcement-case-studies_log-output/thinkpenguin_u-boot-build_fail.log}{complete
+  log output from the failure} is too lengthy to include herein.)
 
-* Ideally the pre-built toolchain binaries should not be included and a symlink
-  as mentioned above should be created by default, with a mention that the
-  U-Boot build depends on the previous build for its toolchain.
-* After compilation completed successfully, we found a new U-Boot image in the
-  bin directory.  The instructions explained how to install it on the device.
-  Output from the successful build (after the symlink was created) is here:
+   This issue is an annoyance, not a compliance problem.  It was clear from
+   context that these binaries were simply for a different architecture, and
+   the investigator simply removed ``toolchain/bin'' and used a symlink the
+   utilize the toolchain already built earlier (during the compilation
+   discussed in \S~\ref{thinkpenguin-main-build}):
 
-     enforcement-case-studies\verb0_0log-output/thinkpenguin\verb0_0u-boot-finish\verb0_0build.log
+\lstset{tabsize=2}
+\begin{lstlisting}
+$ ln -s ../../staging_dir/toolchain-mips_34kc\verb_gcc-4.6-linaro_uClibc-0.9.33.2/bin toolchain/bin
+\end{lstlisting}
+
+
+   After this change, the U-Boot build completed successfully.
+\end{itemize}
+
+The
+\href{https://gitorious.org/copyleft-org/tutorial/source/master:enforcement-case-studies_log-output/thinkpenguin_u-boot-finish_build.log}{full
+  log of the build} is not included herein due its size (approximately 3.8K
+of text).  After that, the investigator found a new U-Boot image in the
+``bin'' directory.
 
 \section{U-Boot Installation}
 
