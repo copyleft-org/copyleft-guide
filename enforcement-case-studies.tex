@@ -472,38 +472,32 @@ kept a
   log of the build}, which is not included herein due its size (approximately
 7.2K of text).
 
-% FIXME: We should somewhere (perhaps on each step we discuss) talk about
-% what often goes wrong on those steps, and why this is right.  As written
-% now, there is no driving home of the fact that it is uncommon that things
-% are so smooth. :)
-% FIXME(dg): Hopefully the below will suffice.  I can expand more/differently if
-% such is desired.  (I presume the above comment relates to the below text.)
-  
-* The "make" step completed successfully on our system and resulted in several
-  files being generated in the bin/ar71xx directory, namely firmware images.
-** This step is normally where we run into the greatest number of build issues
-   (and thus compliance problems).  In many cases, the "make" step will fail due
-   to a missing package or because toolchain paths are not setup correctly.  As
-   a result, it is important to test the provided instructions on a clean system
-   before distributing the binaries and corresponding source.  Listing the
-   specific GNU/Linux distribution and any non-default packages required for the
-   build (ie. those installed before testing the instructions) in the build
-   instructions makes it easier for the end user to successfully build the
-   source release.
+Upon competition of the ``make'' process, the investigator immediately found
+(almost to his surprise) several large firmware files in the ``bin/ar71xx''
+directory.  Typically, this step in the CCS verification process is
+harrowing.  In most cases, the ``make'' step will fail due to a missing
+package or because toolchain paths are not setup correctly.
 
-* There appeared to be several filesystem and kernel images, for different
-  hardware versions.  It was unclear which one to install on the particular
-  device we received or how to install it, both of which should have been
-  mentioned in the README.
+From experience, the investigator is sure that ThinkPenguin's engineers did
+the most important step in self-CCS verification: use one's own instructions
+on a clean system.  Ideally, an employee with similar skills but
+unfamiliar with the specific product can most easily verify CCS  and identify
+problems before a violation occurs.
 
-% FIXME: Below, we probably want to talk to them to add this, and also, be a
-% bit more expansive.
-  
-* The above installation issue is mitigated by the availability of a web UI in
-  the product that performs firmware image installation.  It would be best if
-  instructions like those at http://librecmc.org/librecmc/wiki?name=Tp+MR3020
-  were included in the README, as the user cannot be expected to infer that or
-  to find such a link.
+% FIXME: Is there stuff about the above in the compliance guide?  If so, link
+% to it.  If not, write it, then link to it. :)
+
+However, upon completing the ``make'', the investigator was unclear which
+filesystem and kernel images to use for the TPE-NWIFIROUTER hardware.
+Ideally, the original ``README'' would indicate which image is appropriate
+for the included hardware.  However, this was ultimately an annoyance rather
+than a compliance issue due to other information available.  Specifically,
+the web UI on the TPE-NWIFIROUTER performs firmware image installation.
+While ideal would be to find
+\href{http://librecmc.org/librecmc/wiki?name=Tp+MR3020}{instructions similar
+  to these} in the README itself.  However, application of the reasonableness
+standard indicates compliance, since a knowledgeable user was able to
+determine the proper course of action.
 
 \section{Root Filesystem and Kernel Installation}
 
