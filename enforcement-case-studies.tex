@@ -500,37 +500,6 @@ installation.  While ideal would be to find
 standard indicates compliance, since a knowledgeable user was able to
 determine the proper course of action.
 
-\section{Root Filesystem and Kernel Installation}
-
-The investigator next tested installation of the firmware.  In particular,
-the investigator connected the TPE-NWIFIROUTER to a local network, and
-visited \url{http://192.168.10.1/}, logged in, and chose the option sequence:
-``System $\Rightarrow$ Backup / Flash Firmware''.
-
-From there, the investigator chose the ``Flash new firmware image'' section
-and selected the
-``librecmc-ar71xx-generic-tl-wr841n-v8-squashfs-sysupgrade.bin'' image from
-the ``bin/ar71xx'' directory.  The investigator chose the ``v8'' image upon
-verifying the physical router read ``v8.2'' on its bottom.  The investigator
-chose the ``sysupgrade'' version of the image because this was clearly a
-system upgrade (as a firmware already came preinstalled on the
-TPE-NWIFIROUTER).
-
-Upon clicking ``Flash image\hellip'', the web interface prompted the
-investigator to confirm the MD5 hash of the image to flash.  The investigator
-did so, and then clicked ``Proceed'' to flash the image.  The process took
-about one minute, at which point the web page refreshed to the login screen.
-Upon logging in, the investigator was able to confirm in ``Kernel Log''
-section of the interface that the newly built copy of Linux had indeed been
-installed.
-
-The investigator confirmed that a new version of ``busybox'' had also been
-installed by using SSH to connect to the router and ran the command
-``busybox'', which showed the newly-compiled version (via its date of
-compilation).
-
-%FIXME: dg: can you get me  a screen shot for the Kernel Log above, and paste
-%in the output of running busybox ?
 
 \section{U-Boot Compilation}
 
@@ -585,6 +554,37 @@ The
 of text).  After that, the investigator found a new U-Boot image in the
 ``bin'' directory.
 
+\section{Root Filesystem and Kernel Installation}
+
+The investigator next tested installation of the firmware.  In particular,
+the investigator connected the TPE-NWIFIROUTER to a local network, and
+visited \url{http://192.168.10.1/}, logged in, and chose the option sequence:
+``System $\Rightarrow$ Backup / Flash Firmware''.
+
+From there, the investigator chose the ``Flash new firmware image'' section
+and selected the
+``librecmc-ar71xx-generic-tl-wr841n-v8-squashfs-sysupgrade.bin'' image from
+the ``bin/ar71xx'' directory.  The investigator chose the ``v8'' image upon
+verifying the physical router read ``v8.2'' on its bottom.  The investigator
+chose the ``sysupgrade'' version of the image because this was clearly a
+system upgrade (as a firmware already came preinstalled on the
+TPE-NWIFIROUTER).
+
+Upon clicking ``Flash image\hellip'', the web interface prompted the
+investigator to confirm the MD5 hash of the image to flash.  The investigator
+did so, and then clicked ``Proceed'' to flash the image.  The process took
+about one minute, at which point the web page refreshed to the login screen.
+Upon logging in, the investigator was able to confirm in ``Kernel Log''
+section of the interface that the newly built copy of Linux had indeed been
+installed.
+
+The investigator confirmed that a new version of ``busybox'' had also been
+installed by using SSH to connect to the router and ran the command
+``busybox'', which showed the newly-compiled version (via its date of
+compilation).
+
+%FIXME: dg: can you get me  a screen shot for the Kernel Log above, and paste
+%in the output of running busybox ?
 \section{U-Boot Installation}
 
 We obtained a serial cable along with our router, in order to complete the
