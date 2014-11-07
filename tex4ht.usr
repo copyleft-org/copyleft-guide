@@ -1,21 +1,16 @@
-\newcommand{\startmymenu}{\HCode{
+\newcommand{\footermenu}{\HCode{
      <footer class="navbar navbar-default navbar-fixed-bottom copyleft-navbar">\Hnewline
        <div class="container">\Hnewline
      <nav class="collapse navbar-collapse copyleft-navbar-collapse" role="navigation">\Hnewline
-     <ul class="nav navbar-nav navbar-left">\Hnewline
-      <li><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">License: CC By SA 4.0 International</a></li>\Hnewline}}
-
-\newcommand{\selectmulti}{\HCode{<li class="active"><a href="/guide">HTML</a></li>\Hnewline
-       <li><a href="/guide/monolithic">HTML (1 page)</a></li>\Hnewline}}
-\newcommand{\selectmonolith}{\HCode{<li><a href="/guide/">HTML</a></li>\Hnewline
-       <li><a class="active"><a href="/guide/monolithic">HTML (1 page)</a></li>\Hnewline}}
-
-\newcommand{\finishmymenu}{\HCode{<li><a href="/guide/comprehensive-gpl-guide.pdf">PDF</a></li>\Hnewline
-       <li><a href="/guide/comprehensive-gpl-guide.ps">Postscript</a></li>\Hnewline
-       </ul>\Hnewline}}
+     <p class="navbar-text navbar-left">License:
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC By SA 4.0 International</a></p>\Hnewline}}
 
 \:CheckOption{monolith} \if:Option
-   \newcommand{\monolith}{\Configure{@BODY}{\startmymenu\selectmonolith\finishmymenu\HCode{</nav></div></footer>}}}
+   \newcommand{\monolith}{\Configure{@BODY}{\footermenu\HCode{</nav></div></footer>}}}
+   \newcommand{\selectpropermenuitem}{\HCode{<li><a href="/guide/">HTML</a></li>\Hnewline
+          <li class="active"> <a href="/guide/monolithic">HTML (1 page)</a></li>\Hnewline}}
  \else
-    \newcommand{\monolith}{\Configure{next+}{\startmymenu\selectmulti\finishmymenu\HCode{\Hnewline<nav class="collapse navbar-collapse copyleft-navbar-collapse" role="navigation"><ul class="nav navbar-nav navbar-right">}}{\HCode{</ul></nav></div></footer>}}}
+   \newcommand{\selectpropermenuitem}{\HCode{<li class="active"><a href="/guide">HTML</a></li>\Hnewline
+               <li><a href="/guide/monolithic">HTML (1 page)</a></li>\Hnewline}}
+   \newcommand{\monolith}{\Configure{next+}{\footermenu\HCode{\Hnewline<nav class="collapse navbar-collapse copyleft-navbar-collapse" role="navigation"><ul class="nav navbar-nav navbar-right">}}{\HCode{</ul></nav></div></footer>}}}
  \fi
