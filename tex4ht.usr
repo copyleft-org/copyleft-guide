@@ -15,9 +15,5 @@
        </ul>\Hnewline}}
 
 \:CheckOption{monolith} \if:Option
-   \newcommand{\monolith}{\Configure{@BODY}{IS MONOLITH \startmymenu\selectmonolith\finishmymenu\HCode{</nav></div></footer>}}}
- \else
-   \newcommand{\monolith}{\Configure{next+}{\startmymenu\selectmulti\finishmymenu\HCode{<div class="container">\Hnewline<header class="navbar navbar-default navbar-fixed-bottom copyleft-navbar">\Hnewline\Hnewline<nav class="collapse navbar-collapse copyleft-navbar-collapse" role="navigation"><ul class="nav navbar-nav navbar-right">}}{\HCode{</ul></nav></div></footer>}}}
-   
-
+   \newcommand{\monolith}{\Configure{@BODY}{\startmymenu\selectmonolith\finishmymenu\HCode{</nav></div></footer>}}}
  \fi
