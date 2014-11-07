@@ -694,32 +694,27 @@ The comparison steps we as follows:
   \end{enumerate}
 \end{enumerate}
 
-\section{Minor Infractions}
+\section{Minor Annoyances}
 
-As mentioned above, there were a few minor infractions.  These made it slightly
-difficult to complete the build and installation without additional context, but
-did not make the build impossible to complete without more information, such as
-missing source code for kernel modules or depending on a specific cross-compiler
-but not mentioning which one or, better yet, including its source code, which
-are both more problematic infractions.  These minor infractions were:
+As discussed in detail above, there were a few minor annoyances, none of
+which were GPL violations.  Rather, the annoyances briefly impeded the
+build and installation.  However, the investigator, as a reasonably skilled
+build engineer for embedded devices, was able to complete the process with
+the instructions provided.
 
-% FIXME: clarify seriousness of no install instructions; lack of clarity in
-% which version to install could be more problematic
+To summarize, no GPL compliance issues were found, and the CCS release was
+one of the best ever reviewed by an investigator.  However, the following
+annoyances were discovered:
 
-* Not mentioning how to extract the source tarball and then where to run the
-  "make" command.
-* Not mentioning how to install the kernel and root filesystem on the device;
-  this is the biggest of these 3 issues but a bit less troublesome than it would
-  otherwise have been since the web-based firmware update process is well-known.
-* Using pre-built toolchain binaries that don't work on all systems instead of
-  the ones that are built in a separate step, but not moved to the right place.
-  We were able to build corresponding toolchain binaries from source (though
-  for a slightly different target) so this is not a severe toolchain violation
-  of the type we normally find (where toolchain binaries are provided without
-  source).  However, including instructions to use the built toolchain binaries
-  instead would be best, or alternatively specifying the distribution on which
-  the toolchain binaries must be run (to avoid being unable to run them as we
-  were).
+\begin{itemize}
+\item Failure to explain how to extract the source tarball and then where to run the
+  ``make'' command.
+\item Failure to explain how to install the kernel and root filesystem on the
+  device; the user must assume the web UI must be used.
+
+\item Including pre-built toolchain binaries that don't work on all systems,
+  and failure to built  toolchain binaries to the right location.
+\end{itemize}
 
 \section{Lessons Learned}
 
