@@ -1,0 +1,25 @@
+\newcommand{\startmymenu}{\HCode{
+      <footer role="contentinfo">\Hnewline
+       <div class="container">\Hnewline
+<header class="navbar navbar-default navbar-fixed-bottom copyleft-navbar">\Hnewline
+     <nav class="collapse navbar-collapse copyleft-navbar-collapse" role="navigation">\Hnewline
+     <ul class="nav navbar-nav navbar-left">\Hnewline
+      <li class="navbar-text">License:\Hnewline
+         <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC By SA 4.0 International</a></li>\Hnewline}}
+
+\newcommand{\selectmulti}{\HCode{<li class="active">HTML</li>\Hnewline
+       <li><a href="/guide/monolithic">HTML (single page)</li>\Hnewline}}
+\newcommand{\selectmonolith}{\HCode{<li><a href="/guide/">HTML</li>\Hnewline
+       <li><a class="active">HTML (single page)</li>\Hnewline}}
+
+\newcommand{\finishmymenu}{\HCode{<li><a href="/guide/comprehensive-gpl-guide.pdf">PDF</li>\Hnewline
+       <li><a href="/guide/comprehensive-gpl-guide.ps">Postscript</li>\Hnewline
+       </ul>\Hnewline}}
+
+\:CheckOption{monolith} \if:Option
+   \newcommand{\monolith}{\Configure{@BODY}{\startmymenu\selectmonolith\finishmymenu\HCode{</nav></header></div></footer>}}}
+ \else
+   \newcommand{\monolith}{\Configure{next+}{\HCode{<div class="container">\Hnewline<header class="navbar navbar-default navbar-fixed-bottom copyleft-navbar">\Hnewline      <p class="navbar-text navbar-left">License:\Hnewline         <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC By SA 4.0 International</a></p>\Hnewline<nav class="collapse navbar-collapse copyleft-navbar-collapse" role="navigation"><ul class="nav navbar-nav navbar-right">}}{\HCode{</ul></nav></header></div>}}}
+   
+
+ \fi
