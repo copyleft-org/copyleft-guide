@@ -29,6 +29,6 @@ purposes only.
 ## Contributing
 
 Patches to this project are welcome.  Please
-[submit a merge request on Gitorious](https://gitorious.org/gpl-compliance-tools/merge_requests).
+[submit a merge request on Gitorious](https://gitorious.org/copyleft-org/merge_requests).
 If you cannot use that, you may email patches directly to Bradley.  You can
 find his email address in the commit logs.
