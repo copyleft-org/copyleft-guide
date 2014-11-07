@@ -386,16 +386,23 @@ procedures to build and install a replacement firmware, the instructions are
 likely sufficient to meet GPL's requirements.  However, in this case, the
 instructions are more abundant and give more detail.
 
-** Since it appears that this source release will build on a wide range of
-   distributions, it was fine that no specific distribution was specified.
-   However, most source releases we see will only build on a very specific
-   distribution, due to a variety of assumptions made about the build
-   environment.  While such a situation is not ideal in the general sense, it is
-   fine to specify a particular distribution that must be use to build the
-   source release (such as "Debian 7 amd64"), from a compliance perspective.
-   As an example, we noticed such an assumption later on in this source release,
-   but it would be easy to correct in the instructions in this situation (see
-   "`GLIBC\verb0_02.14' not found" below).
+These instructions are more general than typical.  Often, top-level build
+instructions will specifically name a host distribution to use, such as
+``Debian 7 installed on a amd64 system with the following packages
+installed''.  If the build will not complete on any other system,
+instructions should have such details.  However, in this case, the CCS can
+build on a wide range of distributions, and thus no specific distribution was
+specified.
+
+\label{thinkpenguin-specific-host-system}
+
+In this specific case, the developers of the libreCMC project (on which the
+TPE-NWIFIROUTER is based) have clearly made effort to ensure the CCS builds
+on a variety of host systems.  The investigator was in fact dubious upon
+seeing these instructions, since finicky embedded build processes usually
+require a very specific host system.   Even in this case, a
+\hyperref[thinkpenguin-glibc-214-issue]{minor annoyance was found that more
+  detailed instructions would address}.
 
 % FIXME: Spend some  time here (admittedly a digression: maybe refer to
 % another section later?) about how it's ok to specify a specific build
@@ -684,6 +691,12 @@ are both more problematic infractions.  These minor infractions were:
   to write programmed scripts to do everything.  The ``script'' included can
   certainly be more like the script of a play and less like a Bash script.
 
+\item {\bf Write build/install instructions to the appropriate level of
+  specificity}.  The upstream engineers
+  in this case study \hyperref[thinkpenguin-specific-host-system]{clearly did
+    additional work to ensure functionality on a wide variety of host build
+    systems}; this is quite rare.  When in doubt, include the maximum level
+  of detail build engineers can provide with the CCS instructions.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
