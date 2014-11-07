@@ -1,7 +1,6 @@
 \newcommand{\startmymenu}{\HCode{
-      <footer role="contentinfo">\Hnewline
+     <footer class="navbar navbar-default navbar-fixed-bottom copyleft-navbar">\Hnewline
        <div class="container">\Hnewline
-<header class="navbar navbar-default navbar-fixed-bottom copyleft-navbar">\Hnewline
      <nav class="collapse navbar-collapse copyleft-navbar-collapse" role="navigation">\Hnewline
      <ul class="nav navbar-nav navbar-left">\Hnewline
       <li class="navbar-text">License:\Hnewline
@@ -17,9 +16,9 @@
        </ul>\Hnewline}}
 
 \:CheckOption{monolith} \if:Option
-   \newcommand{\monolith}{\Configure{@BODY}{\startmymenu\selectmonolith\finishmymenu\HCode{</nav></header></div></footer>}}}
+   \newcommand{\monolith}{\Configure{@BODY}{IS MONOLITH \startmymenu\selectmonolith\finishmymenu\HCode{</nav></div></footer>}}}
  \else
-   \newcommand{\monolith}{\Configure{next+}{\HCode{<div class="container">\Hnewline<header class="navbar navbar-default navbar-fixed-bottom copyleft-navbar">\Hnewline      <p class="navbar-text navbar-left">License:\Hnewline         <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC By SA 4.0 International</a></p>\Hnewline<nav class="collapse navbar-collapse copyleft-navbar-collapse" role="navigation"><ul class="nav navbar-nav navbar-right">}}{\HCode{</ul></nav></header></div>}}}
+   \newcommand{\monolith}{\Configure{next+}{\startmymenu\selectmulti\finishmymenu\HCode{<div class="container">\Hnewline<header class="navbar navbar-default navbar-fixed-bottom copyleft-navbar">\Hnewline\Hnewline<nav class="collapse navbar-collapse copyleft-navbar-collapse" role="navigation"><ul class="nav navbar-nav navbar-right">}}{\HCode{</ul></nav></div></footer>}}}
    
 
  \fi
