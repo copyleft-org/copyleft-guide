@@ -488,12 +488,12 @@ problems before a violation occurs.
 % to it.  If not, write it, then link to it. :)
 
 However, upon completing the ``make'', the investigator was unclear which
-filesystem and kernel images to use for the TPE-NWIFIROUTER hardware.
+filesystem and kernel images to install on the TPE-NWIFIROUTER hardware.
 Ideally, the original ``README'' would indicate which image is appropriate
 for the included hardware.  However, this was ultimately an annoyance rather
 than a compliance issue due to other information available.  Specifically,
-the web UI on the TPE-NWIFIROUTER performs firmware image installation.
-While ideal would be to find
+the web UI (see next section) on the TPE-NWIFIROUTER performs firmware image
+installation.  While ideal would be to find
 \href{http://librecmc.org/librecmc/wiki?name=Tp+MR3020}{instructions similar
   to these} in the README itself.  However, application of the reasonableness
 standard indicates compliance, since a knowledgeable user was able to
@@ -501,24 +501,35 @@ determine the proper course of action.
 
 \section{Root Filesystem and Kernel Installation}
 
-As mentioned above, the specific steps for installing an updated firmware image
-were not provided, but we found that the firmware update method available in the
-web interface worked fine.  In particular, we went to http://192.168.10.1/ in
-our browser, then logged in and chose System -> Backup / Flash Firmware.  From
-there, we went to the "Flash new firmware image" section and selected the
-librecmc-ar71xx-generic-tl-wr841n-v8-squashfs-sysupgrade.bin image in the
-bin/ar71xx directory mentioned above.  We chose the "v8" image because we found
-our router said "v8.2" on the bottom and "sysupgrade" because we were doing a
-firmware upgrade rather than a fresh install.
+The investigator next tested installation of the firmware.  In particular,
+the investigator connected the TPE-NWIFIROUTER to a local network, and
+visited \url{http://192.168.10.1/}, logged in, and chose the option sequence:
+``System $\Rightarrow$ Backup / Flash Firmware''.
 
-When we clicked "Flash image...", we were prompted to confirm the MD5 hash of
-the image to flash and then clicked "Proceed" to flash the image.  The process
-took about one minute, at which point we were back at the web UI login screen.
-We logged in and found that the Kernel Log section showed we were running the
-new kernel.
+From there, the investigator chose the ``Flash new firmware image'' section
+and selected the
+``librecmc-ar71xx-generic-tl-wr841n-v8-squashfs-sysupgrade.bin'' image from
+the ``bin/ar71xx'' directory.  The investigator chose the ``v8'' image upon
+verifying the physical router read ``v8.2'' on its bottom.  The investigator
+chose the ``sysupgrade'' version of the image because this was clearly a
+system upgrade (as a firmware already came preinstalled on the
+TPE-NWIFIROUTER).
 
-We then logged in via SSH again and ran "busybox", which printed the new version
-string, showing it was using our newly-compiled version (given the date).
+Upon clicking ``Flash image\hellip'', the web interface prompted the
+investigator to confirm the MD5 hash of the image to flash.  The investigator
+did so, and then clicked ``Proceed'' to flash the image.  The process took
+about one minute, at which point the web page refreshed to the login screen.
+Upon logging in, the investigator was able to confirm in ``Kernel Log''
+section of the interface that the newly built copy of Linux had indeed been
+installed.
+
+The investigator confirmed that a new version of ``busybox'' had also been
+installed by using SSH to connect to the router and ran the command
+``busybox'', which showed the newly-compiled version (via its date of
+compilation).
+
+%FIXME: dg: can you get me  a screen shot for the Kernel Log above, and paste
+%in the output of running busybox ?
 
 \section{U-Boot Compilation}
 
