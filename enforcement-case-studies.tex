@@ -585,59 +585,60 @@ compilation).
 
 %FIXME: dg: can you get me  a screen shot for the Kernel Log above, and paste
 %in the output of running busybox ?
-\section{U-Boot Installation}
 
-The U-Boot installation process is substantially more complicated than the
-firmware update.  The investigator purchased the optional a serial cable
-along with the TPE-NWIFIROUTER, in order to complete the U-Boot installation
-per the instructions in'' -boot\verb0_0reflash''.
+%% \section{U-Boot Installation}
 
-However, we were
-only able to read data from the serial port; we were unable to interrupt the
-boot process or access the U-Boot console to complete the U-Boot re-flash.  Here
-are the steps we tried:
+%% The U-Boot installation process is substantially more complicated than the
+%% firmware update.  The investigator purchased the optional a serial cable
+%% along with the TPE-NWIFIROUTER, in order to complete the U-Boot installation
+%% per the instructions in'' -boot\verb0_0reflash''.
 
-* We found the serial cable included was a USB serial adapter that had a male
-  USB type A connector on one end and 4 female jumper wires at the other end.
-  These female jumper wires were red, black, white, and green.
-* The instructions did not specify how to connect these wires, but we were able
-  to determine this in part using the "v8.4" image (close to our "v8.2" router)
-  at \url{http://wiki.openwrt.org/toh/tp-link/tl-wr841nd#serial.console} .  Aside from
-  power and ground (red and black), we did have to guess which of the wires was
-  RX and TX.  By experimentation we found that green was RX and white was TX.
-  When we tried the other way, we received no data to our serial console at boot
-  time.
-* We did have to use the included jumper pin gender changer with the USB serial
-  adapter, which we put through the holes on the router's mainboard and then
-  connected to the USB serial adapter.  The fit was fairly loose so it would be
-  nice if future router versions included a tighter gender changer or (ideally)
-  had the jumper pins soldered onto the board to begin with (so no gender
-  changer would be required).
-* We used 115200 8N1 as our serial console settings (with no hardware or
-  software flow control).  This was tested with both the minicom and screen
-  commands.  We found that if we connected all 4 wires on the USB serial adapter
-  that the router would start without additional power and our console would
-  receive the startup messages.  We could replicate the same behavior by
-  omitting the power cable from the USB serial adapter (red wire) and connecting
-  the main power adapter to the router instead.
-* While we did see the U-Boot and kernel boot logs in our serial console, we
-  were unable to interrupt the boot process as u-boot\verb0_0reflash indicated we
-  should.  We suspect this is a misconfiguration of our serial console, but it's
-  unclear exactly how it is misconfigured, as we were able to receive data fine
-  (we just couldn't send data to the router).
-* As a result, we were unable to complete the U-Boot installation test.  We did
-  appreciate that installation instructions were included, though these
-  instructions should be updated to include more specifics about connecting the
-  serial cable.  Since ThinkPenguin does have the option to ship a serial
-  adapter with the router, it would be helpful if instructions specific to that
-  adapter were included, as the wiring configuration one should use was unclear.
-* Additionally, instructions for removing the router's case should be included.
-  We found that the two screws that needed removal to open the case were hidden
-  underneath rubber feet on the case.  Indicating which feet need removal to
-  unscrew the case would be helpful.  The instructions should also note that the
-  case needs to be carefully separated once the screws are removed; it
-  effectively snaps apart, but care must be taken to avoid breaking the plastic
-  fasteners that keep the case together after the screws are removed.
+%% However, we were
+%% only able to read data from the serial port; we were unable to interrupt the
+%% boot process or access the U-Boot console to complete the U-Boot re-flash.  Here
+%% are the steps we tried:
+
+%% * We found the serial cable included was a USB serial adapter that had a male
+%%   USB type A connector on one end and 4 female jumper wires at the other end.
+%%   These female jumper wires were red, black, white, and green.
+%% * The instructions did not specify how to connect these wires, but we were able
+%%   to determine this in part using the "v8.4" image (close to our "v8.2" router)
+%%   at \url{http://wiki.openwrt.org/toh/tp-link/tl-wr841nd#serial.console} .  Aside from
+%%   power and ground (red and black), we did have to guess which of the wires was
+%%   RX and TX.  By experimentation we found that green was RX and white was TX.
+%%   When we tried the other way, we received no data to our serial console at boot
+%%   time.
+%% * We did have to use the included jumper pin gender changer with the USB serial
+%%   adapter, which we put through the holes on the router's mainboard and then
+%%   connected to the USB serial adapter.  The fit was fairly loose so it would be
+%%   nice if future router versions included a tighter gender changer or (ideally)
+%%   had the jumper pins soldered onto the board to begin with (so no gender
+%%   changer would be required).
+%% * We used 115200 8N1 as our serial console settings (with no hardware or
+%%   software flow control).  This was tested with both the minicom and screen
+%%   commands.  We found that if we connected all 4 wires on the USB serial adapter
+%%   that the router would start without additional power and our console would
+%%   receive the startup messages.  We could replicate the same behavior by
+%%   omitting the power cable from the USB serial adapter (red wire) and connecting
+%%   the main power adapter to the router instead.
+%% * While we did see the U-Boot and kernel boot logs in our serial console, we
+%%   were unable to interrupt the boot process as u-boot\verb0_0reflash indicated we
+%%   should.  We suspect this is a misconfiguration of our serial console, but it's
+%%   unclear exactly how it is misconfigured, as we were able to receive data fine
+%%   (we just couldn't send data to the router).
+%% * As a result, we were unable to complete the U-Boot installation test.  We did
+%%   appreciate that installation instructions were included, though these
+%%   instructions should be updated to include more specifics about connecting the
+%%   serial cable.  Since ThinkPenguin does have the option to ship a serial
+%%   adapter with the router, it would be helpful if instructions specific to that
+%%   adapter were included, as the wiring configuration one should use was unclear.
+%% * Additionally, instructions for removing the router's case should be included.
+%%   We found that the two screws that needed removal to open the case were hidden
+%%   underneath rubber feet on the case.  Indicating which feet need removal to
+%%   unscrew the case would be helpful.  The instructions should also note that the
+%%   case needs to be carefully separated once the screws are removed; it
+%%   effectively snaps apart, but care must be taken to avoid breaking the plastic
+%%   fasteners that keep the case together after the screws are removed.
 
 \section{Firmware Comparison}
 
