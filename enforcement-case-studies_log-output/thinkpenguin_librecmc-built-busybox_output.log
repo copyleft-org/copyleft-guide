@@ -1,0 +1,46 @@
+denver@cherry:~$ ssh root@192.168.10.1
+root@192.168.10.1's password: 
+
+
+BusyBox v1.19.4 (2014-10-17 10:20:00 EDT) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+                    ____  _____	 ____  
+  _ _ _            |  __||     ||  __| 
+ | (_) |__ _ _ ___ | |   | | | || |    
+ | | | '_ \ '_/ -_)| |__ | | | || |__  
+ |_|_|_.__/_| \___||____||_|_|_||____| 
+ -----------------------------------------
+ Delusional Dan Version 1.2
+root@libreCMC:~# busybox
+BusyBox v1.19.4 (2014-10-17 10:20:00 EDT) multi-call binary.
+Copyright (C) 1998-2011 Erik Andersen, Rob Landley, Denys Vlasenko
+and others. Licensed under GPLv2.
+See source distribution for full notice.
+
+Usage: busybox [function] [arguments]...
+   or: busybox --list[-full]
+   or: function [arguments]...
+
+	BusyBox is a multi-call binary that combines many common Unix
+	utilities into a single executable.  Most people will create a
+	link to busybox for each function they wish to use and BusyBox
+	will act like whatever it was invoked as.
+
+Currently defined functions:
+	[, [[, arping, ash, awk, basename, brctl, bunzip2, bzcat, cat, chgrp,
+	chmod, chown, chroot, clear, cmp, cp, crond, crontab, cut, date, dd,
+	devmem, df, dirname, dmesg, du, echo, egrep, env, expr, false, fgrep,
+	find, free, fsync, grep, gunzip, gzip, halt, head, hexdump, hostid,
+	hwclock, id, ifconfig, kill, killall, less, ln, lock, logger, ls,
+	md5sum, mkdir, mkfifo, mknod, mkswap, mktemp, mount, mv, nc, netmsg,
+	netstat, nice, nslookup, ntpd, passwd, pgrep, pidof, ping, ping6,
+	pivot_root, poweroff, printf, ps, pwd, readlink, reboot, reset, rm,
+	rmdir, route, sed, seq, sh, sleep, sort, start-stop-daemon, strings,
+	switch_root, sync, sysctl, tail, tar, tee, telnet, telnetd, test, time,
+	top, touch, tr, traceroute, true, udhcpc, umount, uname, uniq, uptime,
+	vconfig, vi, wc, wget, which, xargs, yes, zcat
+
+root@libreCMC:~# exit
+Connection to 192.168.10.1 closed.
+denver@cherry:~$
