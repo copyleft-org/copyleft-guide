@@ -30,8 +30,9 @@ body {
 
 .quotation {
   padding: 10px 20px;
-  margin: 0 0 20px;
-  border-left: 5px solid #eeeeee;
+  margin: 1px 50px 4px;
+  border: 2px solid #91908f;
+  background: #eceeee;
 }
 
 .quotation p {
@@ -79,20 +80,30 @@ body {
   content: "";
 }
 
-.lstlisting {
+.lstlisting
+{
   font-family: monospace, serif;
   font-size: 1em;
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  padding: 2px 4px;
+  padding: 2px 1px;
+  margin: 1px 5px 4px;
   font-size: 90%;
   color: #c7254e;
   white-space: nowrap;
   background-color: #f9f2f4;
-  border-radius: 4px;
-  padding: 0;
+  border-radius: 2px;
   font-size: inherit;
   color: inherit;
   white-space: pre-wrap;
   background-color: transparent;
-  border: 0;
+  border: 2px solid #575857;
+}
+.lstlisting.label {
+    font-family: monospace, serif;
+    border: 0;
+    margin-bottom: 1px;
+    font-weight: normal;
+    font-size: 90%;
+    padding: 0;
+    border-radius: 0px;
+    color: #c7254e;
 }
