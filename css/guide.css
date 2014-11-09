@@ -8,3 +8,91 @@ body {
     font-family: Georgia, serif;
 }
 .tabbing{padding-left: 2px; padding-right:2px;}
+
+/* The below was adapted from Bootstrap 3.0.0,
+** which is:
+**
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Modifications made in this project are:
+ * Copyright 2014 Bradley M. Kuhn
+ * Also licensed Apache-2.0
+ */
+
+@media print {
+  .quotation {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+}
+
+.quotation {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eeeeee;
+}
+
+.quotation p {
+  font-size: 17.5px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.quotation p:last-child {
+  margin-bottom: 0;
+}
+
+.quotation small {
+  display: block;
+  line-height: 1.428571429;
+  color: #999999;
+}
+
+.quotation small:before {
+  content: '\2014 \00A0';
+}
+
+.quotation.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #eeeeee;
+  border-left: 0;
+}
+
+.quotation.pull-right p,
+.quotation.pull-right small {
+  text-align: right;
+}
+
+.quotation.pull-right small:before {
+  content: '';
+}
+
+.quotation.pull-right small:after {
+  content: '\00A0 \2014';
+}
+
+.quotation:before,
+.quotation:after {
+  content: "";
+}
+
+.lstlisting {
+  font-family: monospace, serif;
+  font-size: 1em;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  white-space: nowrap;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
