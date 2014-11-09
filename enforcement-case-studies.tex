@@ -647,6 +647,15 @@ receive pin to be permanently disabled.  Here are the steps the investigator
 tried, including the alternate method of installation that did not require
 the serial console:
 
+However, the investigator was only able to read data from the serial port; the
+investigator was unable to send key events via the serial port so the U-Boot
+console could not be accessed in that way.  The investigator did find another
+way of accessing the U-Boot console, though, which was used to complete the
+U-Boot installation and verification.  The likely issue with the serial port was
+initial mis-wiring of the serial connector, causing the receive pin to be
+permanently disabled.  Here are the steps the investigator tried, including the
+alternate method of installation that did not require the serial console:
+
 \begin{itemize}
 
 \item The investigator found the serial cable included was a USB serial adapter
