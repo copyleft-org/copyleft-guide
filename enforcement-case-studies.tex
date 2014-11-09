@@ -331,17 +331,19 @@ file called ``README'' at the top-level directory:
 
 \lstset{tabsize=2}
 \begin{lstlisting}[language=bash]
-  $ dd if=/dev/cdrom of=libreCMC_v1.2.1_SRC.iso
-  $ mkdir libCMC
-  $ sudo mount -o loop ./libreCMC_v1.2.1_SRC.iso libCMC
-  mount: block device /path/to/libreCMC_v1.2.1_SRC.iso is write-protected, mounting read-only
-  $ ls -1 libCMC
-  bin
-  librecmc-u-boot.tar.bz2
-  librecmc-v1.2.1.tar.bz2
-  README
-  u-boot_reflash
-  $ cat libCMC/README
+$ dd if=/dev/cdrom of=libreCMC_v1.2.1_SRC.iso
+$ mkdir libCMC
+$ sudo mount -o loop ./libreCMC_v1.2.1_SRC.iso libCMC
+mount: block device /path/to/libreCMC_v1.2.1_SRC.iso
+       is write-protected, mounting read-only
+$ ls -1 libCMC
+bin
+librecmc-u-boot.tar.bz2
+librecmc-v1.2.1.tar.bz2
+README
+u-boot_reflash
+$ cat libCMC/README
+...
 \end{lstlisting}
 \label{thinkpenguin-toplevel-readme}
 The investigator therefore knew immediately to begin the CCS check by
@@ -408,7 +410,7 @@ beginning, the investigator used the following command:
 
 \lstset{tabsize=2}
 \begin{lstlisting}[language=bash]
-  $ dpkg --list | egrep '^iii' | less
+$ dpkg --list | egrep '^iii' | less
 \end{lstlisting}
 
 to verify that the required packages listed in the README were
@@ -421,7 +423,7 @@ following command:
 
 \lstset{tabsize=2}
 \begin{lstlisting}[language=bash]
-  $ tar --posix -jxpf libCMC/librecmc-v1.2.1.tar.bz2
+$ tar --posix -jxpf libCMC/librecmc-v1.2.1.tar.bz2
 \end{lstlisting}
 
 The investigator did notice an additional source release, entitled
@@ -461,8 +463,8 @@ Therefore, the investigator proceeded to simply run:
 
 \lstset{tabsize=2}
 \begin{lstlisting}[language=bash]
-  $ cd libCMC
-  $ make
+$ cd libCMC
+$ make
 \end{lstlisting}
 
 and waited approximately 40 minutes for the build to complete\footnote{Build
@@ -531,7 +533,7 @@ annoyances, however, while building U-Boot:
 \begin{lstlisting}
 mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6:
    version `GLIBC`_2.14' not found
-     (required by mips-librecmc-linux-uclibc-gcc.bin)
+   (required by mips-librecmc-linux-uclibc-gcc.bin)
 \end{lstlisting}
 
    (The
@@ -546,7 +548,7 @@ mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6:
 
 \lstset{tabsize=2}
 \begin{lstlisting}
-  $ ln -s \
+$ ln -s \
   ../../staging_dir/toolchain-mips_34kc_gcc-4.6-linaro_uClibc-0.9.33.2/bin \
   toolchain/bin
 \end{lstlisting}
@@ -726,8 +728,8 @@ likely ruined, described an alternative method for console access using the
     
 \lstset{tabsize=2}
 \begin{lstlisting}[language=bash]
-  $ nc -u -p 6666 192.168.1.1 6666
-  uboot>
+$ nc -u -p 6666 192.168.1.1 6666
+uboot>
 \end{lstlisting}
   \end{itemize}
 \end{quotation}
@@ -735,9 +737,9 @@ likely ruined, described an alternative method for console access using the
 Upon following this procedure, the investigator was able to confirm the
 (original)  version:
 \begin{lstlisting}[language=bash]
-  $ nc -u -p 6666 192.168.1.1 6666
-  uboot> version
-  U-Boot 1.1.4 (Jul 28 2014)
+$ nc -u -p 6666 192.168.1.1 6666
+uboot> version
+U-Boot 1.1.4 (Jul 28 2014)
 \end{lstlisting}
 
 Thereafter, the investigator followed the instructions as original specified
