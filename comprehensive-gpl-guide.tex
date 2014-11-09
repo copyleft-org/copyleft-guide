@@ -29,6 +29,16 @@
 %     versions.  Adding a footnote with the URL for the print version is
 %     probably right.  (or maybe a References page?)
 
+%   * The text is extremely inconsistent regarding formatting of code and
+%     commands.  The following varied different methods have been used:
+%         + the \verb%..% inline form
+%         + verbatim environment (i.e., \begin{verbatim}
+%         + {\tt }
+%         + \texttt{}
+%         + the lstlisting environment (i.e., \begin{lstlisting}
+%     These should be made consistent, using only two forms: one for line and
+%     one for a long quoted section.
+
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{enumerate}
