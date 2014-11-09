@@ -633,110 +633,123 @@ u-boot to your router'', which reads:
   \end{enumerate}
 \end{quotation}
 
-At this point in the installation process, hitting a key failed to interrupt
-the boot process and yield the \verb0hornet>0 prompt.  For the investigator,
-this became a moment of consideration: is this 
 
-However, the investigator was only able to read data from the serial port; the
-investigator was unable to send key events via the serial port so the U-Boot
-console could not be accessed in that way.  The investigator did find another
-way of accessing the U-Boot console, though, which was used to complete the
-U-Boot installation and verification.  The likely issue with the serial port was
-initial mis-wiring of the serial connector, causing the receive pin to be
-permanently disabled.  Here are the steps the investigator tried, including the
-alternate method of installation that did not require the serial console:
+%FIXME: image of the serial cable available anywhere to put here:
+%  https://www.adafruit.com/images/970x728/954-02.jpg
+
+The investigator used the purchased serial cable, which was a USB serial
+adapter with a male USB type A connector to 4 female jumper wires.  The
+female jumper wires were red, black, white, and green.
+
+The instructions here were slightly incomplete, since they did not specify
+how to connect the wires to the router.  However, the investigator found
+general information available online at
+\url{http://wiki.openwrt.org/toh/tp-link/tl-wr841nd#serial.console} which
+described the proper procedure.  While the ``power'' and ``ground'' cables
+were obvious, some trial and error was necessary to find the RX and TX
+cables, but this was easily determined since miswiring TX and RX yields no
+I/O and proper wiring yields the output as expected.  Using the pin gender
+changer included with the adapter, the investigator was able to stably wire
+the pins for use once the proper RX and TX connections were determined.
+
+The investigator then used the recommended 115200 8N1 for serial console
+settings, leaving all flow control off, and tested both with the
+\verb0minicom0 and \verb0screen0 commands.  The investigator found that if
+all 4 wires were connected on the USB serial adapter that the router would
+start without additional power and the console would receive the startup
+messages.  The investigator could replicate the same behavior by omitting the
+power cable from the USB serial adapter (red wire) and connecting the main
+power adapter to the router instead.
+
+At this point, the on-screen messages as described in the installation
+instructions appeared, but the investigator found that no key events sent via
+the serial port appeared to reach the U-Boot console.  In other words, while
+the investigator saw both U-Boot and kernel boot messages in the serial
+console, the investigator was unable to interrupt the boot process as
+instructed by ``u-boot\verb0_0reflash''.  Hitting a key simply did
+\texit{not} interrupt the boot process and yield the \verb0hornet>0 prompt.
+
+After additional trial and error over a period of hours, the investigator had
+finally to consider this question for the first time during the process:
+``Has ThinkPenguin violated the GPL?'' More specifically, the immediate
+question was: ``Given this failure, has the distributor met
+\hyperref{GPLv2s3-build-scripts}{the requirements for `scripts used to
+  control \ldots installation of the executable' (GPLv2)} and
+\hyperref[GPLv3-installation-information]{necessary `Installation
+  Information' (GPLv3)}?''
+
+The answer to the question; however, is (at this specific stage), ``possibly,
+but more information is needed''.  Embedded installation and configuration is
+a tricky and complex technical process.  While the GPL requires documentation
+and clear instructions for this process, immediately blaming the distributor
+for honest, correctable mistakes, or issues legitimately explained by
+feasible alternative theories.
+
+In this case, upon remembering the issues of wiring, the investigator wonder
+if perhaps the power pin was accidentally connected for a moment to the RX
+pin while live.  Such action could easily fry the RX pin, and yield the
+observed behavior.  Since the investigator could not rule out the possibility
+of accidental connection of power to the RX pin mentioned, the investigator
+had to assume the instructions would work properly if he had not made that
+error.
+
+That conclusion, while correct, also left the investigator with only two
+option to complete the final verification of the CCS:
 
 \begin{itemize}
 
-\item The investigator found the serial cable included was a USB serial adapter
-that had a male USB type A connector on one end and 4 female jumper wires at the
-other end.  These female jumper wires were red, black, white, and green.
+   \item Purchase a new router and cable anew, and reattempt the installation
+     process while taking extra care not to miswire any cables.
 
-\item The instructions did not specify how to connect these wires, but the
-investigator was able to determine this in part using the "v8.4" image (close to
-the "v8.2" version string the investigator found on the bottom of the router) at
-\url{http://wiki.openwrt.org/toh/tp-link/tl-wr841nd#serial.console} .  Aside
-from power and ground (red and black), the investigator did have to guess which
-of the wires was RX and TX.  By experimentation the investigator found that
-green was RX and white was TX.  When the investigator tried the other way, no
-data was received to the serial console at boot time.  While determining which
-wires connected to which pins, the investigator may have connected the power pin
-to the RX pin; this could explain why the receive (RX) pin later failed to work.
-
-\item The investigator did have to use the included jumper pin gender changer
-with the USB serial adapter, which the investigator put through the holes on the
-router's mainboard and then connected to the USB serial adapter.  The fit was
-fairly loose so it would be nice if future router versions included a tighter
-gender changer or (ideally) had the jumper pins soldered onto the board to begin
-with (so no gender changer would be required).  Since the serial cable is not
-strictly required for U-Boot installation (see below), this may not be issue.
-
-\item The investigator used 115200 8N1 as the serial console setting (with no
-hardware or software flow control).  This was tested with both the
-\verb0minicom0 and \verb0screen0 commands.  The investigator found that if all 4
-wires were connected on the USB serial adapter that the router would start
-without additional power and the console would receive the startup messages.
-The investigator could replicate the same behavior by omitting the power cable
-from the USB serial adapter (red wire) and connecting the main power adapter to
-the router instead.
-
-\item While the investigator did see the U-Boot and kernel boot logs in the
-serial console, the investigator was unable to interrupt the boot process as
-u-boot\verb0_0reflash indicated one should.  This is likely related to the
-accidental connection of power to the RX pin mentioned earlier, which may have
-disabled the pin, preventing the serial port on the router from receiving the
-commands sent to it.
-
-\item The investigator then contacted one of the libreCMC developers to
-determine what the serial console issue might be and whether there was an
-alternate way to install U-Boot that did not rely on the serial console working.
-The developer agreed the the receive pin had likely been disabled so a different
-installation method would be needed.  The developer indicated that the console
-could be accessed via \verb0netcat0 when the router was booted into a special
-mode by holding the reset button on the router for 7 seconds after turning on
-the router.
-
-\item The investigator turned on the router while pressing reset as mentioned
-above and then ran \verb0nc -u -p 6666 192.168.1.1 66660 on the desktop that was
-connected to the router (after changing its IP address to 192.168.1.2).  After
-pressing Enter, a \verb0uboot>0 prompt appeared and the investigator was able to
-confirm the running version by typing \verb0version0 to which the router
-responded with "U-Boot 1.1.4  (Jul 28 2014)".
-
-\item A TFTP server was then setup according to step 1 of the U-Boot
-installation steps in u-boot\verb0_0reflash.  These instructions did not
-explicitly state that the U-Boot image mentioned in step 4 of the build
-instructions should be placed in /srv/tftp, but this was evident based on the
-instructions that followed.  This should be corrected in a future version of
-u-boot\verb0_0reflash but, because it was straight-forward based on the context,
-did not amount to a compliance issue.
-
-\item The u-boot\verb0_0reflash steps were then followed starting at step 4,
-using the \verb0netcat0 console rather than the serial console (described in
-steps 2 and 3).  The U-Boot image was downloaded onto the device and then copied
-over top of the old U-Boot image.  The router was then restarted with the
-\verb0reset0 command.
-
-\item Since the serial cable was still connected, the investigator noticed at
-startup that U-Boot now printed "U-Boot 1.1.4  (Oct 17 2014)" as its version
-string.  This was also confirmed by using the \verb0netcat0 console and the
-\verb0version0 command, as was previously done above.  The new version string
-showed that the router was now running the version of U-Boot that the
-investigator built, rather than the one it was shipped with, thus fulfilling the
-GPL's requirements that one must be able to build and install the software and
-any modified versions.
+   \item Seek assistance from the libreCMC community to find an alternative
+     method of installation.
 
 \end{itemize}
 
-While the u-boot\verb0_0reflash instructions appear to be functional for those
-able to use a serial console, we would prefer if these instructions were updated
-to use the \verb0netcat0 console instead.  This provides a number of advantages,
-such as no requirement for additional hardware to install a new version of
-U-Boot, and less chance of mis-configuring one's serial connector (which would
-reduce the risk of damage to the router).  The existing instructions appear to
-be compliant without modification; this suggestion would merely make it easier
-for users to take advantage of the freedoms provided to them by U-Boot and the
-rest of the system.
+The investigator chose the latter and then contacted a libreCMC developers
+familiar with the product.  That developer, who  agreed the the RX pin was
+likely ruined, described an alternative method for console access using the
+{\tt netcat}.  The method described was:
+
+\begin{quotation}
+
+  \begin{itemize}
+
+  \item Change the IP address of the router to 192.168.1.1.
+
+  \item Change the IP address of a desktop GNU/Linux system to 192.168.1.2.
+
+  \item Power on the router while holding the reset button for 7 seconds.
+
+  \item Use the {\tt netcat} command (as below) on the desktop, and press
+    enter to receive U-Boot's prompt:
+    
+\lstset{tabsize=2}
+\begin{lstlisting}[language=bash]
+  $ nc -u -p 6666 192.168.1.1 6666
+  uboot>
+\end{lstlisting}
+  \end{itemize}
+\end{quotation}
+
+Upon following this procedure, the investigator was able to confirm the
+(original)  version:
+\begin{lstlisting}[language=bash]
+  $ nc -u -p 6666 192.168.1.1 6666
+  uboot> version
+  U-Boot 1.1.4 (Jul 28 2014)
+\end{lstlisting}
+
+Thereafter, the investigator followed the instructions as original specified
+in ``u-boot\verb0_0reflash''.  The investigator configured a TFTP server,
+placed the newly built firmware into \textt{/srv/tftp}.  The investigator
+then followed the remaining instructions in ``u-boot\verb0_0reflash'' as
+written, using the \textt{netcat} console rather than the serial console, and
+used U-Boot's \texttt{reset} command to reboot the router.
+
+Upon reboot, the serial console (still connect with working output) showed
+the message \texttt{U-Boot 1.1.4  (Oct 17 2014)}, and thus confirmed a
+successful reflash of the U-Boot image built by the investigator.
 
 \section{Firmware Comparison}
 
