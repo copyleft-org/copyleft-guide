@@ -10,6 +10,25 @@
 % For the moment, I've thrown in fancychap because I don't have time to
 % research memoir.
 
+
+% FIXME: Some overall formatting hacks that would really help:
+
+%   * I have started using  \hyperref[LABEL]{text} extensively, which seems
+%     to work great in the PDF and HTML versions, but in the Postscript
+%     version, the link lost entirely.  I think we need an additional command
+%     to replace \hyperref which takes an optional third argument that will
+%     insert additional text only when generating print versions, such as:
+%      \newhyperref[GPLv2s3]{the requirements for binary distribution under
+%      GPLv2}{(see section~\ref*{GPLv2s3} for more information)}
+%
+%     This is a careful balance, because it'd be all too easy to over-pepper
+%     the printed version with back/forward references, but there are
+%     probably times when this is useful.
+
+%   * Similar issue: \href{} is well known not to carry the URLs in the print
+%     versions.  Adding a footnote with the URL for the print version is
+%     probably right.  (or maybe a References page?)
+
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{enumerate}
