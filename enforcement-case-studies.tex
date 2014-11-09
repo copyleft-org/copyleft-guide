@@ -602,16 +602,50 @@ compilation).
 The U-Boot installation process is substantially more complicated than the
 firmware update.  The investigator purchased the optional serial cable
 along with the TPE-NWIFIROUTER, in order to complete the U-Boot installation
-per the instructions in ``u-boot\verb0_0reflash''.
+per the instructions in ``u-boot\verb0_0reflash'' in its section ``Installing
+u-boot to your router'', which reads:
 
-However, the investigator was only able to read data from the serial port; the
-investigator was unable to send key events via the serial port so the U-Boot
-console could not be accessed in that way.  The investigator did find another
-way of accessing the U-Boot console, though, which was used to complete the
-U-Boot installation and verification.  The likely issue with the serial port was
-initial mis-wiring of the serial connector, causing the receive pin to be
-permanently disabled.  Here are the steps the investigator tried, including the
-alternate method of installation that did not require the serial console:
+\begin{quotation}
+  \begin{enumerate}
+
+    \item Install and configure any TFTP server on your PC (tftp-hpa).
+
+       Set a fixed IP address on your PC \ldots and connect it to the router,
+       using RJ45 network cable \ldots
+
+ \item Connect USB to UART adapter to the router and start any application to
+   communicate with it, like PuTTY. \ldots
+
+   \item Power on the router, wait for a line like one of the following and
+     interrupt the process of loading a kernel:
+\begin{verbatim}
+    Autobooting in 1 seconds (for most TP-Link routers, you should enter tpl at this point)
+    Hit ESC key to stop autoboot: 1 (for 8devices Carambola 2, use ESC key)
+    Hit any key to stop autoboot: 1 (for D-Link DIR-505, use any key)
+\end{verbatim}
+\item   Set ipaddr and serverip environment variables:
+\lstset{tabsize=2}
+\begin{lstlisting}
+    hornet> setenv ipaddr 192.168.1.1
+    hornet> setenv serverip 192.168.1.2
+\end{lstlisting}
+
+  \end{enumerate}
+\end{quotation}
+
+At this point in the installation process, hitting a key failed to interrupt
+the boot process and yield the \verb0hornet>0 prompt.  For the investigator,
+this became a moment of consideration: is this 
+
+However, the investigator was only able to read data from the serial port;
+the investigator was unable to send key events via the serial port so the
+U-Boot console could not be accessed in that way.  The investigator did find
+another way of accessing the U-Boot console, though, which was used to
+complete the U-Boot installation and verification.  The likely issue with the
+serial port was initial mis-wiring of the serial connector, causing the
+receive pin to be permanently disabled.  Here are the steps the investigator
+tried, including the alternate method of installation that did not require
+the serial console:
 
 \begin{itemize}
 
