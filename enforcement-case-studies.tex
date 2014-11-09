@@ -245,14 +245,14 @@ compliance work.
 Too often, case studies examine failure and mistakes.  Indeed, most of the
 chapters that follow herein will consider the myriad difficulties discovered
 in community-oriented GPL enforcement for the last two decades.  However, to
-begin, we offer a study in how copyleft compliance can be done correctly.
+begin, this is a case study in how copyleft compliance can indeed be done correctly.
 
 This example is, in fact, more than ten years in the making.  Since almost
 the inception of for-profit corporate adoption of Free Software, companies
 have requested a clear example of a model citizen to emulate.  Sadly, while
 community-oriented enforcers have vetted uncounted thousands of ``Complete,
-Corresponding Source'' CCS candidates from hundreds of companies, the CCS
-release describes the first one CCS experts have declared a ``pristine
+Corresponding Source'' (CCS) candidates from hundreds of companies, this
+particular CCS release described herein is the first ever declared a ``pristine
 example''.
 
 % FIXME (above): link to a further discussion of CCS in the compliance guide
@@ -262,9 +262,9 @@ example''.
 
 Of course, most CCS examined for the last decade has (eventually) complied
 with the GPL, perhaps after many iterations of review by the enforcer.
-However, in the experience of the two primary community-oriented enforcers,
-Conservancy and the FSF, such CCS results routinely fix the description of
-``barely complies with GPL's requirements''.  To use an academic analogy:
+However, in the experience of the two primary community-oriented enforcers
+(Conservancy and the FSF), such CCS results routinely 
+``barely comply with GPL's requirements''.  To use an academic analogy:
 while a ``C'' is certainly a passing grade, any instructor prefers to
 disseminate to the class an exemplar sample that earned an ``A''.
 
@@ -274,23 +274,24 @@ Fortunately, thanks in large part to the FSF's
     software freedom}.  Products must meet
   \href{http://www.fsf.org/resources/hw/endorsement/criteria}{strict
     standards for RYF certification}, and among them is a pristine example of
-  CCS\@.}, electronics products have begun to appear on the market that are
-held to a higher standard of copyleft compliance.  As such, for the first
+  CCS\@.}, a few electronics products on the market meet
+a higher standard of copyleft compliance.  As such, for the first
 time in the history of copyleft, CCS experts have pristine examples to study
 and present as exemplars worthy of emulation.
 
 This case study therefore examines the entire life-cycle of a GPL compliance
-investigation: from product purchase, to source request, to CCS review.
+investigation: from product purchase, to source request, to CCS review, and concluding
+in a final compliance determination.
 Specifically, this chapter discusses the purchase, CCS provision, and a
 step-by-step build and installation analysis of a specific, physical,
-embedded electronics product.  The product in question is
+embedded electronics product:
 \href{https://www.thinkpenguin.com/gnu-linux/free-software-wireless-n-broadband-router-gnu-linux-tpe-nwifirouter}{the
   ``TPE-NWIFIROUTER'' wireless router by ThinkPenguin}.\footnote{The FSF of
-  course performed a thorough CCS check as part of the certification process.
+  course performed a thorough CCS check as part of its certification process.
   The analysis discussed herein was independently performed by Software
-  Freedom Conservancy without reviewing any findings of the FSF, and thus the
-  analysis provides a ``true to form'' analysis as it occurs when Conservancy
-  investigates a potential GPL violation.  In this case, obviously, no
+  Freedom Conservancy without reviewing the FSF's findings.  Thus, this
+  analysis is ``true to form'', and explains the typical procedures Conservancy
+  uses when investigating a potential GPL violation.  In this case, obviously, no
   violation was uncovered.}
 
 \section{Consumer Purchase and Unboxing}
@@ -300,11 +301,11 @@ determines whether users inclined to exercise their rights under a copyleft
 license will be successful in their attempt.  Therefore, at every stage, the
 investigator seeks to take actions that reasonably technically knowledgeable
 users would during the ordinary course of their acquisition and use of
-products.  As such, the investigator typically purchases the device on the
+copyleft-covered products.  As such, the investigator typically purchases the device on the
 open market to verify that distribution of the copylefted software therein
 complies with binary distribution requirements (such as those
 \tutorialpartsplit{discussed in \textit{Detailed Analysis of the GNU GPL and
-    Related Licenses}}{discussed here in \S~\ref{GPLv2s3} and
+    Related Licenses}}{discussed earlier in \S~\ref{GPLv2s3} and
   \S~\ref{GPLv3s6}}).
 
 % FIXME: Above is my only use of \tutorialpartsplit in this chapter.  I just
@@ -315,17 +316,18 @@ complies with binary distribution requirements (such as those
 Therefore, the investigator first purchased the TPE-NWIFIROUTER through an
 online order, and when the package arrived, examined the contents of the box.
 The investigator immediately discovered that ThinkPenguin had taken advice
-from \S~\ref{offer-for-source} in this guide, and had chosen to use
-\hyperref[GPLv2s3a]{GPLv2\S3(a)} and \hyperref[GPLv3s6]{GPLv3s6}, rather than
+from \S~\ref{offer-for-source}, and exercised
+\hyperref[GPLv2s3a]{GPLv2\S3(a)} and \hyperref[GPLv3s6]{GPLv3\S6}, rather than
 using the \hyperref[offer-for-source]{problematic offer for source
-  provisions}.  This choice not only speeds up the investigation (since there
-is no CCS offer to test), but also simplifies the compliance requirements for
+  provisions}.  This choice not only accelerated the investigation (since there
+was no CCS offer to ``test''), but also simplified the compliance requirements for
 ThinkPenguin.
 
 \section{Root Filesystem and Kernel Compilation}
 
 The CD found in the box was labeled ``libreCMC v1.2.1 source code'', and
-contained 407 megabytes of data.  The investigator copied this ISO and
+contained 407 megabytes of data.  The investigator copied this ISO to a
+desktop GNU/Linux system and
 examined its contents.  Upon doing so, the investigator immediately found a
 file called ``README'' at the top-level directory:
 
@@ -346,12 +348,12 @@ $ cat libCMC/README
 ...
 \end{lstlisting}
 \label{thinkpenguin-toplevel-readme}
-The investigator therefore knew immediately to begin the CCS check by
-studying the contents of the ``README'', which contained the appropriate
-details to get started with a build:
+The investigator therefore knew immediately to begin the CCS check should
+begin with a study of the contents of ``README''.  Indeed, that file contained the appropriate
+details to start the build:
 \begin{quotation}
 
-In order to build firmware images for your router,the following needs to be
+In order to build firmware images for your router, the following needs to be
 installed:
 
 gcc, binutils, bzip2, flex, python, perl, make, find, grep, diff, unzip,
@@ -370,42 +372,46 @@ To build your own firmware you need to have access to a GNU/Linux system
 (case-sensitive filesystem required).
 \end{quotation}
 
-In other words, the first ``script'' that investigator ran in building
-testing this CCS candidate was the above, which ran on the investigator's own
-brain --- like a script of a play.  Less glibly, instructions written in
-English are particularly necessary for parts of the build and installation
-process that require some amount of actual intelligence to complete.
-In this case, the investigator was able to determine the requirements for the
-host system to use when constructing the firmware for the embedded device.
+In other words, the first ``script'' that investigator ``ran'' was the above.
+This was not a software script, rather the processor for the script was the investigator's own
+brain --- like a script of a play.  Less glibly stated: instructions written in
+English are usually necessary for the build and installation operations
+that demand actual intelligence.
+In this case, the investigator ascertained the host system requirements
+for construction of this embedded firmware.
 
-GPL does not, of course, give specific guidance on the form or location of
-such instructions.  Community-oriented GPL enforcers generally use a
-reasonableness standard to evaluate such instructions.  If an investigator of
+GPL does not give specific guidance on the form or location of
+``scripts used to control compilation and installation of the executable''
+and/or ``Installation Information''.  Community-oriented GPL enforcers apply a
+``reasonableness standard'' to evaluate such instructions.  If an investigator of
 average skill in embedded firmware construction can surmise the proper
 procedures to build and install a replacement firmware, the instructions are
-likely sufficient to meet GPL's requirements.  However, in this case, the
-instructions are more abundant and give more detail.
+likely sufficient to meet GPL's requirements.  Fortunately, in this case, the
+instructions are more abundant and give extra detail.
 
-These instructions are more general than typical.  Often, top-level build
-instructions will specifically name a host distribution to use, such as
+Nevertheless, these instructions offer more options than the reader
+typically sees in other CCS candidates.  More typically, top-level build
+instructions name an exact host distribution to use, such as
 ``Debian 7 installed on an amd64 system with the following packages
-installed''.  If the build will not complete on any other system,
-instructions should have such details.  However, in this case, the CCS can
-build on a wide range of distributions, and thus no specific distribution was
-specified.
+installed''.  Of course, if the build will fail on any other system,
+instructions \textit{should} include such details.  However, this CCS builds
+on a wide range of distributions, and thus it was appropriate (and preferred)
+that the build instructions do not  specify a specific distribution.
 
 \label{thinkpenguin-specific-host-system}
 
-In this specific case, the developers of the libreCMC project (on which the
-TPE-NWIFIROUTER is based) have clearly made an effort to ensure the CCS builds
-on a variety of host systems.  The investigator was in fact dubious upon
-seeing these instructions, since finicky embedded build processes usually
-require a very specific host system.   Even in this case, a
-\hyperref[thinkpenguin-glibc-214-issue]{minor annoyance was found that more
-  detailed instructions would address}.
+In this specific case, the developers of the libreCMC project (a Free
+Software project that forms the base system for the TPE-NWIFIROUTER) have
+clearly made an effort to ensure the CCS builds on a variety of host systems.
+The investigator was in fact dubious upon seeing these instructions, since
+finicky embedded build processes usually require a very specific host system.
+Fortunately, it seems such doubts were generally unfounded (although the
+investigator did find
+\hyperref[thinkpenguin-glibc-214-issue]{a minor annoyance that could be
+  resolved with more detailed instructions}).
 
 Anyway, since these instructions did not specify a specific host system, the
-investigator simply used his own amd64 Debian 6 desktop system.  Before
+investigator simply used his own amd64 Debian GNU/Linux 6 desktop system.  Before
 beginning, the investigator used the following command:
 
 \lstset{tabsize=2}
@@ -430,9 +436,8 @@ The investigator did notice an additional source release, entitled
 ``librecmc-u-boot.tar.bz2''.  The investigator concluded upon simple
 inspection that the instructions found in ``u-boot\verb0_0reflash'' were
 specific instructions for that part of the CCS\@.  This was a minor
-annoyance, and ideally the ``README'' would list that fact, but the existing
-layout met the reasonable standard that community-oriented GPL enforcers
-typically apply, since the skilled investigator could determine the correct
+annoyance, and ideally the ``README'' would so-state, but the CCS filesystem
+layout met the reasonableness standard; the skilled investigator determine the correct
 course of action with a few moments of study.
 
 The investigator then noted the additional step offered by the ``README'',
@@ -444,13 +449,13 @@ what was used to build the firmware image for your router. It is advised that
 you use this configuration.
 \end{quotation}
 
-This instruction actually goes above and beyond the requirements of GPL\@.
+This instruction actually exceeds GPL's requirements.
 Specifically, the instruction guides users in their first step toward
 exercising the freedom to modify the software.  While the GPL does contain
 requirements that facilitate the freedom to modify (such as ensuring the CCS is
-in the ``preferred form \ldots for making modifications to it'' form), it
-does not require that you write specific instructions explaining how
-modifications might be undertaken.  This instruction therefore exemplifies
+in the ``preferred form \ldots for making modifications to it''), GPL
+does not require specific instructions explaining how to undertake
+modifications.  This specific instruction therefore exemplifies
 the exceptional quality of this particular CCS\@.
 
 %FIXME: add a \hyperref to some ``preferred for for modification'' stuff above.
@@ -481,8 +486,8 @@ directory.  Typically, this step in the CCS verification process is
 harrowing.  In most cases, the ``make'' step will fail due to a missing
 package or because toolchain paths are not setup correctly.
 
-From experience, the investigator is sure that ThinkPenguin's engineers did
-the most important step in self-CCS verification: use one's own instructions
+In light of such experiences, the investigator speculated that ThinkPenguin's engineers did
+the most important step in self-CCS verification: test one's own instructions
 on a clean system.  Ideally, an employee with similar skills but
 unfamiliar with the specific product can most easily verify CCS  and identify
 problems before a violation occurs.
@@ -494,14 +499,15 @@ However, upon completing the ``make'', the investigator was unclear which
 filesystem and kernel images to install on the TPE-NWIFIROUTER hardware.
 Ideally, the original ``README'' would indicate which image is appropriate
 for the included hardware.  However, this was ultimately an annoyance rather
-than a compliance issue due to other information available.  Specifically,
+than a compliance issue.  Fortunately,
 the web UI (see next section) on the TPE-NWIFIROUTER performs firmware image
 installation.  Additionally, the router's version number was specified on the
 bottom of the device, which indicated which of the differently-versioned images
-we should install.  It would be ideal to find
-\href{http://librecmc.org/librecmc/wiki?name=Tp+MR3020}{instructions similar
-  to these} in the README itself.  However, application of the reasonableness
-standard indicates compliance, since a knowledgeable user was able to
+we should install.  The investigator would prefer instructions such as
+those found at
+\url{http://librecmc.org/librecmc/wiki?name=Tp+MR3020}{instructions similar
+  to these} in the README itself; however, application of the reasonableness
+standard here again indicates compliance, since a knowledgeable user can easily
 determine the proper course of action.
 
 
@@ -510,7 +516,7 @@ determine the proper course of action.
 %FIXME: link to u-boot reflash, maybe put it in log-output dir?
 
 The investigator then turned his attention to the file,
-``u-boot\verb0_0reflash'' instructions.  These instructions explained how to
+``u-boot\verb0_0reflash''.  These instructions explained how to
 build and install the bootloader for the device.
 
 The investigator followed the instructions for compiling U-Boot, and found
@@ -522,7 +528,7 @@ annoyances, however, while building U-Boot:
  \item The variable \verb0$U-BOOT_SRC0 was used as a placeholder for the name
    of the extracted source directory.  This was easy to surmise and was not a
    compliance issue (per the reasonableness standard), but explicitly stating
-   that at the top of the instructions would be helpful.
+   that fact at the top of the instructions would be helpful.
 
 \label{thinkpenguin-glibc-214-issue}
 \item Toolchain binaries were included and used by default by the build
@@ -541,8 +547,8 @@ mips-librecmc-linux-uclibc-gcc.bin: /lib/libc.so.6:
   log output from the failure} is too lengthy to include herein.)
 
    This issue is an annoyance, not a compliance problem.  It was clear from
-   context that these binaries were simply for a different architecture, and
-   the investigator simply removed ``toolchain/bin'' and used a symlink to
+   context that these binaries were simply for a different host architecture, and
+   the investigator simply removed ``toolchain/bin'' and created a symlink to
    utilize the toolchain already built earlier (during the compilation
    discussed in \S~\ref{thinkpenguin-main-build}):
 
@@ -583,8 +589,8 @@ Upon clicking ``Flash image\ldots'', the web interface prompted the
 investigator to confirm the MD5 hash of the image to flash.  The investigator
 did so, and then clicked ``Proceed'' to flash the image.  The process took
 about one minute, at which point the web page refreshed to the login screen.
-Upon logging in, the investigator was able to confirm in ``Kernel Log''
-section of the interface that the newly built copy of Linux had indeed been
+Upon logging in, the investigator was able to confirm in the ``Kernel Log''
+section of the web interface that the newly built copy of Linux had indeed been
 installed.
 
 The investigator confirmed that a new version of ``busybox'' had also been
@@ -611,7 +617,6 @@ u-boot to your router'', which reads:
   \begin{enumerate}
 
     \item Install and configure any TFTP server on your PC (tftp-hpa).
-
        Set a fixed IP address on your PC \ldots and connect it to the router,
        using RJ45 network cable \ldots
 
@@ -621,9 +626,10 @@ u-boot to your router'', which reads:
    \item Power on the router, wait for a line like one of the following and
      interrupt the process of loading a kernel:
 \begin{verbatim}
-    Autobooting in 1 seconds (for most TP-Link routers, you should enter tpl at this point)
-    Hit ESC key to stop autoboot: 1 (for 8devices Carambola 2, use ESC key)
-    Hit any key to stop autoboot: 1 (for D-Link DIR-505, use any key)
+ Autobooting in 1 seconds
+      (for most TP-Link routers, you should enter tpl at this point)
+Hit ESC key to stop autoboot: 1 (for 8devices Carambola 2, use ESC key)
+ Hit any key to stop autoboot: 1 (for D-Link DIR-505, use any key)
 \end{verbatim}
 \item   Set ipaddr and serverip environment variables:
 \lstset{tabsize=2}
@@ -675,16 +681,16 @@ After additional trial and error over a period of hours, the investigator had
 finally to consider this question for the first time during the process:
 ``Has ThinkPenguin violated the GPL?'' More specifically, the immediate
 question was: ``Given this failure, has the distributor met
-\hyperref{GPLv2s3-build-scripts}{the requirements for `scripts used to
+\hyperref[GPLv2s3-build-scripts]{the requirements for `scripts used to
   control \ldots installation of the executable' (GPLv2)} and
 \hyperref[GPLv3-installation-information]{necessary `Installation
   Information' (GPLv3)}?''
 
-The answer to the question; however, is (at this specific stage), ``possibly,
+The appropriate answer to the question (at this specific stage) is ``possibly,
 but more information is needed''.  Embedded installation and configuration is
 a tricky and complex technical process.  While the GPL requires documentation
-and clear instructions for this process, immediately blaming the distributor
-for honest, correctable mistakes, or issues legitimately explained by
+and clear instructions for this process, the investigator did not immediately blame the distributor
+for what may be an honest, correctable mistake, or an issue legitimately explained by
 feasible alternative theories.
 
 In this case, upon remembering the issues of wiring, the investigator wonder
@@ -708,10 +714,10 @@ option to complete the final verification of the CCS:
 
 \end{itemize}
 
-The investigator chose the latter and then contacted a libreCMC developers
+The investigator chose the latter and then contacted a libreCMC developer
 familiar with the product.  That developer, who  agreed the the RX pin was
 likely ruined, described an alternative method for console access using the
-{\tt netcat}.  The method described was:
+{\tt netcat}.  The libreCMC developer described the process as follows:
 
 \begin{quotation}
 
@@ -735,18 +741,18 @@ uboot>
 \end{quotation}
 
 Upon following this procedure, the investigator was able to confirm the
-(original)  version:
+(original) shipped version of U-Boot was still installed:
 \begin{lstlisting}[language=bash]
 $ nc -u -p 6666 192.168.1.1 6666
 uboot> version
 U-Boot 1.1.4 (Jul 28 2014)
 \end{lstlisting}
 
-Thereafter, the investigator followed the instructions as original specified
-in ``u-boot\verb0_0reflash''.  The investigator configured a TFTP server,
-placed the newly built firmware into \texttt{/srv/tftp}.  The investigator
-then followed the remaining instructions in ``u-boot\verb0_0reflash'' as
-written, using the \texttt{netcat} console rather than the serial console, and
+Thereafter, the investigator followed the instructions from
+``u-boot\verb0_0reflash''.  Specifically, the investigator configured a TFTP server
+and placed the newly built firmware into \texttt{/srv/tftp}.  The investigator
+also followed the remaining instructions in ``u-boot\verb0_0reflash'', but
+used the \texttt{netcat} console rather than the serial console, and
 used U-Boot's \texttt{reset} command to reboot the router.
 
 Upon reboot, the serial console (still connect with working output) showed
@@ -755,7 +761,7 @@ successful reflash of the U-Boot image built by the investigator.
 
 \section{Firmware Comparison}
 
-To ensure the CCS did indeed correspond to the firmware original
+Next, to ensure the CCS did indeed correspond to the firmware original
 installed on the TPE-NWIFIROUTER, the investigator compared the built
 firmware image with the filesystem originally found on the device itself.
 The comparison steps were as follows:
@@ -771,33 +777,33 @@ The comparison steps were as follows:
   morx0.squash, using the filesystem in the new squashfs-root directory for
   comparison.
 
-\item Login to the router's web interface (at \url{http://192.168.10.1/ }) from a computer that is
+\item Login to the router's web interface (at \url{http://192.168.10.1/ }) from a computer
   connected to the router.
   
 \item Set a password using the provided link at the top (since the router's
   UI warns that no password is set and asks the user to change it).
   
-\item Login to the router via SSH, using the root user with the
+\item Logged into the router via SSH, using the root user with the
   aforementioned password.
   
-\item Compare representative directory listings and binaries to ensure the set of
-  included files (on the router) is similar to those found in the firmware image
-  we created (whose contents are now in the local squashfs-root directory).  In
-  particular, we did the following comparisons:
+\item Compared representative directory listings and binaries to ensure the set of
+  included files (on the router) is similar to those found in the firmware
+  image that the investigator created (whose contents are now in the local squashfs-root directory).  In
+  particular, the investigator did the following comparisons:
 
   \begin{enumerate}
-  \item List the /bin folder (``ls -l /bin'') and confirm the list of files is the same
+  \item Listed the /bin folder (``ls -l /bin'') and confirm the list of files is the same
     and that the file sizes are similar.
     
-  \item Check the ``strings'' output of ``/bin/busybox'' to confirm it is similar in both
+  \item Checked the ``strings'' output of ``/bin/busybox'' to confirm it is similar in both
    places (similar number of lines and content of lines).  (One cannot directly
    compare the binaries because the slight compilation variations will cause
    some bits to be different.)
- \item Do the above two steps for ``/lib/modules'', ``/usr/bin'', and other directories with
+ \item Repeated the above two steps for ``/lib/modules'', ``/usr/bin'', and other directories with
    a significant number of binaries.
    
- \item Check that the kernel is sufficiently similar.  The investigator
-   compared the "dmesg" output both before and after flashing the new
+ \item Checked that the kernel was sufficiently similar.  The investigator
+   compared the ``dmesg'' output both before and after flashing the new
    firmware.  As the investigator expected, the kernel version string was
    similar, but had a different build date and user@host indicator.  (The
    kernel binary itself is not easily accessible from an SSH login, but was
@@ -826,7 +832,7 @@ enforcement organization.  However, the following annoyances were discovered:
   device; the user must assume the web UI must be used.
 
 \item Including pre-built toolchain binaries that don't work on all systems,
-  and failure to put built toolchain binaries in the right location.
+  and failure to copy and/or symlink built toolchain binaries in the right location.
 
 \item Failure to include information in the U-Boot installation instructions for
   wiring the serial cable.
@@ -854,19 +860,19 @@ can be learned here:
 
 \item Even though copyleft licenses have them,
   \hyperref[thinkpenguin-included-ccs]{\bf avoid the offer-for-source
-    provisions.}  Not only does including the CCS alongside binary
+    provisions}.  Not only does including the CCS alongside binary
   distribution make violation investigation and compliance confirmation
-  substantially easier, but more importantly it also
+  substantially easier, but also (and more importantly) doing so
   \hyperref[offer-for-source]{completes the distributor's CCS compliance
     obligations at the time of distribution} (provided, of course, that the
-  distributor is otherwise in compliance with copyleft).
+  distributor is otherwise in compliance with the relevant copyleft license).
   
 \item {\bf Include top-level build instructions in a natural language (such
   as English) in a \hyperref[thinkpenguin-toplevel-readme]{clear and
     conspicuous place}.}  Copyleft licenses require that someone reasonably
-  skilled in the art can reproduce your work.  Ultimately, sometimes
-  instructions written in English are necessary, and often easier than trying
-  to write programmed scripts to do everything.  The ``script'' included can
+  skilled in the art can reproduce the build and installation.  Typically,
+  instructions written in English are necessary, and often easier than writing
+  programmed scripts.  The ``script'' included can
   certainly be more like the script of a play and less like a Bash script.
 
 \item {\bf Write build/install instructions to the appropriate level of
@@ -874,25 +880,28 @@ can be learned here:
   in this case study \hyperref[thinkpenguin-specific-host-system]{clearly did
     additional work to ensure functionality on a wide variety of host build
     systems}; this is quite rare.  When in doubt, include the maximum level
-  of detail build engineers can provide with the CCS instructions.
+  of detail build engineers can provide with the CCS instructions, but also
+  double-check to investigate if a more generalized solution (such as other
+  host systems) work just as well for the build.
 
 \item {\bf Seek to adhere to the spirit of copyleft, not just the letter of
-  the license}.  ThinkPenguin uses encouragement of  users to improve and
-  make their devices better as a commercial differentiator.  Copyleft advocates
-  remain baffled as to why other companies have not realized how the large the
-  market for
-  users who seek hackable devices continues to grow.  By going beyond the
+  the license}.  Encouragement of users to improve and
+  make their devices better is one of ThinkPenguin's commercial differentiators.  Copyleft advocates
+  that other companies have undervalued the large and lucrative
+  market of
+  users who seek hackable devices.  By going beyond the
   mere minimal requirements of GPL, companies can immediately reap the
   benefits in that target market.
 
-  \item Community-oriented enforcement organizations (for lack of a better
-    phrase) do not play ``gotcha'' with distributors regarding GPL
+  \item Community-oriented enforcement organizations do not play ``gotcha''\footnote{For lack of a better
+    phrase.} with distributors regarding GPL
     violations.  The goal in the GPL enforcement process is to achieve
     compliance and correct mistakes and annoyances.  Such organizations
-    therefore do not wish to assume a violation, and simply work with the
-    vendor to correct issues.  (This can be almost directly contrasted with
+    therefore take an ``innocent until proven guilty $\rightarrow$ guilty
+    due to honest error rather than malicious action '' approach.  The goal
+    is compliance (in direct contrast with
     the \hyperref[Proprietary Relicensing]{discussion in \S~\ref*{Proprietary Relicensing} about the
-      proprietary relicensing} business model.)
+      proprietary relicensing} business model).
     
 \end{enumerate}
 
