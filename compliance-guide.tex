@@ -6,9 +6,9 @@
 {\parindent 0in
 This part is: \\
 \begin{tabbing}
-Copyright \= \copyright{} 2014 \= \hspace{.2in} Bradley M. Kuhn. \\
+Copyright \= \copyright{} 2008, 2014 \= \hspace{.2in} Bradley M. Kuhn. \\
 Copyright \= \copyright{} 2014 \> \hspace{.2in} Free Software Foundation, Inc. \\
-Copyright \> \copyright{} 2008 \> \hspace{.2in} Software Freedom Law Center. \\
+Copyright \> \copyright{} 2008, 2014 \> \hspace{.2in} Software Freedom Law Center. \\
 \end{tabbing}
 
 \vspace{1in}
@@ -51,6 +51,20 @@ methods that lead to better GPL compliance.  Finally, it recommends proper
 post-violation responses to the concerns of copyright holders.
 
 \chapter{Background}
+
+% FIXME-URGENT: integrate and correct
+
+Copyright law grants exclusive rights to authors. The ``preclusive'' use of
+copyleft to protect users’ rights still leaves the authors, as copyright
+holders, or their agents in the sole position of enforcers or protectors of
+their users’ rights. Actions for copyright infringement are the ultimate
+legal mechanism for enforcement, and copyright law allows only a copyright
+holder or her agent to bring an action for infringement. There also exist
+community efforts at compliance that help copyright holders in enforcement of
+their rights, but only the copyright holders or their legal representatives
+can actually initiate enforcement proceedings in the legal system.
+
+%FIXME-URGENT: END
 
 Early GPL enforcement efforts began soon after the GPL was written by
 Richard M.~Stallman (RMS) in 1989, and consisted of informal community efforts,
@@ -101,6 +115,117 @@ found that most violations stem from a few common, avoidable mistakes.  All copy
 commercial distributors, redistributors, and resellers on how to avoid
 violations in the first place, and to respond adequately and appropriately
 when a violation occurs.
+
+%FIXME-URGENT: integrate (into its own chapter)
+\chapter{FIXME-URGENT}
+
+\section{Who Has Compliance Obligations?}
+
+Distributors of licensed works—whether they are distributing modified or
+unmodified versions of the works, whether they have embedded executable
+copies of licensed works in a device, or are selling or otherwise
+transferring only a digital copy—have obligations to at least the users to
+whom they or intermediary parties distributed those copies. Whether those
+obligations run also to third parties not directly receiving their
+distribution of the works depends on the precise license involved, and their
+chosen mode of either distributing or offering to distribute source code. In
+addition, they have obligations to upstream parties, to preserve reasonable
+legal notices embedded in the code, and to mark modified versions
+appropriately.
+
+Both service providers and distributors have the obligation, in order to
+protect users’ rights, to refrain from imposing any additional restrictions
+on downstream parties. They must refrain from terms in ``umbrella licenses,''
+EULAs, or sublicenses that restrict downstream users’ rights as described
+above. Under the terms of LGPL, they must also refrain from license terms on
+works based on the licensed work that prohibit replacement of the licensed
+components of the larger non-LGPL’d work, or prohibit decompilation or
+reverse engineering in order to enhance or fix bugs in the LGPL’d components.
+
+Patent holders having claims reading on works they distribute have an
+obligation to refrain from enforcing those claims against parties to whom
+they distribute. Patent holders modifying and distributing works under the
+version 3 family of licenses have an obligation to refrain from enforcing any
+claims reading on the version they distributed, not only against that version
+as distributed, but also against any subsequent version or work based thereon
+that also practices those claims.
+
+All parties have an obligation to refrain from acting as a provider of
+services or distributor of licensed works if they have accepted, or had
+imposed on them by judicial action, binding legal conditions that would
+prevent them from meeting obligations to users as described. If a party is
+under such conflicting obligations, it has a duty to refrain from playing the
+role in which it is no longer free to meet its license obligations.
+
+\section{FIXME: Understanding Risk}
+
+we have observed that there is a significant mismatch between the assumptions
+businesses make about compliance and the realities of what goes wrong, what
+causes disputes, and how those disputes are resolved. Often, we have found
+companies preparing at great expense to avoid unlikely risks that have low
+historical incidence of occurrence and low cost of remediation, while leaving
+unmanaged the risks that have historically resulted in all the litigation and
+other adverse outcomes. In this section, we describe in broad terms the
+activities that help businesses prepare to meet their compliance obligations
+with minimal effort at minimal cost, dealing preventively with the compliance
+risks they really face.
+
+The mismatch between actual compliance risk and compliance risk management,
+in our experience, results from a misunderstanding of licensor
+intentions. Commercial parties often expect copyleft project communities to
+approach compliance as a form of copyright monetization, or else as an
+ideological effort to force proprietary software to be relicensed under
+copyleft terms. Under the assumption that the intention of the licensors is
+to take advantage of non-compliance to extract royalties, or to force the
+business’s proprietary products to be distributed under copyleft, businesses
+manage the risk that they will ``accidentally''—or as the result of
+unsupervised activity by individual programmers—copy infringing ``snippets'' of
+copylefted code into their own proprietary computer program. Risk management
+involves the purchase of expensive proprietary ``code scanning'' services that
+purport to detect such accidental inclusions. Effort is concentrated on how
+proprietary computer programs are made, to prevent ``infection'' by free
+software.
+
+In fact, however, development communities that use copyleft regard compliance
+failures as an opportunity to improve compliance. Every compliance failure
+downstream from their project represents a loss of rights by their users. The
+project, as copyright holder, is the guardian of its users’ rights. Their
+activity is designed to restore those rights, and to protect the project’s
+contributors’ intentions in the making of their software. Projects’ goals in
+seeking compliance are more often frustrated by the way software is delivered
+to users than by the way combinations of proprietary and free software are
+made. In particular,
+
+\begin{itemize}
+
+\item Users aren’t provided with required information about the presence of
+  copylefted programs and their applicable license terms in the product they
+  have purchased; or
+
+\item Users can’t reliably get complete and corresponding source code to
+  copylefted programs the distributor knew it was using and intended to use
+  pursuant to the license terms; or
+
+\item Users get no response when they communicate with published addresses
+  requesting fulfillment of businesses’ obligations.
+\end{itemize}
+
+
+In these and similar situations, the project’s goal is compliance with
+obligations intentionally incurred by intentional use of copylefted programs,
+through observance of fulfillment obligations to downstream users. Failures
+of this type, which are uncaught by scanning programs or other similar
+services, have resulted in all the litigation ever brought by copyleft
+communities around the world.
+
+Inclusions of free software in commercial proprietary products do happen. In
+our practice on behalf of copyleft-using development communities, we
+encounter such problems not frequently, but regularly. To the best of our
+knowledge, not one such instance has ever resulted in compliance litigation
+by a community party. These issues are regularly settled in an amicable and
+cooperative fashion.
+
+%FIXME-URGENT: END
 
 \chapter{Best Practices to Avoid Common Violations}
 \label{best-practices}
@@ -199,6 +324,24 @@ source (CCS)\footnote{For more on CCS,  see
 for the GPL'd components and your modifications thereto, but not
 for independent proprietary applications.  The procedures described in
 this document address this typical scenario.
+
+% FIXME-URGENT: integrate
+
+Use of these terms allows GPLv3 to be interpreted authoritatively based
+solely on local legal knowledge and the technical facts. Parties who may have
+questions about compliance with GPLv3 under domestic copyright provisions
+need only to ask two questions, one legal and the other factual:
+
+    Do I need a license under local copyright law to carry out this activity?
+
+    Does my activity enable any other party to make or receive a copy of the program?
+
+If question 1 is answered by a local copyright lawyer in the negative, then
+the activity involved is not propagation and is permitted by GPLv3 without
+more. If the answers to both questions are positive, then the activity
+involved is ``conveying'', and copyleft obligations apply.
+
+%FIXME-URGENT: END
 
 \section{Monitor Software Acquisition}
 
@@ -304,6 +447,24 @@ and \href{http://www.fsf.org/licensing/licenses/gpl.html#section6}{GPLv3}.
 It may be helpful to have a copy of each license open while reading this
 section.
 
+%FIXME-URGENT: integrate
+
+with Section 1 is the source of the requirement that
+the full license text must accompany every distribution of a source or binary
+version of each licensed work, to ensure that users have actual notice of
+their rights. This requirement is responsible for a surprisingly significant
+fraction of compliance complaints, primarily because users are not provided
+with required information about the presence of GPL’d programs and the
+applicable license terms in physical products that they have purchased. The
+most effective mode of compliance engineering is to treat the required
+license texts as a ``make target'' in the compiling, packaging and distribution
+of the software, so that license texts and other ``collateral'' for the
+software in a product stack are produced and verified at the same stages and
+in the same fashion that the binaries themselves are generated, tested and
+packaged.
+
+%FIXME-URGENT: END
+
 \section{Binary Distribution Permission}
 \label{binary-distribution-permission}
 
@@ -388,6 +549,11 @@ your last binary distribution (under GPLv2), or your last binary or spare
 part distribution (under GPLv3).  Your source code request and
 provisioning system must be designed to last much longer than your product
 life cycle.
+
+% FIXME-URGENT: integrate
+it also increases your compliance costs in the long
+run
+%FIXME-URGENT: END
 
 In addition, if you are required to comply with the terms of GPLv2, you
 {\bf cannot} use a network service to provide the source code.  For GPLv2,
@@ -528,6 +694,12 @@ market with an out-of-compliance product.  If you ship an offer for source
 with your product but cannot actually deliver \emph{immediately} on that
 offer when your customers request it, you should expect an enforcement
 action.
+
+%FIXME-URGENT: integrate
+
+Failure to provide or offer complete and corresponding source code is the
+single largest failure mode leading to compliance disputes.
+%FIXME-URGENT: END
 
 \subsection{Option (c): Noncommercial Offers}
 
@@ -741,6 +913,63 @@ build system and no source tracking.  Address these issues by installing a
 revision system, telling your developers to use it, and requiring your
 build guru to document his or her work!
 
+
+% FIXME-URGENT: integrate, possibly create:
+% \section{Non-Technical Compliance Issues}
+
+Compliance with GPLv2 \S7 is therefore a matter of legal review rather than
+technical or engineering practice.
+
+%FIXME-URGENT: integrate
+%  Possibly call this: \section{Self-Assessment of Compliance}
+
+\section{FIXME}
+
+%FIXME-URGENT: integrate
+
+Measure your compliance from the position of the user downstream from you
+trying to exercise rights conveyed by the licenses. Has the user received
+notice of the copylefted software intentionally included in your product?  Is
+complete, corresponding source code and applicable installation information
+available to the user easily, preferably by automated means?  Tools that
+measure what you deliver are more valuable than tools that only measure what
+you build.
+
+Always exercise your own right to request complete and corresponding source
+code for all copylefted works from all your providers of software and of
+components embedding software, preferably in an automated process directly
+feeding your overall software governance system. Where possible, reject as
+non-conforming components provided to you containing copylefted software for
+which complete and corresponding source code is not furnished in response to
+your request or which is not accompanied by a ``stackmark'' for automated
+provisioning of source code. If you rely on an upstream provider for your
+software you cannot ignore your GPL compliance requirements simply because
+someone else packaged the software that you distribute.
+
+%FIXME-URGENT: integrate
+%  Possibly call this: \section{Third-Party Compliance Assessors}
+
+\section{FIXME}
+
+
+Concentrate on the copylefted software you know you are using. Historically,
+the risk from a copylefted code snippet that some programmer dropped in your
+proprietary product careless of the consequences is a problem far more
+infrequent and less difficult to resolve. Efficient management of the risks
+of higher concern lies in making sure you can provide, for example, precisely
+corresponding source code and makefiles for a copy of the Coreboot
+bootloader, Linux kernel, Busybox, or GNU tar that you included in a product
+you shipped two years ago.
+
+Don’t rely blindly on code scanners as they work too late in the process to
+improve your governance and too early in the process to catch problems in
+your delivery and post-sale provisioning. They do less important parts of the
+job expensively, and more important parts of the job not at all. Use them,
+where they are cost-effective, as a supplement to your own governance and
+verification processes, not as a primary tool of risk management.
+
+%FIXME-URGENT: END
+
 \chapter{When The Letter Comes}
 
 Unfortunately, many GPL violators ignore their obligations until they are
@@ -781,6 +1010,18 @@ Note that the latter model \textit{only} works for companies that hold 100\% of
 the copyrights in the infringed work.  As such, multi-copyright-held works
 are fully insulated from these tactics.
 
+% FIXME-URGENT: integrate, and rewrite so it doesn't laud behavior that is
+% ultimately problematic.
+
+companies have often formed beneficial consulting or employment relationships
+with project developers they first encountered through compliance
+inquiries. In some cases, working together to alter the mode of use of the
+project’s code in the company’s products was an explicit element in dispute
+resolution. More often, the communication channels opened in the course of
+the inquiry served other and more fruitful purposes later.
+
+    %FIXME-URGENT: END
+
 
 \section{Communication Is Key}
 
@@ -813,6 +1054,44 @@ cooperation, and these values extend to GPL enforcement.  You will
 generally find that software freedom developers and their lawyers are willing to
 have a reasonable dialogue and will work with you to resolve a violation
 once you open the channels of communication in a friendly way.
+
+%FIXME-URGENT: integrate
+
+    Assume preparation on the complainant’s side. The organizations
+    traditionally bringing complaints of copyleft non-compliance all
+    fully investigate and verify complaints referred to them before making
+    contact with apparently non-complying parties. Complainants will be
+    prepared to substantiate the facts on which their complaint is based.
+
+
+%FIXME-URGENT: integrate
+
+
+        Let engineers be a part of the process. The most time-consuming and
+    difficult part of resolving most compliance matters, in our experience,
+    is verifying that source code is indeed complete and
+    corresponding. Without direct contact between software engineers on both
+    sides, the resolution of the technical issues involved in demonstrating
+    that the binary distributed was built from the source provided is likely
+    to be tortuous, expensive, and potentially tense. Counsel are
+    understandably reluctant to expose their client’s employees to direct
+    inquiry from potentially hostile parties. But facilitated exchanges of
+    information among software engineers communicating on technical subjects
+    shortens the time to resolution, substantially reduces the cost of
+    reaching resolution, and prevents unnecessary escalation due to mutual
+    misunderstanding.
+
+%FIXME-URGENT: integrate
+
+    Use compliance discussions to improve relationships. Development
+    communities make software to benefit users, which includes you. When you
+    use copylefted community software in your products, you are an important
+    and valuable part of the commons, from the developers’ point of
+    view. Resolving a compliance matter is an occasion to strengthen your
+    relationship to the commons, by increasing communication between your
+    engineers and the project whose output you use for business benefit.
+
+    %FIXME-URGENT: END
 
 \section{Termination}
 
@@ -937,6 +1216,11 @@ There are several other issues that are less common, but also relevant in
 a GPL compliance situation.  To those who face them, they tend to be of
 particular interest.
 
+% FIXME-URGENT: integrate
+Non-compliance with GPLv3 in the
+distribution of Javascript on the Web is becoming more frequent
+%FIXME-URGENT: END
+
 \section{LGPL Compliance}
 \label{lgpl}
 
@@ -959,6 +1243,22 @@ this.  Also, the license of the whole work must permit ``reverse
 engineering for debugging such modifications'' to the library.  Therefore,
 you should take care that the EULA used for the Application does not
 contradict this permission.
+
+%FIXME-URGENT: integrate
+
+Section 2(a) states that if a licensed work is a software library (defined in
+\S0 as ``a collection of software functions and/or data prepared so as to be
+conveniently linked with application programs (which use some of those
+functions and data) to form executables'') permission is given to distribute
+modified versions only if those versions are themselves libraries. LGPLv2.1
+code can therefore not be compliantly taken from its context in a library and
+placed in a non-library modified version or work based on the work. Section 6
+does not provide an exception for this rule: a combination may be made of a
+modified version of an LGPL’d library with other code, but the LGPL’d code
+must continue to be structured as a library, and to that library the terms of
+the license continue to apply.
+
+%FIXME-URGENT: END
 
 \section{Upstream Providers}
 \label{upstream}
@@ -1013,6 +1313,34 @@ vendor's costs seem ``too good to be true,'' you may ultimately bear the
 burden of the vendor's inattention to GPL compliance.  Ask the right
 questions, demand an account of your vendors' compliance procedures, and
 seek indemnity from them.
+
+% FIXME-URGENT: integrate
+
+In such instances it is advisable that you exercise your own rights as a user
+to request C&CS for all the GPL programs that your suppliers provided to you,
+preferably in an automated process. Once you receive such C&CS, passing it
+along with your product will ensure your compliance with the license.
+
+% FIXME-URGENT: Needs a new section
+% \section{Mergers and Acquisitions}
+
+[GPLv3] Section 10 also clarifies that in business acquisitions, whether by
+sale of assets or transfers of control, the acquiring party is downstream
+from the party acquired. This results in new automatic downstream licenses
+from upstream copyright holders, licenses to all modifications made by the
+acquired business, and rights to source code provisioning for the
+now-downstream purchaser.
+
+In our experience, the process whereby these matters are adjusted in most M&A
+situations are ludicrously expensive and inefficient. A simple waiver and
+release of all claims to GPL compliance against the purchased entity by the
+purchaser, issued before closure, removes the problem. If the purchasing
+entity has adequate software governance systems in place, all software
+acquired in the course of the entity transaction is input to the standard
+governance processes for acquired software, and downstream compliance by the
+new merged entity is automatically handled.
+
+%FIXME-URGENT: END
 
 \section{User Products and Installation Information}
 \label{user-products}

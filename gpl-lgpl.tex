@@ -34,6 +34,7 @@ Copyright \= \copyright{} 2003--2007, 2014 \hspace{.1mm} \=  \kill
 Copyright \> \copyright{} 2014 \> Bradley M. Kuhn \\
 Copyright \> \copyright{} 2014 \>  Anthony K. Sebro, Jr. \\
 Copyright \> \copyright{} 2003--2007, 2014 \>  Free Software Foundation, Inc.
+Copyright \> \copyright{} 2014 \>  Software Freedom Law Center.
 \end{tabbing}
 
 
@@ -335,6 +336,8 @@ created as a community-oriented ``answer'' to the existing proprietary
 software licensing mechanisms.  Thus, first, consider carefully why
 proprietary software exists in the first place.
 
+% FIXME-URGENT: integrate
+The primary legal regime that applies to software is copyright law. % FIXME-URGENT: END
 Proprietary software exists at all only because it is governed by copyright
 law.\footnote{This statement is admittedly an oversimplification. Patents and
   trade secrets can cover software and make it effectively non-Free, and one
@@ -475,6 +478,14 @@ developers of the kernel named Linux, have chosen to follow this paradigm.
 
 \label{copyleft-definition}
 
+% FIXME-URGENT: integrate
+
+Copyleft,
+which uses functional parts of copyright law to achieve an unusual result
+(legal protection for free sharing) forms the core legal principle of these
+licenses. It modifies, or ``hacks'' copyright law, which is usually employed to
+strengthen the rights of authors or publishers, to strengthen instead the
+rights of users.   %FIXME-URGENT: end
 Copyleft is a legal strategy and mechanism to defend, uphold and propagate software
 freedom. The basic technique of copyleft is as follows: copyright the
 software, license it under terms that give all the software freedoms, but
@@ -483,6 +494,34 @@ the software have equal rights and freedom. In essence, copyleft grants
 freedom, but forbids others to forbid that freedom to anyone else along
 the distribution and modification chains.
 
+% FIXME-URGENT: integrate
+
+This ``reciprocity'' or ``share and share alike'' rule protects both
+developers, who avoid facing a ``proprietized'' competitor of their project,
+and users, who can be sure that they will have all four basic freedoms not
+only in the present version of the program they use, but in all its future
+improved versions.
+
+% FIXME-URGENT: integrate
+
+The unit of copyright law is ``the work''. In that sense, the ``work''
+referenced by the licenses is anything that can be copyrighted or will be
+subject to the terms of copyright law. The GNU licenses exercise their scope
+fully. Anything which is ``a work'' or a ``work based on a work'' licensed
+under GPL is subject to its requirements, including the requirement of
+complete and corresponding source code, unless it is specifically
+excepted. This principle often causes theoretical or speculative dispute
+among lawyers, because ``the work'' is not a unit of computer programming. In
+order to determine whether a ``routine'' an ``object'', a ``function'', a
+``library'' or any other unit of software is part of one ``work'' when combined
+with other GPL’d code, we must ask a question that copyright law will not
+directly answer in the same technical terms.
+
+The key here is that the GNU GPL licenses mean to ``plow fence row to fence
+row'', covering every version of ``work based on the work'' recognized by local
+copyright law, but no further.
+
+%FIXME-URGENT: end
 Copyleft is a general concept. Much like ideas for what a computer might
 do must be \emph{implemented} by a program that actually does the job, so
 too must copyleft be implemented in some concrete legal structure.
@@ -1070,6 +1109,14 @@ for identifying the derivative and/or combined works of software.  However,
 no copyright license --- not even the GNU GPL --- can be blamed for this.
 Legislators and court opinions must give us guidance in borderline cases.
 
+% FIXME-URGENT: integrate (and back ref to copyleft section)
+
+A
+lawyer’s conclusion on that subject will be based on the application of rules
+made in the context of literary or artistic copyright to the different
+context of computer programming.
+%FIXME-URGENT: end
+
 \section{GPLv2~\S1: Verbatim Copying}
 \label{GPLv2s1}
 
@@ -1520,6 +1567,15 @@ make proper support choices.  Finally, GPLv2~\S2(a) serves an academic
 purpose --- ensuring that future developers can use a diachronic
 approach to understand the software.
 
+%FIXME-URGENT: integrate
+
+section 2(c)
+provides that if the program before modification ``normally reads commands
+interactively when run'' and displays or prints legal information, all
+copyright notices, warranty disclaimer, modification indications and a
+pointer to the license text must be displayed or printed in interactive
+use.
+%FIXME-URGENT: end
 \medskip
 
 The second requirement (GPLv2~\S2(b)) contains the four short lines that embody
@@ -1579,6 +1635,15 @@ affects the license of the new whole combined and/or derivative work.
 
 \label{separate-and-independent}
 
+%FIXME-URGENT: integrate
+
+But the GNU GPL licenses recognize what is outside their scope. Where a programmer’s work is
+``separate and independent'' from any GPL’d program code with which it could be
+combined, then the obligations of copyleft do not extend to the work
+separately distributed. Far from attempting to extend copyleft beyond the
+scope of copyright, the licenses explicitly recognize.
+
+%FIXME-URGENT: end
 It is certainly possible to take an existing independent work (called
 \worki{}) and combine it with a GPL'd program (called \workg{}).  The
 license of \worki{}, when it is distributed as a separate and independent
@@ -1602,6 +1667,30 @@ of the GPL are upheld, goes far above and beyond the permissions that one
 would get with a typical work not covered by a copyleft license.  (Thus, to
 say that this condition is any way unreasonable is simply ludicrous.)
 
+% FIXME-URGENT: integrate
+
+The GPL licenses, then, are explicit about limiting the scope of copyleft to
+the scope of copyright.  They do not, however, as is sometimes suggested, do
+so in a way that distinguishes ``dynamic'' from ``static'' linking of program
+code in ``early-binding'' programming languages. It is occasionally suggested
+that a subroutine ``dynamically'' linked to GPL’d code is, by virtue of the
+linking alone, inherently outside the scope of copyleft on the main
+work. This is a misunderstanding. When two software components are joined
+together to make one work (whether a main and some library subroutines, two
+objects with their respective methods, or a program and a ``plugin'') the
+combination infringes the copyright on the components if the combination
+required copyright permission from the component copyright holders, and such
+permission was either not available or was available on terms that were not
+observed.
+
+Where a combination is made with GPL’d or AGPL’d components, the
+only available permission is copyleft, and its terms must be observed on the
+combination as a whole if the GPL’d component is to be used at all. Whether
+the combination is made with a linker before distribution of the executable,
+is made by the OS kernel in order to share libraries for execution efficiency
+at runtime, or results from ``late-binding'' of references in the language at
+runtime (as in Java programs) is irrelevant.
+%FIXME-URGENT: end
 \medskip
 
 \label{GPLv2s2-at-no-charge}
@@ -2148,6 +2237,28 @@ In short, GPLv2~\S6 says that your license for the software is your one and
 only copyright license allowing you to copy, modify and distribute the
 software.
 
+% FIXME-URGENT: integrate
+%   Also, link to GPLv3 section
+
+This is GPLv2’s ``automatic downstream licensing'' provision. Each time you
+redistribute a GPL’d program, the recipient automatically receives a license
+from each original licensor to copy, distribute or modify the program subject
+to the conditions of the license. There is no requirement to take any action
+to ensure the downstream recipient’s acceptance of the license terms, see
+above. This places every copyright holder in the chain of descent of the code
+in legal privity, or direct relationship, with every downstream
+redistributor. Two legal effects follow. First, as \S6 says, parties
+themselves remaining in compliance have valid permissions for all actions
+including modification and redistribution even if their immediate upstream
+supplier of the software has been terminated for license violation. Their
+licensed rights are not dependent on compliance of their upstream, because
+their licenses issue directly from the copyright holder. Second, automatic
+termination cannot be cured by obtaining additional copies from an alternate
+supplier: the license permissions emanate only from the original licensors,
+and if they have automatically terminated permission, no act by any
+intermediate license holder can restore those terminated rights.
+
+%FIXME-URGENT: end
 \section{GPLv2~\S7: ``Give Software Liberty or Give It Death!''}
 \label{GPLv2s7}
 
@@ -2387,6 +2498,16 @@ concepts corresponding to the derivative work are recognized in all copyright
 law systems, these counterpart concepts might differ to some degree in scope
 and breadth from the USA derivative work.
 
+% FIXME: integrate
+
+So in GPLv3, we and our clients at the Free Software Foundation
+decided to drop all illustrative reference to US ``derivative works,''
+returning to the base concept only: GPL covers the licensed work and all
+works based on the work, where ``based on the work'' is defined as any
+modification or combination with the licensed work that requires copyright
+permission to make.
+% FIXME-URGENT: end
+
 The goal and intention of GPLv2 was always to cover all rights governed by
 relevant copyright law, in the USA and elsewhere.  GPLv3 therefore takes the
 task of internationalizing the license further by removing references to
@@ -2411,7 +2532,22 @@ definition.  GPLv3 offers a single term ``covered work'', which enables some
 of the wording in GPLv3 to be simpler and clearer than its GPLv2
 counterparts.
 
+% FIXME-URGENT: integrate
+
+Two terms are used in GPLv3 deliberately exotic to the language of
+international copyright.
+
 \subsection{Propagate}
+
+% FIXME-URGENT: integrate
+
+To ``propagate'' a work covered by the license means any activity that
+requires permission of copyright holders in the local legal system where the
+activities are carried on. Personal use or modification for personal use are
+activities explicitly excluded from ``propagation'' regardless of domestic
+copyright law, in order to prevent domestic copyright law from trenching on
+freedoms 0 to 2.
+%FIXME-URGENT: end
 
 The term ``propagate'' serves two purposes.  First, ``propagate'' provides a
 simple and convenient means for distinguishing between the kinds of uses of a
@@ -2452,7 +2588,22 @@ some particular national copyright statute.  This helps not only with
 internationalization, but also factually-based terminology aids in
 developers' and users' understanding of the GPL\@.
 
+%FIXME-URGENT: integrate
+
+As a further benefit, because ``propagation'' includes all
+exclusive rights granted under any particular copyright regime, regimes that
+require a valid license to account for all exclusive rights are automatically
+complied with.
+% FIXME-URGENT: end
+
 \subsection{Convey}
+
+%FIXME-URGENT: integrate
+
+Any propagation that enables other parties to receive or make copies of the
+work, is called ``conveying''. In general, conveying is the activity that
+triggers copyleft obligations.
+% FIXME-URGENT: end
 
 Further to this point, a subset of propagate --- ``convey'' --- is defined.
 Conveying includes activities that constitute propagation of copies to
@@ -2601,6 +2752,15 @@ is that the library in question does not qualify for it.
 
 \section{GPLv3~\S2: Basic Permissions}
 \label{GPLv3S2}
+
+%FIXME-URGENT: integrate
+GPLv3 explicitly affirms your unlimited permission to run the
+unmodified program. You can only make modifications, or otherwise propagate a
+covered work, even one that you do not convey, so long as you are in
+compliance with the license terms. If your license is terminated, then, for
+example, you cannot continue to service your copies by making new modified
+versions.
+% FIXME-URGENT: end
 
 GPLv3~\S2 can roughly be considered as an equivalent to GPLv2~\S0 (discussed
 in \S~\ref{GPLv2s0} of this tutorial).  However, the usual style of
@@ -2863,6 +3023,17 @@ section!).  The intent and scope is the same as was intended in GPLv2.
 \section{GPLv3~\S6: Non-Source and Corresponding Source}
 \label{GPLv3s6}
 
+%FIXME-URGENT: integrate
+
+Section 6 states the compliance obligations for distributing ``non-source
+forms'' of a program, which means any form other than the form preferred for
+making modifications. In addition to binaries or executables, non-source
+forms therefore include obfuscated, minimized, compressed or otherwise
+non-preferred forms for modification. The requirement to provide complete and corresponding source code under \S6
+closely parallels the provisions of GPLv2 \S3, above, but with changes
+designed to make compliant provisioning easier under contemporary
+technological conditions.
+% FIXME-URGENT: end
 GPLv3~\S6 clarifies and revises GPLv2~\S3.  It requires distributors of GPL'd
 object code to provide access to the corresponding source code, in one of
 four specified ways.  As noted in \S~\ref{GPLv3s0}, ``object code'' in GPLv3
@@ -2928,6 +3099,16 @@ server to keep the source code available for copying for as long as the
 downstream distributor enables access to the object code.  This codifies
 formally the typical historical interpretation of GPLv2.
 
+% FIXME-URGENT: integrate
+
+This provision allows, for the first time, for third-party provision of
+complete and corresponding source code in commercial distribution
+situations. The obligation remains on the party distributing the non-source
+form to point prominently (``next to'' the non-source download) to the
+third-party source code provisioning server, and to ensure that this
+third-party server remains in operation for required period.
+% FIXME-URGENT: end
+
 % FIXME-LATER: perhaps in enforcement section, but maybe here, note about
 % ``slow down'' on source downloads being a compliance problem. 
 
@@ -2943,6 +3124,14 @@ GPLv3~\S6(d).  (Note: this does not change nor impact any obligations under
 GPLv3~\S6(b)(2); GPLv3~\S6(d) is a wholly different provision.)
 
 \subsection{GPLv3~\S6(e): Peer-to-Peer Sharing Networks}
+
+% FIXME-urgent: integrate
+
+Section 6 also allows the provision of source via such a server when the
+binary or other non-source form is distributed by peer-to-peer protocols such
+as BitTorrent. Here the requirement is only that each peer be effectively
+informed of the location of the source code on a server as above.
+% FIXME-URGENT: end
 
 Certain decentralized forms of peer-to-peer file sharing present a challenge
 to the unidirectional view of distribution that is implicit in GPLv2 and
@@ -3177,6 +3366,13 @@ asymmetrical, because they do not raise the same interpretive
 issues; in particular, additional requirements, if allowed without careful
 limitation, could transform a GPL'd program into a non-free one.
 
+% FIXME-URGENT: integrate
+
+While GPLv2 does not allow for any additional restrictive terms, GPLv3 allows
+for some specific limited variations, thus varying the strict copyleft of
+GPLv2 in the interest of broader compatibility with other licenses.
+% FIXME-URGENT: end
+
 With these principles in the background, GPLv3~\S7  answers the following
 questions: 
 \begin{enumerate}
@@ -3284,6 +3480,40 @@ pathological case\footnote{Theoretically, a user could collect copyright
 % FIXME-LATER: It would be good to have detailed info on each of 7a-f.
 %              Here's some commented-out text that might be useful for 7a-b
 
+
+% FIXME-URGENT: integrate
+
+Section 7(a) – Disclaimer of warranty: Copyright holders can disclaim
+warranty or limit liability differently from the terms as provided under \S\S15
+& 16. Internationalization of GPL required the drafters to permit the
+variation in such terms necessary to deal with the absence of any
+international harmonization of the laws of warranty and disclaimer.
+
+Section 7(b) – Preservation of appropriate legal notices. Section 7 permits
+additional terms requiring preservation of legal notices, including on output
+from execution of covered works.
+
+Section 7(c) – This provision allows for prohibition of misrepresentation of
+original material and makes GPLv3 compatible with permissive licenses that
+require modified versions be marked in ``reasonable''ways which are different
+from the precise marking requirements of GPL itself.
+
+Section 7(d) – Limiting the use of names of licensor for publicity
+purposes. This provision was added to provide compatibility with licenses
+which prohibit the use of the licensor’s name on unmodified versions and
+other prohibitions on advertising rights. The long-standing and occasionally
+troublesome incompatibility with the ``BSD advertising clause'' is an example
+of the friction removed by this provision.
+
+Section 7(e) – No grant of rights under Trademark Law. This provision serves
+a similar function with respect to ``no trademark grant'' clauses in permissive
+licenses.
+
+Section 7(f) – allows for requiring of Indemnification of authors and
+licensors, removing one of two primary sources of incompatibility with the
+Apache Software License version 2.0.
+% FIXME-URGENT: end
+
 %% Under subsections 7a and 7b, the requirements may include preservation of
 %% copyright notices, information about the origins of the code or alterations
 %% of the code, and different warranty disclaimers. Under subsection 7c, the
@@ -3309,6 +3539,15 @@ pathological case\footnote{Theoretically, a user could collect copyright
 %% accomplishes additional objectives, permitting the expansion of the base of
 %% code available for GPL developers, while also encouraging useful
 %% experimentation with requirements we do not include in the GPL itself.
+
+% FIXME-URGENT: integrate
+
+Any other non-permissive additional terms apart from those stated above are
+considered ``further'' restrictions and are prohibited by \S10. If you add any
+kind of additional terms in accordance with \S7, you must ensure that the
+terms are placed in the relevant source files or provide a conspicuous notice
+about where to find the additional terms.
+% FIXME-URGENT: end
 
 \section{GPLv3~\S8: A Lighter Termination}
 
@@ -3352,6 +3591,30 @@ the working of the license.
 
 GPLv3~\S10 ensures that everyone downstream receives licenses from all
 copyright holders.  It really is a generally straightforward section.
+
+% FIXME-URGENT:
+
+Each time you redistribute a GPL’d program, the recipient automatically
+receives a license, under the terms of the GPL involved, from every upstream
+licensor whose copyrighted material is present in the work you
+redistribute. You can think of this as creating a three-dimensional rather
+than linear flow of license rights. Every recipient of the work is ``in
+privity,'' or is directly receiving a license from every licensor.
+
+This mechanism of automatic downstream licensing is central to the working of
+copyleft. Every licensor independently grants licenses, and every licensor
+independently terminates the license on violation.
+
+Parties further downstream from
+the infringing party remain licensed, so long as they don’t themselves commit
+infringing actions. Their licenses come directly from all the upstream
+holders, and are not dependent on the license of the breaching party who
+distributed to them. For the same reason, an infringer who acquires another
+copy of the program has not thereby acquired any new license rights: once any
+upstream licensor of that program has terminated the license for breach of
+its terms, no new automatic license will issue to the recipient just by
+acquiring another copy.
+% FIXME-URGENT: end
 
 % FIXME-LATER: link up this paragraph to above sections.
 
@@ -3420,6 +3683,41 @@ participate in distribution and development of GPL-covered software.  GPLv3's
 policy requires each such patent holder to provide appropriate levels of
 patent assurance to users, according to the nature of the patent holder's
 relationship to the program.
+
+% FIXME-URGENT: integrate
+
+GPLv3 provides for two classes of patent commitments:
+
+    Prohibition of Enforcement of patent claims against those to whom you
+    distribute: GPLv3 \S10 makes explicit that demands for acceptance of
+    patent licenses or payment of patent royalties by those to whom a
+    licensee directly distributes are additional conditions that may not
+    imposed. This provision establishes a uniform rule of patent exhaustion
+    with respect to GPL’d programs regardless of the domestic patent law in
+    any particular system or locale.
+
+    Grant of license to claims in contributor versions: Section 11 introduces
+    an affirmative grant of rights to patent claims by those who contribute
+    code to GPL’d programs. The intent is to prevent parties within the
+    commons from aggressively asserting patents against users of code they
+    have themselves modified, preventing a form of commons betrayal by
+    ``insiders'' to the community. A contributor’s patent claims necessarily
+    infringed by the version of the program created by the incorporation of
+    its modifications are licensed to all subsequent users and modifiers of
+    the program, or programs based on the program. No patent claims only
+    infringed by subsequent modifications by other parties are thus
+    licensed. Patent claims acquired after the making of the ``contributor
+    version'' necessarily infringed by that version are also licensed by this
+    provision at the time of their acquisition or perfection. When a company
+    with a large number of such claims acquires the program’s modifier, all
+    claims held or thereafter acquired by the purchaser are automatically
+    licensed under this provision. The acquisition of Nokia by Microsoft, for
+    example, resulted in the automatic licensing of all Microsoft claims now
+    or hereafter acquired which read on any contributor version of any GPLv3
+    program ever modified by Nokia. The wholesale decimation of Microsoft
+    patent claims on GPLv3 programs arising from the purchase of Nokia has so
+    far been unremarked in the industry.
+% FIXME-URGENT: end
 
 \subsection{The Contributor's Explicit Patent License}
 
@@ -3578,6 +3876,16 @@ has never been a GPL condition.  However, many vendors who produce products
 that include copylefted software, and who are most likely to be affected by the
 downstream shielding provision, lobbied for the addition of the source code
 availability option, so it remains.
+
+% FIXME-URGENT: integrate
+
+If A takes a patent license from B that benefits A only, rather than A’s
+customers or their distributees, A imposes risk from B’s patents on others
+that it does not suffer itself. Under many circumstances, this is an
+acceptable outcome. If, however, A is the only possible source of the
+program, by taking such a license and distributing in reliance on it, A is in
+effect helping B to ``take the program private.''
+% FIXME-URGENT: end
 
 Meanwhile, two specific alternatives to the source code availability option
 are also available. The distributor may comply by disclaiming the patent
@@ -3752,6 +4060,17 @@ Meanwhile, those who criticize the permission to link with code under the Affero
 GPL should recognize that most other free software licenses also permit
 such linking. 
 
+%FIXME-URGENT: integrate
+%   A section on combinations with Affero is necessary anyway here.
+
+When a combined work is made by linking GPLv3-covered code with AGPL-covered
+code, the copyleft on one part will not extend to the other part. That is to
+say, in such combinations, the Affero requirement will apply only to the part
+that was brought into the combination under the Affero license. Those who
+receive such a combination and do not wish to use code under the Affero
+requirement may remove the Affero-covered portion of the combination.
+% FIXME-URGENT: end
+
 \section{GPLv3~\S14: So, When's GPLv4?}
 \label{GPLv3s14}
 
@@ -3827,6 +4146,12 @@ software is Free Software realize that full copyleft does not best
 serve us. The GNU Lesser General Public License (``GNU LGPL'') was
 designed as a solution for such situations.
 
+% FIXME: integrate
+
+The Lesser General Public License is sometimes described as a ``weak copyleft''
+license, because code licensed under LGPL’s terms can be combined with code
+under non-free licenses, and is sometimes used in that fashion.
+% FIXME-URGENT: end
 \section{The First LGPL'd Program}
 
 The first example that FSF encountered where such altered tactics were
@@ -4247,6 +4572,73 @@ mechanism, the user must have available the object code for the ``work
 based on the library,'' so that the user can relink the application and
 build a new binary.
 
+%FIXME-URGENT: integrate
+
+Under \S6(c), this source code may be offered in writing rather than provided,
+or it may be distributed by network under the terms of \S6(d). In addition,
+under \S6(e) the distributor may ``verify'' that the user has already received,
+or at least that the distributor has already sent to this particular user,
+the relevant source. This is evidently intended to prevent requiring
+duplicate deliveries in ``whole distribution'' situations.
+
+If the distributor of the combined work intends not to distribute or offer
+the source code of the LGPL’d components, the LGPL’d work must be separately
+distributed (subject to source code delivery requirements as part of that
+separate distribution) and packaged in a ``shared library'' mechanism, which
+means
+
+\begin{quotation}
+    that [it] (1) uses at run time a copy of the library already present on
+    the user’s computer system, rather than copying library functions into
+    the executable, and (2) will operate properly with a modified version of
+    the library, if the user installs one, as long as the modified version is
+    interface-compatible with the version that the work was made with.
+\end{quotation}
+
+
+Taken together, these provisions mean:
+
+\begin{itemize}
+
+\item    If you create a program that links through a shared library mechanism to
+    a work that is separately distributed under LGPLv2.1, then you can
+    distribute the resultant program under a license of your choice and you
+    need not convey the LGPL’d work’s source code. If you distribute the
+    library along with your program, or are the separate distributor of the
+    work in another context or as another product, you must distribute its
+    corresponding source under the terms of LGPLv2.1 or GPLv2+, at your
+    option.
+
+\item    If you choose to statically link or otherwise combine your program with
+    an LGPL’d work, you may choose your own license for the work provided the
+    license terms limitations for user modification, reverse engineering and
+    debugging are met, and given that the LGPL’d components are still
+    governed by LGPL’s terms. You must offer or provide complete and
+    corresponding source code for the LGPL’d components. The source code
+    material provided must be sufficient to regenerate the combined work with
+    a user-modified version of the LGPL’d components.
+\end{itemize}
+
+%FIXME-URGENT: integrate
+
+\S6 also requires that:
+
+\begin{quotation}
+    You must give prominent notice with each copy of the work that the
+    Library is used in it and that the Library and its use are covered by
+    this License. You must supply a copy of this License. If the work during
+    execution displays copyright notices, you must include the copyright
+    notice for the Library among them, as well as a reference directing the
+    user to the copy of this License.
+\end{quotation}
+
+This is not identical to the roughly parallel requirements of GPLv2 and
+GPLv3. Compliance requires slightly different measures with respect to the
+``credits'' or ``licenses'' or ``about'' screens in interactive programs.
+
+%FIXME-URGENT: end
+
+
 The remaining options in LGPLv2.1~\S6 are very similar to the other choices
 provided by GPLv2~\S3. There are some additional options, but time does
 not permit us in this course to go into those additional options. In
@@ -4261,6 +4653,17 @@ LGPLv2.1~\S2 is nearly identical in its terms and requirements to GPLv2~\S2.
 There are again subtle differences and additions, which time does not
 permit us to cover in this course.
 
+%FIXME-urgent; integrate
+
+Not only must the source code be complete and corresponding, but it must be
+provided in such a way that a modified version of the entire combined work
+can be regenerated with a modified version of the LGPL’d work replacing the
+version originally provided to the user. When LGPL’d code is statically
+linked to a non-copyleft executable, for example, the required source code
+must also include sufficient material to split the distributed executable and
+relink with a modified version of the library.
+%FIXME-URGENT: end
+
 \section{And the Rest}
 
 The remaining variations between the LGPL and the GPL cover the following
@@ -4269,6 +4672,14 @@ conditions:
 \begin{itemize}
 
 \item Allowing a licensing ``upgrade'' from the LGPL to the GPL\@ (in LGPLv2.1~\S3)
+
+%FIXME-URGENT: integrate
+But LGPLv2.1 \S3 allows all works under its
+terms, copy by copy, to be used instead under the terms of GPLv2 or any later
+version. This provides a pathway for those who do not want to use code under
+the requirements of LGPLv2.1 to do so under GPLv2 or GPLv3 at their
+discretion.
+%FIXME-URGENT: end
 
 \item Binary distribution of the library only, covered in LGPLv2.1~\S4,
   which is effectively equivalent to LGPLv2.1~\S3
@@ -4286,7 +4697,93 @@ understanding the difference between a ``work based on the library'' and a
 remainder of LGPLv2.1 is close enough to GPL that the concepts discussed in
 our more extensive GPL unit can be directly applied.
 
+% FIXME-URGENT: integrate
+
+\chapter{LGPLv3}
+
+LGPLv3 was designed to rectify the architectural plan of the GNU family of
+licenses, by making the copyleft license from which LGPLv3 is a combination
+exception GPLv3. LGPLv3 is therefore an additional permission in the form
+provided for in GPLv3 \S7, above.
+
+\section{Section 0: Additional Definitions}
+
+Section 0 defines the ``Library'' it covers as a work that presents one or more
+interfaces at which a ``use'' can be made by an ``Application.'' Class
+inheritance is ``deemed'' a use of an interface. An ``Application,'' which is
+other program code using one or more ``Library'' interfaces can be combined
+with the code on the other side of the interfaces it uses to form a ``Combined
+Work.''
+
+\section{Section 1: Exception to Section 3 of the GNU GPL}
+
+Section 1 excepts away the interference with use of LGPLv3 code as part of
+``effective technological measures'' of access limitation for other copyrighted
+works provided otherwise by GPLv3 \S3.
+
+
+\section{Section 2 Conveying Modified Versions}
+
+Section 2 continues to require, as LGPLv2.1 \S2(d) required, that the Library
+not be modified to require keys, tokens, tables, or other global non-argument
+data unrelated to function. This is again stated as a ``good faith effort''
+requirement, but failure to cure on notice is strong evidence of the absence
+of good faith. Use of GPLv3 terms by removal of the additional permission, as
+provided for by GPLv3 \S7, is the alternate path to compliance.
+
+\section{Section 3: Object Code Incorporating Material from Library Header Files}
+
+Section 3 disposes entirely [FIXME: with deep technical discussion of
+  combination mechanisms]  in the use of header files and other such forms of
+Library material covered by LGPLv2.1 \S5 by stating a rule applicable at the
+user’s discretion to all such uses within copyright scope: giving notice that
+the library is used in the program and providing copies of GPLv3 and LGPLv3
+along with the work.
+
+\section{ Section 4: Combined Works}
+
+Section 4 is the combination permission at the heart of LGPLv3. It restates
+the license limitation provision of LGPLv2.1 \S2 to clarify that the terms on
+the Combined Work may not prohibit user modification of the Library code, or
+the debugging of such modifications to the Library code by means of whatever
+reverse engineering is necessary.
+
+Section 4(d)(0) contains the source provision requirement, for the Minimal
+Corresponding Source, which ``means the Corresponding Source for the Combined
+Work, excluding any source code for portions of the Combined Work that,
+considered in isolation, are based on the Application, and not on the Linked
+Version [of the Library].'' The alternative to the provision of source code is
+distribution by way of the ``shared library'' mechanism under \S4(d)(1),
+described with respect to LGPLv2.1 \S6, above.
+
+In addition, \S4(e) requires the delivery of ``installation information''
+required to install the modified version of the Library in ``user products''
+under GPLv3 \S6. Where Library Minimal Corresponding Source is not made
+available under \S4(d)(1), \S4(e) reaffirms that ``installation information''
+must still be compliantly delivered under the terms of GPLv3 \S6.
+
+All other provisions of GPLv3 are in force as previously described, and are
+not excepted by the additional permission granted in LGPLv3.
+%FIXME-URGENT: end
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIXME-LATER: There should be a chapter on GPL Exceptions generally.
+
+% Here is some CC-By-SA text from another source that would make an
+% acceptable introduction to a section on the GCC RTL Exception if such a
+% chapter is written:
+
+% This GCC Runtime Library Exception (``Exception'') is an additional
+% permission as provided by Section 7 of GPLv3. The purpose of this Exception
+% is to allow compilation of non-GPL (including proprietary) programs making
+% use of the header files and runtime libraries covered by this Exception and
+% containing code from the copyleft toolchain embedded by the compiler in the
+% object code of the program as part of the compilation process. The GCC
+% Runtime Library Exception covers any file that has a notice in its license
+% headers stating that the exception applies.
+
+% FIXME-LATER: end
+
 \chapter{Integrating the GPL into Business Practices}
 
 Since GPL'd software is now extremely prevalent through the industry, it
