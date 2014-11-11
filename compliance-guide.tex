@@ -947,61 +947,65 @@ revision system, telling your developers to use it, and requiring your
 build guru to document his or her work!
 
 
-% FIXME-URGENT: integrate, possibly create:
-% \section{Non-Technical Compliance Issues}
+\section{Non-Technical Compliance Issues}
 
-Compliance with GPLv2 \S7 is therefore a matter of legal review rather than
-technical or engineering practice.
+Certainly, the overwhelming majority of compliance issues are, in fact,
+either procedural or technical.  Thus, the primary material in this chapter
+so far has covered those issues.  However, a few compliance issues do require
+more direct consideration of a legal situation.  This portion guide does not
+consider those in detail, as a careful reading of the earlier chapters of
+Part~\ref{gpl-lgpl-part} shows various places where legal considerations are
+necessary for considering compliance activity.
 
-%FIXME-URGENT: integrate
-%  Possibly call this: \section{Self-Assessment of Compliance}
+For example, specific compliance issues related to
+\hyperref[GPLv2s7]{GPLv2\S7}, \hyperref[GPLv3s7]{GPLv3\S7}, and
+\hyperref[GPLv3s7]{GPLv3\S11} demand a more traditional approach to legal
+license compliance.  Of course, such analysis and consideration can be
+complicated, and some are considered in the enforcement case studies that
+follow in the next part.  However, compliance issues related to such sections
+are not rare, and, as is typical, no specific training is available for
+dealing with extremely rare occurrences.
 
-\section{FIXME}
+\section{Self-Assessment of Compliance}
 
-%FIXME-URGENT: integrate
+Most companies that adopt copylefted software believe they have complied.
+Humans usually have difficult admitting their own mistakes, particularly
+systematic ones.  Therefore, perhaps the most important necessary step to
+stay in compliance is a company's regular evaluation of their own compliance.
 
-Measure your compliance from the position of the user downstream from you
-trying to exercise rights conveyed by the licenses. Has the user received
-notice of the copylefted software intentionally included in your product?  Is
-complete, corresponding source code and applicable installation information
-available to the user easily, preferably by automated means?  Tools that
-measure what you deliver are more valuable than tools that only measure what
-you build.
+First, exercise a request CCS for all copylefted works from all your upstream
+providers of software and of components embedding software.  Then, perform
+your own CCS check on this material first, and verify that it meets the
+requirements.  This tutorial presents later a case study of a CEGEO's CCS
+check in \S~\ref{pristine-example}, which you can emulate when examining
+their own CCS\@.
 
-Always exercise your own right to request complete and corresponding source
-code for all copylefted works from all your providers of software and of
-components embedding software, preferably in an automated process directly
-feeding your overall software governance system. Where possible, reject as
-non-conforming components provided to you containing copylefted software for
-which complete and corresponding source code is not furnished in response to
-your request or which is not accompanied by a ``stackmark'' for automated
-provisioning of source code. If you rely on an upstream provider for your
-software you cannot ignore your GPL compliance requirements simply because
-someone else packaged the software that you distribute.
+Second, measure all copyleft compliance from the position of the
+users\footnote{Realizing of course that user very well may not be your own
+  customer.} downstream from you exercising their rights under GPL\@.  Have
+those users received notice of the copylefted software included in your
+product?  Is CCS available to the users easily (preferably by automated
+means)?  Ask yourself these questions frequently.  If you cannot answer these
+questions with certainty in the positive, dig deeper and modify your process.
 
-%FIXME-URGENT: integrate
-%  Possibly call this: \section{Third-Party Compliance Assessors}
-
-\section{FIXME}
-
-
-Concentrate on the copylefted software you know you are using. Historically,
-the risk from a copylefted code snippet that some programmer dropped in your
+Avoid ``compliance industry'' marketing distractions and concentrate on the
+copylefted software you already know is in your product.  Historically, the
+risk from a copylefted code snippet that some programmer dropped in your
 proprietary product careless of the consequences is a problem far more
-infrequent and less difficult to resolve. Efficient management of the risks
+infrequent and less difficult to resolve.  Efficient management of the risks
 of higher concern lies in making sure you can provide, for example, precisely
-corresponding source code and makefiles for a copy of the Coreboot
-bootloader, Linux kernel, Busybox, or GNU tar that you included in a product
-you shipped two years ago.
+CCS for a copy of Coreboot, the kernel named Linux, Busybox, or GNU tar that
+you included in a product your company shipped two years ago than in the risk
+of 10 lines of GPL'd Java code an engineer accidentally pasted into the
+source of your ERP system.
 
-Don’t rely blindly on code scanners as they work too late in the process to
-improve your governance and too early in the process to catch problems in
-your delivery and post-sale provisioning. They do less important parts of the
-job expensively, and more important parts of the job not at all. Use them,
-where they are cost-effective, as a supplement to your own governance and
-verification processes, not as a primary tool of risk management.
-
-%FIXME-URGENT: END
+Thus, reject the ``compliance industry'' suggestions that code scanners find
+and help solve fundamental compliance problems.  Consider how CEGEO's tend to
+use code scanners.  FOSSology is indeed an important part of a violation
+investigation, but such is the last step and catches only some (usually
+minor) licensing notice problems.  Thus, code scanners can help solve minor
+compliance problems once you have resolved the major ones.  Code scanners
+do not manage risk.
 
 \chapter{When The Letter Comes}
 
