@@ -2486,34 +2486,28 @@ GPLv2: ``modify'' ``covered work'', ``propagate'', ``convey'', and
 GPLv2 included a defined term, ``work based on the Program'', but also used
 the term ``modify'' and ``based on'' throughout the license.  GPLv2's ``work
 based on the Program'' definition made use of a legal term of art,
-``derivative work'', which is peculiar to USA copyright law.  However,
-ironically, most criticism of USA-specific legal terminology in GPLv2's
-``work based on the Program'' definition historically came not primarily from
-readers outside the USA, but from those within it\footnote{The FSF noted in
-  that it did not generally agree with these views, and expressed puzzlement
-  by the energy with which they were expressed, given the existence of many
-  other, more difficult legal issues implicated by the GPL.  Nevertheless,
-  the FSF argued that it made sense to eliminate usage of local copyright
-  terminology to good effect.}.  Admittedly, even though differently-labeled
-concepts corresponding to the derivative work are recognized in all copyright
-law systems, these counterpart concepts might differ to some degree in scope
-and breadth from the USA derivative work.
+``derivative work'', which is peculiar to USA copyright
+law\footnote{(Ironically, most criticism of USA-specific legal
+terminology in GPLv2's ``work based on the Program'' definition historically
+came not primarily from readers outside the USA, but from those within
+it\footnote{The FSF noted in that it did not generally agree with these
+  views, and expressed puzzlement by the energy with which they were
+  expressed, given the existence of many other, more difficult legal issues
+  implicated by the GPL.  Nevertheless, the FSF argued that it made sense to
+  eliminate usage of local copyright terminology to good effect.}.  GPLv2
+always sought to cover all rights governed by relevant copyright law, in the
+USA and elsewhere.
+Even though differently-labeled concepts corresponding to the
+derivative work are recognized in all copyright law systems, these
+counterpart concepts might differ to some degree in scope and breadth from
+the USA derivative work.  GPLv3 therefore takes the task of
+internationalizing the license further by removing references to derivative
+works and by providing a more globally useful definition.
+GPLv3 drops all reference to USA ``derivative works'' and returns
+to the base concept only: GPL covers the licensed work and all works where
+copyright permission from the licensed work's copyright holder.
 
-% FIXME: integrate
-
-So in GPLv3, we and our clients at the Free Software Foundation
-decided to drop all illustrative reference to US ``derivative works,''
-returning to the base concept only: GPL covers the licensed work and all
-works based on the work, where ``based on the work'' is defined as any
-modification or combination with the licensed work that requires copyright
-permission to make.
-% FIXME-URGENT: end
-
-The goal and intention of GPLv2 was always to cover all rights governed by
-relevant copyright law, in the USA and elsewhere.  GPLv3 therefore takes the
-task of internationalizing the license further by removing references to
-derivative works and by providing a more globally useful definition.  The new
-definition returns to the common elements of copyright law.  Copyright
+The new definitions returns to the common elements of copyright law.  Copyright
 holders of works of software have the exclusive right to form new works by
 modification of the original --- a right that may be expressed in various
 ways in different legal systems.  GPLv3 operates to grant this right to
@@ -2533,38 +2527,31 @@ definition.  GPLv3 offers a single term ``covered work'', which enables some
 of the wording in GPLv3 to be simpler and clearer than its GPLv2
 counterparts.
 
-% FIXME-URGENT: integrate
-
-Two terms are used in GPLv3 deliberately exotic to the language of
-international copyright.
+Next, to avoid locking GPLv3 into specific copyright statues, the GPLv3
+defines two terms that are otherwise exotic to the language of international
+copyright.
 
 \subsection{Propagate}
 
-% FIXME-URGENT: integrate
-
-To ``propagate'' a work covered by the license means any activity that
-requires permission of copyright holders in the local legal system where the
-activities are carried on. Personal use or modification for personal use are
-activities explicitly excluded from ``propagation'' regardless of domestic
-copyright law, in order to prevent domestic copyright law from trenching on
-freedoms 0 to 2.
-%FIXME-URGENT: end
+To ``propagate'' a work covered by the license means any activity in a locale
+that requires permission of copyright holders in that locale's legal system.
+However, personal use or modification for personal use are activities explicitly
+excluded from ``propagation'' \textit{regardless} of domestic copyright law.
 
 The term ``propagate'' serves two purposes.  First, ``propagate'' provides a
 simple and convenient means for distinguishing between the kinds of uses of a
 work that GPL imposes conditions on and the kinds of uses that GPL does not
 (for the most part) impose conditions on.
 
-Second, ``propagate'' helps globalize GPL in its wording and effect.  When a
-work is GPL'd, the copyright law of some particular country will govern
-certain legal issues arising under the license.  A term like ``distribute''
-(or its equivalent in languages other than English) is used in several
-national copyright statutes.  Yet, practical experience with GPLv2 revealed
-the awkwardness of using the term ``distribution'' in a license intended for
-global use: the scope of ``distribution'' in the copyright context can differ
-from country to country.  The GPL never necessarily intended the specific
-meaning of ``distribution'' that exists under USA (or any other country's)
-copyright law.
+Second, ``propagate'' helps globalize GPL in its wording and effect:
+``derivative work'' was in fact not the only term commonly used by local
+copyright statutes.  A term like ``distribute'' (or its equivalent in
+languages other than English) is also used in several national copyright
+statutes.  Practical experience with GPLv2 revealed the awkwardness of using
+the term ``distribution'' in a license intended for global use: the scope of
+``distribution'' in the copyright context can differ from country to country.
+The GPL never necessarily intended the specific meaning of ``distribution''
+that exists under USA (or any other country's) copyright law.
 
 Indeed, even within a single country and language, the term distribution may
 be ambiguous; as a legal term of art, distribution varies significantly in
@@ -2589,27 +2576,19 @@ some particular national copyright statute.  This helps not only with
 internationalization, but also factually-based terminology aids in
 developers' and users' understanding of the GPL\@.
 
-%FIXME-URGENT: integrate
-
 As a further benefit, because ``propagation'' includes all
-exclusive rights granted under any particular copyright regime, regimes that
-require a valid license to account for all exclusive rights are automatically
-complied with.
-% FIXME-URGENT: end
+exclusive rights granted under any particular copyright regime, the term
+automatically  accounts for all exclusive rights under that regime.
 
 \subsection{Convey}
 
-%FIXME-URGENT: integrate
-
-Any propagation that enables other parties to receive or make copies of the
-work, is called ``conveying''. In general, conveying is the activity that
-triggers copyleft obligations.
-% FIXME-URGENT: end
-
-Further to this point, a subset of propagate --- ``convey'' --- is defined.
+Next, GPLv3 defines a subset of propagate --- ``convey''.
 Conveying includes activities that constitute propagation of copies to
 others.  As with the definition of propagate, GPLv3 thus addresses transfers
 of copies of software in behavioral rather than statutory terms.  
+Any propagation that enables other parties to receive or make copies of the
+work, is called ``conveying''.  Usually, conveying is the activity that
+triggers most of the other obligations of GPLv3.
 
 \subsection{Appropriate Legal Notices}
 
