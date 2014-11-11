@@ -479,31 +479,31 @@ practice.
 
 \chapter{Details of Compliant Distribution}
 
-This section explains the specific requirements placed upon
-distributors of GPL'd software.  Note that this section refers heavily to
-specific provisions and language in
-\href{http://www.gnu.org/licenses/old-licenses/gpl-2.0.html#section3}{GPLv2}
-and \href{http://www.fsf.org/licensing/licenses/gpl.html#section6}{GPLv3}.
-It may be helpful to have a copy of each license open while reading this
-section.
+Distribution of GPL'd works has requirements; copyleft will not function
+without placing requirements on redistribution.  However, some requirements
+are more likely to cause compliance difficult than others.  This
+chapter\footnote{Note that this chapter refers heavily to specific provisions
+  and language in
+  \hyperref[GPLv2s3-full-text]{GPLv2\S3}
+  and \hyperref[GPLv3s6-full-text]{GPLv3\S6}.
+  It may be helpful  to review \S~\ref{GPLv2s3} and \S~\ref{GPLv3s6} first,
+  and then have a copy of each license open while reading this
+  section.}  explains some the specific requirements placed upon
+distributors of GPL'd software that redistributors are most likely to
+overlook, yielding compliance problems.
 
-%FIXME-URGENT: integrate
-
-with Section 1 is the source of the requirement that
-the full license text must accompany every distribution of a source or binary
-version of each licensed work, to ensure that users have actual notice of
-their rights. This requirement is responsible for a surprisingly significant
-fraction of compliance complaints, primarily because users are not provided
-with required information about the presence of GPL’d programs and the
-applicable license terms in physical products that they have purchased. The
-most effective mode of compliance engineering is to treat the required
-license texts as a ``make target'' in the compiling, packaging and distribution
-of the software, so that license texts and other ``collateral'' for the
-software in a product stack are produced and verified at the same stages and
-in the same fashion that the binaries themselves are generated, tested and
-packaged.
-
-%FIXME-URGENT: END
+First, \hyperref[GPLv2s1]{GPLv2\S1} and \hyperref[GPLv2s4]{GPLv2\S4} require
+that the full license text must accompany every distribution (either in
+source or binary form) of each licensed work.  Strangely, this requirement is
+responsible for a surprisingly significant fraction of compliance errors; too
+often, physical products lack required information about the presence of
+GPL’d programs and the applicable license terms.  Automated build processes
+can and should carry a copy of the license from the the source distribution
+into the final binary firmware package for embedded products.  Such
+automation usually achieves compliance regarding license inclusion
+requirements\footnote{At least one COGEO recommends the
+  \href{https://www.yoctoproject.org/}{Yocto Project}, since its engineers
+  have designed such features into it build process.}
 
 \section{Binary Distribution Permission}
 \label{binary-distribution-permission}
