@@ -1309,26 +1309,47 @@ must ensure that CCS is correct and adequate yourself.  Good vendors should
 help you do this, and make it easy.  If those vendors cannot, pick a
 different vendor before proceeding with the product. 
 
-% FIXME-URGENT: Needs a new section
-% \section{Mergers and Acquisitions}
+\section{Mergers and Acquisitions}
 
-[GPLv3] Section 10 also clarifies that in business acquisitions, whether by
+Often, larger companies often encounter copyleft licensing during a Mergers
+and Acquisitions (M\&A) process.  Ultimately, a merger or acquisition causes
+all of the other company's problems to become yours.  Therefore, for most
+concerns, the acquirer ``simply'' must apply the compliance analysis and
+methodologies discussed earlier across the acquired company's entire product
+line.  Of course, this is not so simple, as such effort may be substantial,
+but a well-defined process for compliance investigation means the required
+work, while voluminous, is likely rote.
+
+A few sections of GPL require careful attention and legal analysis to
+determine the risk of acquisitions.  Those handling M\&A issues should pay
+particular attention to the requirements of GPLv2~\S7 and GPLv3~\S10--12 ---
+focusing on how they relate to the acquired assets may be of particular
+importance.
+
+For example, GPLv3\S10 clarifies that in business acquisitions, whether by
 sale of assets or transfers of control, the acquiring party is downstream
-from the party acquired. This results in new automatic downstream licenses
+from the party acquired.  This results in new automatic downstream licenses
 from upstream copyright holders, licenses to all modifications made by the
 acquired business, and rights to source code provisioning for the
-now-downstream purchaser.
+now-downstream purchaser.  However, despite this aid given by explicit
+language in GPLv3, acquirers must still confirm compliance by the acquired
+(even if GPLv3\S10 does assert the the acquirers rights under GPL, that does
+not help if the acquired is out of compliance altogether).  Furthermore, for
+fear of later reprisal by the acquirer if a GPL violation is later discovered
+in the acquired's product line, the acquired may need to seek a waiver and
+release of from additional damages beyond a requirement to comply fully (and
+a promise of rights restoration) if a GPL violation by the acquired is later
+uncovered during completion of the acquisition or thereafter.
 
-In our experience, the process whereby these matters are adjusted in most M\&A
-situations are ludicrously expensive and inefficient. A simple waiver and
-release of all claims to GPL compliance against the purchased entity by the
-purchaser, issued before closure, removes the problem. If the purchasing
-entity has adequate software governance systems in place, all software
-acquired in the course of the entity transaction is input to the standard
-governance processes for acquired software, and downstream compliance by the
-new merged entity is automatically handled.
-
-%FIXME-URGENT: END
+Finally, other advice available regarding handling of GPL compliance in an
+M\&A situation tends to ignore the most important issue: most essential
+copylefted software is not wholly copyrighted by the entities involved in the
+M\&A transaction.  Therefore, copyleft obligations likely reach out to the
+customers of all entities involved, as well as to the original copyright
+holders of the copylefted work.  As such, notwithstanding the two paragraphs
+in GPLv3\S10, the entities involved in M\&A should read the copyleft licenses
+through the lens of third parties whose software freedom rights under those
+licenses are of equal importance to then entities inside the transaction.
 
 \section{User Products and Installation Information}
 \label{user-products}
