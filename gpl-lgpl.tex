@@ -1667,15 +1667,6 @@ affects the license of the new whole combined and/or derivative work.
 
 \label{separate-and-independent}
 
-%FIXME-URGENT: integrate
-
-But the GNU GPL licenses recognize what is outside their scope. Where a programmer’s work is
-``separate and independent'' from any GPL’d program code with which it could be
-combined, then the obligations of copyleft do not extend to the work
-separately distributed. Far from attempting to extend copyleft beyond the
-scope of copyright, the licenses explicitly recognize.
-
-%FIXME-URGENT: end
 It is certainly possible to take an existing independent work (called
 \worki{}) and combine it with a GPL'd program (called \workg{}).  The
 license of \worki{}, when it is distributed as a separate and independent
@@ -1696,33 +1687,41 @@ GPL, states the  options for the copyright holder of \worki{}
 who may want to create and distribute \gplusi{}. The  GPL's pre-granted
 permission to create and distribute combined and/or derivative works, provided the terms
 of the GPL are upheld, goes far above and beyond the permissions that one
-would get with a typical work not covered by a copyleft license.  (Thus, to
-say that this condition is any way unreasonable is simply ludicrous.)
+would get with a typical work not covered by a copyleft license.  Thus, to
+say that this condition is any way unreasonable is simply ludicrous.
 
-% FIXME-URGENT: integrate
+The GPL  recognizes what is outside its scope.  When a programmer’s work is
+``separate and independent'' from any GPL’d program code with which it could be
+combined, then the obligations of copyleft do not extend to the work
+separately distributed.  Thus, Far from attempting to extend copyleft beyond the
+scope of copyright, the licenses explicitly recognize.
 
-The GPL licenses, then, are explicit about limiting the scope of copyleft to
-the scope of copyright.  They do not, however, as is sometimes suggested, do
-so in a way that distinguishes ``dynamic'' from ``static'' linking of program
-code in ``early-binding'' programming languages. It is occasionally suggested
-that a subroutine ``dynamically'' linked to GPL’d code is, by virtue of the
-linking alone, inherently outside the scope of copyleft on the main
-work. This is a misunderstanding. When two software components are joined
-together to make one work (whether a main and some library subroutines, two
-objects with their respective methods, or a program and a ``plugin'') the
-combination infringes the copyright on the components if the combination
-required copyright permission from the component copyright holders, and such
-permission was either not available or was available on terms that were not
-observed.
+Thus, GPL recognizes what is outside its scope.  When a programmer's work is
+``separate and independent'' from any GPL’d program code with which it could
+be combined, then copyleft obligations do not extend to the independent work
+separately distributed.  Thus, far from attempting to extend copyleft beyond
+the scope of copyright, GPL explicitly limits the scope of copyleft to the
+scope of copyright.
 
-Where a combination is made with GPL’d or AGPL’d components, the
-only available permission is copyleft, and its terms must be observed on the
-combination as a whole if the GPL’d component is to be used at all. Whether
-the combination is made with a linker before distribution of the executable,
-is made by the OS kernel in order to share libraries for execution efficiency
-at runtime, or results from ``late-binding'' of references in the language at
-runtime (as in Java programs) is irrelevant.
-%FIXME-URGENT: end
+GPL does not, however (as is sometimes suggested) distinguish ``dynamic''
+from ``static'' linking of program code.  It is occasionally suggested that a
+subroutine ``dynamically'' linked to GPL’d code is, by virtue of the linking
+alone, inherently outside the scope of copyleft on the main work.  This is a
+misunderstanding.  When two software components are joined together to make
+one work (whether a main and some library subroutines, two objects with their
+respective methods, or a program and a ``plugin'') the combination infringes
+the copyright on the components if the combination required copyright
+permission from the component copyright holders, as such permission was
+either not available or was available on terms that were not observed.
+
+In other words, when combining other software with GPL'd components, the only
+available permission is GPL.  The combiner must observe and respect the GPL
+observed on the combination as a whole.  It matters not if that combination
+is made with a linker before distribution of the executable, is made by the
+operating system in order to share libraries for execution efficiency at
+runtime, or results from runtime references in the language at runtime (as in
+Java programs).
+
 \medskip
 
 \label{GPLv2s2-at-no-charge}
