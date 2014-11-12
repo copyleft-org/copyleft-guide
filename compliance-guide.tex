@@ -1227,26 +1227,26 @@ engineering for debugging such modifications'' to the library.  Therefore,
 you should take care that the EULA used for the Application does not
 contradict this permission.
 
-%FIXME-URGENT: integrate
-
-Under the terms of LGPL, they must also refrain from license terms on works
+Thus, under the terms of LGPL, you must refrain from license terms on works
 based on the licensed work that prohibit replacement of the licensed
 components of the larger non-LGPL’d work, or prohibit decompilation or
 reverse engineering in order to enhance or fix bugs in the LGPL’d components.
 
-Section 2(a) states that if a licensed work is a software library (defined in
-\S0 as ``a collection of software functions and/or data prepared so as to be
-conveniently linked with application programs (which use some of those
-functions and data) to form executables'') permission is given to distribute
-modified versions only if those versions are themselves libraries. LGPLv2.1
-code can therefore not be compliantly taken from its context in a library and
-placed in a non-library modified version or work based on the work. Section 6
-does not provide an exception for this rule: a combination may be made of a
-modified version of an LGPL’d library with other code, but the LGPL’d code
-must continue to be structured as a library, and to that library the terms of
-the license continue to apply.
+LGPLv3 is not surprisingly easier to understand and examine from a compliance
+lens, since the FSF was influenced in LGPLv3's drafting by questions and
+comments on LGPLv2.1 over a period of years.  Admittedly, LGPLv2.1 is still
+in wide use, and thus compliance with LGPLv2.1 remains a frequent topic you
+may encounter.  The best advice there is careful study of
+Chapter~\ref{LGPLv2}.
 
-%FIXME-URGENT: END
+However, to repeat a key point here made within that chapter: Note though
+that, since the LGPLv2.1 can be easily upgraded to GPLv2-or-later, in the
+worst case you simply need to comply as if the software was licensed under
+GPLv2.  The only reason you must consider the question of whether you have a
+``work that uses the library'' or a ``work based on the library'' is when you
+wish to take advantage of the ``weak copyleft'' effect of the Lesser GPL\@.
+If GPLv2-or-later is an acceptable license (i.e., if you plan to copyleft the
+entire work anyway), you may find this an easier option.
 
 \section{Upstream Providers}
 \label{upstream}

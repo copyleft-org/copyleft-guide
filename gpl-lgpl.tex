@@ -4438,19 +4438,42 @@ have a ``work based on the library.''  If the answer is ``no'' to the
 first but ``yes'' to the second, you are in a gray area between ``work
 based on the library'' and a ``work that uses the library.''
 
-In our years of work with the LGPLv2.1, however, we have never seen a work
-of software that was not clearly one or the other; the line is quite
-bright. At times, though, we have seen cases where a particularly  large work
-in some ways seemed to be both to both a work that used the library and 
-a work based on the library. We overcame this problem by
-dividing the work into smaller subunits. It was soon discovered that
-what we actually had were three distinct components: the original
-LGPL'd work, a specific set of works that used that library, and a
-specific set of works that were based on the library. Once such
-distinctions are established, the licensing for each component can be
-considered independently and the LGPLv2.1 applied to each work as
-prescribed.
+You can also perform a similar same analysis through careful consideration of
+the license text itself.  LGPLv2~\S2(a) states that if a licensed work is a
+software library (defined in LGPLv2~\S0 as ``a collection of software
+functions and/or data prepared so as to be conveniently linked with
+application programs (which use some of those functions and data) to form
+executables''), you have permission to distribute modified versions only if
+those versions are themselves libraries.  LGPLv2.1 code can therefore not be
+compliantly taken from its context in a library and placed in a non-library
+modified version or work based on the work.  For its part, LGPLv2~\S6 does
+not provide an exception for this rule: a combination may be made of a
+modified version of an LGPL’d library with other code, but the LGPL’d code
+must continue to be structured as a library, and to that library the terms of
+the license continue to apply.
 
+
+Either way you view the rules, these issues are admittedly complicated.
+Nevertheless, In our years of work with the LGPLv2.1, however, we have never
+seen a work of software that was not clearly one or the other; the line is
+quite bright. At times, though, we have seen cases where a particularly large
+work in some ways seemed to be both to both a work that used the library and
+a work based on the library. We overcame this problem by dividing the work
+into smaller subunits.  It was soon discovered that what we actually had were
+three distinct components: the original LGPL'd work, a specific set of works
+that used that library, and a specific set of works that were based on the
+library. Once such distinctions are established, the licensing for each
+component can be considered independently and the LGPLv2.1 applied to each
+work as prescribed.
+
+Finally, note though that, since the LGPLv2.1 can be easily upgraded to
+GPLv2-or-later, in the worst case you simply need to comply as if the
+software was licensed under GPLv2.  The only reason you must consider the
+question of whether you have a ``work that uses the library'' or a ``work
+based on the library'' is when you wish to take advantage of the ``weak
+copyleft'' effect of the Lesser GPL\@.  If GPLv2-or-later is an acceptable
+license (i.e., if you plan to copyleft the entire work anyway), you may find
+this an easier option.
 
 \section{Subtleties in Defining the Application}
 
