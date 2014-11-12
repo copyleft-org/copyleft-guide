@@ -492,56 +492,65 @@ of this work itself).  Copyright holders of creative work can unilaterally
 implement these licenses for their own works to build communities that
 collaboratively share and improve those copylefted creative works.
 
-% FIXME-URGENT: integrate
-Copyleft,
-which uses functional parts of copyright law to achieve an unusual result
-(legal protection for free sharing) forms the core legal principle of these
-licenses. It modifies, or ``hacks'' copyright law, which is usually employed to
-strengthen the rights of authors or publishers, to strengthen instead the
-rights of users.   %FIXME-URGENT: end
-Copyleft is a legal strategy and mechanism to defend, uphold and propagate software
+Copyleft uses functional parts of the copyright system to achieve an unusual
+result (legal protection for free sharing). Copyleft modifies, or ``hacks''
+copyright law, which is usually employed to strengthen the rights of authors
+or publishers, to strengthen instead the rights of users.  Thus, Copyleft is
+a legal strategy and mechanism to defend, uphold and propagate software
 freedom. The basic technique of copyleft is as follows: copyright the
-software, license it under terms that give all the software freedoms, but
-use the copyright law controls to ensure that all who receive a copy of
-the software have equal rights and freedom. In essence, copyleft grants
-freedom, but forbids others to forbid that freedom to anyone else along
-the distribution and modification chains.
+software, license it under terms that give all the software freedoms, but use
+the copyright law controls to ensure that all who receive a copy of the
+software have equal rights and freedom. In essence, copyleft grants freedom,
+but forbids others to forbid that freedom to anyone else along the
+distribution and modification chains.
 
-% FIXME-URGENT: integrate
-
-This ``reciprocity'' or ``share and share alike'' rule protects both
+Copyleft's ``reciprocity'' or ``share and share alike'' rule protects both
 developers, who avoid facing a ``proprietized'' competitor of their project,
-and users, who can be sure that they will have all four basic freedoms not
-only in the present version of the program they use, but in all its future
-improved versions.
+and users, who can be sure that they will have all four software freedoms ---
+not only in the present version of the program they use, but in all its
+future improved versions.
 
-% FIXME-URGENT: integrate
-
-The unit of copyright law is ``the work''. In that sense, the ``work''
-referenced by the licenses is anything that can be copyrighted or will be
-subject to the terms of copyright law. The GNU licenses exercise their scope
-fully. Anything which is ``a work'' or a ``work based on a work'' licensed
-under GPL is subject to its requirements, including the requirement of
-complete and corresponding source code, unless it is specifically
-excepted. This principle often causes theoretical or speculative dispute
-among lawyers, because ``the work'' is not a unit of computer programming. In
-order to determine whether a ``routine'' an ``object'', a ``function'', a
-``library'' or any other unit of software is part of one ``work'' when combined
-with other GPL’d code, we must ask a question that copyright law will not
-directly answer in the same technical terms.
-
-The key here is that the GNU GPL licenses mean to ``plow fence row to fence
-row'', covering every version of ``work based on the work'' recognized by local
-copyright law, but no further.
-
-%FIXME-URGENT: end
 Copyleft is a general concept. Much like ideas for what a computer might
 do must be \emph{implemented} by a program that actually does the job, so
 too must copyleft be implemented in some concrete legal structure.
 ``Share and share alike'' is a phrase that is used often enough to explain the
 concept behind copyleft, but to actually make it work in the real world, a
-true implementation in legal text must exist. The GPL is the primary
-implementation of copyleft in copyright licensing language.
+true implementation in legal text must exist, written as a ``copyright
+license''.  The GPL implements the concept of copyleft for software-oriented
+and other functional works of a technical nature.  The ``CC BY SA'' license
+implements copyleft for works of textual, musical and visual authorship, such
+as this tutorial.
+
+Copyleft advocates often distinguish between the concept of a ``strong
+copyleft'' or a ``weak copyleft''.  However, ``strong vs. weak'' copyleft is
+not a dichotomy, it's a spectrum.  The strongest copylefts strive to the
+exclusive rights that copyright  grants to authors as extensively as possible
+to maximize software freedom.  As a copyleft gets ``weaker'', the copyleft
+license typically makes ``trade offs'' that might impede software freedom,
+but reach other tactic goals for the community of users and developers of the
+work.
+
+In other words, strong copyleft licenses place the more requirements on how
+``the work'' is licensed.  The unit of copyright law is ``the work''.  In
+that sense, the ``work'' referenced by the licenses is anything that can be
+copyrighted or will be subject to the terms of copyright law.  Strong
+copyleft licenses exercise their scope fully.  Anything which is ``a work''
+or a ``work based on a work'' licensed under a strong copyleft is subject to
+its requirements, including the requirement of complete, corresponding source
+code\footnote{Copyleft communities' use of the term ``strong copyleft'' is
+  undoubtedly imprecise.  For example, most will call the GNU GPL a ``strong
+  copyleft'' license, even though the GPL itself has various exceptions, such
+  as the \hyperref[GPLv3-system-library-exception]{GPLv3's system library
+    exception} written into the text of the license itself.  Furthermore, the
+  copyleft community continues to debate where the a license cross the line
+  from ``strong copyleft'' to ``license that fails to respect software
+  freedom'', although ultimately these debates are actually regarding whether
+  the license fits \hyperref[Free Software Definition]{Free Software
+    definition} at all.}.  Thus, copyleft licenses, particularly strong ones,
+seek to ensure the same license covers every version of ``work based on the
+work'', as recognized by local copyright law, and thereby achieve the
+specific strategic policy aim of ensuring software freedom for all users,
+developers, authors, and readers who encounter the copylefted work.
 
 \subsection{Software and Non-Copyright Legal Regimes}
 \label{software-and-non-copyright}
@@ -1175,6 +1184,16 @@ on making a profit from Free Software redistribution.)
 
 \chapter{Derivative Works: Statute and Case Law}
 \label{derivative-works}
+
+% FIXME-URGENT: integrate
+This principle often causes theoretical or
+speculative dispute among lawyers, because ``the work'' is not a unit of
+computer programming. In order to determine whether a ``routine'' an
+``object'', a ``function'', a ``library'' or any other unit of software is
+part of one ``work'' when combined with other GPL’d code, we must ask a
+question that copyright law will not directly answer in the same technical
+terms.  (This issue
+%END FIXME-URGENT
 
 We digress for this chapter from our discussion of GPL's exact text to
 consider the matter of derivative works --- a concept that we must
@@ -2701,6 +2720,7 @@ modify a source code work by deleting any part of it, and there can be no
 requirement that free software source code be a whole functioning program.
 
 \subsection{The System Library Exception}
+\label{GPLv3-system-library-exception}
 
 The previous section skipped over one part of the CCS definition, the
 so-called system library exception.  The ``System Libraries'' definition (and
