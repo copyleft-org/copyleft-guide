@@ -4604,97 +4604,46 @@ mechanism, the user must have available the object code for the ``work
 based on the library,'' so that the user can relink the application and
 build a new binary.
 
-%FIXME-URGENT: integrate
+Almost all known LGPL'd distributions exercise either LGPLv2.1~\S6(a) or
+LGPLv2.1~\S6(b).  However, LGPLv2.1~\S6 provides three other options.
+LGPLv2.1~\S6(c) allows for a written offer for CCS (akin to
+\hyperref[GPLv2s3b]{GPLv2~\S3(b)}).  CCS may also be distributed by network
+under the terms of LGPLv2.1~\S6(c).  Furthermore, under LGPLv2.1~\S6(e) the
+distributor may ``verify'' that the user has already received, or at least
+that the distributor has already sent to this particular user, the relevant
+source\footnote{Policy motivations for LGPLv2.1~\S6(d) are unclear, but it
+  presumably intended to prevent requiring duplicate deliveries in ``whole
+  distribution'' situations.}.
 
-Under \S6(c), this source code may be offered in writing rather than provided,
-or it may be distributed by network under the terms of \S6(d). In addition,
-under \S6(e) the distributor may ``verify'' that the user has already received,
-or at least that the distributor has already sent to this particular user,
-the relevant source. This is evidently intended to prevent requiring
-duplicate deliveries in ``whole distribution'' situations.
+Finally, LGPLv3~\S6 also requires that:
 
-If the distributor of the combined work intends not to distribute or offer
-the source code of the LGPL’d components, the LGPL’d work must be separately
-distributed (subject to source code delivery requirements as part of that
-separate distribution) and packaged in a ``shared library'' mechanism, which
-means
-
-\begin{quotation}
-    that [it] (1) uses at run time a copy of the library already present on
-    the user’s computer system, rather than copying library functions into
-    the executable, and (2) will operate properly with a modified version of
-    the library, if the user installs one, as long as the modified version is
-    interface-compatible with the version that the work was made with.
-\end{quotation}
-
-
-Taken together, these provisions mean:
-
-\begin{itemize}
-
-\item    If you create a program that links through a shared library mechanism to
-    a work that is separately distributed under LGPLv2.1, then you can
-    distribute the resultant program under a license of your choice and you
-    need not convey the LGPL’d work’s source code. If you distribute the
-    library along with your program, or are the separate distributor of the
-    work in another context or as another product, you must distribute its
-    corresponding source under the terms of LGPLv2.1 or GPLv2+, at your
-    option.
-
-\item    If you choose to statically link or otherwise combine your program with
-    an LGPL’d work, you may choose your own license for the work provided the
-    license terms limitations for user modification, reverse engineering and
-    debugging are met, and given that the LGPL’d components are still
-    governed by LGPL’s terms. You must offer or provide complete and
-    corresponding source code for the LGPL’d components. The source code
-    material provided must be sufficient to regenerate the combined work with
-    a user-modified version of the LGPL’d components.
-\end{itemize}
-
-%FIXME-URGENT: integrate
-
-\S6 also requires that:
-
-\begin{quotation}
+\begin{quote}
     You must give prominent notice with each copy of the work that the
     Library is used in it and that the Library and its use are covered by
     this License. You must supply a copy of this License. If the work during
     execution displays copyright notices, you must include the copyright
     notice for the Library among them, as well as a reference directing the
     user to the copy of this License.
-\end{quotation}
+\end{quote}
 
 This is not identical to the roughly parallel requirements of GPLv2 and
 GPLv3. Compliance requires slightly different measures with respect to the
 ``credits'' or ``licenses'' or ``about'' screens in interactive programs.
 
-%FIXME-URGENT: end
-
-
-The remaining options in LGPLv2.1~\S6 are very similar to the other choices
-provided by GPLv2~\S3. There are some additional options, but time does
-not permit us in this course to go into those additional options. In
-almost all cases of distribution under LGPL, either LGPLv2.1~\S6(a) or LGPLv2.1~\S6(b) are
-exercised.
-
-\section{Distribution of the Combined Works}
+\section{Distributing Works Based On the Library}
 
 Essentially, ``works based on the library'' must be distributed under the
 same conditions as works under full GPL\@. In fact, we note that 
 LGPLv2.1~\S2 is nearly identical in its terms and requirements to GPLv2~\S2.
-There are again subtle differences and additions, which time does not
-permit us to cover in this course.
 
-%FIXME-urgent; integrate
-
-Not only must the source code be complete and corresponding, but it must be
-provided in such a way that a modified version of the entire combined work
-can be regenerated with a modified version of the LGPL’d work replacing the
-version originally provided to the user. When LGPL’d code is statically
-linked to a non-copyleft executable, for example, the required source code
-must also include sufficient material to split the distributed executable and
-relink with a modified version of the library.
-%FIXME-URGENT: end
+There are, however, subtle differences and additions.  For example not only
+is CCS required (as would be with normal versions of GPL), but also the CCS
+provided must enable a developer to regenerate the modified version of the
+entire combined work, using with a modified version of the LGPL'd work (as a
+replacement for the version a distributor provided).  For example, LGPL'd
+code is statically linked to a non-copyleft executable, the required source
+code must also include sufficient material to split the distributed
+executable and relink with a modified version of the library.
 
 \section{And the Rest}
 
@@ -4703,15 +4652,11 @@ conditions:
 
 \begin{itemize}
 
-\item Allowing a licensing ``upgrade'' from the LGPL to the GPL\@ (in LGPLv2.1~\S3)
-
-%FIXME-URGENT: integrate
-But LGPLv2.1 \S3 allows all works under its
-terms, copy by copy, to be used instead under the terms of GPLv2 or any later
-version. This provides a pathway for those who do not want to use code under
-the requirements of LGPLv2.1 to do so under GPLv2 or GPLv3 at their
-discretion.
-%FIXME-URGENT: end
+\item Allowing a licensing ``upgrade'' from the LGPL to the GPL\@ (in LGPLv2.1~\S3).
+  Note, however, LGPLv2.1~\S3 allows relicensing of works under its terms
+  instead under the terms of GPLv2-or-later.  This provides, for example, a
+  pathway for those who do not want to use code under the requirements of
+  LGPLv2.1 to do so under GPLv2 or GPLv3 at their discretion.
 
 \item Binary distribution of the library only, covered in LGPLv2.1~\S4,
   which is effectively equivalent to LGPLv2.1~\S3
@@ -4729,75 +4674,121 @@ understanding the difference between a ``work based on the library'' and a
 remainder of LGPLv2.1 is close enough to GPL that the concepts discussed in
 our more extensive GPL unit can be directly applied.
 
-% FIXME-URGENT: integrate
-
 \chapter{LGPLv3}
 \label{LGPLv3}
 
-LGPLv3 was designed to rectify the architectural plan of the GNU family of
-licenses, by making the copyleft license from which LGPLv3 is a combination
-exception GPLv3. LGPLv3 is therefore an additional permission in the form
-provided for in GPLv3 \S7, above.
+LGPLv3 was designed to rectify  architectural flaws in the GNU family of
+licenses.  Historically , LGPLv2.1 was a textual modification of GPLv2.
+Reconciliation of licensing terms upon combination of LGPLv2.1'd and GPLv2'd
+works is cumbersome, from a licensing bookkeeping perspective.
+
+LGPLv3 redresses this historical problem through extensive use of
+\hyperref[GPLv3s7]{GPLv3~\S7}'s exception architecture.  LGPLv3 is therefore
+a set of additional permission to GPLv3.
+
+%FIXME: harken back to policy motivations of LGPL and how GPLv3 as a whole is
+%always an option.
 
 \section{Section 0: Additional Definitions}
 
-Section 0 defines the ``Library'' it covers as a work that presents one or more
-interfaces at which a ``use'' can be made by an ``Application.'' Class
-inheritance is ``deemed'' a use of an interface. An ``Application,'' which is
+LGPLv3~\S0 defines the ``Library'' -- a work that presents one or more
+interfaces at which a ``use'' can be made by an ``Application.''  Class
+inheritance is ``deemed'' a use of an interface.  An ``Application,'' which is
 other program code using one or more ``Library'' interfaces can be combined
-with the code on the other side of the interfaces it uses to form a ``Combined
-Work.''
+with the code on the other side of the interfaces it uses to form a
+``Combined Work.''
 
-\section{Section 1: Exception to Section 3 of the GNU GPL}
+\section{LGPLv3~\S1: Exception to GPLv3~\S3}
 
-Section 1 excepts away the interference with use of LGPLv3 code as part of
+LGPLv3~\S1 excepts away the interference with use of LGPLv3 code as part of
 ``effective technological measures'' of access limitation for other copyrighted
-works provided otherwise by GPLv3 \S3.
+works provided otherwise by GPLv3~\S3.
 
+\section{LGPLv3~\S2: Conveying Modified Versions}
 
-\section{Section 2 Conveying Modified Versions}
-
-Section 2 continues to require, as LGPLv2.1 \S2(d) required, that the Library
+LGPLv3~\S2 continues to require, as LGPLv2.1~\S2(d) requires, that the Library
 not be modified to require keys, tokens, tables, or other global non-argument
 data unrelated to function. This is again stated as a ``good faith effort''
 requirement, but failure to cure on notice is strong evidence of the absence
-of good faith. Use of GPLv3 terms by removal of the additional permission, as
-provided for by GPLv3 \S7, is the alternate path to compliance.
+of good faith.  LGPLv3~\S2(b) permits removal of the permissions entirely (as
+prescribed by GPLv3~\S7); however, such removal reduces the license of the
+entire covered work back to pure GPLv3.   Thus, exercising LGPLv3~\S2(b) as a
+compliance alternative to LGPLv3~\S2(a) likely creates more compliance
+obligations than it removes.
 
-\section{Section 3: Object Code Incorporating Material from Library Header Files}
+\section{LGPLv3~\S3: Object Code Incorporating Material from Library Header Files}
 
-Section 3 disposes entirely [FIXME: with deep technical discussion of
-  combination mechanisms]  in the use of header files and other such forms of
-Library material covered by LGPLv2.1 \S5 by stating a rule applicable at the
-user’s discretion to all such uses within copyright scope: giving notice that
-the library is used in the program and providing copies of GPLv3 and LGPLv3
-along with the work.
+LGPLv3~\S3's front matter assures incorporation of smaller header files into
+non-copylefted object code can proceed unimpeded.  More complex
+header files (those that do not meet the limitations provided in the
+section), can still be incorporated into object code, a copy of appropriate
+licensing information must accompany distribution (per LGPLv3~\S3(a--b).
 
-\section{ Section 4: Combined Works}
+%FIXME: talk about copyrightabilty lines and the like and why the ten line rule.
 
-Section 4 is the combination permission at the heart of LGPLv3. It restates
-the license limitation provision of LGPLv2.1 \S2 to clarify that the terms on
+\section{LGPLv3~\S4: Combined Works}
+
+LGPLv3~\S4 is the combination permission at the heart of LGPLv3. It restates
+the license limitation provision of LGPLv2.1~\S2 to clarify that the terms on
 the Combined Work may not prohibit user modification of the Library code, or
 the debugging of such modifications to the Library code by means of whatever
 reverse engineering is necessary.
 
-Section 4(d)(0) contains the source provision requirement, for the Minimal
+LGPLv3~\S4(d)(0) contains the source provision requirement, for the Minimal
 Corresponding Source, which ``means the Corresponding Source for the Combined
 Work, excluding any source code for portions of the Combined Work that,
 considered in isolation, are based on the Application, and not on the Linked
-Version [of the Library].'' The alternative to the provision of source code is
-distribution by way of the ``shared library'' mechanism under \S4(d)(1),
-described with respect to LGPLv2.1 \S6, above.
+Version [of the Library]''. The alternative to the provision of source code is
+distribution by way of the ``shared library'' mechanism under LGPLv3~\S4(d)(1),
+described with respect to LGPLv2.1~\S6.
 
-In addition, \S4(e) requires the delivery of ``installation information''
+In addition, LGPLv3~\S4(e) requires the delivery of ``installation information''
 required to install the modified version of the Library in ``user products''
-under GPLv3 \S6. Where Library Minimal Corresponding Source is not made
-available under \S4(d)(1), \S4(e) reaffirms that ``installation information''
-must still be compliantly delivered under the terms of GPLv3 \S6.
+under GPLv3~\S6. Where Library Minimal Corresponding Source is not made
+available under LGPLv3~\S4(d)(1), LGPLv3~\S4(e) reaffirms that ``installation information''
+must still be compliantly delivered under the terms of GPLv3~\S6.
 
 All other provisions of GPLv3 are in force as previously described, and are
 not excepted by the additional permission granted in LGPLv3.
-%FIXME-URGENT: end
+
+If the distributor of the combined work intends not to distribute or offer
+the source code of the LGPL'd components, the LGPL'd work must be separately
+distributed (subject to source code delivery requirements as part of that
+separate distribution) and packaged in a ``shared library'' mechanism, which
+means that it:
+\begin{quote}
+\begin{enumerate}[label=4(d)(\arabic*):,ref=LGPLv3s4d\arabic*]
+  \item uses at run time a copy of the library already present on
+    the user’s computer system, rather than copying library functions into
+    the executable, and
+
+  \item will operate properly with a modified version of
+    the library, if the user installs one, as long as the modified version is
+    interface-compatible with the version that the work was made with.
+\end{enumerate}
+\end{quote}
+
+Taken all together, LGPLv3~\S4's primary implications for redistributors are
+two-fold, as follows:
+\begin{itemize}
+
+\item  If you create a program that links through a shared library mechanism to
+    a work that is separately distributed under LGPLv3, then you can
+    distribute the resultant program under a license of your choice and you
+    need not convey the LGPLv3'd work's source code. If you distribute the
+    library along with your program, or are the separate distributor of the
+    work in another context or as another product, you must distribute its
+    corresponding source under the terms of LGPLv3 or GPLv3-or-later.
+
+\item If you choose to statically link or otherwise combine your program with
+    an LGPLv3'd work via mechanisms other than a shared library, you may choose your own license for the work provided the
+    license terms limitations for user modification, reverse engineering and
+    debugging are met, and given that the LGPL'd components are still
+    governed by LGPL's terms. You must offer or provide CCS for the LGPL'd components. The source code
+    material provided must be sufficient to regenerate the combined work with
+    a user-modified version of the LGPL'd components.
+\end{itemize}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FIXME-LATER: There should be a chapter on GPL Exceptions generally.
