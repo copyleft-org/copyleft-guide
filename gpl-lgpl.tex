@@ -3692,40 +3692,34 @@ policy requires each such patent holder to provide appropriate levels of
 patent assurance to users, according to the nature of the patent holder's
 relationship to the program.
 
-% FIXME-URGENT: integrate
+In general, GPLv3 provides for two classes of patent commitments:
 
-GPLv3 provides for two classes of patent commitments:
+\begin{itimize}
+\item Grant of license to claims in contributor versions: GPLv3~\S11
+  introduces an affirmative grant of rights to patent claims by those who
+  contribute code to GPL’d programs. The intent is to prevent parties from
+  aggressively asserting patents against users of code those parties have
+  themselves modified --- in theory preventing betrayal by ``insiders'' of
+  the copyleft community.  A contributor's patent claims necessarily
+  infringed by the version of the program created by the incorporation of its
+  modifications are licensed to all subsequent users and modifiers of the
+  program, or programs based on the program.  No patent claims only infringed
+  by subsequent modifications by other parties are thus licensed.  Patent
+  claims acquired after the making of the ``contributor version'' necessarily
+  infringed by that version are also licensed by this provision at the time
+  of their acquisition or perfection.
 
-    Prohibition of Enforcement of patent claims against those to whom you
-    distribute: GPLv3 \S10 makes explicit that demands for acceptance of
-    patent licenses or payment of patent royalties by those to whom a
-    licensee directly distributes are additional conditions that may not
-    imposed. This provision establishes a uniform rule of patent exhaustion
-    with respect to GPL’d programs regardless of the domestic patent law in
-    any particular system or locale.
+\item Prohibition of enforcement of patent claims against those to whom you
+  distribute: GPLv3~\S10 makes explicit that licensees who directly
+  distribute may not make demands for acceptance of patent licenses or
+  payment of patent royalties from distribution recipients.  This provision
+  establishes a uniform rule of patent exhaustion with respect to GPL'd
+  programs regardless of the domestic patent law in any particular system or
+  locale.
+\end{itimize}
 
-    Grant of license to claims in contributor versions: Section 11 introduces
-    an affirmative grant of rights to patent claims by those who contribute
-    code to GPL’d programs. The intent is to prevent parties within the
-    commons from aggressively asserting patents against users of code they
-    have themselves modified, preventing a form of commons betrayal by
-    ``insiders'' to the community. A contributor’s patent claims necessarily
-    infringed by the version of the program created by the incorporation of
-    its modifications are licensed to all subsequent users and modifiers of
-    the program, or programs based on the program. No patent claims only
-    infringed by subsequent modifications by other parties are thus
-    licensed. Patent claims acquired after the making of the ``contributor
-    version'' necessarily infringed by that version are also licensed by this
-    provision at the time of their acquisition or perfection. When a company
-    with a large number of such claims acquires the program’s modifier, all
-    claims held or thereafter acquired by the purchaser are automatically
-    licensed under this provision. The acquisition of Nokia by Microsoft, for
-    example, resulted in the automatic licensing of all Microsoft claims now
-    or hereafter acquired which read on any contributor version of any GPLv3
-    program ever modified by Nokia. The wholesale decimation of Microsoft
-    patent claims on GPLv3 programs arising from the purchase of Nokia has so
-    far been unremarked in the industry.
-% FIXME-URGENT: end
+The following two subsections discuss in order each of the above mentioned
+classes of patent commitments.
 
 \subsection{The Contributor's Explicit Patent License}
 
@@ -3836,6 +3830,14 @@ their rule, the contributor must always compare the entire work against its
 patent portfolio to determine whether the combination of the modifications
 with the remainder of the work cause it to read on any of the contributor's
 patent claims.
+
+Finally, GPLv3's explicit patent license for contributors has an interesting
+and useful side effect.  When a company with a large number of such claims
+acquires the program's modifier, all claims held or thereafter acquired by
+the purchaser are automatically licensed under this provision.  For example,
+Microsoft's acquisition of Nokia resulted in the automatic licensing of all
+Microsoft patent claims now or hereafter acquired which read on any
+contributor version of any GPLv3 program ever modified by Nokia.
 
 \subsection{Conveyors' Patent Licensing}
 
