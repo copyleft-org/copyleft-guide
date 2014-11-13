@@ -2283,7 +2283,7 @@ redistributor.  Two legal effects follow.  First, downstream parties
 who remain in compliance have valid permissions for all actions
 (including modification and redistribution) even if their immediate upstream
 supplier of the software has been terminated for license
-violation\footnote{While this is legally true, as a practical matter, a
+violation\footnote{\label{German-reinstatement-footnote} While this is legally true, as a practical matter, a
   failure of ``complete, corresponding source'' (CCS) provisioning by an
   upstream could make it effectively impossible for a downstream party to
   engage in a commercial redistribution pursuant to
@@ -3602,39 +3602,32 @@ the working of the license.
 \section{GPLv3~\S10: Explicit Downstream License}
 \label{GPLv3s10}
 
-% FIXME-LATER: this is a punt: need more time to write!
+GPLv3~\S10 is a generally straightforward section that ensures that everyone
+downstream receives licenses from all copyright holders.  Each time you
+redistribute a GPL'd program, the recipient automatically receives a license,
+under the terms of GPL, from every upstream licensor whose copyrighted
+material is present in the work you redistribute.  You could think of this as
+creating a three-dimensional rather than linear flow of license rights.
+Every recipient of the work is ``in privity,'' or is directly receiving a
+license from every licensor.
 
-GPLv3~\S10 ensures that everyone downstream receives licenses from all
-copyright holders.  It really is a generally straightforward section.
+This mechanism of automatic downstream licensing is central to copyleft's
+function.  Every licensor independently grants licenses, and every licensor
+independently terminates the license on violation.  Parties further
+downstream from the infringing party remain licensed, so long as they don't
+themselves commit infringing actions.  Their licenses come directly from all
+the upstream copyright holders, and are not dependent on the license of the breaching
+party who distributed to them.  For the same reason, an infringer who acquires
+another copy of the program has not thereby acquired any new license rights:
+once any upstream licensor of that program has terminated the license for
+breach of its terms, no new automatic license will issue to the recipient
+just by acquiring another
+copy\footnote{Footnote~\ref{German-reinstatement-footnote} also applies here
+  in discussion of GPLv3 just as it did in discussion of GPLv2.}
 
-% FIXME-URGENT:
-
-Each time you redistribute a GPL’d program, the recipient automatically
-receives a license, under the terms of the GPL involved, from every upstream
-licensor whose copyrighted material is present in the work you
-redistribute. You can think of this as creating a three-dimensional rather
-than linear flow of license rights. Every recipient of the work is ``in
-privity,'' or is directly receiving a license from every licensor.
-
-This mechanism of automatic downstream licensing is central to the working of
-copyleft. Every licensor independently grants licenses, and every licensor
-independently terminates the license on violation.
-
-Parties further downstream from
-the infringing party remain licensed, so long as they don’t themselves commit
-infringing actions. Their licenses come directly from all the upstream
-holders, and are not dependent on the license of the breaching party who
-distributed to them. For the same reason, an infringer who acquires another
-copy of the program has not thereby acquired any new license rights: once any
-upstream licensor of that program has terminated the license for breach of
-its terms, no new automatic license will issue to the recipient just by
-acquiring another copy.
-% FIXME-URGENT: end
-
-% FIXME-LATER: link up this paragraph to above sections.
-
-Note, however, GPLv3 removed the words ``at no charge'' from GPLv2~\S2(b) (in
-GPLv3,~\S5(b)) because it contributed to a misconception that the GPL did not
+Meanwhile, one specific addition in GPLv3 here in GPLv3~\S10 deserves special
+mention.  Specifically, GPLv3 removed the words ``at no charge'' from
+GPLv2~\S2(b) (which, BTW, became GPLv3~\S5(b)) because it contributed to a misconception that the GPL did not
 permit charging for distribution of copies.  The purpose of the ``at no
 charge'' wording was to prevent attempts to collect royalties from third
 parties.  The removal of these words created the danger that the imposition
