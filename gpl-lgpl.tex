@@ -3492,77 +3492,77 @@ pathological case\footnote{Theoretically, a user could collect copyright
   assignment from all known contributors and then do this, but this would
   indeed be the pathological case.}  would a user have the right to do so.
 
-% FIXME-LATER: It would be good to have detailed info on each of 7a-f.
-%              Here's some commented-out text that might be useful for 7a-b
+In general, the types of additional requirements were those terms in regular
+use by other non-copyleft Free Software licenses that the FSF found
+unobjectionable.  The specific details GPLv3's permitted additional
+requirements hat GPLv3 are as follows:
 
+\begin{enumerate}[label=7(\alph*):,ref=GPLv3s7\alph*]
 
-% FIXME-URGENT: integrate
+\item This provision allows alternative ``disclaimer of warranty''
+  forms. Copyright holders can disclaim warranty or limit liability
+  differently from the terms as provided under GPLv3\S~\S15--16.  Drafters
+  included this permission to advance the internationalization goals of
+  GPLv3; international treaties lack adequate harmonization for laws
+  regarding warranty and disclaimer.
 
-Section 7(a) – Disclaimer of warranty: Copyright holders can disclaim
-warranty or limit liability differently from the terms as provided under \S\S15
-\& 16. Internationalization of GPL required the drafters to permit the
-variation in such terms necessary to deal with the absence of any
-international harmonization of the laws of warranty and disclaimer.
+\item This provision allows alternative requirements for preservation of
+  appropriate legal notices.  GPLv3 permits additional requirements regarding
+  preservation of legal notices, including on output from execution of
+  covered works.  Preserved information can include information about the
+  origins of the code or alterations of the code.
 
-Section 7(b) – Preservation of appropriate legal notices. Section 7 permits
-additional terms requiring preservation of legal notices, including on output
-from execution of covered works.
+\item This provision allows prohibition of misrepresentation of original
+  material.  The provision yields compatibility with non-copyleft Free
+  Software licenses that require marking of modified versions in
+  ``reasonable''ways which differ from GPL's own precise marking
+  requirements.
 
-Section 7(c) – This provision allows for prohibition of misrepresentation of
-original material and makes GPLv3 compatible with permissive licenses that
-require modified versions be marked in ``reasonable''ways which are different
-from the precise marking requirements of GPL itself.
+\item This provision allows limitations on the use of names of licensor for
+  publicity purposes.  This provision also yields additional compatibility
+  with non-copyleft Free Software licenses that prohibit the use of the
+  licensor’s name on unmodified versions (or other prohibitions on
+  advertising rights).  The third clause of the
+  \href{http://opensource.org/licenses/BSD-3-Clause}{3-Clause BSD
+  License}, for example, long considered de-facto compatible with GPLv2
+    anyway, is via this clause unequivocally compatible with GPLv3.  However,
+    \href{https://www.gnu.org/licenses/license-list.html#OriginalBSD}{this
+      clause \textit{does not} make GPL compatible with the old BSD
+      advertising clause} that the FSF
+    \href{https://www.gnu.org/philosophy/bsd.html}{long ago identified as
+      problematic}.
+ 
+\item This provision clarifies that refusal to grant trademark rights for a
+  GPLv3'd covered work remains compatible with GPLv3.  Again, some
+  non-copyleft permissive licenses include such clauses.
 
-Section 7(d) – Limiting the use of names of licensor for publicity
-purposes. This provision was added to provide compatibility with licenses
-which prohibit the use of the licensor’s name on unmodified versions and
-other prohibitions on advertising rights. The long-standing and occasionally
-troublesome incompatibility with the ``BSD advertising clause'' is an example
-of the friction removed by this provision.
+\item This provision allows indemnification requirements of authors and
+  licensors.  The FSF specifically designed this clause to achieve GPLv3
+  compatibility for the
+  \href{http://www.apache.org/licenses/LICENSE-2.0.html}{Apache Software
+    License, Version 2.0}.
 
-Section 7(e) – No grant of rights under Trademark Law. This provision serves
-a similar function with respect to ``no trademark grant'' clauses in permissive
-licenses.
+\end{enumerate}
 
-Section 7(f) – allows for requiring of Indemnification of authors and
-licensors, removing one of two primary sources of incompatibility with the
-Apache Software License version 2.0.
-% FIXME-URGENT: end
+During the GPLv3 drafting process, some questioned the necessity of GPLv3~\S7;
+those critics suggested that it creates complexity that did not previously
+exist.  However, by the time of GPLv3's drafting, many existing GPLv2'd
+software packages already combined with various non-copylefted Free Software
+licensed code that carried such additional terms.  Therefore, GPLv3~\S7 is
+rationalized existing practices of those package authors and modifiers, since
+it sets clear guidelines regarding the removal and addition of these
+additional terms.  With its carefully limited list of allowed additional
+requirements, GPLv3\S7 accomplishes additional objectives as well, since it
+permits the expansion of the base of code available for GPL developers, while
+also encouraging useful experimentation with requirements the GPLv3 does not
+include by default.
 
-%% Under subsections 7a and 7b, the requirements may include preservation of
-%% copyright notices, information about the origins of the code or alterations
-%% of the code, and different warranty disclaimers. Under subsection 7c, the
-%% requirements may include limitations on the use of names of contributors and
-%% on the use of trademarks for publicity purposes. In general, we permit these
-%% requirements in added terms because many free software licenses include them
-%% and we consider them to be unobjectionable. Because we support trademark fair
-%% use, the limitations on the use of trademarks may seek to enforce only what
-%% is required by trademark law, and may not prohibit what would constitute fair
-%% use.
-
-% FIXME-LATER:  Say removing additional restrictions
-
-% FIXME-LATER: This text may be useful later:
-
-%% Some have questioned whether section 7 is needed, and some have suggested
-%% that it creates complexity that did not previously exist.  We point out to
-%% those readers that there is already GPLv2-licensed code that carries
-%% additional terms.  One of the objectives of section 7 is to rationalize
-%% existing practices of program authors and modifiers by setting clear
-%% guidelines regarding the removal and addition of such terms.  With its
-%% carefully limited list of allowed additional requirements, section 7
-%% accomplishes additional objectives, permitting the expansion of the base of
-%% code available for GPL developers, while also encouraging useful
-%% experimentation with requirements we do not include in the GPL itself.
-
-% FIXME-URGENT: integrate
-
-Any other non-permissive additional terms apart from those stated above are
-considered ``further'' restrictions and are prohibited by \S10. If you add any
-kind of additional terms in accordance with \S7, you must ensure that the
-terms are placed in the relevant source files or provide a conspicuous notice
-about where to find the additional terms.
-% FIXME-URGENT: end
+However, any other non-permissive additional terms apart from those stated
+above are considered ``further'' restrictions which
+\hyperref[GPLv3s10]{GPLv3~\S10} prohibits.  Furthermore, as a compliance
+matter, if you add additional terms in accordance with GPLv3~\S7, you must
+ensure that the terms are placed in the relevant source files or provide a
+conspicuous notice about where to find the additional terms.
 
 \section{GPLv3~\S8: A Lighter Termination}
 
