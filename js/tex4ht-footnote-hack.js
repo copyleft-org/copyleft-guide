@@ -25,9 +25,3 @@ $( ".footnote-mark" ).tooltip({
         }
     }});
 });
-// $(function() {
-// $( document ).tooltip({
-// content: function() {
-//     var element = $( this );
-//     return "HI";
-// }});});
