@@ -56,3 +56,12 @@ them are writing, and some of them are formatting-related.
 There is also a [TODO list on the website](https://copyleft.org/todo/), which
 are mostly related to formatting, layout and infrastructure, but if you'd
 like to help there, such help is also welcome.
+
+## Merge Request and Patch Workflow
+
+Currently, the main location for work on this project is Gitorious, and
+active new development on the project happens on the 'next' branch.  Here is
+a suggested workflow for submitting patches &mdash; first doing so *with*
+the Gitorious infrastructure and second *avoiding* the Gitorious
+infrastructure.
+
