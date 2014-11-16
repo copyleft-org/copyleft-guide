@@ -107,3 +107,34 @@ body {
     border-radius: 0px;
     color: #c7254e;
 }
+/* Handle issues with anchor in-page links offsets due to bootstrap's */
+/* fixed top navbar.  For  in-page anchor links, the fixed navbar at  */
+/* the top obscures the text of the link that's jumped to.            */
+/* Most of the pure CSS solutions found online cannot handle the      */
+/* situation where you have an anchor with both href and id           */
+/* attributes.  This seemed the best one for use in cases where       */
+/* there was is no href. in the anchor which included the id.         */
+
+.likesectionHead a[id],
+.subsectionHead a[id],
+.likesubsectionHead a[id],
+.partHead a[id],
+.likepartHead a[id],
+.appendixHead a[id],
+.likeappendixHead a[id],
+.chapterHead a[id],
+.likechapterHead a[id],
+.sectionHead a[id] {
+    border-top: 75px solid transparent;
+    margin-top: -75px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+/* Note that those anchors that contain both href and id cannot be     */
+/* handled this way.  It casuses strange problems with the href links. */
+/* The specific problem is that you get a 75px offset when the         */
+/* mousepointer activates the link, and the tooltip on the footnotes   */
+/* don't work.  Therefore, the following classes are handled by the    */
+/* Javascript rather than CSS:                                         */
+/*    chapterToc, sectionToc, subsectionToc, partToc, footnote-mark    */
