@@ -17,10 +17,12 @@ Debian-based systems, this command may work as root:
 
     # aptitude install texlive-full make tex4ht
 
-You can also [download a prebuilt PDF file](http://ebb.org/bkuhn/articles/copyleft-book.pdf).
+You may also
+[browse the current version of the guide on copyleft.org](https://copyleft.org/guide/),
+and [download a PDF of the Guide as well](http://copyleft.org/guide/comprehensive-gpl-guide.pdf).
 
 Note the
-[canonical repository for this project is on gitorious](https://gitorious.org/gpl-compliance-tools/tutorial/source/master:). Copies
+[canonical repository for this project is on gitorious](https://gitorious.org/copyleft-org/tutorial/source/master:). Copies
 of this repository on other sites is for informational and backup purposes
 only.
 
