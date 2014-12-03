@@ -2,8 +2,10 @@
      <footer class="navbar navbar-default navbar-fixed-bottom copyleft-navbar">\Hnewline
        <div class="container">\Hnewline
      <nav class="collapse navbar-collapse copyleft-navbar-collapse" role="navigation">\Hnewline
-     <p class="navbar-text navbar-left">License:
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC By SA 4.0 International</a></p>\Hnewline}}
+      <p class="navbar-text navbar-left"> License:
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+        Donate now to this site's sponsors: <a href="https://sfconservancy.org/supporter/">Conservancy</a> &amp; <a href="https://www.fsf.org/appeal/">FSF</a></p>
+\Hnewline}}
 
 \:CheckOption{monolith} \if:Option
    \newcommand{\monolith}{\Configure{@BODY}{\footermenu\HCode{</nav></div></footer>}}}
