@@ -16,3 +16,5 @@
                <li><a href="/guide/monolithic">HTML (1 pg)</a></li>\Hnewline}}
    \newcommand{\monolith}{\Configure{next+}{\footermenu\HCode{\Hnewline<nav class="collapse navbar-collapse copyleft-navbar-collapse" role="navigation"><ul class="nav navbar-nav navbar-right">}}{\HCode{</ul></nav></div></footer>}}}
  \fi
+
+\def\hrefnofollow#1#2{\Link[#1 rel="nofollow"]{}{}{#2}\EndLink}
