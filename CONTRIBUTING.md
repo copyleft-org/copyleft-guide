@@ -67,9 +67,13 @@ like to help there, such help is also welcome.
 
 ## Merge Request and Patch Workflow
 
-Currently, the main location for work on this project is Gitorious, and
-active new development on the project happens on the 'next' branch.  Here is
-a suggested workflow for submitting patches &mdash; first doing so *with*
-the Gitorious infrastructure and second *avoiding* the Gitorious
+Currently, the main location for work on this project is
+[on Gitorious](https://gitorious.org/copyleft-org/tutorial), and active new
+development on the project happens on the
+['next' branch](https://gitorious.org/copyleft-org/tutorial/source/next:)
+(which is
+[auto-published on the copyleft.org/guide-next URL](https://copyleft.org/guide-next/)).
+Here is a suggested workflow for submitting patches &mdash; first doing so
+*with* the Gitorious infrastructure and second *avoiding* the Gitorious
 infrastructure.
 
