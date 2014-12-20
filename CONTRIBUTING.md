@@ -53,7 +53,13 @@ Note: by submitting contributions via any of these means, you agree to the
 
 If you're looking for something to fix, just grep the *.tex files for "FIXME"
 and you'll find plenty.  Many of them are simple and easy to do.  Some of
-them are writing, and some of them are formatting-related.
+them are writing, and some of them are simply formatting-related.
+
+If you want a larger, more involved writing project, take a look at the
+[TODO list in this repository](TODO.md).  That list has bigger items that
+other contributors have identified as necessary.  (BTW, the project
+contributors are considering various possible copylefted bug-tracking
+solutions, but admittedly haven't picked a bug-tracker yet.)
 
 There is also a [TODO list on the website](https://copyleft.org/todo/), which
 are mostly related to formatting, layout and infrastructure, but if you'd
