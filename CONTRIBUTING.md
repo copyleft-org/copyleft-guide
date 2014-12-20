@@ -16,10 +16,12 @@ for more details on who has contributed to the project.
 
 ## How Do I Get Involved?
 
-The Guide is maintained in a distributed version control system called
+The Guide is maintained in a copylefted distributed version control system called
 [Git](http://git-scm.com/).  Currently, the project utilizes the services of
-a Git hosting website called [Gitorious](https://gitorious.org).  Those who
-are comfortable with Gitorious can submit
+a  Git hosting website called [Gitorious](https://gitorious.org). (The
+software which runs Gitorious is, itself, copylefted, too.)
+
+Those who are comfortable with Gitorious can submit
 [merge requests on copyleft.org's gitorious site](https://gitorious.org/copyleft-org/tutorial/merge_requests).
 See the section "Merge Request and Patch Workflow" below for more information
 on the details of doing that.
