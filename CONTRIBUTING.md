@@ -125,17 +125,30 @@ request.
 0. First, ensure the Git repository points at the right branch and all old
    changes are committed.
 
-        $ git checkout official-next
-        $ git pull copyleft-tutorial-official
         $ git status
 
    The output of the last command should look like this:
 
-        # On branch official-next
+        # On branch SOME_BRANCH
         nothing to commit (working directory clean)
 
-   If you don't get that output, you probably have uncommitted changes, which
-   is beyond the scope of this tutorial.
+   If you don't get that output, you probably have uncommitted changes from
+   some other situation, which is beyond the scope of this document.
+
+1. Now, get the most recent version of the 'next' branch:
+
+        $ git checkout master
+        $ git branch -D official-next
+        $ git fetch copyleft-tutorial-official
+        $ git branch --track official-next copyleft-tutorial-official/next
+        $ git checkout official-next
+        $ git pull
+
+   (This step is more complicated than is typically found in a tutorial like
+   this.  Experienced Git users will note the above is the easiest way to
+   handle the fact that the 'next' branch is occasionally rebased against
+   master.  If 'next' branch has not been rebased since the last time the
+   operation was performed, the last two commands suffice for this step.)
 
 1. Next, create a new branch to hold your changes:
 
