@@ -74,6 +74,15 @@ development on the project happens on the
 (which is
 [auto-published on the copyleft.org/guide-next URL](https://copyleft.org/guide-next/)).
 Here is a suggested workflow for submitting patches &mdash; first doing so
-*with* the Gitorious infrastructure and second *avoiding* the Gitorious
-infrastructure.
+*with* the Gitorious infrastructure, second *avoiding* the Gitorious
+infrastructure but still using Git, and third avoiding Git altogether.
+
+Merge requests and/or patches against
+['next' branch](https://gitorious.org/copyleft-org/tutorial/source/next:) are
+typically much preferred, and the workflow explanations below assume that.
+However, merge requests and/or patches against
+['master' branch](https://gitorious.org/copyleft-org/tutorial/source/master:)
+are not necessarily rejected.  In fact, if your change is a fix for typo,
+spelling, grammar, formatting or anything urgent, submitting a patch against
+'master' may make more sense.
 
