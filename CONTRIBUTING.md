@@ -26,10 +26,9 @@ Those who are comfortable with Gitorious can submit
 See the section "Merge Request and Patch Workflow" below for more information
 on the details of doing that.
 
-However, the editor-in-chief do not want lack of Git and/or LaTeX knowledge
-to create an entry barrier for potential contributors.  Therefore, the
-editor-in-chief happily accepts contributions and ideas via the following
-means:
+However, lack of Git and/or LaTeX knowledge is *not a barrier* for
+contribution to this project.  Useful contributions will be accepted by the
+following means as well:
 
   * Patches posted to
     [the mailing list](http://lists.copyleft.org/cgi-bin/mailman/listinfo/discuss).
