@@ -12,7 +12,7 @@ Currently, [Bradley M. Kuhn](http://ebb.org/bkuhn/) is the editor-in-chief of
 this Guide project.  However, many other contributors have given patches and
 improvements to the text.  Review the
 [commit log in the Git repository](https://gitorious.org/copyleft-org/tutorial/commits/master)
-for more details on who has committed to the project.
+for more details on who has contributed to the project.
 
 ## How Do I Get Involved?
 
