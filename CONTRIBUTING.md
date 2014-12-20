@@ -163,8 +163,9 @@ request.
 
     That's the end of the command-line part.
 
-5. Now, visit Gitorious' merge-requst creation web interface at
+5. Now, visit Gitorious' merge-request creation web interface at
    https://gitorious.org/copyleft-org/MYNAME-copyleft-tutorial-suggestions/merge_requests/new
+
    Initiate your merge request with by setting:
 
         Summary:       Briefly describe your proposal
