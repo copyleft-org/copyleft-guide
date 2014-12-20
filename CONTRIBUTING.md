@@ -174,3 +174,9 @@ request.
         Target Branch: next
         Source Branch: my-new-idea-for-tutorial
 
+6. While it's possible to discuss the details of the merge request via the
+   web interface, for larger changes, it may be worthwhile to start a thread
+   on
+   [the mailing list](http://lists.copyleft.org/cgi-bin/mailman/listinfo/discuss)
+   about the merge request.  Include the URL of the merge request in the
+   post.
