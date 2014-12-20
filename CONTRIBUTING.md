@@ -41,9 +41,10 @@ following means as well:
 
 Please, do not worry if your patches or new sections of text are not properly
 formatted as patches and/or are not formatted in LaTeX properly.  Indeed,
-feel free to offer patches that break LaTeX formatting.  If the content is
-good, the editor-in-chief or someone else will format your contribution
-properly for LaTeX.
+feel free to offer patches that break LaTeX formatting, or to just write up
+your suggestion in an email.  If the content is appropriate for the Guide,
+the editor-in-chief or someone else will format your contribution properly
+for LaTeX.
 
 Note: by submitting contributions via any of these means, you agree to the
 "Author's Certificate of Origin" (see below).
