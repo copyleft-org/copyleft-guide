@@ -28,7 +28,6 @@ purposes only.
 
 ## Contributing
 
-Patches to this project are welcome.  Please
-[submit a merge request on Gitorious](https://gitorious.org/copyleft-org/merge_requests).
-If you cannot use that, you may email patches directly to Bradley.  You can
-find his email address in the commit logs.
+Improvements of all kinds and manner are welcome.  Please review
+[the instructions and details regarding making contributions](CONTRIBUTING.md)
+for more information.
