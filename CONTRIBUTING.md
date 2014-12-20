@@ -86,6 +86,10 @@ are not necessarily rejected.  In fact, if your change is a fix for typo,
 spelling, grammar, formatting or anything urgent, submitting a patch against
 'master' may make more sense.
 
+To use the instructions below for proposals against the 'master' branch, just
+replace 'next' everywhere below with 'master'.
+
+
 ### Contributing via Gitorious
 
 First-time contributors may want to do the following four items first:
@@ -113,7 +117,6 @@ First-time contributors may want to do the following four items first:
 
         $ git remote add copyleft-tutorial-official git@gitorious.org:copyleft-org/tutorial.git
         $ git fetch copyleft-tutorial-official
-        $ git branch --track official-master copyleft-tutorial-official/master
         $ git branch --track official-next copyleft-tutorial-official/next
 
 That completes the first-time setup.  Next is a workflow each proposed merge
