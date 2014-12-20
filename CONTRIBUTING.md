@@ -86,3 +86,90 @@ are not necessarily rejected.  In fact, if your change is a fix for typo,
 spelling, grammar, formatting or anything urgent, submitting a patch against
 'master' may make more sense.
 
+### Contributing via Gitorious
+
+First-time contributors may want to do the following four items first:
+
+0. [Create an account on Gitorious](https://gitorious.org/users/new)
+
+1. [Visit gitorious.org/copyleft-org/tutorial](https://gitorious.org/copyleft-org/tutorial)
+    and click "Clone".
+
+    Instead of the default, you might call your clone
+    "MYNAME-copyleft-tutorial-suggestions".
+
+2. On the command line create a *local* clone of your Clone, by typing:
+
+        $ git clone git@gitorious.org:copyleft-org/MYNAME-copyleft-tutorial-suggestions.git copyleft-tutorial
+        $ cd copyleft-tutorial
+        $ git remote rename origin MYNAME-copyleft-tutorial-suggestions
+
+    (The last part isn't strictly necessary; you just might want to name the
+    upstream repository a more descriptive name, since below you'll add the
+    official repository as well).
+
+3. Now, add to your clone a copy of the "real" Conservancy policies
+   repository, and make a branch that tracks the official version:
+
+        $ git remote add copyleft-tutorial-official git@gitorious.org:copyleft-org/tutorial.git
+        $ git fetch copyleft-tutorial-official
+        $ git branch --track official-master copyleft-tutorial-official/master
+        $ git branch --track official-next copyleft-tutorial-official/next
+
+That completes the first-time setup.  Next is a workflow each proposed merge
+request.
+
+0. First, ensure the Git repository points at the right branch and all old
+   changes are committed.
+
+        $ git checkout official-next
+        $ git pull copyleft-tutorial-official
+        $ git status
+
+   The output of the last command should look like this:
+
+        # On branch official-next
+        nothing to commit (working directory clean)
+
+   If you don't get that output, you probably have uncommitted changes, which
+   is beyond the scope of this tutorial.
+
+1. Next, create a new branch to hold your changes:
+
+        $ git checkout -b my-new-idea-for-tutorial official-next
+
+   Use a name that briefly describes your planned proposal for
+   "my-new-idea-for-tutorial".
+
+2. Make your edits.  If you're editing the tutorial, you likely want to focus
+   on the files ending in '.tex'.  Commit frequently while you're editing
+   with:
+
+        $ git commit -a
+
+   Write useful and clear commit messages that explain the purpose of the
+   changes.
+
+3. When you are done all the changes related to 'my-new-idea-for-tutorial',
+   verify they've all been committed this way:
+
+        $ git status
+        # On branch my-new-idea-for-tutorial
+        nothing to commit (working directory clean)
+
+4. Next, upload and publish those ideas to your own clone on Gitorious.
+
+        $ git push MYNAME-copyleft-tutorial-suggestions my-new-idea-for-tutorial
+
+    That's the end of the command-line part.
+
+5. Now, visit Gitorious' merge-requst creation web interface at
+   https://gitorious.org/copyleft-org/MYNAME-copyleft-tutorial-suggestions/merge_requests/new
+   Initiate your merge request with by setting:
+
+        Summary:       Briefly describe your proposal
+        Description:   More completely describe your proposal
+        Target:        tutorial
+        Target Branch: next
+        Source Branch: my-new-idea-for-tutorial
+
