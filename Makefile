@@ -8,7 +8,7 @@ ifndef WEB_INSTALL_DIR
 WEB_INSTALL_DIR = /path/to/html/install/directory
 endif
 
-LATEX_INPUT_FILES = $(BOOK_BASE).tex compliance-guide.tex license-texts.tex enforcement-case-studies.tex gpl-lgpl.tex
+LATEX_INPUT_FILES = $(BOOK_BASE).tex compliance-guide.tex license-texts.tex enforcement-case-studies.tex gpl-lgpl.tex third-party-citations.tex
 BOOK_CLASS_FILE = gpl-book.cls
 
 CSS_FILES = css/*.css

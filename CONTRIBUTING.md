@@ -65,6 +65,10 @@ There is also a [TODO list on the website](https://copyleft.org/todo/), which
 are mostly related to formatting, layout and infrastructure, but if you'd
 like to help there, such help is also welcome.
 
+## Contributing Third-Party CC-BY-SA'd Works
+
+FIXME
+
 ## Merge Request and Patch Workflow
 
 Currently, the main location for work on this project is
