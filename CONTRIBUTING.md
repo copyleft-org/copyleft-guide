@@ -67,7 +67,86 @@ like to help there, such help is also welcome.
 
 ## Contributing Third-Party CC-BY-SA'd Works
 
-FIXME
+As can be seen in
+[the LaTeX source file, third-party-citations.tex](third-party-citations.tex),
+some material from third-party works has occasionally been merged into this
+guide.  We're always on the hunt for useful CC-BY-SA'd materials that would
+work well with this guide.
+
+Do offer merge requests and/or patches that incorporate useful third-party
+works, provided  that is clearly licensed under CC-BY-SA.  Follow these
+procedures when doing so:
+
+0. Target all changes for the 'next' branch (see below).  Likely, use of a
+   secondary branch will be useful for the following steps (perhaps use the
+   procedure below entitled "Contributing via Gitorious" to do so).
+
+1. If possible, follow this procedure for the first commit that begins the
+   work of integrating the third party text.
+
+   Initially, just "paste in" any useful text from the other work into the
+   appropriate .tex file.  Try to keep it as similar to the upstream sourced
+   text as possible.  Surround the text with '% FIXME: ' as needed to remind
+   that editing is needed to integrate the text into document.  Then, commit
+   this just as a stand-alone commit without any attempt to integrate the
+   text.
+
+   While not strictly necessary, it's ideal to set the "Author" field and
+   "Author-Date" fields of this first commit to match the original author of
+   the work, rather than your own.  You can do this with a command like this:
+
+        $ date="2014-05-31 13:15:01 -0400"; env GIT_AUTHOR_DATE="$date" GIT_AUTHOR_NAME="Original Author Name" GIT_AUTHOR_EMAIL="originalauthor@example.org" git commit -a
+
+   Write a commit message that specifically identifies the original author,
+   the original title of the published work.  Include specific details
+   stating the reasons why you believe the work is licensed under CC-BY-SA.
+   If the original published work has a canonical hyperlink for the work,
+   include that as well in the commit message.
+
+   Finally, include any comments or reasoning why the text is appropriate for
+   the Guide (and/or, why some text from the original material is not
+   included because those parts aren't appropriate for the Guide).
+
+   This procedure creates a "commit point" that shows the specific text
+   brought from the other source &mdash; more-or-less as it stood in the
+   other work.  This is useful for historical archiving purposes.
+
+   [Commit 678e841079aa708f98fe948ec8cef672d9a4c3cc](https://gitorious.org/copyleft-org/tutorial/commit/678e841079aa708f98fe948ec8cef672d9a4c3cc)
+   contains an example of this specific procedure.
+
+2. In a second commit, by itself, add the following two things only:
+
+      * Update the copyright notices found in
+        [comprehensive-gpl-guide.tex](comprehensive-gpl-guide.tex).  Ensure
+        that the LaTeX formatting is correct.
+
+      * Add an entry in
+        [third-party-citations.tex](third-party-citations.tex) with a link to
+        the work.  Mimic the formatting of existing '\item' entries on the
+        list already in that file.
+
+3. Next, through a series of small commits, carefully integrate the text into
+   the larger whole.  Think carefully about how the new text will appear to
+   readers.  Rework phrases as necessary to match the style of the existing
+   text of the Guide; pay particular attention to the style in the paragraphs
+   immediately surrounding your pastes to ensure the text reads a unified
+   whole.  Commit changes as necessary, in the smallest increments reasonably
+   possible.
+
+4. Carefully vet the text for locations where the positions contradict or
+   otherwise aren't fully congruent with the existing material in the Guide.
+   Ideally, all copyleft advocates would agree on all points, but they don't.
+   Therefore, the Guide should note the major differences in opinion in the
+   actual text, and include footnotes for any notable minority opinions.
+   Commit changes as necessary, in the smallest increments reasonably
+   possible.
+
+   [Commit 07a02b0b1c6d3ac2af9ed21b2a563abcf44d3d0f](https://gitorious.org/copyleft-org/tutorial/commit/07a02b0b1c6d3ac2af9ed21b2a563abcf44d3d0f)
+   is an example of the process for the last two steps.
+
+5. Submit a merge request for your branch into 'next'.  In this particular
+   situation, it's particularly helpful to make a formal merge request on
+   Gitorious rather than emailing a patch set.
 
 ## Merge Request and Patch Workflow
 
