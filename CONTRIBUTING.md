@@ -116,7 +116,7 @@ First-time contributors may want to do the following four items first:
     upstream repository a more descriptive name, since below you'll add the
     official repository as well).
 
-3. Now, add to your clone a copy of the "real" Conservancy policies
+3. Now, add to your clone a copy of the "real" copyleft.org tutorial
    repository, and make a branch that tracks the official version:
 
         $ git remote add copyleft-tutorial-official git@gitorious.org:copyleft-org/tutorial.git
