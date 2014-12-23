@@ -52,7 +52,6 @@
 %        is worse. :)  My other opting was   COEO, which seemed too close to
 %        CEO.  Suggestions welcome.
 
-\usepackage{hyperref}
 \usepackage{listings}
 \usepackage{enumerate}
 \usepackage{enumitem}
@@ -62,6 +61,9 @@
               paperwidth=8.5in, paperheight=11in,
               left=1in, right=1in, top=1.25in, bottom=.75in,
            ]{geometry}
+% Make sure hyperref is last in the package list.  Order matters here, See:
+%   http://tex.stackexchange.com/questions/77886/fncychap-and-hyperref-messes-up-page-references
+\usepackage{hyperref}
 
 \newcommand{\tutorialpartsplit}[2]{#2}
 
