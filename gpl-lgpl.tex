@@ -1847,6 +1847,8 @@ option for most distributors, because it means that the source-code
 provision obligations are fully completed at the time of binary
 distribution (more on that later).
 
+\subsection{Complete, Corresponding Source (CCS)}
+
 Under GPLv2~\S3(a), the source code provided must be the ``corresponding source
 code.''  Here ``corresponding'' primarily means that the source code
 provided must be that code used to produce the binaries being distributed.
@@ -1859,23 +1861,38 @@ exercise her freedoms to modify and redistribute changes.  Without the
 complete source, it would not be possible to make changes that were
 actually directly derived from the version received.
 
+Based on the appearance of those two words, GPL theorists will often refer to
+the source code required under the previsions of this section as ``Complete,
+Corresponding Source'', sometimes abbreviated as CCS\@.  CCS is not a formal,
+defined term in GPLv2, but rather, GPL theorists coined the acronym CCS to
+embody not just the concepts of ``complete'' and ``corresponding'' as found
+in GPLv2, but the entirety of GPLv2's requirements for source code
+provisioning.  In other words, GPL theorists might say: ``the company
+provided some source, but it wasn't CCS'', which would mean the source code
+failed in some ways to meet some term of GPLv2.
+
 \label{GPLv2s3-build-scripts}
 
-Furthermore, GPLv2~\S3 is defending against a tactic that has in fact been
-seen in GPL enforcement.  Under GPL, if you pay a high price for
-a copy of GPL'd binaries (which comes with corresponding source, of
-course), you have the freedom to redistribute that work at any fee you
-choose, or not at all.  Sometimes, companies attempt a GPL-violating
-cozenage whereby they produce very specialized binaries (perhaps for
-an obscure architecture).  They then give source code that does
-correspond, but withhold the ``incantations'' and build plans they
-used to make that source compile into the specialized binaries.
-Therefore, GPLv2~\S3 requires that the source code include ``meta-material'' like
-scripts, interface definitions, and other material that is used to
-``control compilation and installation'' of the binaries.  In this
-manner, those further down the distribution chain are assured that
-they have the unabated freedom to build their own modified works
-from the sources provided.
+Indeed, CCS needs completely include not just that source which is directly
+translated by the compiler into object code, but other materials necessary to
+convert the source into equivalent binaries.  Specifically, GPLv2~\S3
+requires that the source code include ``meta-material'' like scripts,
+interface definitions, and other material that is used to ``control
+compilation and installation'' of the binaries.  In this manner, those
+further down the distribution chain are assured that they have the unabated
+freedom to build their own modified works from the sources provided.
+
+This requirement is not merely of theoretical value.  If you pay a high price
+for a copy of GPL'd binaries (which comes with CCS, of course), you have the
+freedom to redistribute that work at any fee you choose, or not at all.
+Sometimes, companies attempt a GPL-violating cozenage whereby they produce
+very specialized binaries (perhaps for an obscure architecture).  They then
+give source code that does correspond, but withhold the ``incantations'' and
+build plans they used to make that source compile into the specialized
+binaries.  Such distributions violate GPL, since the downstream users cannot
+effectively ``control compilation and installation'' of the binaries.
+
+\subsection{Additional Source Provision Options}
 
 Software distribution comes in many
 forms.  Embedded manufacturers, for example, have the freedom to put
