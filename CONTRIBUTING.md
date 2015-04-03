@@ -11,18 +11,19 @@ Free Software project.
 Currently, [Bradley M. Kuhn](http://ebb.org/bkuhn/) is the editor-in-chief of
 this Guide project.  However, many other contributors have given patches and
 improvements to the text.  Review the
-[commit log in the Git repository](https://gitorious.org/copyleft-org/tutorial/commits/master)
+[commit log in the Git repository](https://k.copyleft.org/guide/changelog)
 for more details on who has contributed to the project.
 
 ## How Do I Get Involved?
 
 The Guide is maintained in a copylefted distributed version control system called
-[Git](http://git-scm.com/).  Currently, the project utilizes the services of
-a  Git hosting website called [Gitorious](https://gitorious.org). (The
-software which runs Gitorious is, itself, copylefted, too.)
+[Git](http://git-scm.com/).  Currently, the project collaboration site is an
+instance of the [Kallithea code hosting software](https://kallithea-scm.org/)
+hosted at [k.copyleft.org](https://k.copyleft.org/guide/).  (Kallithea itself
+us under a copyleft license, too, namely GPLv3.)
 
-Those who are comfortable with Gitorious can submit
-[merge requests on copyleft.org's gitorious site](https://gitorious.org/copyleft-org/tutorial/merge_requests).
+Those who are comfortable with using Kallithea can submit
+[pull requests via the Kallithea interface](https://k.copyleft.org/guide/pull-request).
 See the section "Merge Request and Patch Workflow" below for more information
 on the details of doing that.
 
@@ -111,7 +112,7 @@ procedures when doing so:
    brought from the other source &mdash; more-or-less as it stood in the
    other work.  This is useful for historical archiving purposes.
 
-   [Commit 678e841079aa708f98fe948ec8cef672d9a4c3cc](https://gitorious.org/copyleft-org/tutorial/commit/678e841079aa708f98fe948ec8cef672d9a4c3cc)
+   [Commit 678e841079aa708f98fe948ec8cef672d9a4c3cc](https://k.copyleft.org/guide/changeset/678e841079aa708f98fe948ec8cef672d9a4c3cc)
    contains an example of this specific procedure.
 
 2. In a second commit, by itself, add the following two things only:
@@ -141,7 +142,7 @@ procedures when doing so:
    Commit changes as necessary, in the smallest increments reasonably
    possible.
 
-   [Commit 07a02b0b1c6d3ac2af9ed21b2a563abcf44d3d0f](https://gitorious.org/copyleft-org/tutorial/commit/07a02b0b1c6d3ac2af9ed21b2a563abcf44d3d0f)
+   [Commit 07a02b0b1c6d3ac2af9ed21b2a563abcf44d3d0f](https://k.copyleft.org/guide/changeset/07a02b0b1c6d3ac2af9ed21b2a563abcf44d3d0f)
    is an example of the process for the last two steps.
 
 5. Submit a merge request for your branch into 'next'.  In this particular
@@ -151,9 +152,9 @@ procedures when doing so:
 ## Merge Request and Patch Workflow
 
 Currently, the main location for work on this project is
-[on Gitorious](https://gitorious.org/copyleft-org/tutorial), and active new
+[on k.copyleft.org](https://k.copyleft.org/guide), and active new
 development on the project happens on the
-['next' branch](https://gitorious.org/copyleft-org/tutorial/source/next:)
+['next' branch](https://k.copyleft.org/guide/changelog?branch=next)
 (which is
 [auto-published on the copyleft.org/guide-next URL](https://copyleft.org/guide-next/)).
 Here is a suggested workflow for submitting patches &mdash; first doing so
@@ -161,10 +162,10 @@ Here is a suggested workflow for submitting patches &mdash; first doing so
 infrastructure but still using Git, and third avoiding Git altogether.
 
 Merge requests and/or patches against
-['next' branch](https://gitorious.org/copyleft-org/tutorial/source/next:) are
+['next' branch](https://k.copyleft.org/guide/changelog?branch=next) are
 typically much preferred, and the workflow explanations below assume that.
 However, merge requests and/or patches against
-['master' branch](https://gitorious.org/copyleft-org/tutorial/source/master:)
+['master' branch](https://k.copyleft.org/guide/changelog?branch=master)
 are not necessarily rejected.  In fact, if your change is a fix for typo,
 spelling, grammar, formatting or anything urgent, submitting a patch against
 'master' may make more sense.
@@ -173,23 +174,23 @@ To use the instructions below for proposals against the 'master' branch, just
 replace 'next' everywhere below with 'master'.
 
 
-### Contributing via Gitorious
+### Contributing via copyleft.org's Kallithea instance
 
 First-time contributors may want to do the following four items first:
 
-0. [Create an account on Gitorious](https://gitorious.org/users/new)
+0. [Create an account on k.copyleft.org](https://k.copyleft.org/_admin/register)
 
-1. [Visit gitorious.org/copyleft-org/tutorial](https://gitorious.org/copyleft-org/tutorial)
-    and click "Clone".
+1. [Visit k.copyleft.org/guide](https://k.copyleft.org/guide)
+    and choose "Fork" from the "Options" menu.
 
     Instead of the default, you might call your clone
-    "MYNAME-copyleft-tutorial-suggestions".
+    "guide-USERNAME".
 
 2. On the command line create a *local* clone of your Clone, by typing:
 
-        $ git clone git@gitorious.org:copyleft-org/MYNAME-copyleft-tutorial-suggestions.git copyleft-tutorial
-        $ cd copyleft-tutorial
-        $ git remote rename origin MYNAME-copyleft-tutorial-suggestions
+        $ git clone https://USERNAME@k.copyleft.org/guide-USERNAME copyleft-guide
+        $ cd copyleft-guide
+        $ git remote rename origin guide-USERNAME
 
     (The last part isn't strictly necessary; you just might want to name the
     upstream repository a more descriptive name, since below you'll add the
@@ -198,9 +199,9 @@ First-time contributors may want to do the following four items first:
 3. Now, add to your clone a copy of the "real" copyleft.org tutorial
    repository, and make a branch that tracks the official version:
 
-        $ git remote add copyleft-tutorial-official git@gitorious.org:copyleft-org/tutorial.git
-        $ git fetch copyleft-tutorial-official
-        $ git branch --track official-next copyleft-tutorial-official/next
+        $ git remote add guide-official https://bkuhn@k.copyleft.org/guide
+        $ git fetch guide-official
+        $ git branch --track official-next guide-official/next
 
 That completes the first-time setup.  Next is a workflow each proposed merge
 request.
@@ -222,8 +223,8 @@ request.
 
         $ git checkout master
         $ git branch -D official-next
-        $ git fetch copyleft-tutorial-official
-        $ git branch --track official-next copyleft-tutorial-official/next
+        $ git fetch guide-official
+        $ git branch --track official-next gude-official/next
         $ git checkout official-next
         $ git pull
 
@@ -258,20 +259,19 @@ request.
 
 4. Next, upload and publish those ideas to your own clone on Gitorious.
 
-        $ git push MYNAME-copyleft-tutorial-suggestions my-new-idea-for-tutorial
+        $ git push guide-USERNAME my-new-idea-for-tutorial
 
     That's the end of the command-line part.
 
-5. Now, visit Gitorious' merge-request creation web interface at
-   https://gitorious.org/copyleft-org/MYNAME-copyleft-tutorial-suggestions/merge_requests/new
+5. Now, visit the Kallithea pull request merge-request creation web interface at
+   https://k.copyleft.org/guide-USERNAME/pull-request
 
    Initiate your merge request with by setting:
 
-        Summary:       Briefly describe your proposal
-        Description:   More completely describe your proposal
-        Target:        tutorial
-        Target Branch: next
-        Source Branch: my-new-idea-for-tutorial
+        Title:                  Briefly describe your proposal
+        Description:            More completely describe your proposal
+        Original Repository:    guide-USERNAME : my-new-idea-for-tutorial
+        Destination Repository: guide (parent) : next
 
 6. While it's possible to discuss the details of the merge request via the
    web interface, for larger changes, it may be worthwhile to start a thread

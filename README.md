@@ -22,8 +22,8 @@ You may also
 and [download a PDF of the Guide as well](http://copyleft.org/guide/comprehensive-gpl-guide.pdf).
 
 Note the
-[canonical repository for this project is on gitorious](https://gitorious.org/copyleft-org/tutorial/source/master:).
-Typically, copies of this repository on  sites other than gitorious are for informational and backup
+[canonical repository for this project is on k.copyleft.org](https://k.copyleft.org/guide/files/tip/).
+Typically, copies of this repository on  sites other than copyleft.org are for informational and backup
 purposes only.
 
 ## Contributing
