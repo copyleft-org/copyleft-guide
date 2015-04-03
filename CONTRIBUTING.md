@@ -279,3 +279,33 @@ request.
    [the mailing list](http://lists.copyleft.org/cgi-bin/mailman/listinfo/discuss)
    about the merge request.  Include the URL of the merge request in the
    post.
+
+## Gitorious Apocalypse Recovery
+
+If you used to contribute via Gitorious, *don't panic*!  We were careful to
+transition the project to Kallithea without requiring recloning the
+repository.  If you initially did a clone of the main repository (i.e., not
+your own clone) all you need to do one of these operations
+
+For Git 1.8.0 or later:
+
+    $ git remote set-url origin https://k.copyleft.org/guide
+    $ git --set-upstream master origin/master
+    $ git --set-upstream-to next origin/next
+
+For any older version of Git:
+
+    $ git remote set-url origin https://k.copyleft.org/guide
+    $ git config branch.master.remote https://k.copyleft.org/guide
+    $ git config branch.next.remote https://k.copyleft.org/guide
+
+(If you renamed the gitorious remote to a different name, replace "origin"
+with the name you used.  If you previously followed the workflow instructions
+above, yours is probably called "guide-official", or "tutorial-official",
+rather than "origin").
+
+It's really that simple!
+
+If you had a clone on gitorious, you have a bit more work to do, but feel
+free to create a clone on k.copyleft.org and push any branches you care about
+there!
