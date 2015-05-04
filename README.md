@@ -31,3 +31,14 @@ purposes only.
 Improvements of all kinds and manner are welcome.  Please review
 [the instructions and details regarding making contributions](CONTRIBUTING.md)
 for more information.
+
+Copyleft.org may be sponsored by various organizations, and organizations may
+also republish some, or all, of the output of this project under the terms of
+the CC BY-SA license.  However, contributors' work is their own, and thus the
+opinions expressed in their contributions, IRC utterances, commit messages,
+mailing list posts, and/or other fora provided by copyleft.org may not
+necessarily reflect the views of the contributors' employers and/or
+organizations sponsoring the project and/or organizations republishing
+copyleft.org's materials.  Generally speaking, unless stated otherwise,
+please assume that individuals contribute to copyleft.org in their personal
+capacity.
