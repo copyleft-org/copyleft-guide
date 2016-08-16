@@ -8,3 +8,5 @@
   copyleft.org/guide/  I set a few of these up by hand already, but perhaps
   there's a way that tex4ht could dump an list of URL redirects automatically
   when it builds the HTML.
+* https://hypothes.is/ might be useful for quickly allowing web readers
+  to add changes.
