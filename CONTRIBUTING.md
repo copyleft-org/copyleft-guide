@@ -175,7 +175,9 @@ spelling, grammar, formatting or anything urgent, submitting a patch against
 'master' may make more sense.
 
 To use the instructions below for proposals against the 'master' branch, just
-replace 'next' everywhere below with 'master'.
+replace 'next' everywhere below with 'master'.  However, please read below
+the section entitled "Why Changes Should Target 'next' Branch" below before
+pushing anything to the master branch.
 
 
 ### Contributing via copyleft.org's Kallithea instance
@@ -283,6 +285,31 @@ request.
    [the mailing list](http://lists.copyleft.org/cgi-bin/mailman/listinfo/discuss)
    about the merge request.  Include the URL of the merge request in the
    post.
+
+## Why Changes Should Target 'next' Branch
+
+The instructions above encourage you to submit your changes to the 'next'
+branch, which is found
+[on k.copyleft.org](https://k.copyleft.org/guide/files/next), and is
+auto-deployed to
+[copyleft.org/guide-next/](https://copyleft.org/guide-next/).
+
+The "official" Copyleft Guide is published on
+[copyleft.org/guide/](https://copyleft.org/guide/) automatically from the
+'master' branch of the repository.
+
+Since many use this Guide as a reference, non-trivial changes are merged into
+the "official" Copyleft Guide carefully and only after
+discussion on
+[the mailing list](http://lists.copyleft.org/cgi-bin/mailman/listinfo/discuss).
+
+There is one key rule with regard to merging changes from 'next' to 'master':
+
+> Treat 'master' branch as if by committing there, you have single-handledly
+> defined for the world what copyleft is.
+
+If you have commit access to the public master branch, please carefully head
+this.
 
 ## Gitorious Apocalypse Recovery
 
