@@ -9,8 +9,11 @@ Free Software project.
 ## Who Is In Charge?
 
 Currently, [Bradley M. Kuhn](http://ebb.org/bkuhn/) is the editor-in-chief of
-this Guide project.  However, many other contributors have given patches and
-improvements to the text.  Review the
+this Guide project.  Bradley shares commit access with Ben Cotton, Donald
+Roberston, and Engel Nyst.
+
+Also, many other contributors have given patches and improvements to the
+text.  Review the
 [commit log in the Git repository](https://k.copyleft.org/guide/changelog)
 for more details on who has contributed to the project.
 
