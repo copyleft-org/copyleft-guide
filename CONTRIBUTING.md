@@ -83,7 +83,8 @@ procedures when doing so:
 
 0. Target all changes for the 'next' branch (see below).  Likely, use of a
    secondary branch will be useful for the following steps (perhaps use the
-   procedure below entitled "Contributing via Gitorious" to do so).
+   procedure below entitled "Contributing via copyleft.org's Kallithea
+   instance" to do so).
 
 1. If possible, follow this procedure for the first commit that begins the
    work of integrating the third party text.
