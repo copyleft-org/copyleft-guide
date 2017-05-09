@@ -17,7 +17,7 @@
 
 # Considering Sections of the GPL
 
-+ GPL &hearts; 17 USC&sect;106(2) &amp; 17 USC&sect;106(3)
++ GPL interacts extensively with 17 USC&sect;106(2) &amp; 17 USC&sect;106(3)
 
 + GPL hinges on modification and distribution.
 
@@ -36,8 +36,6 @@
 + N.B.: &ldquo;derivative works&rdquo; is USA-centric, modify is more international)
 
 # Modification As a Center Provision
-
-+ GPL's primary copyright hook is copyright controls on the right to modify.
 
 + GPL's central tenant:
 
@@ -149,10 +147,9 @@ on the Program.
   from human-readable
       + This process can be done ahead of time.
 
-+ Separation of source and binary was the first way proprietary software
-  companies discovered to subjugate users.
++ Separation of source and binary create first proprietary software.
       + GPL uses the fact that binaries are modifications (which are often
-        distribution) to prevent that subjugation.
+        distribution) to prevent proprietarization.
 
 # GPLv2 &sect; 3(a-b)
 
