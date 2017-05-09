@@ -1,5 +1,5 @@
 % Considering Key Sections of the GPL
-% Bradley M. Kuhn
+% Bradley M. Kuhn &amp; Karen M. Sandler
 % Tuesday 9 May 2017
 
 
