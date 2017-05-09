@@ -24,7 +24,7 @@
 # Why Permission to Modify?
 
 + Your new copyrights are your copyrights:
-     + you are affixing it in a tangible medium.
+     + you are fixed it in a tangible medium.
 
 + Exclusive right of copyright holders:
      + Control on &ldquo;preparation of derivative works&rdquo;
