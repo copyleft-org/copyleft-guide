@@ -1,6 +1,6 @@
 #!/bin/sh
 
-talk=lca-2017-2
+talk=half-day-gpl/specific-sections
 
 rsync -HavP ./  /home/pres/$talk/
 rm -rf /home/pres/$talk/ui
