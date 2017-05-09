@@ -1,0 +1,9 @@
+#!/bin/sh
+
+talk=lca-2017-2
+
+rsync -HavP ./  /home/pres/$talk/
+rm -rf /home/pres/$talk/ui
+rsync -HavP ~/talks/ui/  /home/pres/$talk/ui/
+find /home/pres/$talk -exec chmod gou+r {} \;
+find /home/pres/$talk -type d -exec chmod gou+rx {} \;
