@@ -313,6 +313,9 @@
 
 <img align="right" src="cc-by-sa-4-0_88x31.png" />
 
++ Specific Sections of Copyleft Guide relating to these topics:
+      - [The Pristine Example](https://copyleft.org/guide/comprehensive-gpl-guidech22.html#x29-15900021)
+      - [Details of a Compliant Distribution](https://copyleft.org/guide/comprehensive-gpl-guidech16.html#x21-12700015)
 
 <span class="fitonslide">
 <p>Presentation and slides are: Copyright &copy; Bradley M. Kuhn (2008&ndash;2011, 2015, 2017), Karen M. Sandler (2017), and are licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution-Share Alike 4.0 International License</a>. </p>
