@@ -2,6 +2,16 @@
 % Bradley M. Kuhn
 % Tuesday 9 May 2017
 
+# CCS "Round" Reports
+
++ Evaluate each CCS candidate.
+
++ Someone "skilled in the art" attempts to build.
+
++ Detailed notes are sent, asking for new CCS candidate "round".
+
++ Some anonyomized real world examples.
+
 # No Build Instructions
 
 <hr/>
