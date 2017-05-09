@@ -241,3 +241,16 @@ The Corresponding Source for a work in source code form is that
 same work.
 </p>
 </span>
+
+# More Info / Talk License
+
+<img align="right" src="cc-by-sa-4-0_88x31.png" />
+
++ Specific Sections of Copyleft Guide relating to these topics:
+     - [Modified Source and Binary Distribution](https://copyleft.org/guide/comprehensive-gpl-guidech6.html#x9-410005)
+     - [GPLv3 &sect;5: Modified Source](https://copyleft.org/guide/comprehensive-gpl-guidech10.html#x13-780009.8)
+     - [GPLv3 &sect;6: Non-Source and Corresponding Source](https://copyleft.org/guide/comprehensive-gpl-guidech10.html#x13-790009.9)
+
+<span class="fitonslide">
+<p>Presentation and slides are: Copyright &copy; Bradley M. Kuhn (2008&ndash;2011, 2015, 2017), Karen M. Sandler (2017), and are licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution-Share Alike 4.0 International License</a>. </p>
+</span>
