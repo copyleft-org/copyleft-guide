@@ -1,140 +1,7 @@
-% Brief Introduction to the GNU General Public License
+% Considering Key Sections of the GPL
 % Bradley M. Kuhn
-% Monday 24 March 2014
+% Tuesday 9 May 2017
 
-
-# Audience Polls
-
-+ My goal here is to move faster or slower based on audience knowledge.
-
-+ There are folks in this audience who have worked with this stuff for years,
-  and those who are completely new.
-
-+ We want these presentations to be valuable to all of you.
-
-+ Please, don't be embarrassed:
-     + Ever GPL expert in the world, including me, started as a student who
-       knew none of this.
-
-# IANAL
-
-<cite>IANAL</cite>
-
-# My Affiliations
-
-+ Formerly had John's job, Executive Director of FSF, years ago.
-
-+ Currently: on Board of Directors of FSF.
-
-+ President of Software Freedom Conservancy.
-
-# How These Orgs Relate to GPL?
-
-+ FSF
-    + Invented copyleft.
-    + Authors &amp; stewards of the GPL.
-    + Holder of copyrights on many key GNU programs &hellip;
-    + &hellip; and therefore enforcers of those copyrights.
-
-+ Software Freedom Conservancy
-    + Adviser on legal issues of copyright, etc. to Free Software projects.
-    + Holder of some copyrights on its member projects.
-    + Enforcer of GPL on behalf of many copyright holders in:
-    + BusyBox, Samba, Mercurial, and the kernel named Linux.
-
-# How this Hour Will Go?
-
-+ Materials presented will mix the simple &amp; complex.
-
-+ We cannot possibly cover the entire GPL in one hour.
-
-+ Discuss: motivations, origins, then a few of GPL's sections.
-
-+ I understand the mix of backgrounds in the audience.
-
-# A Restaurant's Lawyer?
-
-+ Considering why you want to learn this.
-
-+ What if your client was a restaurant?
-
-+ What would you want to need to know?
-
-# Restaurant Lawyer: What'd You Study?
-
-+ If you were a restaurant's lawyer:
-
-+ Probably three areas of law you'd focus on:
-     + building codes.
-     + health and safety regulations.
-     + tax regulations.
-
-+ Who would want to hear from?
-
-# Restaurant Lawyer: What'd You Study?
-
-+ Figure out the motivations behind the building code:
-      + What parts are arcane and less important to inspectors?
-      + How do inspections work?
-      + What are the penalties?
-
-+ Figure out the same for health &amp; safety:
-      + Who inspects, and when?
-      + What's the health code say, and what checklist do inspectors use?
-
-+ Likely Questions:
-      + Who's in charge of all this?
-      + What's purpose and intent of these regulations?
-      + Can I meet the inspectors?
-      
-# Why Listen To Us?
-
-+ FSF: Understanding the purpose and intent of the GPL.
-    
-+ Conservancy &amp; FSF:
-    + both enforce the GPL.
-    + if your client violates, you will hear from one of us.
-
-+ Such access to drafters, interpreters, enforcers is highly unique.
-
-+ Someday, we may (or already have) sit across the table from you.
-
-+ Our transparency does make your job easier. 
-
-# The Mindset of GPL
-
-+ GPL protects software freedom.
-
-+ Ultimate goal: make sure every user has the four freedoms.
-     + Freedom to run the software.
-     + Freedom to study and modify the software.
-     + Freedom to share the software.
-     + Freedom to distribute modified versions.
-
-+ Every clause in GPL was designed to uphold one of these freedoms.
-     + Or, it's a compromise of drafting in adoption vs. freedom debate.
-
-# Using Copyright
-
-+ GPL is primarily a copyright license.
-      + Software is copyrighted.
-      + License grants key freedoms.
-      + Requirement prohibit activities that take away freedoms.
-
-+ General concept: copyleft.
-
-+ Specific implementation: GPL.
-
-<hr/>
-
-<span class="fitonslide">
-
-> Copyright protection subsists &hellip; original works of authorship fixed in any tangible medium of expression &hellip;  from which they can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device.
-
-<p align=right>
- &mdash; <a href="http://www.law.cornell.edu/uscode/text/17/102">17 USC &sect;102</a>
-</p>
-</span>
 
 # Conditional Permissions
 
@@ -148,41 +15,11 @@
 
 + 9 times in GPLv3.
 
-# Compare To Proprietary Licenses
-
-+ Yes, the GPL has its requirements.
-
-+ But *none* of these activities are ever permitted under proprietary
-  licenses.
-
-+ If you don't like what the GPL requires you to do, then just tell your
-  client to use the proprietary software instead.
-
-+ That way, they know the answer to every question is &ldquo;no&rdquo;
-
-+ rather than: &ldquo;yes, but only as long as you &hellip;&rdquo;
-
-# The Technical Gap
-
-+ Understanding GPL well requires a some software expertise &amp; legal
-  expertise.
-
-+ You don't have to be a professional on either side to grok it.
-     + but you're best off if you're a professional in one &amp; an amateur
-       in the other. 
-
-+ Most important technical concepts you need:
-     + source code, binaries, methods of distribution.
-
 # Considering Sections of the GPL
-
-+ With the remaining time &hellip;
-     + in interest of the experts in the audience &hellip;
-     + let's dig into a few specific sections.
 
 + GPL &hearts; 17 USC&sect;106(2) &amp; 17 USC&sect;106(3)
 
-+ Modification and distribution.
++ GPL hinges on modification and distribution.
 
 # Why Permission to Modify?
 
@@ -404,15 +241,3 @@ The Corresponding Source for a work in source code form is that
 same work.
 </p>
 </span>
-
-
-# The GPL is a Complex Topic
-
-+ An in-depth seminar on GPL's provisions is a one-day course &hellip;
-     + &hellip; but the written materials discuss every section in depth.
-
-+ Keep in mind: every requirement has a carefully considered purpose to
-  uphold freedom of users.
-
-+ Software freedom licenses have a moral perspective.
-      + This is probably the most difficult thing for lawyers to understand.
