@@ -114,14 +114,12 @@
   perfect.
      + but we don't live in an ideal world.
 
-+ The worst I've ever experienced is 22 rounds.
++ The worst we've ever experienced is 22 rounds.
 
 + We send detailed reports.
+
 # More Info / Talk License
 
 <img align="right" src="cc-by-sa-4-0_88x31.png" />
 
 
-<span class="fitonslide">
-<p>Presentation and slides are: Copyright &copy; Bradley M. Kuhn (2008&ndash;2011, 2015, 2017), Karen M. Sandler (2017), and are licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution-Share Alike 4.0 International License</a>. </p>
-</span>
