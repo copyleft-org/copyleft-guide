@@ -122,4 +122,6 @@
 
 <img align="right" src="cc-by-sa-4-0_88x31.png" />
 
-
+<span class="fitonslide">
+<p>Presentation and slides are: Copyright &copy; Bradley M. Kuhn (2008&ndash;2011, 2015, 2017), Karen M. Sandler (2017), and are licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution-Share Alike 4.0 International License</a>. </p>
+</span>
