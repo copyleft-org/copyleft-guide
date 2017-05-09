@@ -1,5 +1,5 @@
 % The What and How of GPL Violations
-% Bradley M. Kuhn
+% Bradley M. Kuhn &amp; Karen M. Sandler
 % Tuesday 9 May 2017
 
 # What's a GPL Violation?
