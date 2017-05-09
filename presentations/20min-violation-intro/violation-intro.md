@@ -21,7 +21,7 @@
      + modifying, building, and installing software is a technical process.
 
 + In embedded systems, this process is rarely straightforward.
-     + Yet GPL requires that such be possible.
+     + GPL's requirements are strict.
 
 + In enforcement, we talk about &ldquo;the CCS adequately meeting GPL's requirements&rdquo;
 
