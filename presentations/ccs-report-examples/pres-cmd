@@ -1,6 +1,6 @@
 #!/bin/sh
 
-talk=half-day-gpl/specific-sections
+talk=half-day-gpl/ccs-examples
 
 rsync -HavP ./  /home/pres/$talk/
 rm -rf /home/pres/$talk/ui
