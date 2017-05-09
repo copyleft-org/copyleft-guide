@@ -122,6 +122,11 @@
 
 <img align="right" src="cc-by-sa-4-0_88x31.png" />
 
++ Specific Sections of Copyleft Guide relating to these topics:
+      - [GPLv2 &sect;4: Termination on Violation](https://copyleft.org/guide/comprehensive-gpl-guidech8.html#x11-510007.1)
+      - [GPLv3 &sect;7: Understanding License Compatibility](https://copyleft.org/guide/comprehensive-gpl-guidech10.html#x13-850009.10)
+      - [GPLv3 &sect;8: A Lighter Termination](https://copyleft.org/guide/comprehensive-gpl-guidech10.html#x13-860009.11)
+      - [A Practical Guide to GPL Compliance](https://copyleft.org/guide/comprehensive-gpl-guidech14.html)
 <span class="fitonslide">
 <p>Presentation and slides are: Copyright &copy; Bradley M. Kuhn (2008&ndash;2011, 2015, 2017), Karen M. Sandler (2017), and are licensed under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution-Share Alike 4.0 International License</a>. </p>
 </span>
