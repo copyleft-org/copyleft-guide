@@ -55,7 +55,7 @@
 
 # Offer For Source
 
-+ Useful if not shipping CD already.
++ Useful if not shipping media already.
 
 + Lasts three years.
 
