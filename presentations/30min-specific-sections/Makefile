@@ -4,8 +4,7 @@
 # an environment variable before you type make.
 
 ifndef PRESENTATION_BASE
-PRESENTATION_BASE=2hr-GPL
-INSTALL_DIR=/home/bkuhn/Files/Personal/Website/www.ebb.org/web-public/bkuhn/talks/LCA-2017-Tutorial/
+PRESENTATION_BASE=specific-sections
 endif 
 
 DO_INCREMENTAL_POINTS = -i -s
@@ -76,8 +75,9 @@ clean:
 err: ; $(ERR)
 
 install: all
-	/bin/rm -rf $(INSTALL_DIR)/ui
-	/usr/bin/rsync -HavP ./  $(INSTALL_DIR)
-	/bin/rm -rf $(INSTALL_DIR)/ui
-	/usr/bin/rsync -HavP ../ui/ $(INSTALL_DIR)/ui/
+	/usr/bin/rsync -HavP --exclude ui ./ copyleft.org:/var/www/presentations/$(PRESENTATION_BASE)/
+	-ssh copyleft.org 'mkdir -p /var/www/presentations/$(PRESENTATION_BASE)/ui/conservancy/'
+	/usr/bin/rsync -HavP ui/conservancy/  copyleft.org:/var/www/presentations/$(PRESENTATION_BASE)/ui/conservancy/
+	-ssh copyleft.org 'find /var/www/presentations/$(PRESENTATION_BASE) -exec chmod gou+r {} \;'
+	-ssh copyleft.org 'find /var/www/presentations/$(PRESENTATION_BASE) -type d -exec chmod gou+rx {} \;'
 	./pres-cmd
