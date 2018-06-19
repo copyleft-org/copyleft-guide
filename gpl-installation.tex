@@ -1,0 +1,59 @@
+\documentstyle[twocolumn]{article}
+\pagestyle{empty}
+\begin{document}
+
+%don't want date printed
+\date{}
+
+%make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+
+\title{\Large\bf A Comprehensive Consideration of Installation Requirements of the GPL}
+
+%for two authors (this is what is printed)
+
+\author{\begin{tabular}[t]{c@{\extracolsep{8em}}c@{\extracolsep{8em}}c}
+    Bradley M. Kuhn & Behan Webster \\
+    Software Freedom Conservancy, Inc. & Converse In Code
+\end{tabular}
+}
+
+\thispagestyle{empty}
+
+\maketitle
+
+\subsection*{\centering Abstract}
+
+The GNU General License (``GPL'') is the most widely used \textit{copyleft}
+license for software.  Copyleft licenses function as copyright license in
+atypical manner: rather than restricting permission to copy, modify and
+redistribute the software, copyleft licenses encourage and enable such
+activities.  However, these license have strict requirements that mandate
+further software sharing by enabling downstream users to easily improve,
+modify, and upgrade the copylefted software on their own.
+
+GPL has two versions in common use: version 2 (``GPLv2'') and version 3
+(``GPLv3'').  Both versions require those who redistribute the software to
+provide information related to the installation of software modified by
+downstream.  These installation requirements, however, differ somewhat in
+their details.  While some business practices around license compliance
+efforts have reached adequate sophistication to address simpler compliance
+problems, firms have generally given inadequate attention to the installation
+requirements of both common versions of GPL\@.  Misunderstanding of these
+clauses is often common, and violations related to installation instructions
+remain prevalent.
+
+Furthermore, perceived differences in the requirements, and lack of rigorous
+study of the Installation Information requirements of GPLv3\S6 has allowed
+rumor and impression, rather than a textually grounded adherence to the
+written rules, to govern industry response in adoption of software licensed
+under GPLv3.  The resulting scenario often causes redistributors to assume
+the GPLv2 has \textbf{no} requirements regarding installation information,
+and that GPLv3's requirements in this regard are impossible to meet,
+particularly in security-conscious embedded products.
+
+This paper explores the installation provisions of both common versions of
+GPL, discusses historical motivations and context for each, and suggests best
+practices regarding installation information for firms that redistribute
+software under both licenses.
+
+\end{document}
