@@ -1,3 +1,6 @@
+% Copyright (C) 2018, Bradley M. Kuhn
+% License: CC-BY-SA-4.0
+
 \documentstyle[twocolumn]{article}
 \pagestyle{empty}
 \begin{document}
@@ -55,5 +58,149 @@ This paper explores the installation provisions of both common versions of
 GPL, discusses historical motivations and context for each, and suggests best
 practices regarding installation information for firms that redistribute
 software under both licenses.
+
+\section{Introduction}
+
+Free, Libre and Open Source (``FLOSS'') licenses are typically categorized as
+either copyleft or non-copyleft licenses.  The license compliance demands of
+most non-copyleft licenses typically center purely around issues of author
+attribution, and thus are straightforwardly addressed by license compliance
+programs such as OpenChain and SPDX, which focus on the details of properly
+annotating licensing information for software in the supply-chain to assure
+proper downstream license and related author credit notification.
+
+Copyleft licenses do indeed require proper downstream license and credit
+notification, and thus we can broadly model copyleft license requirements as
+a proper superset of those requirements of non-copyleft licenses.  The
+compliance subset of license annotation is a well-studied problem, and many
+automation tools exist and remain under active development to assist in these
+aspects of compliance. Unfortunately, the nascent state of industry
+compliance efforts currently means that firms are often ill-equipped to
+handle the additional requirements of copyleft licenses.
+
+In particular, software copyleft licenses are specifically designed to
+promulgate a transparent agenda to champion the rights of downstream users to
+effectively and easily copy, modify, reinstall and redistribute the software
+both commercially and non-commercially.  Proper verification of source code
+for license compliance generally cannot be automated.  Indeed, given that
+program equivalence (often colloquially called the ``Halting Problem'') was
+mathematically proven as an undecidable problem in the computing subfield of
+Theory of Computation, we know that a generalized solution that shows
+specific source code corresponds to a specific set of binaries remains
+unsolvable in the general case.
+
+We do expect automation tools that approximate solutions for the specific
+cases of most interest to adopter of copylefted software to eventually exist.
+Currently, much research and industry attention has turned toward the
+software engineering problem of ``reproducible builds''.  We find this area
+of endeavor directly applicable to the requirements of copyleft license
+compliance, and believe that reproducible build techniques will eventually
+become as common for  compliance with source code provisioning terms of
+FLOSS licenses as SPDX and OpenChain are for the license notice and
+attribution requirements are today.
+
+However, even that solution, when it exists, will not fully satisfy the goals
+of many firms.  Frankly, most firms do not share the idealistic goals of
+software freedom activists who design copyleft licenses.  These activists
+seek to defends the rights of software users by creating copyleft licenses
+that mandate source code provisioning, which include the rights to modify and
+install modified versions of the software.  However, in what the inventor of
+copyleft, Richard M.~Stallman, called ``pragmatic idealism'', copyleft
+licenses make reasonable trade-offs regarding how much disclosure is required
+to downstream.  While conventional wisdom often considered copyleft licenses
+to contain substantial and complicated requirements, ultimately the
+requirements are substantially more permissive than most industry-standard
+proprietary licenses, which often complete prohibit redistribution of the
+software and disclose absolutely no source code.  Copyleft licenses typically
+make a clear compromise between maximal software freedom for the downstream
+recipient and permission for firms to distribute proprietary software in
+aggregation with copylefted software.
+
+By way of hypothetical counterexample, consider this possible ``copyleft''
+license that one might create:
+
+\begin{quotation}
+  \begin{center}
+    {\Large The Unreasonably Overly Broad Copyleft License}
+  If you distribute this software in any form, you agree to publicly release
+  the complete source code of all software that you and your successors in
+  interest write, in any form, for perpetuity.
+\end{quotation}
+
+Besides likely being unenforceable for various reasons, firms would quickly
+ban all software under this license, and ban all employees from ever using
+such software at home or work.  A highly broad license of this nature, even
+if succeeded in the very short term in a few instances, would fail long-term
+to reach the long term goal of maximizing software freedom for users.
+Copyleft, therefore, must find a balance between two competing goals:
+
+\begin{itemize}
+
+\item Ensure the rights to copy, share, modify, redistribute,
+  and reinstall the software for downstream users.
+
+\item Entice firms that do not seek the same goals as the activists to adopt,
+  share and improve the copylefted software to assure its promulgation.
+\end{itemize}
+
+In essence, much FLOSS licensing balances these competing goals.
+Non-copyleft licenses favor the latter much more than the former, and
+copyleft licenses seek to create an optimal policy between the ``maximal
+software freedom'' vs. ``adoption and popularity'' dichotomy, to assure that
+in the long term, users have these specific rights, but also allow for short
+term interest of firms and individuals alike who may not share the software
+freedom activist perspective.
+
+\section{Historical Background}
+
+Despite the awareness of copyleft activists, the adoption of copyleft
+licenses has been wrought with acrimony and accusation.  To our knowledge,
+there are no specific empirical studies of attitudes and reasoning why firms
+initially rejected copyleft (and that some still do).  However, consideration
+of anecdotes can illuminate study of the reasons why confusion exists
+regarding copyleft licensing requirements in general, and in particular
+(which will be the focus of this article) the installation requirements of
+the GNU General Public License (``GPL'').
+
+The Free Software Foundation (``FSF''), which is the license steward for all
+existing versions of the GPL, was the first to license software under GPL\@.
+Released in 1991, GPLv2 came into wide use by other software authors,
+including those of Linux.  During the 1990s, the alternative body of software
+released under GPLv2 gained slow but steady adoption, until major firms could
+no longer ignore it.
+
+In 2001, Microsoft launched a series of political attacks against the GPL\@.
+Over a period of months, various Microsoft executives called the GPL
+``unAmerican'' and a ``cancer'' on the software industry.  This was the first
+time most in the industry had ever heard of the GPL, and the rhetoric created
+the expected fervor.
+
+The industry context of the time was the growing adoption of GPL'd software,
+and Linux, in particular, by firms.  While Microsoft was not the first to
+draw negative attention to GPL's copyleft provisions, but sadly the
+misunderstandings launched in these attacks remain with us today.
+
+Adoption of FLOSS grew quickly in the last two decades.  License compliance
+and FLOSS supply-chain adoption techniques have become essential components
+of most large firms along with this adoption.  However, these tools and
+procedures have focused on the straightforward problems of license notice,
+attribution, and supply-chain FLOSS inclusion discovery techniques.  The
+finer points of copyleft license compliance, particularly source code
+provisioning and installation requirements of GPL, remain often
+misunderstood, and sometimes outright ignored.
+
+Historically, firms have often reacted to the two popular versions of the GPL
+in the same pattern.  During the feverish anti-copyleft rhetoric of the
+1990s, firms widely considered the GPLv2 as a toxic license they could not
+abide.  Eventually, executives and lawyers at major firms learned what their
+engineers often already knew: that GPLv2 was not unreasonable, its
+requirements were well understood and could be respected by businesses that
+produced both FLOSS and proprietary products.
+
+We now see the same process happening, albeit much more slowly, with GPLv3.
+We hear rhetoric drawing attention to perceived differences between GPLv2's
+and GPLv3's requirements, which seem untenable to firms, some of whom
+maintain GPLv2'd forks of projects that have moved on to the
+``GPLv3-or-later'' upstream.
 
 \end{document}
