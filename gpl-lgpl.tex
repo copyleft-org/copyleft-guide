@@ -2320,6 +2320,117 @@ rights\footnote{While nearly all attorneys and copyleft theorists are in
   Jaeger and almost everyone else in the copyleft community for nearly a
   decade, regard an almost moot and wholly esoteric legal detail.}.
 
+\section{GPLv2 Irrevocability}
+
+There are two legal theories why a contributor cannot terminate their license
+grant. First is an argument that the text of the GPL prevents it; second is
+that a contributor would be estopped from succeeding on an infringement claim
+for continued use of the code even if it wasn't removed.
+
+\subsection{The text of the GPLv2}
+
+The GPLv2 have several provisions that, when taken together, can be construed
+as an irrevocable license from each contributor. First, the GPLv2 says ``by
+\emph{modifying} or distributing the Program (or any work based on the Program), you
+indicate your acceptance of this License to do so, and all its terms and
+conditions for copying, distributing or modifying the Program or works based
+on it'' (GPLv2\S5, emphasis added).  A contributor by definition is modifying
+the code and therefore has agreed to all the terms in the GPLv2, which
+includes the web of mechanisms in the GPLv2 that ensure the code can be used
+by all.
+
+More specifically, the downstream license grant says ``the recipient
+automatically receives a license from the original licensor to copy,
+distribute or modify the Program subject to these terms and conditions.''
+(GPLv2\S6). So in this step, the contributor has granted a license to the
+downstream, on the condition that the downstream complies with the license
+terms.
+
+That license granted to downstream is irrevocable, again provided that the
+downstream user complies with the license terms: ``[P]arties who have
+received copies, or rights, from you under this License will not have their
+licenses terminated so long as such parties remain in full compliance''
+(GPLv2\S4).
+
+Thus, anyone downstream of the contributor (which is anyone using the
+contributor's code), has an irrevocable license from the contributor. A
+contributor may claim to revoke their grant, and subsequently sue for
+copyright infringement, but a court would likely find the revocation was
+ineffective and the downstream user had a valid license defense to a claim of
+infringement.
+
+Nevertheless, for purposes of argument, we will assume that for some
+reason the GPLv2 is not enforceable against the contributor\footnote{For
+  example, the argument has been made that there may be a failure of
+  consideration on the part of the contributor. While \textit{Jacobsen
+    v. Katzer}, 535 F.3d 1373 (Fed. Cir. 2008) is accepted as holding that
+  there is consideration received by the contributor in a FOSS license, the
+  posture of the case was one where the contributor advocated for the theory,
+  not against it. The author is not aware of any other decisions that have analyzed
+  the question in any depth, so it perhaps could be challenged in the right
+  factual situation.}, or that the irrevocable license can be
+revoked\footnote{A contract without a definable duration can be terminated on
+  reasonable notice. \textit{Great W. Distillery Prod. v. John A. Wathen Distillery
+  Co.}, 10 Cal. 2d 442, 447, 74 P.2d 745, 747 (1937). The term nevertheless
+  can be a term of indefinite length where its continuing effect is tied to
+  the conduct of the parties. \emph{Id}.}. In that case, the application of
+promissory estoppel will likely mean that the contributor still cannot
+enforce their copyright against downstream users.
+
+\subsection{Promissory estoppel}
+
+``Promissory estoppel'' is a legal theory that says, under some
+circumstances, a promise is enforceable against the promisee even after the
+promisee tries to renege on the promise. The test for how and when promissory
+estoppel applies differs from state to state, but generally where there is a
+``promise which the promisor should reasonably expect to induce action or
+forbearance on the part of the promisee or a third person and which does
+induce such action or forbearance is binding if injustice can be avoided only
+by enforcement of the promise.''\footnote{\textit{Kajima/Ray Wilson v. Los Angeles
+Cty. Metro. Transp. Auth.}, 23 Cal. 4th 305, 310, 1 P.3d 63, 66 (2000), \emph{citing}
+Restatement (Second) of Contracts \S 90(1) (1979).} Breaking it down, it is:
+\begin{enumerate}
+\item where there is a clear and definite promise;
+\item where the promisor has a reasonable expectation that the offer will
+  induce action or forbearance on the part of the promisee;
+
+\item which does induce actual and reasonable action or forbearance by the promisee; and
+
+\item which causes a detriment which can only be avoided by the enforcement
+  of the promise.
+\end{enumerate}
+
+In this case, the promisor is the contributor. This should be an easy
+standard to meet in any widely used software.
+\begin{enumerate}
+\item The promise is contained in the GPL, which is a promise that one can
+  continue to use the licensed software as long as the terms of the license
+  are met.
+
+
+\item A contributor knows that there is a broad user base and users consume
+  the software relying on the grant in the GPL as assuring their continued
+  ability to use the software (one might even say it is the \textit{sine qua
+    non} of the intent of the GPL).
+
+\item Users do, in fact, rely on the promises in the GPL, as they ingest the software
+  and base their businesses on their continued ability to use the software.
+
+\item Whether the user will suffer detriment is case-specific, but using
+  Linux, a software program that is often fundamental to the operation of a
+  business, as an example, the loss of its use would have a significantly
+  detrimental, perhaps even fatal, effect on the continued operation of the
+  business.
+
+\end{enumerate}
+
+\subsection{Conclusion}
+
+Whether as a matter of a straightforward contractual obligation, or as a
+matter of promissory estoppel, a contributor's attempt to revoke a copyright
+license grant and then enforce their copyright against a user is highly
+unlikely to succeed.
+
 \section{GPLv2~\S7: ``Give Software Liberty or Give It Death!''}
 \label{GPLv2s7}
 
