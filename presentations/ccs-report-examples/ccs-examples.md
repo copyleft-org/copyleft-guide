@@ -2,6 +2,77 @@
 % Bradley M. Kuhn &amp; Karen M. Sandler
 % Tuesday 9 May 2017
 
+# CCS
+
+Complete, Corresponding Source
+
+# How GPLv3 says CCS.
+
+<hr/>
+
+> The "Corresponding Source" for a work in object code form means all the source code needed to generate, install, and (for an executable work) run the object code and to modify the work, including scripts to control those activities.
+<span class="fitonslide">
+<p align=right>
+&mdash; GPLv3&sect;1
+</p>
+</span>
+
+# How GPLv2 says CCS.
+
+<hr/>
+
+> You may copy and distribute the Program (or a work based on it, under
+> &sect; 2) in object code or executable form under the terms of &sect; 1
+> &amp; 2 above provided that you &hellip; [a]ccompany it with the complete
+> corresponding machine-readable source code &hellip; The source code for a
+> work means the preferred form of the work for making modifications to it.
+> For an executable work, complete source code means all the source code for
+> all modules it contains, plus any associated interface definition files,
+> plus the scripts used to control compilation and installation of the
+> executable.
+
+<p align=right>
+&mdash; GPLv2&sect;3
+</p>
+</span>
+
+# The 11 Words That Consumed My Life
+
++ GPLv2 enforcement, for embedded products, is all about the these eleven
+  words.
+
++ I could give an entire talk on any one of these 11 words.
+    + Yes, I can even give 20-30 minute treatises on each use of &ldquo;the&rdquo;. 
+
++ Yet, when enforcement processes are at their best, they're about the spirit
+  behind these words, not the words themselves.
+
+<hr>
+> the scripts used to control compilation and installation of the executable.
+
+<p align=right>
+&mdash; GPLv2&sect;3
+</p>
+</span>
+
+# The 11 Words That Consumed My Life
+
++  Basic reference rule:
+     + Can a developer reasonably skilled in the art of embedded software
+       build your sources, take the (copylefted) executables and install
+       them?
+
++ Enforcement spends its most attention on testing CSS
+  &ldquo;candidates&rdquo; to verify that.
+
+<hr>
+> the scripts used to control compilation and installation of the executable.
+
+<p align=right>
+&mdash; GPLv2&sect;3
+</p>
+</span>
+
 # CCS "Round" Reports
 
 + Evaluate each CCS candidate.
@@ -308,6 +379,116 @@
     Note that the offer for source included in the web UI of the device said 
     to email NAME@COMPANY.com , which is how the above instructions for 
     downloading the source were received.
+
+# A Pristine Example
+
++ Enforcement must often use a &ldquo;know it when I see it&rdquo; standard.
+    + i.e., can we take your CCS build it, and install it?
+
++ We've reached compliant CCS with hundreds of companies:
+    + but that didn't mean the CCS was pretty.
+
++ Thanks to ThinkPenguin, we finally have an example of beautiful embedded
+  product compliance. 
+
+# Lessons Learned from Pristine Example
+
++ The full paper for this talk is available online:
+    + [compliance.guide/pristine-example](http://compliance.guide/pristine-example)
+
+
++ It's part of the larger tutorial called [*Copyleft and the GNU General
+  Public License: A Comprehensive Tutorial and Guide*](https://copyleft.org/guide/)
+  at copyleft.org.
+
+# Give a roadmap in a README
+
++ Scripts doesn't only mean shell scripts and Makefiles.
+
++ Think of the script of a play or movie. 
+
++ If your build process includes human intervention &hellip;
+
++ &hellip; then the script are a written explanation of what the human must
+do.
+
+<hr>
+> **the scripts** used to control compilation and installation of the executable.
+
+<p align=right>
+&mdash; GPLv2&sect;3
+</p>
+</span>
+
+# ThinkPengiun's README
+
+A file called “README” at the top-level directory said:
+
+    In order to build firmware images for your router, the following needs to be installed:
+
+    gcc, binutils, bzip2, flex, python, perl, make, find, grep, diff, unzip,
+    gawk, getopt, libz-dev and libc headers.
+
+    Please use “make menuconfig” to configure your appreciated configuration
+    for the toolchain and firmware. Please note that the default configuration
+    is what was used to build the firmware image for your router. It is advised
+    that you use this configuration.
+
+    Simply running “make” will build your firmware. The build system will
+    download all sources, build the cross-compile toolchain, the kernel and all
+    chosen applications.
+
+     To build your own firmware you need to have access to a GNU/Linux system
+     (case-sensitive filesystem required).
+
+# Make Sure It Builds
+
++ Can your CCS pass this test?
+    + Give you source release to another developer from another department.
+    + Ask them to follow the instructions you wrote.
+    + They should get the equivalent binaries you get in building.
+
++ Very few organizations bother to do this.
+
++ It's probably the most useful step to verify compliance, yet *no*
+  compliance process recommendations I've ever seen include this.
+
+<hr>
+> the scripts used to **control compilation** and installation of the executable.
+
+<p align=right>
+&mdash; GPLv2&sect;3
+</p>
+</span>
+
+
+# It's not &ldquo;make install&rdquo;
+
++ Server system software can offer a &ldquo;make install&rdquo; that
+  reasonable works to meet installation requirements.
+
++ Embedded products are admittedly difficult to install.
+
++ To comply here, you'll usually just have write out the instructions.
+
++ It is required; don't skip this part.
+
+<hr>
+> the scripts used to **control** compilation and **installation** of the executable.
+<p align=right>
+&mdash; GPLv2&sect;3
+</p>
+</span>
+
+# Missing hardware components
+
++ Inclusion of specialized installation hardware is not a
+  &ldquo;script&rdquo;.
+
++ In our ThinkPenguin example, we had to go buy a USB serial adapter to
+  install the modified firmware.
+
++ Just tell the user what they have to go buy for the install to work.
 
 # More Info / Talk License
 
