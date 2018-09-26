@@ -17,20 +17,26 @@ Debian-based systems, this command may work as root:
 
     # aptitude install texlive-full make tex4ht
 
-You may also
-[browse the current version of the guide on copyleft.org](https://copyleft.org/guide/),
-and [download a PDF of the Guide as well](http://copyleft.org/guide/comprehensive-gpl-guide.pdf).
+You may also browse the current live version of
+[the guide on copyleft.org](https://copyleft.org/guide/),
+or
+[download a PDF of the Guide](http://copyleft.org/guide/comprehensive-gpl-guide.pdf)
+as well.
 
-Note the
-[canonical repository for this project is on k.copyleft.org](https://k.copyleft.org/guide/files/tip/).
-Typically, copies of this repository on  sites other than copyleft.org are for informational and backup
-purposes only.
 
 ## Contributing
 
 Improvements of all kinds and manner are welcome.  Please review
 [the instructions and details regarding making contributions](CONTRIBUTING.md)
 for more information.
+
+Note that the canonical repository for this project is the Kallithea instance at
+[k.copyleft.org](https://k.copyleft.org/guide/files/tip/).
+Contributions and comments are also accepted on the
+[GitHub](https://github.com/copyleft-org/copyleft-guide/)
+and
+[NotABug](https://notabug.org/copyleft.org/copyleft-guide/)
+mirrors; but it is possibe that those may lag behind the upstream at times.
 
 Copyleft.org may be sponsored by various organizations, and organizations may
 also republish some, or all, of the output of this project under the terms of
