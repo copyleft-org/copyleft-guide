@@ -26,6 +26,23 @@ Note the
 Typically, copies of this repository on  sites other than copyleft.org are for informational and backup
 purposes only.
 
+## Community
+
+### Joining Mailing Lists
+
+Subscribe to our low-traffic
+[announcements-only mailing list](https://lists.copyleft.org/cgi-bin/mailman/listinfo/announce).
+Join discussion on our primary
+[discussions mailing list](https://lists.copyleft.org/cgi-bin/mailman/listinfo/discuss).
+
+### IRC Discussion
+
+The copyleft.org IRC channel is #copyleft on irc.freenode.net.
+The
+[IRC logs](https://copyleft.org/irclogs/)
+are public on the copyleft.org website.
+
+
 ## Contributing
 
 Improvements of all kinds and manner are welcome.  Please review
