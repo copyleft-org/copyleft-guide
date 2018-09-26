@@ -20,7 +20,7 @@ for more details on who has contributed to the project.
 ## How Do I Get Involved?
 
 The Guide is maintained in a copylefted distributed version control system called
-[Git](http://git-scm.com/).  Currently, the project collaboration site is an
+[Git](http://git-scm.com/).  The primary project collaboration site is an
 instance of the [Kallithea code hosting software](https://kallithea-scm.org/)
 hosted at [k.copyleft.org](https://k.copyleft.org/guide/).  (Kallithea itself
 us under a copyleft license, too, namely GPLv3.)
@@ -28,7 +28,11 @@ us under a copyleft license, too, namely GPLv3.)
 Those who are comfortable with using Kallithea can submit
 [pull requests via the Kallithea interface](https://k.copyleft.org/guide/pull-request).
 See the section "Merge Request and Patch Workflow" below for more information
-on the details of doing that.
+on the details of doing that. Contributions are also accepted on the
+[GitHub](https://github.com/copyleft-org/copyleft-guide/)
+and
+[NotABug](https://notabug.org/copyleft.org/copyleft-guide/)
+mirrors; but it is possibe that those may lag behind the upstream at times.
 
 However, lack of Git and/or LaTeX knowledge is *not a barrier* for
 contribution to this project.  Useful contributions will be accepted by the
