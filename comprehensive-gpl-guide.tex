@@ -63,8 +63,16 @@
            ]{geometry}
 % Make sure hyperref is last in the package list.  Order matters here, See:
 %   http://tex.stackexchange.com/questions/77886/fncychap-and-hyperref-messes-up-page-references
-\usepackage{hyperref}
-
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{xcolor}
+\definecolor{c1}{rgb}{0,0,1} % blue
+\definecolor{c2}{rgb}{0,0.3,0.9} % light blue
+\definecolor{c3}{rgb}{0.3,0,0.9} % red blue
+\hypersetup{
+    linkcolor=c1, % internal links
+    citecolor=c2, % citations
+    urlcolor=c3   % external links/urls
+}
 \newcommand{\tutorialpartsplit}[2]{#2}
 
 %\input{no-numbers-on-table-of-contents}
