@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 1957.7118 400"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   width="100%"
+   height="100%"
+   sodipodi:docname="copyleftorg-green-stylized.svg"
+   inkscape:export-filename="/home/ml/G/floss-docs-diffs/copyleft.org/copyleftorg.png"
+   inkscape:export-xdpi="11.25"
+   inkscape:export-ydpi="11.25">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1060"
+     id="namedview8"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.24081633"
+     inkscape:cx="1304.751"
+     inkscape:cy="-726.69492"
+     inkscape:window-x="-3"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g2997" />
+  <g
+     id="g3020">
+    <g
+       transform="scale(0.40816327,0.40816327)"
+       id="g2997">
+      <circle
+         d="M 930,490 C 930,733.00529 733.00529,930 490,930 246.99471,930 50,733.00529 50,490 50,246.99471 246.99471,50 490,50 733.00529,50 930,246.99471 930,490 z"
+         style="fill:#44aa00;stroke:#44aa00;stroke-width:99.99919926000001169;stroke-opacity:0.50196081;opacity:1;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:0"
+         sodipodi:ry="440"
+         sodipodi:rx="440"
+         sodipodi:cy="490"
+         sodipodi:cx="490"
+         cx="490"
+         cy="490"
+         r="440"
+         id="circle4" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 486,215 c -130,0 -239,91 -267,213 l 131,0 c 24,-52 76,-88 136,-88 83,0 150,67 150,150 0,83 -67,150 -150,150 -60,0 -112,-36 -136,-87 l -131,0 C 247,674 356,765 486,765 638,765 761,642 761,490 761,338 638,215 486,215 z"
+         id="path6"
+         style="fill:#44aa00" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text2993"
+       y="275.58594"
+       x="427.71182"
+       style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       xml:space="preserve"><tspan
+         style="font-size:288px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Droid Sans;-inkscape-font-specification:Droid Sans;fill:#44aa00"
+         y="275.58594"
+         x="427.71182"
+         id="tspan2995"
+         sodipodi:role="line">copyleft.org</tspan></text>
+  </g>
+</svg>
